@@ -1,4 +1,4 @@
-# Template generator 
+<div align="center" > Template generator </div>
 
 <h1 align="center">
   <br>
