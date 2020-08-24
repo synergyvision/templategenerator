@@ -1,0 +1,48 @@
+<div class="header">
+    <nav>
+      <div class="row">
+        <ul class="main-nav" >
+          <img class="logo" src="../1-corporate-template/assets/images/{{site.data.navigation.logo}}" alt="Logo">
+          <div class="main-nav__titles">
+              {% for section in site.data.navigation.navigationTitles %}
+              <li><a href="{{section.url | prepend: site.baseurl }}" >{{section.title}}</a></li>
+              {% endfor %}
+          </div> 
+          
+        </ul>
+      </div>
+    </nav>
+    <div class="banner-container">
+      <div class="header__title">
+        <h2 class="title-secondary ">{{site.data.navigation.headerTitlePrimary}}</h2>
+        <span id="typed" class="title-primary"></span>
+        <div id="typed-strings">
+          <h1 class="title-primary">{{site.data.navigation.headerTitleSecondary}}</h1>
+        </div>
+        <div class="line mtb-medium"></div>
+        <div class="header__title-description">{{site.data.navigation.headerSubtitle}}</div>
+        <div class="btn-cont mt-medium">
+            {% for button in site.data.navigation.headerButtons %}
+              <div class="mt-medium">
+                <a href="#" class="btn btn-{{ button.type }}" >
+                  <svg>
+                  <rect x="0" y="0" fill="none" width="100%" height="100%" />
+                  </svg>
+                  {{ button.title }}
+                </a>
+              </div>   
+            {% endfor %}
+        </div>
+      </div>
+    </div>   
+  </div>
+    {% include border.html %}
+   <style>
+     .header{
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(0,0,0, 0.4),
+        rgba(0,0,0, 0.4)
+      ), url('{{site.data.navigation.headerBackground}}');
+     }
+   </style>

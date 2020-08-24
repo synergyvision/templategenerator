@@ -1,0 +1,131 @@
+
+//mover 
+
+.line{
+  width:100px;
+  height: 2.5px;
+  background-color:#FFC133;
+}
+// logo
+
+.logo{
+	height:115px;
+	width: auto;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.main-nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    
+   
+
+      &__titles {
+        list-style:none;
+        display: flex;
+        align-items: center;
+   
+        @include respond(tab-port){
+          display: none;
+        }
+        
+        li{
+          display: inline-block;
+          justify-self: flex-end;
+          margin-left: 40px;
+          z-index: 6 !important;
+          
+          a:link, a:visited{
+            padding: 8px 0;
+            color: #fff !important;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 90%;
+            border-bottom: 0;
+            -webkit-transition: border-bottom 0.2s;
+            transition: border-bottom 0.2s;
+          }
+          a:hover, a:active {
+            border-bottom: 2px solid var(--color-primary);
+
+          }
+      }
+    }
+}
+
+//borrar
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+   /* position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);*/
+    width:90%;
+    margin: 0 auto;
+    padding-top: 100px;
+    @include respond(tab-port) {       
+        flex-direction: column;
+    }
+}
+
+
+
+
+.header {
+   position: relative;
+    height: 90vh;
+    width: auto;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+  
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    }
+    @include respond(phone){
+      height: 110vh;
+    }
+    &:before {
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(black, .5);
+        z-index: 1;
+        visibility: visible;
+        @include respond(tab-port) {
+          visibility: hidden;
+        }
+      }
+
+      &__title {
+        display: flex;
+        flex-direction: column;
+        z-index:5;
+        width:45%;
+        position: absolute;
+        top: 40%;
+        @include respond(tab-port) {
+            width: 90%;
+            background-color: rgba(black, .5);
+            padding: 15px;
+        }
+        @include respond(phone) {
+          top:25%;
+        }
+        color: white;
+      }
+      &__title-description{
+          text-align: justify;
+      }
+}
+ 
+
