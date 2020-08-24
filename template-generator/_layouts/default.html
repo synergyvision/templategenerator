@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body>
-    <div class="prueba">
-        {{ content }} 
-    </div>
-		
+<body>	
+	{% include header.html %}
+	   {{ content }} 	
+	{% include footer.html %}
 </body>
-<!--Script js-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="../javascript/script.js"></script>
 <style lang="scss">
 	:root{
 		--color-primary: {{site.data.colors.color-primary}};
-		--color-secondary: {{site.data.colors.color-secondary}}
+		--color-secondary: {{site.data.colors.color-secondary}};
+		--header-background: '{{site.data.navigation.headerBackground}}';
 	}
 </style>
 </html>

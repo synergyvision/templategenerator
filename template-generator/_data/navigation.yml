@@ -1,0 +1,29 @@
+headerTitlePrimary: Bienvenido a Synplus
+headerTitleSecondary: Expertos en desarrollo de software
+headerSubtitle:
+logo: logo.png
+headerButtons:
+    - title: Descubre más
+      type: 1 
+    - title: Contáctanos
+      type: 2
+
+headerBackground: ../../1-corporate-template/assets/images/office.jpg
+
+navigationTitles:
+    - title: Our services
+      url: 'our-services'
+    - title: Our team
+      url: 'our-team'
+    - title: Blog
+      url: 'blog'
+    
+footerItems:
+    - title: Company
+    - title: Privacy Policy
+    - title: Terms
+
+footerInfo:
+    - title: Av. de los Castros S/N Xhsi Módulo 1 39341 Caracas, Venezuela
+    - title: +58 942 760 866
+    - title: synplus@synteam.com

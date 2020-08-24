@@ -1,0 +1,55 @@
+
+
+.border {
+
+    &__primary{
+      z-index: 1;
+      transform: translateY(-20%);
+      position: relative;
+      height: 300px;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(255, 193, 51), 0.8),
+        rgba(#fab617, 1)
+      );
+      
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(
+        0 0%, 50% 20%, 100% 0%, 100% 70%, 50% 90%, 0% 70%
+        ); 
+        clip-path: polygon(0 0%, 50% 20%, 100% 0%, 100% 60%, 50% 90%, 0% 60%);
+      }
+  
+        &:before{
+          content: "";
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.2);
+          z-index: 2;
+          visibility: visible;
+          @include respond(tab-port) {
+            visibility: hidden;
+          }
+        }
+    }
+  
+    
+     
+    &__secondary{
+      background-color: rgba(orange, 1);
+      height: 150px;
+      
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 80%, 0% 100%);
+        clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 20%, 50% 80%, 0% 20%);
+        transform: translateY(-100%);
+      }
+    }
+  
+  }
+    
+  
+  
