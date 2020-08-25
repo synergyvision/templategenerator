@@ -2,7 +2,8 @@
 <html>
 {% include head.html %}
 <body>	
-	{% include corporate-template/header.html %}
+	{% if page.url != "/1-corporate-template/" %}
+	{% endif %}
 	   {{ content }} 	
 	{% include corporate-template/footer.html %}
 </body>
@@ -12,7 +13,6 @@
 	:root{
 		--color-primary: {{site.data.colors.color-primary}};
 		--color-secondary: {{site.data.colors.color-secondary}};
-		--header-background: '{{site.data.navigation.headerBackground}}';
 	}
 </style>
 </html>

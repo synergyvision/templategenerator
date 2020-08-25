@@ -39,7 +39,7 @@
           
           a:link, a:visited{
             padding: 8px 0;
-            color: #fff !important;
+            color: #fff;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 90%;
@@ -53,6 +53,45 @@
           }
       }
     }
+}
+.main-nav-active{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+
+  &__titles {
+    list-style:none;
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port){
+      display: none;
+    }
+    
+    li{
+      display: inline-block;
+      justify-self: flex-end;
+      margin-left: 40px;
+      z-index: 6 !important;
+      
+      a:link, a:visited{
+        padding: 8px 0;
+        color: black !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 90%;
+        border-bottom: 0;
+        -webkit-transition: border-bottom 0.2s;
+        transition: border-bottom 0.2s;
+      }
+      a:hover, a:active {
+        border-bottom: 2px solid var(--color-primary);
+
+      }
+  }
+}
 }
 
 //borrar
