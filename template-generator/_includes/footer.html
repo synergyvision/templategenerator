@@ -1,18 +1,18 @@
 <div class="footer">
     <div class="row">
         <div class="footer__logo">
-            <img src="../1-corporate-template/assets/images/{{site.data.navigation.logo}}" alt="logo">
+            <img src="../1-corporate-template/assets/images/{{site.data.navigation.navigation.logo}}" alt="logo">
         </div>
         <div class="footer-content">
             <div class="footer-content__navigation">
                 <ul class="footer__list">
-                    {% for item in site.data.navigation.footerItems  %}
+                    {% for item in site.data.navigation.footer.items  %}
                         <li class="footer__item"><a href="#" class="footer__link">{{ item.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="footer-content__info-container">
-                {% for info in site.data.navigation.footerInfo %}
+                {% for info in site.data.navigation.footer.info %}
                     <div class="footer-content__info">
                         {{ info.title }}
                     </div>

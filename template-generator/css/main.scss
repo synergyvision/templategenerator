@@ -1,12 +1,12 @@
 ---
 ---
+
 @import 
-	"base/base",
-	"base/typography",
-	"base/utilities",
-	"abstracts/mixins",
+	"global-base/base",
+	"global-base/typography",
+	"global-base/utilities",
+	"global-abstracts/mixins",
+	"global-abstracts/variables",
 	"layout/header",
 	"layout/footer",
-	"components/buttons",
-	"components/border",
-	"components/navigation"
+	"global-components/navigation"
