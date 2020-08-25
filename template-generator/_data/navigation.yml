@@ -1,29 +1,31 @@
-headerTitlePrimary: Bienvenido a Synplus
-headerTitleSecondary: Expertos en desarrollo de software
-headerSubtitle:
-logo: logo.png
-headerButtons:
+
+banner:
+  title-secondary: Bienvenido a Synplus
+  title-primary: Expertos en desarrollo de software
+  description:
+  buttons:
     - title: Descubre más
       type: 1 
     - title: Contáctanos
       type: 2
+  background: ../../1-corporate-template/assets/images/office.jpg
 
-headerBackground: ../../1-corporate-template/assets/images/office.jpg
-
-navigationTitles:
+navigation:
+  titles:
     - title: Our services
       url: 'our-services'
     - title: Our team
       url: 'our-team'
     - title: Blog
-      url: 'blog'
-    
-footerItems:
-    - title: Company
-    - title: Privacy Policy
-    - title: Terms
+      url: Blog
+  logo: logo.png
 
-footerInfo:
-    - title: Av. de los Castros S/N Xhsi Módulo 1 39341 Caracas, Venezuela
-    - title: +58 942 760 866
-    - title: synplus@synteam.com
+footer:
+    items:
+       - title: Company
+       - title: Privacy Policy
+       - title: Terms
+    info:
+       - title: Av. de los Castros S/N Xhsi Módulo 1 39341 Caracas, Venezuela
+       - title: +58 942 760 866
+       - title: synplus@synteam.com
