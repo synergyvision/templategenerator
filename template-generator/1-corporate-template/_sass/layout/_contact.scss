@@ -1,0 +1,114 @@
+.section__contact {
+    background-image: var(--contact-background);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+  }
+  .book__form {
+    border-radius: 15px;
+    margin: 0 auto;
+    background-image: linear-gradient(
+      to right,
+      rgba(white, .9) 0%,
+      rgba(white, .9) calc(25% + 40px),
+      rgba(white, .7) calc(25% + 40px),
+      rgba(white, .7) 100%
+    );
+    @include respond(tab-port){
+      background-image: linear-gradient(
+          to right,
+          rgba(white, .7) 0%,
+          rgba(white, .7) 100%
+        );}
+    @include respond(phone){
+        width: 90%;
+        padding:20px;
+    }
+    box-shadow: 0 15px 40px rgba(black , .2);
+    width: 70%;
+    padding: 40px;
+  }
+  
+  .form {
+    @include abscenter;
+  
+    &__group{
+      width: 100%;
+      &:not(:last-child) {
+          margin-bottom: 20px;
+      }
+    }
+  
+  
+    &__text-side{
+      width: 25%;
+      @include respond(tab-port){
+              width: 100%;
+      }
+    }
+    &__input-side{
+      width: 75%;
+      padding-left: 40px;
+      @include abscenter;
+      flex-direction: column;
+  
+      @include respond(tab-port){
+          width: 100%;
+          margin-top: 25px;
+          padding-left: 0px;
+      }
+    }
+  
+    &__button{
+      width: max-content;
+    }
+    &__input {
+      font-family: inherit;
+      color: inherit;
+      font-size: 20px;
+      padding: 15px 20px;
+      border-radius: 2px;
+      background-color: rgba(white, 0.5);
+      border: none;
+      border-bottom: 3px solid var(--color-primary);
+      width: 90%;
+      display: block;
+      transition: all 0.3s;
+  
+      @include respond(tab-port) {
+        width: 100%;
+      }
+  
+      &:focus {
+        outline: none;
+        box-shadow: 0 10px 20px rgba(black, 0.1);
+        border-bottom: 3px solid var(--color-secondary);
+  
+        &:invalid {
+          border-bottom: 3px solid var(--color-terciary);
+        }
+      }
+  
+      &::-webkit-input-placeholder {
+        color: rgb(97, 97, 97);
+      }
+    }
+  
+    &__label {
+      font-size: 15px;
+      font-weight: 700;
+      margin-left: 20px;
+      margin-top: 7px;
+      display: block;
+      transition: all 0.3s;
+    }
+  
+    &__input:placeholder-shown ~ &__label {
+      // sibling selector (input y label son hermanos). label tiene que estar ajuro despues del input en el html
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-40px);
+    }
+  }
+  

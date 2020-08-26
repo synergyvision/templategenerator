@@ -3,7 +3,7 @@
         position: relative;
         &__photo{
             height: 180px;
-            box-shadow: 0 1.5rem 4rem rgba(black ,.4);
+            box-shadow: 0 15px 40px rgba(black ,.4);
             border-radius: 2px;
             position: absolute;
             z-index:10;
@@ -38,3 +38,6 @@
     
         } 
     }
+
+
+   

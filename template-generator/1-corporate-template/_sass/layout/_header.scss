@@ -116,6 +116,11 @@
 
 
 .header {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  ),var(--banner-background);
    position: relative;
     height: 90vh;
     width: auto;

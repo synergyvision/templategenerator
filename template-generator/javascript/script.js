@@ -2,8 +2,7 @@ var typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
     typeSpeed: 100,
     showCursor: false
-  });
-
+});
 
   // carousel
   let slider_index = 0;
