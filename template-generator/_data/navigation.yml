@@ -1,3 +1,6 @@
+assets:
+    svg-directory: ../../1-corporate-template/assets/svg/sprite.svg#
+    images: ../../1-corporate-template/assets/images/
 
 banner:
   title-secondary: Welcome to Synplus
@@ -8,7 +11,7 @@ banner:
       type: 1 
     - title: Contact us
       type: 2
-  background: ../../1-corporate-template/assets/images/office.jpg
+  background: office.jpg
 
 navigation:
   titles:
@@ -31,7 +34,7 @@ footer:
        - title: synplus@synteam.com
       
 form:
-    background:  contact-bg.jpeg
+    background: contact-bg.jpeg
     inputs:
       - title: Full Name
         id: name
@@ -41,3 +44,19 @@ form:
       - title: Give us a message
         id: message
     button: Send message
+
+features:
+    feature:
+      - class: icon icon-hour-glass
+        icon: icon-hour-glass
+        text: Always on time
+      - class: icon icon-cogs
+        icon: icon-cogs
+        text:  With the best experience
+      - class: icon icon-sphere
+        icon: icon-sphere
+        text: For all world
+      - class: icon icon-wink
+        icon: icon-wink
+        text: To make you smile
+    background: feature-bg.jpeg

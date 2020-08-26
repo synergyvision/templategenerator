@@ -1,0 +1,10 @@
+<div class="mt-neg-bigger feature">
+    <div class="row feature-container">
+      {% for feature in site.data.navigation.features.feature %}
+        <div class="feature__card">
+           {% include svg.html image=feature.icon directory=site.data.navigation.assets.svg-directory icon=feature.class %}
+          <div class="feature__text">{{ feature.text }}</div> 
+        </div>
+       {% endfor %}
+    </div>
+</div>
