@@ -5,25 +5,18 @@
                     {% include corporate-template/title.html title='Contact us' %}
             </div>
             <div class="form__input-side">
+                {% for input in site.data.navigation.form.inputs %}
                 <div class="form__group">
-                    <input type="" class="form__input" placeholder="Full Name" id="name" required>
-                    <label for="name" class="form__label">Full Name</label>
+                    <input type="{{input.type}}" class="form__input" placeholder="{{input.title}}" id="{{input.id}}" required>
+                    <label for="{{input.id}}" class="form__label">{{input.title}}</label>
                 </div>
-                <div class="form__group">
-                    <input type="email" class="form__input" placeholder="Email" id="email" required>
-                    <label for="email" class="form__label">Email</label>
-                </div>  
-                <div class="form__group">
-                    <input type="" class="form__input" placeholder="Give us a message" id="message" required>
-                    <label for="message" class="form__label">Give us a message</label>
-                </div>  
+                {% endfor %}
                 <div class="form__button">
-                    {% include corporate-template/button-primary.html type=1 title='Send message' %}  
+                    {% include corporate-template/button-primary.html type=1 title=site.data.navigation.form.button %}  
                 </div>
             </div>
             </form>
-            </div>
-            
+        </div>      
     </div> 
 </div>
 
