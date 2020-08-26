@@ -1,0 +1,8 @@
+
+<div class="mt-neg-bigger mb-big">
+    {% include corporate-template/title.html title=site.data.home.sections.services.title %}
+    <div class="mt-big">
+    {% include carousel.html cardsFile='corporate-template/card.html' quantity='3.0'
+        cardsCollection=site.data.services.cards-services %}
+    </div>
+</div>

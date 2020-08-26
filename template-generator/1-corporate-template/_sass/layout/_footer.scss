@@ -2,7 +2,7 @@
     .footer{
         height: auto;
         background-color: rgb(48, 48, 48);
-        
+        padding: 15px 0 20px 0;
         &__logo{
             height: 100px;
             width: auto;
@@ -48,10 +48,15 @@
         justify-content: space-between;
         padding: 15px 0;
 
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+
         &__navigation, &__info-container{
             border-top: 1px solid rgb(214, 214, 214);
             margin-top: 50px;
             padding: 15px 0;
+            text-align: center;
         }
         
         &__info-container{

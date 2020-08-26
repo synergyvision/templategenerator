@@ -1,51 +1,51 @@
 
 cards-services:
   - card: Card1
-    title: Title 1
+    title: Web Design
     subtitle: Best subtitle ever
-    category: Category 1
+    category: Technology
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service1.jpg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!
   - card: Card2
-    title: Title 2
+    title: Mobile Apps
     subtitle: Best subtitle ever
-    category: Category 2
+    category: Technology
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service2.jpeg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card3
-    title: Title 3
+    title: Training for companies
     subtitle: Best subtitle ever
-    category: Category 3
+    category: Training
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service3.jpeg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card4
-    title: Title 4
+    title: Imagenes corporativas
     subtitle: Best subtitle ever
-    category: Category 4
+    category: Design
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service4.jpg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card5
-    title: Title 5
+    title: Consultancy
     subtitle: Best subtitle ever
-    category: Category 5
+    category: Training
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service5.jpeg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card6
-    title: Title 6
+    title: Software development
     subtitle: Best subtitle ever
-    category: Category 6
+    category: Technology
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service6.jpeg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card7
-    title: Title 7
+    title: Access Control
     subtitle: Best subtitle ever
-    category: Category 7
+    category: Security
     button: Learn more &rarr;
-    img: firsti.jpg
-    description: New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.
+    img: service7.jpeg
+    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
