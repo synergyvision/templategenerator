@@ -32,3 +32,12 @@ footer:
       
 form:
     background:  contact-bg.jpeg
+    inputs:
+      - title: Full Name
+        id: name
+      - title: Email
+        id: email
+        type: email
+      - title: Give us a message
+        id: message
+    button: Send message
