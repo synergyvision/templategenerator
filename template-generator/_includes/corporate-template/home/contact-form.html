@@ -1,0 +1,34 @@
+<div class="section__contact">
+    <div class="book__form">
+        <form action="" class="form">
+            <div class="form__text-side">
+                    {% include corporate-template/title.html title='Contact us' %}
+            </div>
+            <div class="form__input-side">
+                <div class="form__group">
+                    <input type="" class="form__input" placeholder="Full Name" id="name" required>
+                    <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" id="email" required>
+                    <label for="email" class="form__label">Email</label>
+                </div>  
+                <div class="form__group">
+                    <input type="" class="form__input" placeholder="Give us a message" id="message" required>
+                    <label for="message" class="form__label">Give us a message</label>
+                </div>  
+                <div class="form__button">
+                    {% include corporate-template/button-primary.html type=1 title='Send message' %}  
+                </div>
+            </div>
+            </form>
+            </div>
+            
+    </div> 
+</div>
+
+<style>
+    .section__contact{
+        background-image: url("../../1-corporate-template/assets/images/{{site.data.navigation.form.background}}");
+    }
+</style>

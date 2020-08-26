@@ -1,18 +1,35 @@
+.u-center-text{
+    text-align: center !important;
+}
+.u-justify-text{
+    text-align: justify !important;
+}
 .mb-small{
-    margin-bottom: 7.5px;
+    margin-bottom: 7.5px !important;
 }
 .mt-small{
-    margin-top: 7.5px;
+    margin-top: 7.5px !important;
 }
 .mt-medium{
-    margin-top: 15px;
+    margin-top: 15px !important;
 }
 .mb-medium{
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
 }
 .mtb-medium{
-    margin: 15px 0;
+    margin: 15px 0 !important;
 }
 .mt-big{
-    margin-top: 25px;   
+    margin-top: 50px !important;   
 }
+.mb-big{
+    margin-bottom: 50px !important;
+}
+.mt-bigger{
+    margin-top: 100px !important;   
+}
+.mt-neg-bigger{
+    margin-top: -100px !important;   
+}
+
+

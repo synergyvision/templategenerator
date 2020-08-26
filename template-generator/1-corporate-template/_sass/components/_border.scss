@@ -9,8 +9,8 @@
       height: 300px;
       background-image: linear-gradient(
         to right bottom,
-        rgba(rgb(255, 193, 51), 0.8),
-        rgba(#fab617, 1)
+        var(--color-primary),
+        var(--color-primary)
       );
       
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
@@ -39,7 +39,7 @@
     
      
     &__secondary{
-      background-color: rgba(orange, 1);
+      background-color:var(--color-terciary);
       height: 150px;
       
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {

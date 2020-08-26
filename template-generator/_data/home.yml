@@ -1,0 +1,14 @@
+
+sections:
+  why-us:
+    title: Why us?
+    heading: We are the best software developer team in the country
+    paragraphs:
+        - text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio in eos illo similique obcaecati, alias pariatur commodi, qui vero praesentium, magni necessitatibus rem. Dolores cum sapiente optio voluptas hic porro.
+        - text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio in eos illo similique obcaecati, alias pariatur commodi, qui vero praesentium, magni necessitatibus rem. Dolores cum sapiente optio voluptas hic porro.
+    button: More about us
+    composition:
+        - image: composition1.jpeg
+        - image: composition2.jpg
+  services:
+    title: Our services

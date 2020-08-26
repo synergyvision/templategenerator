@@ -1,12 +1,12 @@
 
 banner:
-  title-secondary: Bienvenido a Synplus
-  title-primary: Expertos en desarrollo de software
+  title-secondary: Welcome to Synplus
+  title-primary: The bests in software development 
   description:
   buttons:
-    - title: Descubre más
+    - title: Discover more
       type: 1 
-    - title: Contáctanos
+    - title: Contact us
       type: 2
   background: ../../1-corporate-template/assets/images/office.jpg
 
@@ -26,6 +26,9 @@ footer:
        - title: Privacy Policy
        - title: Terms
     info:
-       - title: Av. de los Castros S/N Xhsi Módulo 1 39341 Caracas, Venezuela
+       - title: Los Castros Avenue. S/N Xhsi Module 1 39341. Caracas, Venezuela
        - title: +58 942 760 866
        - title: synplus@synteam.com
+      
+form:
+    background:  contact-bg.jpeg

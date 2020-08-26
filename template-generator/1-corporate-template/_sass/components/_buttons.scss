@@ -34,7 +34,7 @@
 }
 .btn-1 {
     color: white !important;
-    background:#FFC133 !important;
+    background:var(--color-primary) !important;
     font-weight: 900;
     
     
@@ -69,7 +69,7 @@
     
     rect {
       fill: none;
-      stroke: var(--color-primary);// 
+      stroke: var(--color-primary);
       stroke-width: 2;
       stroke-dasharray: 422, 0;
       transition: all 0.35s linear;
