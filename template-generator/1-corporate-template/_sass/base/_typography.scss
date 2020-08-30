@@ -1,21 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
+*::selection{
+    background-color: var(--color-primary-light);
+}
 
 .title-secondary{
     color: var(--color-title-secondary);
-    font-size: 25px;
+    font-size: 2.5rem;
 
 }
 
 .title-primary {
     color: var(--color-title-primary);
-    font-size: 35px;
+    font-size: 3.5rem;
     letter-spacing: 5px;
 }
 
 .title-terciary{
 
-    font-size: 30px;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block; 

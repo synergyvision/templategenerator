@@ -1,80 +1,119 @@
+.footer{       
+    background-color: var(--color-secondary);
+    padding-bottom: 40px;
+    height: auto;
 
-    .footer{
-        height: auto;
-        background-color: rgb(48, 48, 48);
-        padding: 15px 0 20px 0;
+    &__container{
+        @include abscenter;
+        align-items: flex-start !important;
+        padding:0 100px;
+    }
+
+    &__wave{
+        background-color: var(--color-secondary);
+    }
+    
+    &__copyright{
+        @include abscenter;
+        font-family: 16px;
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: white;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center !important;
+    }
+
+    &__svg-info{
+        fill: white;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__svg-quotes{
+        fill: #58587a; //change
+        height: 100%;
+        width: 100%;
+    }
+}
+
+ .footer-col{
+        margin-top: 20px;
+        display: flex;
+        width: 300px;
+        flex-direction: column;
+        
+
+        &:not(:last-child){
+            margin-right: 40px;
+        }
+
+        &__quotes{
+            height: 50px; width: 50px;
+        }
+
+        &__message{
+            color: white;
+            font-weight: 200;
+            font-size: 1.35rem;
+            text-align: end;
+            transform: translateY(-20px);
+        }
+
+        &__member{
+            border-radius: 100%;
+            height: 50px; width: 50px;
+            transform: translateY(-20px);
+            margin-left: 50px;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover{
+                filter: opacity(.6);
+            }
+        }
+
+        &__title{
+            color: white;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 1.6rem;
+            align-self: center;
+        }
+
         &__logo{
-            height: 100px;
+            height: 60px;
             width: auto;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            
-            img {
+    
+            img{
                 height: 100%;
             }
         }
-
-        &__list{
-            list-style: none;
+        &__description{
+            color: white;
+            font-weight: 100;
+            text-align: justify;
+            font-size: 1.4rem;
+            line-height: 200%;
         }
+       
+        
 
         &__item{
-            display: inline-block;
-            &:not(:last-child){
-                margin-right: 1.5rem;
-            }  
-           
-        }
-        &__link{
-        
-            &:link,&:visited{
-                color: rgb(214, 214, 214);
-                text-decoration: none;
-                text-transform: uppercase;
-                display: inline-block;
-                transition: all .2s;
+            @include abscenter;
+            margin-top: 15px;
+            &__svg{
+                height:18px; width: 18px;
+                width: 25%;      
             }
-            &:hover,&:active{
-                color:rgb(214, 214, 214);
-                box-shadow: 0 1rem 2rem rgba(black,.4);
-                transform: rotate(2.5deg) scale(1.2);
+            &__text{
+                color: white;
+                font-weight: 100;
+                font-size: 1.5rem;
+                width: 75%;
             }
         }
-    }
-    .footer-content{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 15px 0;
-
-        @include respond(tab-port){
-            flex-direction: column;
-        }
-
-        &__navigation, &__info-container{
-            border-top: 1px solid rgb(214, 214, 214);
-            margin-top: 50px;
-            padding: 15px 0;
-            text-align: center;
-        }
-        
-        &__info-container{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        &__info{
-            color:rgb(214, 214, 214);
-            &:last-child{
-                color: var(--color-primary) !important;
-            }
-        }
-    }
-
+ }
     
 
-   
-
-
+    
 

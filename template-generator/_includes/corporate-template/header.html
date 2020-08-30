@@ -1,19 +1,46 @@
-<div class="row">
-    <ul class=" {% if page.url == '/1-corporate-template/' %} main-nav {% else %} main-nav-active {% endif %}" >    
+
+<ul
+    class="main-nav"
+  >
+    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.navigation.baseUrl}}">
         <img
         class="logo"
-        src="../1-corporate-template/assets/images/{{site.data.navigation.navigation.logo}}"
+        src="{{site.data.corporate-template.global.assets.images}}{{site.data.navigation.navigation.logo}}"
         alt="Logo"
-        />
-        <div class="{% if page.url == '/1-corporate-template/' %} main-nav__titles {% else %} main-nav-active__titles {% endif %}">
-        {% for section in site.data.navigation.navigation.titles %}
-        <li>
-            <a href="{{section.url | prepend: site.baseurl }}"
-            >{{section.title}}</a
-            >
-        </li>
-        {% endfor %}
-        </div>
-    </ul>
-</div>
+      />
+    </a>  
+    <div
+      class="main-nav__titles"
+    >
+      {% for section in site.data.navigation.navigation.titles %}
+      <li>
+        <a href="{{section.url | prepend: site.baseurl }}">{{section.title}}</a>
+      </li>
+      {% endfor %}
+    </div> 
+  <!--Mobile navbar-->
+  <div class="main-nav__hamburger">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger-container">
+      <div class="line"></div>
+    </div>
+    <div class="menu main-nav__titles">
+          <div class="dot-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <ul>
+              {% for section in site.data.navigation.navigation.titles %}
+              <li>
+                <a href="{{section.url | prepend: site.baseurl }}">{{section.title}}</a>
+              </li>
+              {% endfor %}
+          </ul>           
+    </div>
+ </div>
+</ul>
 
+
+
+ 

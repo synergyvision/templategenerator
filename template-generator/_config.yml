@@ -25,12 +25,12 @@ twitter_username:
 github_username:  stephanie-cruz
 
 # Build settings
+
 sass:
   load_paths:
         - _sass
         - 1-corporate-template/_sass
 
-include: ['_pages']
 kramdown:
   input: GFM
 

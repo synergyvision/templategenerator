@@ -1,25 +1,48 @@
+<div class="footer__wave " style="height: 150px; overflow: hidden;" ><svg class="footer__svg-info" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;"></path></svg></div>
 <div class="footer">
-    <div class="row">
-        <div class="footer__logo">
-            <img src="../1-corporate-template/assets/images/{{site.data.navigation.navigation.logo}}" alt="logo">
-        </div>
-        <div class="footer-content">
-            <div class="footer-content__navigation">
-                <ul class="footer__list">
-                    {% for item in site.data.navigation.footer.items  %}
-                        <li class="footer__item"><a href="#" class="footer__link">{{ item.title }}</a></li>
-                    {% endfor %}
-                </ul>
+    
+        <div class="footer__container">
+            <div class="footer-col">
+                <div class="footer-col__logo">
+                    <img src="../1-corporate-template/assets/images/{{site.data.navigation.footer.logo}}" alt="logo">
+                </div>
+                <div class="footer-col__description">{{site.data.navigation.footer.description}}</div>
+                
             </div>
-            <div class="footer-content__info-container">
-                {% for info in site.data.navigation.footer.info %}
-                    <div class="footer-content__info">
-                        {{ info.title }}
+            <div class="footer-col">
+                <div class="footer-col__title">
+                   {{site.data.navigation.footer.info-title}}
+                </div>
+                <div class="footer-col__item">
+                    <div class="footer-col__item__svg">
+                        {% include svg.html directory=site.data.navigation.assets.svg-directory image='icon-location' class='footer__svg-info' %}
                     </div>
-                {% endfor %}
+                    <div class="footer-col__item__text">{{site.data.navigation.footer.direction}}</div>
+                </div>
+                <div class="footer-col__item">
+                    <div class="footer-col__item__svg">
+                        {% include svg.html directory=site.data.navigation.assets.svg-directory image='icon-envelope' class='footer__svg-info' %}
+                    </div>
+                    <div class="footer-col__item__text">{{site.data.navigation.footer.email}}</div>
+                </div>
+                <div class="footer-col__item">
+                    <div class="footer-col__item__svg">
+                        {% include svg.html directory=site.data.navigation.assets.svg-directory image='icon-mobile' class='footer__svg-info' %}
+                    </div>
+                    {% for phone in site.data.navigation.footer.phones %}
+                        <div class="footer-col__item__text">{{phone.number}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col__quotes">
+                    {% include svg.html directory=site.data.navigation.assets.svg-directory image='icon-quotes-left' class='footer__svg-quotes' %}
+                </div>
+                <p class="footer-col__message">{{site.data.navigation.footer.member-message}}</p>
+                <img class="footer-col__member" src="../../1-corporate-template/assets/images/member2.jpeg" alt="CEO">
             </div>
         </div>
-    </div>
-   
+        <div class="footer__copyright"> {{site.data.navigation.footer.copyright}}</div>
+
 </div>
 
