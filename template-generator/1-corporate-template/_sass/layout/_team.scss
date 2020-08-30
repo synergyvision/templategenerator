@@ -54,6 +54,7 @@
     margin-top: 17.5px;
     text-align: center;
     text-transform: uppercase;
+    font-size: 1.5rem;
     letter-spacing: 2px;
   }
   &__text-active {
@@ -72,7 +73,8 @@
     img {
       height: 100%;
       width: auto;
-      margin: 0 auto !important;
+      background-position: center;
+      margin-right: auto !important;
     }
   }
 }
@@ -94,11 +96,11 @@
   width: 100%;
   background-image: linear-gradient(
       to right,
-      rgba(black, 0.6) 0%,
-      rgba(black, 0.6) 100%
-    ),url("../../1-corporate-template/assets/images/team-bg.jpeg");
+      rgba(black, 0.2) 0%,
+      rgba(black, 0.2) 100%
+    ),url("../../1-corporate-template/assets/images/Untitled-2.png");
   background-attachment: fixed;
-  background-position: right;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -161,6 +163,8 @@
         margin-top: 10px;
         font-weight: 700;
         text-align: center;
+        font-size: 1.25rem;
+        letter-spacing: 1.5px;
       }
    
   
@@ -196,3 +200,23 @@
 
 
 
+.progress-box{
+  &__bar{
+    width:500px;
+    height:20px;
+    background-color: grey;
+    position: relative;
+    margin-top: 100px;
+    &__animated{
+      width:0px;
+      height: 16px;
+      position: absolute;
+      background-color: greenyellow;
+      top: 2px; left: 0;
+    }
+  }
+
+}
+.yvv{
+  width:20%;
+}

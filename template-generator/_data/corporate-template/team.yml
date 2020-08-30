@@ -12,9 +12,33 @@ features:
 
       
 members:
-    - name: Jhon Doe
+    - name: Roger Millman
       position: CEO
-      image: member1.jpeg
+      image: member8.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Christie Duman
+      position: Position3
+      image: member7.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Jhon Zverev
+      position: CEO
+      image: member1.jpg
       social-media:
           - name: twitter
             account: https://www.twitter.com/
@@ -24,9 +48,9 @@ members:
             account: https://www.github.com/
           - name: pinterest
             account: https://www.pinterest.com/
-    - name: Christie Duman
+    - name: Milos Wallman
       position: Consultant and Engineer
-      image: member6.jpeg
+      image: member6.jpg
       social-media:
           - name: twitter
             account: https://www.twitter.com/
@@ -38,9 +62,9 @@ members:
             account: https://www.pinterest.com/
           - name: instagram
             account: https://www.instagram.com/
-    - name: Javier Hernandez
+    - name: Katy Hernandez
       position: Graphic Designer
-      image: member2.jpeg
+      image: member2.jpg
       social-media:
           - name: twitter
             account: https://www.twitter.com/
@@ -50,7 +74,7 @@ members:
             account: https://www.instagram.com/
     - name: Jake Tylor
       position: Position1
-      image: member3.jpeg
+      image: member3.jpg
       social-media:
           - name: twitter
             account: https://www.twitter.com/
@@ -58,9 +82,9 @@ members:
             account: https://www.facebook.com/
           - name: instagram
             account: https://www.instagram.com/
-    - name: Helen Withmore
+    - name: Nole Djövel
       position: Position2
-      image: member5.png
+      image: member5.jpg
       social-media:
           - name: twitter
             account: https://www.twitter.com/
@@ -72,9 +96,9 @@ members:
             account: https://www.pinterest.com/
           - name: instagram
             account: https://www.instagram.com/
-    - name: Christie Duman
+    - name: Helen Withmore
       position: Position3
-      image: member4.jpeg
+      image: member4.jpg
       social-media:
           - name: twitter
             account: https://www.twitter.com/
