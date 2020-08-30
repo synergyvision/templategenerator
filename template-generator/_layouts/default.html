@@ -3,20 +3,26 @@
 {% include head.html %}
 <body>	
 	{% if page.url != "/1-corporate-template/" %}
+		{% include corporate-template/header.html %}
 	{% endif %}
 	   {{ content }} 	
 	{% include corporate-template/footer.html %}
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 <script src="../javascript/script.js"></script>
 <style lang="scss">
 	:root{
 		--color-primary: {{site.data.colors.color-primary}};
+		--color-primary-light: {{site.data.colors.color-primary-light}};
 		--color-secondary: {{site.data.colors.color-secondary}};
+		--color-secondary-light: {{site.data.colors.color-secondary-light}};
 		--color-terciary: {{site.data.colors.color-terciary}};
-		--contact-background: url({{site.data.navigation.assets.images}}{{site.data.navigation.form.background}});
-		--banner-background: url({{site.data.navigation.assets.images}}{{site.data.navigation.banner.background}});
-		--feature-background: url({{site.data.navigation.assets.images}}{{site.data.navigation.features.background}});
+		--contact-background: url({{site.data.corporate-template.global.assets.images}}{{site.data.navigation.form.background}});
+		--banner-background: url({{site.data.corporate-template.global.assets.images}}{{site.data.navigation.banner.background}});
+		--feature-background: url({{site.data.corporate-template.global.assets.images}}{{site.data.navigation.features.background}});
 	}
 </style>
 </html>

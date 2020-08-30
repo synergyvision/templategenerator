@@ -2,17 +2,55 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 50px 0;
-    background-image: linear-gradient(
-            to top,
-            rgba(white, 1) 0%,
-            rgba(white, .8) 10%,
-            rgba(white, .4) 25%,
-            rgba(white, 0) 50%,
-            rgba(white, .4) 75%,
-            rgba(white, .8) 90%,
-            rgba(white, 1) 100%,
-        ), var(--feature-background);
+   // margin: 50px 0;
+    padding: 50px 0;
+   /* background-image: linear-gradient(
+            to bottom, rgba(white, 1) 0%,
+            rgba(white, .8) 50%,
+            rgba(white, 0) 100%,
+        ), var(--feature-background); */
+    background-color: var(--color-secondary);
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(
+            0 0%, 50% 10%, 100% 0%, 100% 100%,50% 90%, 0 100%
+        ); 
+        clip-path: polygon( 0 0%, 50% 10%, 100% 0%, 100% 100%,50% 90%, 0 100%);
+      }
+  
+        &__text-counter{
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        &__text-message{
+            letter-spacing: 2px;
+            margin-top: 5px;
+            font-size: 1.5rem;
+        }
+        
+        &__circle{
+            height: 70px; width: 70px;
+            border-radius: 100%;
+            background-color: rgb(236, 236, 236);
+            position: relative;
+            box-shadow: 0 5px 5px rgba(black,.15);
+
+        }
+
+        &__svg{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            fill: var(--color-terciary);   
+        }
+        
 }
 
 .feature__card{
@@ -31,22 +69,12 @@
     }
 }
 
-.feature__text{
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 20px;
-    padding: 7px;
-    text-align: center;
-}
-
-.svg{
-    height: 70px;
-    fill: var(--color-terciary);   
-}
 
 .feature-container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    @include abscenter;
+    justify-content: space-around !important;
     padding: 100px 0;
 }
+
+
+

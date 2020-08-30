@@ -1,0 +1,13 @@
+<div class="row">
+    {% include corporate-template/title.html title='Go follow us' %}
+    <div class="social-box">
+        {% for social in site.data.corporate-template.social.accounts %}
+            <div class="social-box__item">
+                <a href="{{social.link}}" target=”_blank”>{{social.account}}</a> 
+                <div class="social-box__item__logo">
+                    {% include svg.html directory=site.data.navigation.assets.svg-directory image=social.svg class='social-box__svg' %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>   
+</div>

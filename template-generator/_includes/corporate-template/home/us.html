@@ -1,14 +1,14 @@
 <div class="mt-neg-bigger">
     {% include corporate-template/title.html title=site.data.home.sections.why-us.title %}
     <div class="row us-col-container mt-big">
-        <div class="us-col us-col__1">
+        <div class="us-col us-col__1 js--wp-1">
             <div class="composition">
                 {% for image in site.data.home.sections.why-us.composition %}
                     <img class="composition__photo" src="../../../1-corporate-template/assets/images/{{image.image}}" alt="">
                 {% endfor %}
             </div>
         </div>
-        <div class="us-col us-col__2">
+        <div class="us-col us-col__2 js--wp-2">
             <div class="us-col__text">
                 <div class="heading mb-medium">
                    {{ site.data.home.sections.why-us.heading }}
@@ -28,8 +28,4 @@
     </div>
    
 </div>
-<div class="border__secondary mt-bigger"></div>
-<style>
 
-    
-</style>

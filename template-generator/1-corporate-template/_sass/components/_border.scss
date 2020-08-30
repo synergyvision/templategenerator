@@ -3,15 +3,9 @@
 .border {
 
     &__primary{
-      z-index: 1;
       transform: translateY(-20%);
-      position: relative;
       height: 300px;
-      background-image: linear-gradient(
-        to right bottom,
-        var(--color-primary),
-        var(--color-primary)
-      );
+      background-color: var(--color-primary-light);
       
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(
@@ -39,16 +33,20 @@
     
      
     &__secondary{
-      background-color:var(--color-terciary);
+      background-color: var(--color-primary);
       height: 150px;
       
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 80%, 0% 100%);
         clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 20%, 50% 80%, 0% 20%);
-        transform: translateY(-100%);
+       
       }
     }
+
+    &__top{
+      transform: translateY(-100%);
+    }
+    
   
   }
     
-  

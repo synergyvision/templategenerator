@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="team-bg">
+    <div class="team-bg__title">
+        <h1>{{site.data.corporate-template.team.section-title}}</h1> 
+    </div>
+    <div class="team-bg__title-big">
+      <h1>And share with them</h1> 
+  </div>
+</div>
+<div class="team-box">
+  {% for feature in site.data.corporate-template.team.features %}
+    <div class="team-box__item">
+      <div class="team-box__circle">
+        {% include svg.html class='team-box__svg' image=feature.icon directory=site.data.corporate-template.global.assets.svg-directory %}
+      </div>
+      <div class="team-box__text">
+          {{ feature.title }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<div class="row">
+  <div class="team-section ">
+    {% for member in site.data.corporate-template.team.members %}
+    <div class="team-card">
+      <div class="team-card__img">
+        <img
+          src="{{site.data.corporate-template.global.assets.images}}{{ member.image }}"
+          alt="{{member.name}}"
+        />
+      </div>
+      <div class="team-card__text-container">
+        <div class="team-card__text">
+            {{ member.name }}
+          </div>
+          <div class="team-card__text team-card__text-active">
+            {{ member.position }}
+          </div>
+          <div class="team-card-social">
+            {% for social in site.data.navigation.social-media %}
+                {% for msocial in member.social-media %}
+                    {% if social.name == msocial.name %}
+                        <a class="team-card-social__1"  href="{{msocial.account}}" target=”_blank”>
+                            {% include svg.html directory=site.data.corporate-template.global.assets.svg-directory image=social.svg-image class=social.class %}
+                        </a>  
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}  
+  </div>
+</div>
+
+

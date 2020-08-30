@@ -1,10 +1,20 @@
-.section__contact {
-    background-image: var(--contact-background);
+.section{
+  
+    &__contact {
+   // background-image: var(--contact-background);
+   background-color: var(--color-primary-light);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 100px 0;
+    padding: 50px 0;
   }
+
+  &__contact-wave{
+    fill: var(--color-primary-light);
+  }
+}
+
+
   .book__form {
     border-radius: 15px;
     margin: 0 auto;
@@ -18,8 +28,8 @@
     @include respond(tab-port){
       background-image: linear-gradient(
           to right,
-          rgba(white, .7) 0%,
-          rgba(white, .7) 100%
+          rgba(white, .9) 0%,
+          rgba(white, .9) 100%
         );}
     @include respond(phone){
         width: 90%;
@@ -33,8 +43,15 @@
   .form {
     @include abscenter;
   
+    &__svg{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
     &__group{
       width: 100%;
+      margin: 0 7px;
       &:not(:last-child) {
           margin-bottom: 20px;
       }
@@ -43,6 +60,9 @@
   
     &__text-side{
       width: 25%;
+      @include abscenter;
+      flex-direction: column;
+
       @include respond(tab-port){
               width: 100%;
       }
@@ -72,7 +92,7 @@
       background-color: rgba(white, 0.5);
       border: none;
       border-bottom: 3px solid var(--color-primary);
-      width: 90%;
+      width: 100%;
       display: block;
       transition: all 0.3s;
   
@@ -112,3 +132,8 @@
     }
   }
   
+  .form__input-side1{
+    display: flex;
+    width: 100%;
+}
+

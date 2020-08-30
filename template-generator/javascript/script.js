@@ -1,8 +1,27 @@
+//typed effect
 var typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
     typeSpeed: 100,
     showCursor: false
 });
+//counter effect
+$(document).ready(function($) {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 10000
+    });
+
+//animations
+    $('.js--wp-1').waypoint(function(direction){
+        $('.js--wp-1').addClass('animated fadeInLeft');  
+    },{offset:'100%;'})
+
+    $('.js--wp-2').waypoint(function(direction){
+        $('.js--wp-2').addClass('animated fadeInRight');  
+    },{offset:'100%;'})
+    
+});
+
 
   // carousel
   let slider_index = 0;
@@ -40,3 +59,5 @@ var typed = new Typed('#typed', {
           })
       });
   
+
+    

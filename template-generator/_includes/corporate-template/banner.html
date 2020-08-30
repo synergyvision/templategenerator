@@ -1,10 +1,8 @@
+  {% include corporate-template/header.html %}
 <div class="header">
-  <nav>
-    {% include corporate-template/header.html %}
-  </nav>
   <div class="banner-container">
-    <div class="header__title">
-      <h2 class="title-secondary">
+    <div class="header__title js--wp-1">
+      <h2 class="title-secondary ">
         {{site.data.navigation.banner.title-secondary}}
       </h2>
       <span id="typed" class="title-primary"></span>
@@ -26,6 +24,10 @@
         {% endfor %}
       </div>
     </div>
+    <div class="banner-container__svg ">
+      {% include svg.html directory='../../1-corporate-template/assets/svg/home.svg#' image='home' class='home-svg' %}
+    </div>
   </div>
 </div>
+
 {% include corporate-template/border.html %}
