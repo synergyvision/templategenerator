@@ -2,9 +2,60 @@
 layout: corporate
 ---
 
-<div class="" style="padding-top: 90px;">
-    {{ content }}
+<div class="team-bg" style="padding-top: 90px;">
+  <div class="team-bg__side">
+    <div class="team-bg__title">
+      <h1>{{ page.title }}</h1>
+      <div class="team-bg__subtitle">
+        <h1>{{ page.subtitle }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="team-bg__side">
+    <div class="team-bg__side__svg">
+      <img
+        src="{{site.data.corporate-template.global.assets.images | relative_url}}{{ page.img }}"
+        alt=""
+      />
+    </div>
+  </div>
 </div>
+<!--Wave-->
+{% include wave.html content='corporate-template/home/contact-form.html'
+color=site.data.corporate-template.colors.color-primary-light %}
+<!--Description-->
+<div class="service row">
+    <div class="service__post">
+        <div class="service__post__title">{{ page.title }}</div>
+        <div class="service__post__by">By Stephanie Cruise</div>
+        <div class="service__post__description service__post__description--1">{{ page.description }}</div>
+        <div class="service__post__description ">{{ page.description-2 }}</div>
+        <i class="fas fa-clock"></i>
 
-<h1>{{ page.url}}</h1>
-<h2>{{ page.title }}</h2>
+    </div>
+    <div class="service__side">
+        <div class="service__side__categories">Categories</div>
+    </div>
+</div>
+<div class="">
+  {{ content }}
+</div>
+{% include corporate-template/title.html title='See all services' %}
+<!--Filtrando servicios para no mostrar servicio actual-->
+{% assign services = "" | split: ',' %} 
+{% for service in site.services %} 
+    {% if service.title != page.title %} 
+        {% assign services = services | push: service %}
+    {% endif %} 
+{% endfor %} 
+<!--Carousel-->
+{% include carousel.html
+cardsFile='corporate-template/card.html' quantity='3.0' cardsCollection=services
+%}
+
+<style>
+    .fas{
+        font-size: 100px;
+        color:blue;
+    }
+</style>

@@ -5,8 +5,8 @@
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<!--FAVICON-->
-	<link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="../1-corporate-template/css/main.css">
+	<link rel="stylesheet" href="{{"/css/main.css" | relative_url }}">
+	<link rel="stylesheet" href="{{ "/1-corporate-template/css/main.css" | relative_url }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
 <!-- Schema.org markup for Google+ -->
@@ -36,4 +36,7 @@
 <meta property="og:price:amount" content="15.00" />
 <meta property="og:price:currency" content="USD" />
 
+  <link rel='stylesheet' id='fontawesome-css'
+    href="{{ "/css/font-awesome.css?ver=5.4.1" | relative_url }}" type='text/css'
+    media='all' />
 </head> 

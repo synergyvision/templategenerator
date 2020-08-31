@@ -13,21 +13,23 @@
                 <div class="footer-col__title">
                    {{site.data.corporate-template.footer.info-title}}
                 </div>
+                {% assign svg-directory={{site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#"}}
+                    %}
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
-                        {% include svg.html directory=site.data.corporate-template.global.assets.svg-icon-directory image='icon-location' class='footer__svg-info' %}
+                        {% include svg.html directory=svg-directory image='icon-location' class='footer__svg-info' %}
                     </div>
                     <div class="footer-col__item__text">{{site.data.corporate-template.footer.direction}}</div>
                 </div>
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
-                        {% include svg.html directory=site.data.corporate-template.global.assets.svg-icon-directory image='icon-envelope' class='footer__svg-info' %}
+                        {% include svg.html directory=svg-directory image='icon-envelope' class='footer__svg-info' %}
                     </div>
                     <div class="footer-col__item__text">{{site.data.corporate-template.footer.email}}</div>
                 </div>
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
-                        {% include svg.html directory=site.data.corporate-template.global.assets.svg-icon-directory image='icon-mobile' class='footer__svg-info' %}
+                        {% include svg.html directory=svg-directory image='icon-mobile' class='footer__svg-info' %}
                     </div>
                     {% for phone in site.data.corporate-template.footer.phones %}
                         <div class="footer-col__item__text">{{phone.number}}</div>
@@ -35,8 +37,9 @@
                 </div>
             </div>
             <div class="footer-col">
+
                 <div class="footer-col__quotes">
-                    {% include svg.html directory=site.data.corporate-template.global.assets.svg-icon-directory image='icon-quotes-left' class='footer__svg-quotes' %}
+                    {% include svg.html directory=svg-directory image='icon-quotes-left' class='footer__svg-quotes' %}
                 </div>
                 <p class="footer-col__message">{{site.data.corporate-template.footer.member-message}}</p>
                 <img class="footer-col__member" src="../../1-corporate-template/assets/images/member2.jpeg" alt="CEO">
