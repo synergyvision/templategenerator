@@ -1,17 +1,17 @@
 <div class="border__secondary"></div>
 <div class="feature">
   <div class="row feature-container">
-    {% for feature in site.data.navigation.features.feature %}
+    {% for feature in site.data.corporate-template.home.sections.features.feature %}
     <div class="feature__card">
-      <div class="feature__circle">
-        {% include svg.html image=feature.icon
-        directory=site.data.corporate-template.global.assets.svg-directory
-        class='feature__svg' %}
-      </div>
-      <div class="feature__text-counter">
-        <span class="counter">{{ feature.number }} </span
-        ><span>{% if feature.plus %} + {% endif %}</span>
-      </div>
+        <div class="feature__circle">
+          {% include svg.html image=feature.icon
+          directory=site.data.corporate-template.global.assets.svg-icon-directory
+          class='feature__svg' %}
+        </div>
+        <div class="feature__text-counter">
+          <span class="counter">{{ feature.number }} </span
+          ><span>{% if feature.plus %} + {% endif %}</span>
+        </div>
       <div class="feature__text-message">{{ feature.text }}</div>
     </div>
     {% endfor %}
