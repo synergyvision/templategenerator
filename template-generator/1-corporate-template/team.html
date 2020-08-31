@@ -14,7 +14,7 @@ layout: default
   {% for feature in site.data.corporate-template.team.features %}
     <div class="team-box__item">
       <div class="team-box__circle">
-        {% include svg.html class='team-box__svg' image=feature.icon directory=site.data.corporate-template.global.assets.svg-directory %}
+        {% include svg.html class='team-box__svg' image=feature.icon directory=site.data.corporate-template.global.assets.svg-icon-directory %}
       </div>
       <div class="team-box__text">
           {{ feature.title }}
@@ -22,8 +22,12 @@ layout: default
     </div>
   {% endfor %}
 </div>
-
-<div class="row">
+<div class="mt-bigger">
+  {% for quality in site.data.corporate-template.team.qualities %}
+    {% include global/progress-bar.html percentage=quality.percentage color=site.data.corporate-template.colors.color-primary  name=quality.name %}
+  {% endfor %}
+</div>
+<div class="row mt-bigger">
   <div class="team-section ">
     {% for member in site.data.corporate-template.team.members %}
     <div class="team-card">
@@ -41,11 +45,11 @@ layout: default
             {{ member.position }}
           </div>
           <div class="team-card-social">
-            {% for social in site.data.navigation.social-media %}
+            {% for social in site.data.corporate-template.team.social-media %}
                 {% for msocial in member.social-media %}
                     {% if social.name == msocial.name %}
                         <a class="team-card-social__1"  href="{{msocial.account}}" target=”_blank”>
-                            {% include svg.html directory=site.data.corporate-template.global.assets.svg-directory image=social.svg-image class=social.class %}
+                            {% include svg.html directory=site.data.corporate-template.global.assets.svg-icon-directory image=social.svg-image class=social.class %}
                         </a>  
                     {% endif %}
                 {% endfor %}
@@ -56,5 +60,3 @@ layout: default
     {% endfor %}  
   </div>
 </div>
-
-

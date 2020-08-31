@@ -4,47 +4,47 @@ cards-services:
     subtitle: Best subtitle ever
     category: Technology
     button: Learn more &rarr;
-    img: prueba.png
+    img: service1.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!
   - card: Card2
     title: Web Design
     subtitle: Best subtitle ever
     category: Technology
     button: Learn more &rarr;
-    img: prueba2.png
+    img: service2.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card3
     title: Training for companies
     subtitle: Best subtitle ever
     category: Training
     button: Learn more &rarr;
-    img: prueba3.png
+    img: service3.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card4
     title: Imagenes corporativas
     subtitle: Best subtitle ever
     category: Design
     button: Learn more &rarr;
-    img: prueba5.png
+    img: service5.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card5
     title: Consultancy
     subtitle: Best subtitle ever
     category: Training
     button: Learn more &rarr;
-    img: prueba6.png
+    img: service6.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card6
     title: Software development
     subtitle: Best subtitle ever
     category: Technology
     button: Learn more &rarr;
-    img: prueba7.png
+    img: service7.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  
   - card: Card7
     title: Access Control
     subtitle: Best subtitle ever
     category: Security
     button: Learn more &rarr;
-    img: prueba8.png
+    img: service8.png
     description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus nemo quia? Impedit repudiandae obcaecati consectetur aliquid totam earum tempora possimus fugit ad odit commodi, ut officiis maiores non rerum!  

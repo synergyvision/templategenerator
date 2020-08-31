@@ -1,5 +1,4 @@
 .team-section {
-  margin: 250px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,11 +93,7 @@
 .team-bg {
   height: 400px;
   width: 100%;
-  background-image: linear-gradient(
-      to right,
-      rgba(black, 0.2) 0%,
-      rgba(black, 0.2) 100%
-    ),url("../../1-corporate-template/assets/images/Untitled-2.png");
+ 
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -107,7 +102,7 @@
   z-index: 1 !important;
   &__title{
       width: 90%;
-      color: white;
+      color: var(--color-secondary);
       position: absolute;
       top: 50%;
       left: 50%;

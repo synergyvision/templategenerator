@@ -10,7 +10,6 @@ features:
     - title: We respect your time
       icon: icon-alarm
 
-      
 members:
     - name: Roger Millman
       position: CEO
@@ -109,3 +108,34 @@ members:
           - name: instagram
             account: https://www.instagram.com/
       
+qualities:
+    - name: Web Design
+      percentage: 90%
+    - name: Graphic Design
+      percentage: 76%
+    - name: Mobile Apps
+      percentage: 88%
+    - name: Software Development
+      percentage: 100%
+    - name: Consultancy
+      percentage: 67%
+    - name: Training for companies
+      percentage: 60%
+
+social-media:
+    - name: twitter
+      svg-image: icon-twitter
+      class: team__social icon-twitter
+    - name: facebook
+      svg-image: icon-facebook
+      class: team__social icon-facebook
+    - name: github
+      svg-image: icon-github
+      class: team__social icon-github
+    - name: pinterest
+      svg-image: icon-pinterest
+      class: team__social icon-pinterest
+    - name: instagram
+      svg-image: icon-instagram
+      class: team__social icon-instagram
+  

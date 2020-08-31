@@ -2,17 +2,17 @@
 <ul
     class="main-nav"
   >
-    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.navigation.baseUrl}}">
+    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.global.baseUrl}}">
         <img
         class="logo"
-        src="{{site.data.corporate-template.global.assets.images}}{{site.data.navigation.navigation.logo}}"
+        src="{{site.data.corporate-template.global.assets.images}}{{site.data.corporate-template.header.logo}}"
         alt="Logo"
       />
     </a>  
     <div
       class="main-nav__titles"
     >
-      {% for section in site.data.navigation.navigation.titles %}
+      {% for section in site.data.corporate-template.header.titles %}
       <li>
         <a href="{{section.url | prepend: site.baseurl }}">{{section.title}}</a>
       </li>
@@ -31,7 +31,7 @@
             <div class="dot"></div>
           </div>
           <ul>
-              {% for section in site.data.navigation.navigation.titles %}
+              {% for section in site.data.corporate-template.header.titles %}
               <li>
                 <a href="{{section.url | prepend: site.baseurl }}">{{section.title}}</a>
               </li>

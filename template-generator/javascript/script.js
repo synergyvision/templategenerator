@@ -83,9 +83,3 @@ $(document).ready(function($) {
       });
   
 
-      function alertt(){
-
-        window.alert('hey')
-      }
-
-    alert();
