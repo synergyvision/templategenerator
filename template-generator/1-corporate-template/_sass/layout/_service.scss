@@ -1,0 +1,43 @@
+.service{
+    @include abscenter;
+    
+    &__post{
+        width: 75%;
+        padding: 0 40px;
+        padding-right: 60px;
+        &__title{
+            color: var(--color-secondary);
+            font-size:3rem;
+            letter-spacing: 3px;
+        }
+        &__by{
+            margin-top: 20px;
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.25px;
+        }
+        &__description{
+            letter-spacing: 1.5px;
+            line-height: 30px;
+            margin-top:20px;
+            text-align: justify;
+            font-size: 1.6rem;
+            font-weight: 300;
+           &::first-letter{
+            margin-left: 40px;
+           } 
+
+        }
+        &__description--1{
+            &::first-letter{
+                font-size: 2.6rem;
+               
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__side{
+        width: 25%;
+    }
+}

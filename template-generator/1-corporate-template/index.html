@@ -5,14 +5,6 @@ layout: corporate
 {% include corporate-template/home/us.html %}
 {% include corporate-template/home/features.html %}
 {% include corporate-template/home/services.html %}
-{% include corporate-template/home/contact-form.html %}
+{% include wave.html content='corporate-template/home/contact-form.html' color=site.data.corporate-template.colors.color-primary-light %}
 {% include corporate-template/home/social-media.html %}
-
-{% for author in site.services %}
-<li>
-  <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-  <h3>{{ author.position }}</h3>
-  <p>{{ author.content | markdownify }}</p>
-</li>
-{% endfor %}
 

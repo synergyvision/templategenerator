@@ -1,7 +1,9 @@
+{% assign svg-directory={{site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#"}}
+%}
 <div class="team-card">
     <div class="team-card__img">
       <img
-        src="{{site.data.corporate-template.global.assets.images}}{{ include.member.image }}"
+        src="{{site.data.corporate-template.global.assets.images | relative_url}}{{ include.member.image }}"
         alt="{{include.member.name}}"
       />
     </div>
@@ -17,7 +19,7 @@
               {% for msocial in include.member.social-media %}
                   {% if social.name == msocial.name %}
                       <a class="team-card-social__1"  href="{{msocial.account}}" target=”_blank”>
-                          {% include svg.html directory=site.data.corporate-template.global.assets.svg-icon-directory image=social.svg-image class=social.class %}
+                          {% include svg.html directory=svg-directory image=social.svg-image class=social.class %}
                       </a>  
                   {% endif %}
               {% endfor %}
