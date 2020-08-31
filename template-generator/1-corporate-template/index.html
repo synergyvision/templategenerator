@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: corporate
 ---
 {% include corporate-template/banner.html %}
 {% include corporate-template/home/us.html %}
@@ -7,4 +7,12 @@ layout: default
 {% include corporate-template/home/services.html %}
 {% include corporate-template/home/contact-form.html %}
 {% include corporate-template/home/social-media.html %}
+
+{% for author in site.services %}
+<li>
+  <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+  <h3>{{ author.position }}</h3>
+  <p>{{ author.content | markdownify }}</p>
+</li>
+{% endfor %}
 

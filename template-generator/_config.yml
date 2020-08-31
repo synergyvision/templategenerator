@@ -34,6 +34,17 @@ sass:
 kramdown:
   input: GFM
 
+
+collections:
+  services:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"    
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

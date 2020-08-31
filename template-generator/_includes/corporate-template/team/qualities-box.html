@@ -1,0 +1,13 @@
+<div class="team-qualities">
+    <div class="team-qualities__img">
+      <img src="{{site.data.corporate-template.global.assets.images}}/{{site.data.corporate-template.team.section-quality.image}}" alt="the team">
+       <div class="team-qualities__img__text">
+         <h1>{{site.data.corporate-template.team.section-quality.text-image}}</h1>
+       </div>
+    </div>
+    <div class="team-qualities__sections">
+      {% for quality in site.data.corporate-template.team.section-quality.qualities %}
+          {% include global/progress-bar.html percentage=quality.percentage color=site.data.corporate-template.colors.color-primary  name=quality.name %}
+      {% endfor %}
+    </div> 
+</div>
