@@ -10,7 +10,9 @@ features:
     - title: We respect your time
       icon: icon-alarm
 
-members:
+team-section:
+  title: Our team
+  members:
     - name: Roger Millman
       position: CEO
       image: member8.jpg
@@ -107,20 +109,23 @@ members:
             account: https://www.github.com/
           - name: instagram
             account: https://www.instagram.com/
-      
-qualities:
-    - name: Web Design
-      percentage: 90%
-    - name: Graphic Design
-      percentage: 76%
-    - name: Mobile Apps
-      percentage: 88%
-    - name: Software Development
-      percentage: 100%
-    - name: Consultancy
-      percentage: 67%
-    - name: Training for companies
-      percentage: 60%
+            
+section-quality:     
+  qualities:
+      - name: Web Design
+        percentage: 90%
+      - name: Graphic Design
+        percentage: 76%
+      - name: Mobile Apps
+        percentage: 88%
+      - name: Software Development
+        percentage: 100%
+      - name: Consultancy
+        percentage: 67%
+      - name: Training for companies
+        percentage: 60%
+  text-image: Lorem ipsum dolor
+  image: team-section.jpeg 
 
 social-media:
     - name: twitter

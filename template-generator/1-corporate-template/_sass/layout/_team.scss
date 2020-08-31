@@ -1,12 +1,6 @@
 .team-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @include respond(tab-port){
-    margin-top: 50px !important;
-  }
+ @include abscenter;
+  margin: 10rem 0;
 }
 
 .team-card {
@@ -90,49 +84,58 @@
   width: 100%;
 }
 
-.team-bg {
-  height: 400px;
-  width: 100%;
- 
-  background-attachment: fixed;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: 1 !important;
-  &__title{
-      width: 90%;
-      color: var(--color-secondary);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      letter-spacing: 5px;
-      font-size: 20px;   
-      text-align: center;
-      z-index: 2;
+
+.team-bg{
+  padding: 0 5%;
+  padding-top:90px;
+  @include abscenter;
+  height: auto;
+
+  justify-content: space-between;
+
+  @include respond(tab-land){
+    justify-content: center;
   }
-  &__title-big{
+  &__side{
+
+    @include abscenter;
+    z-index: 0;
+    height: 100%;
+
+      &__svg{
+        width: 50rem;
+        height: 50rem;
+      }
+  }
+  &__title{
+    width: 90%;  
+    margin: 20px auto;
+    color: var(--color-secondary);
+    letter-spacing: 5px;
+    font-size: 2rem;   
+    text-align: center;
+    z-index: 2;
+  }
+  &__subtitle{
     width: 90%;
     z-index: 1;
     color: rgba(rgb(146, 146, 146), .5);
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    transform: translateY(-10px);
     letter-spacing: 5px;
-    font-size: 21px;   
+    font-size: 1.6rem;   
     text-align: center;
 }
 }
-
+.team-svg{
+  width: 100%;
+  height: 100%;
+}
 .team-box{
-  position: absolute;
     z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
     height: auto;
+    transform: translateY(-50%);
     background-color: rgb(238, 238, 238);
     width: 70%;
     padding: 20px 0;
@@ -140,9 +143,8 @@
     border-radius: 5px;
     @include abscenter;
     
-    @include respond(tab-port){
-      position: relative;
-      margin-top: 50px;
+    @include respond(tab-land){
+      transform: translateY(0);
     }
 
       &__item{
@@ -194,24 +196,56 @@
 
 
 
+.team-qualities{
+    width: 80%;
+    margin: 0 auto;
+    @include abscenter;
+    justify-content: space-between;
 
-.progress-box{
-  &__bar{
-    width:500px;
-    height:20px;
-    background-color: grey;
-    position: relative;
-    margin-top: 100px;
-    &__animated{
-      width:0px;
-      height: 16px;
-      position: absolute;
-      background-color: greenyellow;
-      top: 2px; left: 0;
+    @include respond(tab-land){
+      justify-content: center;
+      width: 90%;
     }
-  }
-
-}
-.yvv{
-  width:20%;
+    & > *{
+      margin: 20px;
+      @include respond(tab-port){
+          margin-top: 40px;
+      }
+    }
+    &__img{
+        @include abscenter;
+        width: 40rem;
+        height: auto;
+        outline-offset: 10px;
+        outline: 7px solid var(--color-primary);
+        position: relative;
+        cursor: pointer;
+        transition: all .3s;
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(black,.2);
+            transition: all .3s;
+          }
+          &__text{
+            letter-spacing: 1.5px;
+            font-size: 1.6rem;
+            color: var(--color-secondary);
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            opacity: 0;
+            transition: all .3s;
+          }
+        &:hover{
+          transform: scale(1.12);
+            img{
+              filter: opacity(0.2);
+            }
+        }
+        &:hover  &__text{
+          opacity: 1;
+        }
+    }
 }
