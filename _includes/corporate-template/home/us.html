@@ -1,0 +1,31 @@
+<div class="mt-neg-bigger">
+    {% include corporate-template/title.html title=site.data.corporate-template.home.sections.why-us.title %}
+    <div class="row us-col-container mt-big">
+        <div class="us-col us-col__1 ">
+            <div class="composition">
+                {% for image in site.data.corporate-template.home.sections.why-us.composition %}
+                    <img class="composition__photo" src="../../../1-corporate-template/assets/images/{{image.image}}" alt="">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="us-col us-col__2 ">
+            <div class="us-col__text">
+                <div class="heading mb-medium">
+                   {{ site.data.corporate-template.home.sections.why-us.heading }}
+                </div>
+                {% for paragraph in site.data.corporate-template.home.sections.why-us.paragraphs %}
+                <div class="paragraph u-justify-text mt-medium">
+                        {{ paragraph.text }}
+                </div>
+                {% endfor %}
+                <div class="us-col-container mt-big">
+                    {% include corporate-template/button-primary.html title=site.data.corporate-template.home.sections.why-us.button
+                        type=2 %}
+                </div>
+            </div>
+               
+        </div>
+    </div>
+   
+</div>
+
