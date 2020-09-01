@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+} 
+
+html{
+    /* font-size: 10px; /* 1 rem is exactly 10 px now*/
+    font-size: 62.5%; /* 10px / 16px */
+ 
+    @include respond (tab-land){font-size: 56.25%;} // 1rem = 9px , 9/16 =56.25%
+    @include respond (tab-port){font-size: 50%;} // 1rem = 8px , 8/16 =50%
+    @include respond (big-desktop){font-size: 75%;}// 1rem = 12px , 12/16 */
+ }
+
+.row{
+    margin: 0 auto;
+    width: 90%;
+  }
