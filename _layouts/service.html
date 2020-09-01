@@ -1,0 +1,38 @@
+---
+layout: corporate
+---
+
+{% include corporate-template/services/service-bg.html service=page %}
+<!--Wave-->
+<div style="margin-top: -100px;">
+    {% include wave.html content='empty-content'
+    color=site.data.corporate-template.colors.color-primary-light %}
+</div>
+<!--Description-->
+{% include corporate-template/services/service-description.html service=page %}
+<!--Title-->
+<div class="mtb-big">
+    {% include corporate-template/title.html title=page.frequent-questions.title %}
+</div>
+{% include corporate-template/cards/questions-card.html collection=page.frequent-questions.collection %}
+<!--Wave-->
+{% include wave.html content='empty-content'
+    color=site.data.corporate-template.colors.color-primary-light %}
+<!--Title-->
+<div class="mtb-big">
+    {% include corporate-template/title.html title=page.other-services.title %}
+</div>
+
+<!--Filtrando servicios para no mostrar servicio actual-->
+{% assign services = "" | split: ',' %} 
+{% for service in site.services %} 
+    {% if service.title != page.title %} 
+        {% assign services = services | push: service %}
+    {% endif %} 
+{% endfor %} 
+<!--Carousel-->
+{% include carousel.html
+cardsFile='corporate-template/cards/service-card.html' quantity='3.0' cardsCollection=services
+%}
+
+<script src="{{ '/javascript/script.js' | relative_url }}"></script>
