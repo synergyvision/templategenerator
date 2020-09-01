@@ -1,0 +1,9 @@
+{% assign svg-directory={{site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#"}}
+%}
+<div class="social-box__item">
+    <a href="{{include.social.link}}" target=”_blank”>{{include.social.account}}</a> 
+    <div class="social-box__item__logo">
+        {% include svg.html directory=svg-directory image=include.svg class=include.class-svg %}
+    </div>
+</div>
+
