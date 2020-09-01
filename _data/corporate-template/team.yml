@@ -1,0 +1,146 @@
+section-title: Meet our fabulous team
+
+features:
+    - title: We build your dream
+      icon: icon-paint-format
+    - title: We work with the heart
+      icon: icon-heart
+    - title: We are a professional team
+      icon: icon-users
+    - title: We respect your time
+      icon: icon-alarm
+
+team-section:
+  title: Our team
+  members:
+    - name: Roger Millman
+      position: CEO
+      image: member8.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Christie Duman
+      position: Position3
+      image: member7.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Jhon Zverev
+      position: CEO
+      image: member1.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: pinterest
+            account: https://www.pinterest.com/
+    - name: Milos Wallman
+      position: Consultant and Engineer
+      image: member6.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: pinterest
+            account: https://www.pinterest.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Katy Hernandez
+      position: Graphic Designer
+      image: member2.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: github
+            account: https://www.github.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Jake Tylor
+      position: Position1
+      image: member3.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Nole Djövel
+      position: Position2
+      image: member5.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: pinterest
+            account: https://www.pinterest.com/
+          - name: instagram
+            account: https://www.instagram.com/
+    - name: Helen Withmore
+      position: Position3
+      image: member4.jpg
+      social-media:
+          - name: twitter
+            account: https://www.twitter.com/
+          - name: facebook
+            account: https://www.facebook.com/
+          - name: github
+            account: https://www.github.com/
+          - name: instagram
+            account: https://www.instagram.com/
+            
+section-quality:     
+  qualities:
+      - name: Web Design
+        percentage: 90%
+      - name: Graphic Design
+        percentage: 76%
+      - name: Mobile Apps
+        percentage: 88%
+      - name: Software Development
+        percentage: 100%
+      - name: Consultancy
+        percentage: 67%
+      - name: Training for companies
+        percentage: 60%
+  text-image: Lorem ipsum dolor
+  image: team-section.jpeg 
+
+social-media:
+    - name: twitter
+      svg-image: icon-twitter
+      class: team__social icon-twitter
+    - name: facebook
+      svg-image: icon-facebook
+      class: team__social icon-facebook
+    - name: github
+      svg-image: icon-github
+      class: team__social icon-github
+    - name: pinterest
+      svg-image: icon-pinterest
+      class: team__social icon-pinterest
+    - name: instagram
+      svg-image: icon-instagram
+      class: team__social icon-instagram
+  

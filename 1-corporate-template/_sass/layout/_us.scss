@@ -1,0 +1,25 @@
+    .us-col-container{
+        @include abscenter;
+
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+    }
+    
+    .us-col{
+        width: 50%; 
+        @include respond(tab-port){
+            width: 100%;
+        }
+        &__1{
+            height: 360px;
+        }
+        &__text{
+            margin: 0 auto;
+            padding: 15px;
+            height: max-content;
+            width: 100%;
+            text-align: center;   
+            font-size: 1.5rem; 
+        }       
+    }

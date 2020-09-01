@@ -1,0 +1,116 @@
+---
+layout: corporate
+---
+
+<div class="team-bg" style="padding-top: 90px;">
+  <div class="team-bg__side">
+    <div class="team-bg__title">
+      <h1>{{ page.title }}</h1>
+      <div class="team-bg__subtitle">
+        <h1>{{ page.subtitle }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="team-bg__side">
+    <div class="team-bg__side__svg">
+      <img
+        src="{{site.data.corporate-template.global.assets.images | relative_url}}{{ page.img }}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+<!--Wave-->
+<div style="margin-top: -100px;">
+    {% include wave.html content='empty-content' color=site.data.corporate-template.colors.color-primary-light %}
+</div>
+<!--Description-->
+{% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: '#' %}
+<div class="service row">
+    <div class="service__post">
+        <div class="service__post__title">{{ page.title }}</div>
+        <div class="service__post__by">
+            <a class="service__post__by__member" href="{{ page.href }}" target=”_blank”>{{ page.by }}</a>
+             {% include svg.html directory=svg-directory image='icon-users' class='service__post__by__svg' %}
+        </div>      
+        <div class="service__post__description service__post__description--1">{{ page.description[0].paragraph }}</div>
+        <div class="service__post__cite">
+                <p>{{ page.quote }}</p>
+                {% include svg.html directory=svg-directory image='icon-quotes-left' class='service__post__cite__quote' %}
+        </div>
+        {% for paragraph in page.description %}
+            {% if paragraph != page.description[0] %}
+            <div class="service__post__description ">{{ paragraph.paragraph }}</div>
+            {% endif %}
+        {% endfor %}
+        <div class="service__post__share">
+            <p>{{page.share.title}}</p>
+                {% for icon in page.share.icons %}
+                {% include svg.html directory=svg-directory image=icon.name class='service__post__share__svg' %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="service__side">
+        <div class="service__side__tags">
+            <div class="service__side__title">{{page.side.tags.title}}</div>
+            <div class="service__side__tags__box">
+                {% for tag in page.side.tags.items %}
+                    <div class="tag">{{tag.title}}</div>
+                {% endfor %}
+            </div>      
+        </div>
+        <div class="service__side__categories">
+            <div class="service__side__title">{{page.side.categories.title}}</div>
+            {% for cat in page.side.categories.tags %}
+                <div class="service__side__categories__item">
+                    <div class="item">{{cat.title}}</div>
+                    <div class="item">{{cat.percentage}}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="service__side__members">
+            <div class="service__side__title">{{page.side.participants.title}}</div>
+            {% for member in page.side.participants.list %}
+                <div class="member-quote">
+                    <div class="circle">
+                        <img src="{{site.data.corporate-template.global.assets.images}}{{member.img}}" alt="{{member.name}}">
+                    </div>
+                    <div class="text">
+                        {{member.name}}
+                        <div class="text__second">
+                           {{member.text}}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="">
+  {{ content }}
+</div>
+<div class="mtb-big">
+    {% include corporate-template/title.html title=page.frequent-questions.title %}
+</div>
+{% include corporate-template/cards/questions-card.html collection=page.frequent-questions.collection %}
+
+{% include wave.html content='empty-content'
+    color=site.data.corporate-template.colors.color-primary-light %}
+
+<div class="mtb-big">
+    {% include corporate-template/title.html title=page.other-services.title %}
+</div>
+
+<!--Filtrando servicios para no mostrar servicio actual-->
+{% assign services = "" | split: ',' %} 
+{% for service in site.services %} 
+    {% if service.title != page.title %} 
+        {% assign services = services | push: service %}
+    {% endif %} 
+{% endfor %} 
+<!--Carousel-->
+{% include carousel.html
+cardsFile='corporate-template/cards/service-card.html' quantity='3.0' cardsCollection=services
+%}
+

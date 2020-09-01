@@ -1,0 +1,240 @@
+.service{
+    @include abscenter;
+
+    @include respond(tab-land){
+        flex-direction: column;
+    }
+
+    height: max-content;
+    &__post{
+        width: 75%;
+        padding: 0 40px;
+        padding-right: 60px;
+
+        @include respond(tab-land){
+            width: 90%;
+        }
+
+        &__title{
+            color: var(--color-secondary);
+            font-size:3rem;
+            letter-spacing: 3px;
+        }
+        &__by{
+            @include abscenter;
+            justify-content: start;
+            &__member{
+                margin-top: 20px;
+                padding-left: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1.25px;
+                text-decoration: none;
+                color: var(--color-secondary-light);
+                transition: color .2s;
+                &:hover{
+                    color: var(--color-primary);
+                }
+            }
+            &__svg{
+                fill: var(--color-secondary-light);
+                width: 20px;
+                height: 20px;
+                align-self: center;
+            }
+        }
+        
+        &__cite{          
+            margin-bottom: 30px;
+            margin-top:50px; 
+            position: relative;
+            &__quote{
+                fill: rgba(255, 181, 43, 0.678);//#5548617a;
+                position: absolute;
+                top:-25%; left: 0;
+                width:100px; height: 100px;
+                z-index: 0;
+            }
+            p{  
+                text-align: center;
+                padding: 20px 10px;
+                color: var(--color-secondary);
+                font-weight: 500;
+                letter-spacing: 1.25px;
+                line-height: 40px;
+                font-size: 2.8rem;
+                z-index: 99999999;
+            }
+        }
+
+        &__description{
+            letter-spacing: 1.5px;
+            line-height: 30px;
+            margin-top:20px;
+            text-align: justify;
+            font-size: 1.6rem;
+            font-weight: 300;
+           &::first-letter{
+            margin-left: 40px;
+           } 
+
+        }
+        &__description--1{
+            &::first-letter{
+                font-size: 2.6rem;
+               
+                font-weight: 400;
+            }
+        }
+        &__share{
+            margin-top: 40px;
+            @include abscenter;
+            justify-content: flex-start;
+            p{
+                font-size: 1.4rem;
+                letter-spacing: 1.2px;
+                color: var(--color-primary-light);
+                margin-right: 20px;
+                text-transform: uppercase;
+            }
+            &__svg{
+                cursor: pointer;
+                fill:var(--color-primary-light);
+                height: 20px;
+                width: 20px;
+                transition: all .2s;
+                &:hover{
+                    fill: var(--color-secondary-light);
+                }
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    &__side{
+        width: 25%;
+        height: inherit;
+        border-radius: 10px 0 0 10px;
+        //box-shadow: 0 5px 10px #5548617a;
+        align-self: flex-start;
+        padding: 15px;
+
+        @include respond(tab-land){
+            width: 90%;
+            margin-top: 40px;
+        }
+
+        &__title{
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 20px;
+            
+        }
+        &__tags{
+            margin: 20px 0 40px 0;
+            &__box{
+                @include abscenter;
+                
+                .tag{
+                    margin: 20px 10px 0 0;
+                    padding:10px;
+                    border-radius: 20px;
+                    background-color: var(--color-primary-light);
+                    color: white;
+                    cursor: pointer;
+                    font-size: 1.4rem;
+                    transition: all .2s;
+                    &:hover{
+                        background-color: #5548617a;
+                        box-shadow: 0 5px 10px rgba(black,.2);
+                        transform: scale(1.12);
+                    }
+                }
+            }
+        }
+
+        &__categories{
+            margin: 20px 0 40px 0;
+            @include respond(tab-land){
+                width: 50%;
+                margin: 40px auto;
+            }
+            @include respond(phone){
+                width: 100%;
+                margin: 40px auto;
+            }
+            &__item{
+                @include abscenter;
+                justify-content: space-between;
+                font-size: 1.4rem;
+                color: var(--color-secondary-light);
+                margin-top: 15px;
+                transition: color .3s;
+                cursor: pointer;
+                &:hover{
+                    color: var(--color-primary-light);
+                }
+               
+            }
+            
+        }
+
+        &__members{
+            margin: 20px 0 40px 0;
+           
+            @include respond(tab-land){
+                width: 50%;
+                margin: 40px auto;
+            }
+            @include respond(phone){
+                width: 100%;
+                margin: 40px auto;
+            }
+            .member-quote{
+                height: auto;
+                margin-top: 40px;
+                @include abscenter;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--color-secondary-light);
+
+
+                .circle{
+                    position: relative;
+                    border-radius: 100%;
+                    width: 65px; height: 65px;
+                    background-color: var(--color-primary-light);
+                    img{
+                        position: absolute;
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        cursor: pointer;
+                        transition: all .3s;
+                        &:hover{
+                            filter: opacity(0.6);
+                        }
+                    }
+                }
+                .text{
+                    @include abscenter;
+                    flex-direction: column;
+                    width: 70%;
+                    margin-top: 10px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    color: var(--color-secondary-light);
+                    text-align: center;
+                    font-size: 1.8rem;
+                    &__second{
+                        color: var(--color-primary-light);
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

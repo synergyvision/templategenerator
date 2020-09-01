@@ -1,0 +1,68 @@
+<div class="row">
+    <div id="slider-container" >
+        <p id="arrow-prev" class="slider-arrow ">&#10094;</p>
+        {% capture slices %} {{include.cardsCollection| size | ceil | divided_by : include.quantity | ceil }}  {% endcapture %}
+        {% assign i = 0 %}
+        {% for slice in (1..slices) %}
+            <div class="slide">       
+                <div class="slide-container">
+                    {% for card in (1..include.quantity) %}   
+                        {% if include.cardsCollection[i] %}
+                            {% assign cardInfo = include.cardsCollection[i]  %}
+                            {% assign file = include.cardsFile %}
+                                {% include {{file}} card=cardInfo %}
+                                {% assign i = i | plus:1 %}  
+                        {% endif %}         
+                    {% endfor %}
+                </div>
+            </div>           
+       {% endfor %}  
+        <p id="arrow-next" class="slider-arrow ">&#10095;</p>        
+    </div>
+    
+    <div id="dots-wrapper" class="">
+        {% for s in (1..slices) %}
+            <div class="dot-nav"></div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<script >
+
+  // carousel
+  let slider_index = 0;
+
+function show_slide(index,side){
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot-nav');
+    if (index >= slides.length) slider_index = 0;
+    if (index < 0)  slider_index = slides.length - 1;
+    for (let i=0; i<slides.length;i++){
+        slides[i].style.display = 'none';
+        dots[i].classList.remove('active-dot');
+    };
+    slides[slider_index].style.display = 'block';
+    if (side === 'next')
+    slides[slider_index].style.animation = ' fadenext 1s ';
+    else 
+    slides[slider_index].style.animation = ' fadeprev 1s ';
+    dots[slider_index].classList.add('active-dot')
+}
+
+show_slide(slider_index);
+
+document.querySelector('#arrow-prev').addEventListener('click', ()=>{
+    show_slide(--slider_index,'prev');
+});
+document.querySelector('#arrow-next').addEventListener('click', ()=>{
+    show_slide(++slider_index,'next');
+});
+document.querySelectorAll('.dot-nav').forEach((el)=>{
+        el.addEventListener('click', function (){
+            var dots = Array.prototype.slice.call(this.parentElement.children),
+            dot_index = dots.indexOf(el);
+            show_slide(slider_index = dot_index) 
+        })
+    });
+</script>

@@ -1,0 +1,38 @@
+.composition {
+  position: relative;
+  &__photo {
+    height: 180px;
+    box-shadow: 0 15px 40px rgba(black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 10px;
+
+    @include respond(phone) {
+      height: 90px;
+    }
+
+    &:first-child {
+      left: 25%;
+      top: 150px;
+      transform: translate(-25%, -25%);
+    }
+    &:last-child {
+      top: 100px;
+      left: 50%;
+      transform: translate(-25%, -25%);
+    }
+
+    &:hover {
+      outline: 7.5px solid var(--color-primary);
+      box-shadow: 0 25px 4px rgba(black, 0.5);
+      z-index: 11;
+    }
+  }
+  &:hover .composition__photo:not(:hover) {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    filter: grayscale(1);
+  }
+}
