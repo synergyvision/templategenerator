@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="progress-bar">
+        <div class="progress-bar__text">
+            <div class="progress-bar__text__name">{{include.name}}</div>
+            <div class="progress-bar__text__percentage">{{include.percentage}}</div>
+        </div>
+        <div class="progress-bar__content" >
+            <div class="progress-bar__content__top" style="width:{{ include.percentage }};">
+                <div class="percentage" style=" background-color: {{include.color}};">
+                    <div class="percentage__circle"></div>
+                </div>
+            </div> 
+        </div>
+    </div>   
+</div>
+  
+  
+  
