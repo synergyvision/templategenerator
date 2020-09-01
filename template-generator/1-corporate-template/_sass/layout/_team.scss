@@ -88,9 +88,9 @@
 .team-bg{
   padding: 0 5%;
   padding-top:90px;
+  padding-bottom: 0;
   @include abscenter;
-  height: auto;
-
+  height: max-content;
   justify-content: space-between;
 
   @include respond(tab-land){
