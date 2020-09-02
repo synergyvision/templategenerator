@@ -18,13 +18,15 @@ email: stephaniecruzcastelli@gmail.com
 description: Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "templategenerator" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 template1-url: "/1-corporate-template/"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  stephanie-cruz
 
 # Build settings
+
+destination: docs
 
 sass:
   load_paths:
