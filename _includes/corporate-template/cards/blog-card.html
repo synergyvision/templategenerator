@@ -1,0 +1,18 @@
+<div class="blog-card">
+    <div class="blog-card__img">
+        <img src="{{site.data.corporate-template.global.assets.images}}{{include.post.image}}" alt="{{include.post.alt}}">
+    </div>
+    <div class="blog-card__info">
+        <div class="title">{{include.post.title}}</div>
+        <div class="by">{{include.post.by}}</div>
+        <div class="description">{{include.post.description | truncatewords: 50 }}</div>
+        {% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#" %}
+        <div class="more">
+            <div class="update">
+                {% include svg.html directory=svg-directory image=include.img class='blog-card__info__svg' %}
+                <p>{{include.post.updated}}</p>
+            </div>
+            <a class="btn-text" href="">{{include.button}}</a>
+        </div>
+    </div>
+</div>

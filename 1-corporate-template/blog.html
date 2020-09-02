@@ -1,0 +1,48 @@
+---
+layout: corporate
+---
+
+<!--Banner-->
+{% include corporate-template/sections-banner.html
+title=site.data.corporate-template.blog.banner.title
+subtitle=site.data.corporate-template.blog.banner.subtitle
+img=site.data.corporate-template.blog.banner.img
+type=site.data.corporate-template.blog.banner.type %}
+
+
+<!--Wave-->
+<div style="margin-top: -100px;">
+  {% include wave.html content='empty-content'
+  color=site.data.corporate-template.colors.color-primary-light %}
+</div>
+
+
+
+<!--Content-->
+<div class="blog mtb-big">
+    <div class="blog__content">
+        <!--Title-->
+        {% include corporate-template/title.html title=site.data.corporate-template.blog.posts.title %}
+        <div class="mt-bigger">
+            {% for post in site.data.corporate-template.blog.posts.collection %} {%
+                include corporate-template/cards/blog-card.html post=post
+                img=site.data.corporate-template.blog.posts.post-icon-name 
+                button=site.data.corporate-template.blog.posts.button %} {% endfor %}
+        </div>      
+    </div>
+    <div class="blog__side">
+            <div class="blog__side__title">{{site.data.corporate-template.blog.posts.top.title}}</div>
+            {% assign tops=0 %}
+            {% for spost in site.data.corporate-template.blog.posts.collection %}
+                {% if tops < site.data.corporate-template.blog.posts.top.quantity %}
+                    {% if spost.top %}
+                        {% assign tops=tops | plus:1 %}
+                        {% include corporate-template/cards/blog-small-card.html post=spost %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <div class="mt-big abscenter">
+                {{ site.data.corporate-template.blog.posts.twitter.embebed}}
+            </div>
+    </div>
+</div>

@@ -23,7 +23,9 @@ template1-url: "/1-corporate-template/"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  stephanie-cruz
-
+gems: [jekyll-paginate]
+paginate: 4
+paginate_path: "/blog/page:num/"
 # Build settings
 
 sass:
