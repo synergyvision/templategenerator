@@ -10,9 +10,9 @@
         <div class="more">
             <div class="update">
                 {% include svg.html directory=svg-directory image=include.img class='blog-card__info__svg' %}
-                <p>{{include.post.updated}}</p>
+                <p>{{include.post.created}}</p> <p style="margin-left:10px;">{{include.post.date | date: "%b %d, %y"}}</p>
             </div>
-            <a class="btn-text" href="">{{include.button}}</a>
+            <a class="btn-text" href="{{include.post.url}}">{{include.button}}</a>
         </div>
     </div>
 </div>

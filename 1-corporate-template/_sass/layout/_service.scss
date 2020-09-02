@@ -23,8 +23,9 @@
         &__by{
             @include abscenter;
             justify-content: start;
+            margin-top: 20px;
             &__member{
-                margin-top: 20px;
+                
                 padding-left: 10px;
                 text-transform: uppercase;
                 letter-spacing: 1.25px;
@@ -36,6 +37,7 @@
                 }
             }
             &__svg{
+                margin-left: 10px;
                 fill: var(--color-secondary-light);
                 width: 20px;
                 height: 20px;

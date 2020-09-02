@@ -8,9 +8,9 @@
             <div class="title">{{include.post.title}}</div>
             <div class="update">
                 {% include svg.html directory=svg-directory image='icon-calendar' class='blog-card__info__svg' %}
-                <p>{{include.post.updated}}</p>
+                <p>{{include.post.created}}</p> <p style="margin-left:5px;">{{include.post.date | date: "%b %d, %y"}}</p>
             </div>
-            <a href=""><div class="plus">&plus;</div></a>
+            <a href="{{include.post.url}}"><div class="plus">&plus;</div></a>
         </div>
     </div>
 </div>

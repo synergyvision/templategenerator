@@ -23,8 +23,9 @@ type=site.data.corporate-template.blog.banner.type %}
     <div class="blog__content">
         <!--Title-->
         {% include corporate-template/title.html title=site.data.corporate-template.blog.posts.title %}
+        {% assign sorted-blogs= site.blogs | sort: "date"  %}
         <div class="mt-bigger">
-            {% for post in site.data.corporate-template.blog.posts.collection %} {%
+            {% for post in sorted-blogs %} {%
                 include corporate-template/cards/blog-card.html post=post
                 img=site.data.corporate-template.blog.posts.post-icon-name 
                 button=site.data.corporate-template.blog.posts.button %} {% endfor %}
@@ -33,7 +34,7 @@ type=site.data.corporate-template.blog.banner.type %}
     <div class="blog__side">
             <div class="blog__side__title">{{site.data.corporate-template.blog.posts.top.title}}</div>
             {% assign tops=0 %}
-            {% for spost in site.data.corporate-template.blog.posts.collection %}
+            {% for spost in site.blogs %}
                 {% if tops < site.data.corporate-template.blog.posts.top.quantity %}
                     {% if spost.top %}
                         {% assign tops=tops | plus:1 %}

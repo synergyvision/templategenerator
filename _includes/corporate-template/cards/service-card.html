@@ -8,7 +8,7 @@
       <div class="xy">
         <h1 class="title2">{{include.card.title}}</h1>
         <h2 class="sub_title">{{include.card.subtitle}}</h2>
-        {% assign description={{include.card.description | truncatewords 360}} %}
+        {% assign description={{include.card.description[0].paragraph | truncatewords 360}} %}
         <p class="description">{{description}}</p>
         <a href="{{include.card.url}}" class="btn-text hide">{{include.card.button}}</a>
       </div>
