@@ -3,8 +3,9 @@ layout: corporate
 ---
 
 {% include corporate-template/sections-banner.html title=page.title subtitle=page.subtitle img=page.img type=page.img-type %}
+
 <!--Wave-->
-<div style="margin-top: -100px;">
+<div style="margin-top: -100px;" >
     {% include wave.html content='empty-content'
     color=site.data.corporate-template.colors.color-primary-light %}
 </div>
@@ -35,4 +36,3 @@ layout: corporate
 cardsFile='corporate-template/cards/service-card.html' quantity='3.0' cardsCollection=services
 %}
 
-<script src="{{ '/javascript/script.js' | relative_url }}"></script>

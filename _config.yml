@@ -23,9 +23,9 @@ template1-url: "/1-corporate-template/"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  stephanie-cruz
-gems: [jekyll-paginate]
-paginate: 4
-paginate_path: "/blog/page:num/"
+#gems: [jekyll-paginate]
+#paginate: 4
+#paginate_path: "/blog/page:num/"
 # Build settings
 
 sass:
@@ -41,7 +41,11 @@ kramdown:
 collections:
   services:
     output: true
-   # permalink: 1-corporate-template/service/:path.html
+    permalink: templategenerator/1-corporate-template/:path.html
+  blogs:
+    output: true
+    permalink: templategenerator/1-corporate-template/:path.html
+ 
 
 defaults:
   - scope:
@@ -49,6 +53,11 @@ defaults:
       type: "services"
     values:
       layout: "service"    
+  - scope:
+      path: ""
+      type: "blogs"
+    values:
+      layout: "blog" 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

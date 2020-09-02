@@ -2,7 +2,7 @@
 <ul
     class="main-nav"
   >
-    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.global.baseUrl}}">
+    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.global.baseUrl | prepend: site.baseurl }}">
         <img
         class="logo"
         src="{{site.data.corporate-template.global.assets.images | relative_url }}{{site.data.corporate-template.header.logo}}"
