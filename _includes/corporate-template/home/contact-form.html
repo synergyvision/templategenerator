@@ -2,8 +2,9 @@
     <div class="book__form ">
         <form action="" class="form">
             <div class="form__text-side">
-                    {% include corporate-template/title.html title='Contact us' %}
-                    {% include svg.html directory='../../1-corporate-template/assets/svg/contact.svg#' image='mail' class='form__svg'  %}
+                    {% include corporate-template/title.html title=site.data.corporate-template.home.sections.form.title %}
+                    {% assign svg-directory='/1-corporate-template/assets/svg/contact.svg' | relative_url | append: '#' %}
+                    {% include svg.html directory=svg-directory image='mail' class='form__svg'  %}
             </div>
             <div class="form__input-side">
                 <div class="form__input-side1">

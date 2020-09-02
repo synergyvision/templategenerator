@@ -4,7 +4,8 @@
         <div class="footer__container">
             <div class="footer-col">
                 <div class="footer-col__logo">
-                    <img src="../1-corporate-template/assets/images/{{site.data.corporate-template.footer.logo}}" alt="logo">
+                    {% assign logo-path='/1-corporate-template/assets/images' | relative_url %}
+                    <img src="{{logo-path}}/{{site.data.corporate-template.footer.logo}}" alt="logo">
                 </div>
                 <div class="footer-col__description">{{site.data.corporate-template.footer.description}}</div>
                 
@@ -37,15 +38,15 @@
                 </div>
             </div>
             <div class="footer-col">
-
+                {% assign image-directory={{site.data.corporate-template.global.assets.images  | relative_url }}
+                    %}
                 <div class="footer-col__quotes">
                     {% include svg.html directory=svg-directory image='icon-quotes-left' class='footer__svg-quotes' %}
                 </div>
                 <p class="footer-col__message">{{site.data.corporate-template.footer.member-message}}</p>
-                <img class="footer-col__member" src="../../1-corporate-template/assets/images/member2.jpeg" alt="CEO">
+                <img class="footer-col__member" src="{{image-directory}}/{{site.data.corporate-template.footer.member-image}}" alt="{{site.data.corporate-template.footer.member-alt}}">
             </div>
         </div>
         <div class="footer__copyright"> {{site.data.corporate-template.footer.copyright}}</div>
-
 </div>
 

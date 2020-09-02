@@ -1,7 +1,6 @@
 ---
 layout: corporate
 ---
-
 <div class="team-bg">
       <div class="team-bg__side">
         <div class="team-bg__title">
@@ -11,9 +10,11 @@ layout: corporate
             </div>
         </div>    
     </div>
+
     <div class="team-bg__side">
       <div class="team-bg__side__svg">
-        {% include svg.html directory='../../1-corporate-template/assets/svg/team.svg#' image='team' class='team-svg' %}
+        {% assign svg-directory= '/1-corporate-template/assets/svg/team.svg' | relative_url | append: "#" %}
+        {% include svg.html directory=svg-directory image='team' class='team-svg' %}
       </div>
     </div>
 </div>

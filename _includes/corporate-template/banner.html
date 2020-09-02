@@ -23,8 +23,10 @@
         {% endfor %}
       </div>
     </div>
+    {% assign svg-directory='/1-corporate-template/assets/svg/home.svg' | relative_url | append: "#"
+    %}
     <div class="banner-container__svg ">
-      {% include svg.html directory='../../1-corporate-template/assets/svg/home.svg#' image='home' class='home-svg' %}
+      {% include svg.html directory=svg-directory image='home' class='home-svg' %}
     </div>
   </div>
 </div>

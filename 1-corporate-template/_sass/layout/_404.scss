@@ -1,0 +1,44 @@
+.page-404{
+    height: 90vh;
+    background-color: white;
+    width: 100%;
+
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        .error-message{
+            border-radius: 15px;
+            width: 35%;
+            height: auto;
+            text-align: center;
+            color: var(--color-secondary);
+            box-shadow: 0 5px 15px rgba(black,.4);
+            padding: 20px 20px 40px 20px;
+
+            @include respond(tab-port){
+                width: 80%;
+            }
+
+            &__svg{
+                width: 180px;
+                height: 180px;
+            }
+            h3{
+                font-size: 3rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+            }
+            p{
+                margin-top: 20px;
+                font-size: 2rem;
+            }
+        }
+    }
+     
+}
+  
+  

@@ -46,7 +46,7 @@
             {% for member in include.service.side.participants.list %}
                 <div class="member-quote">
                     <div class="circle">
-                        <img src="{{site.data.corporate-template.global.assets.images}}{{member.img}}" alt="{{member.name}}">
+                        <img src="{{site.data.corporate-template.global.assets.images | relative_url }}{{member.img}}" alt="{{member.name}}">
                     </div>
                     <div class="text">
                         {{member.name}}
