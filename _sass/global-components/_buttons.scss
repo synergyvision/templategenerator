@@ -2,8 +2,7 @@
 .btn-text{
 	align-self: flex-end;
 	margin-top: auto;
-	display: none;
-	opacity: 0;
+
     &:link,&:visited{
         font-size: 16px;
         color: var(--color-primary);

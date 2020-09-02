@@ -1,4 +1,10 @@
-section-title: Meet our fabulous team
+title: Meet our fabulous team
+subtitle: And share with them
+bg-image:
+    id: 'team'
+    type: 'svg' #or image
+    img: 'team.svg#'
+    
 
 features:
     - title: We build your dream
