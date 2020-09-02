@@ -26,6 +26,8 @@ github_username:  stephanie-cruz
 
 # Build settings
 
+destination: docs
+
 sass:
   load_paths:
         - _sass
@@ -50,8 +52,8 @@ defaults:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
+exclude:
+  - propuesta
 #   - Gemfile.lock
 #   - node_modules
 #   - vendor/bundle/

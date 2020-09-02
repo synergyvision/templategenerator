@@ -9,3 +9,7 @@
 
 ## How to use 🧮
 
+## docs generation
+
+`jekyll build -d docs`
+
