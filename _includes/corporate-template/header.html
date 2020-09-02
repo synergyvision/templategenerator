@@ -5,7 +5,7 @@
     <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.global.baseUrl}}">
         <img
         class="logo"
-        src="{{site.data.corporate-template.global.assets.images}}{{site.data.corporate-template.header.logo}}"
+        src="{{site.data.corporate-template.global.assets.images | relative_url }}{{site.data.corporate-template.header.logo}}"
         alt="Logo"
       />
     </a>  
@@ -14,7 +14,7 @@
     >
       {% for section in site.data.corporate-template.header.titles %}
       <li>
-        <a href="{{section.url | prepend: site.template1-url }}">{{section.title}}</a>
+        <a href="{{section.url | prepend: site.template1-url | prepend: site.baseurl }}">{{section.title}}</a>
       </li>
       {% endfor %}
     </div> 
