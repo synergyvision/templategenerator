@@ -1,4 +1,5 @@
-    .us-col-container{
+// Home page
+.us-col-container{
         @include abscenter;
 
         @include respond(tab-port){
@@ -23,3 +24,90 @@
             font-size: 1.5rem; 
         }       
     }
+
+// us.html
+
+
+.us-quote{
+    width:100%;
+    height: auto;
+    position: relative;
+
+    &__card{
+        width: 60%;
+        @include respond(tab-port){
+            width: 80%;
+        }
+        position: absolute;
+        top: 25%; left: 10%;
+        
+    }
+
+    &__blob{
+        width: 50%;
+        margin-left: auto;
+    }
+}
+
+.reverse{
+    flex-direction: row-reverse !important;
+}
+
+.our-section{
+    @include abscenter;
+    justify-content: space-around;
+    .our-card{
+        margin:100px  20px;
+        background-color: #fff;
+        width:300px;
+        height: 150px;
+        box-shadow: 0 5px 15px rgba(black,.2);
+        position: relative;
+        z-index:4;
+        transition: all .3s;
+        &:hover{
+            transform: scale(1.05);
+        }
+            &__animated-circles{
+                z-index: 2;
+                position: absolute;
+                top: 0; left: 0;
+                transform: translateY(-50%) translateX(-35%);
+
+            }
+
+            &__text{
+                @include abscenter;
+                text-align: center;
+                height: 100%;
+                margin-left: 100px;
+                
+                color: var(--color-secondary-light);
+                .title{
+                    font-size: 3rem;
+                }
+            }
+    }
+
+    .our-text{
+        width: 50%;
+        font-size: 1.8rem;
+        color: var(--color-secondary);
+        text-align: center;
+        letter-spacing: 1.5px;
+
+
+        .line{
+            width: 100px;
+            height: 2px;
+            background-color: var(--color-primary);
+            margin: 15px auto;
+            @include abscenter;
+        }
+
+        @include respond(tab-port){
+            width: 80%;
+        }
+    }
+
+}

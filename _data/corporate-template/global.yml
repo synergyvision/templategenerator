@@ -4,4 +4,4 @@ baseUrl: /1-corporate-template/
 assets:
     svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'
     images: /1-corporate-template/assets/images/
-    svg-directory: '/1-corporate-template/assets/svg'
+    svg-directory: '/1-corporate-template/assets/svg/'

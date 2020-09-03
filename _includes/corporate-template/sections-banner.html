@@ -1,0 +1,23 @@
+<div class="team-bg" style="padding-top: 90px;">
+    <div class="team-bg__side">
+      <div class="team-bg__title">
+        <h1>{{ include.title }}</h1>
+        <div class="team-bg__subtitle">
+          <h1>{{ include.subtitle }}</h1>
+        </div>
+      </div>
+    </div>
+    <div class="team-bg__side">
+      <div class="team-bg__side__svg">
+        {% if include.type == 'svg' %}
+            {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: include.img }}{% endcapture %}
+            {% include global/svg.html directory=svg-directory image=include.id class='team-svg'  %}
+        {% else %}
+          <img
+            src="{{site.data.corporate-template.global.assets.images | relative_url}}{{ include.img }}"
+            alt=""
+          />
+        {% endif %}
+      </div>
+    </div>
+  </div>

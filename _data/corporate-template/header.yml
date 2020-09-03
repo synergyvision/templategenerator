@@ -1,10 +1,10 @@
 titles:
   - title: About us
-    url: 'us'
+    url: 'us.html'
   - title: Our clients
     url: 'our-clients'
   - title: Our team
     url: 'team.html'
   - title: Blog
-    url: Blog
+    url: 'blog.html'
 logo: logo-color.png

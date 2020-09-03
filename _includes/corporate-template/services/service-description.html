@@ -4,12 +4,12 @@
         <div class="service__post__title">{{ include.service.title }}</div>
         <div class="service__post__by">
             <a class="service__post__by__member" href="{{ include.service.href }}" target=”_blank”>{{ include.service.by }}</a>
-             {% include svg.html directory=svg-directory image='icon-users' class='service__post__by__svg' %}
+             {% include global/svg.html directory=svg-directory image='icon-users' class='service__post__by__svg' %}
         </div>      
         <div class="service__post__description service__post__description--1">{{ include.service.description[0].paragraph }}</div>
         <div class="service__post__cite">
                 <p>{{ include.service.quote }}</p>
-                {% include svg.html directory=svg-directory image='icon-quotes-left' class='service__post__cite__quote' %}
+                {% include global/svg.html directory=svg-directory image='icon-quotes-left' class='service__post__cite__quote' %}
         </div>
         {% for paragraph in include.service.description %}
             {% if paragraph != include.service.description[0] %}
@@ -19,7 +19,7 @@
         <div class="service__post__share">
             <p>{{include.service.share.title}}</p>
                 {% for icon in include.service.share.icons %}
-                {% include svg.html directory=svg-directory image=icon.name class='service__post__share__svg' %}
+                {% include global/svg.html directory=svg-directory image=icon.name class='service__post__share__svg' %}
             {% endfor %}
         </div>
     </div>
@@ -46,7 +46,7 @@
             {% for member in include.service.side.participants.list %}
                 <div class="member-quote">
                     <div class="circle">
-                        <img src="{{site.data.corporate-template.global.assets.images}}{{member.img}}" alt="{{member.name}}">
+                        <img src="{{site.data.corporate-template.global.assets.images | relative_url }}{{member.img}}" alt="{{member.name}}">
                     </div>
                     <div class="text">
                         {{member.name}}

@@ -1,0 +1,16 @@
+<div class="blog-small">
+    <div class="blog-card__small">
+        <div class="blog-card__small__img">
+            <img src="{{site.data.corporate-template.global.assets.images}}{{include.post.image}}" alt="{{include.post.alt}}">
+        </div>
+        <div class="blog-card__small__info">
+            {% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#" %}
+            <div class="title">{{include.post.title}}</div>
+            <div class="update">
+                {% include global/svg.html directory=svg-directory image='icon-calendar' class='blog-card__info__svg' %}
+                <p>{{include.post.created}}</p> <p style="margin-left:5px;">{{include.post.date | date: "%b %d, %y"}}</p>
+            </div>
+            <a href="{{include.post.url}}"><div class="plus">&plus;</div></a>
+        </div>
+    </div>
+</div>

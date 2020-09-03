@@ -1,0 +1,61 @@
+.quote-card{
+    @include abscenter;
+    flex-direction: column;
+    box-shadow: 0 5px 10px rgba($color: black, $alpha: .2);
+    background-color: #fff;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    &__circle{
+        border-radius: 100%;
+        background-color: var(--color-grey-light);
+        position: relative;
+        width: 80px; height: 80px;
+        .quotes{
+            width: 40px; height: 40px;
+            fill: var(--color-secondary-light);
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    &__text{
+        padding:20px;
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--color-secondary);
+    }
+    &__line{
+        background-color: var(--color-secondary);
+        height: 2px;
+        width: 35px;
+    }
+    &__member{
+        @include abscenter;
+        margin-top: 20px;
+        .circle{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: var(--color-secondary);
+            position: relative;
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .info{
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            .position{
+                color: var(--color-primary);
+            }
+        }
+    }
+}

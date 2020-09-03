@@ -1,0 +1,30 @@
+<div class="row">
+    <div id="slider-container" >
+        <p id="arrow-prev" class="slider-arrow" style=" color: {{include.color}};">&#10094;</p>
+        {% capture slices %} {{include.cardsCollection| size | ceil | divided_by : include.quantity | ceil }}  {% endcapture %}
+        {% assign i = 0 %}
+        {% for slice in (1..slices) %}
+            <div class="slide">       
+                <div class="slide-container">
+                    {% for card in (1..include.quantity) %}   
+                        {% if include.cardsCollection[i] %}
+                            {% assign cardInfo = include.cardsCollection[i]  %}
+                            {% assign file = include.cardsFile %}
+                                {% include {{file}} card=cardInfo %}
+                                {% assign i = i | plus:1 %}  
+                        {% endif %}         
+                    {% endfor %}
+                </div>
+            </div>           
+       {% endfor %}  
+        <p id="arrow-next" class="slider-arrow " style=" color: {{include.color}};">&#10095;</p>        
+    </div>
+    
+    <div id="dots-wrapper" class="">
+        {% for s in (1..slices) %}
+            <div class="dot-nav"></div>
+        {% endfor %}
+    </div>
+</div>
+
+
