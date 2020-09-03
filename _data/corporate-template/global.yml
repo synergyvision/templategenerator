@@ -1,5 +1,7 @@
 
-baseUrl: /1-corporate-template/
+title: Synplus | Dsw
+
+corporate-base-url: /1-corporate-template/
 
 assets:
     svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'

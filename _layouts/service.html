@@ -26,7 +26,7 @@ layout: corporate
 
 <!--Filtrando servicios para no mostrar servicio actual-->
 {% assign services = "" | split: ',' %} 
-{% for service in site.services %} 
+{% for service in site.corporate-services %} 
     {% if service.title != page.title %} 
         {% assign services = services | push: service %}
     {% endif %} 
