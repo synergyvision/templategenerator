@@ -32,7 +32,7 @@ team-section:
           - name: instagram
             account: https://www.instagram.com/
     - name: Christie Duman
-      position: Position3
+      position: Consulant
       image: member7.jpg
       social-media:
           - name: twitter
@@ -44,7 +44,7 @@ team-section:
           - name: instagram
             account: https://www.instagram.com/
     - name: Jhon Zverev
-      position: CEO
+      position: Data Scientist
       image: member1.jpg
       social-media:
           - name: twitter
@@ -80,7 +80,7 @@ team-section:
           - name: instagram
             account: https://www.instagram.com/
     - name: Jake Tylor
-      position: Position1
+      position: Graphic Designer
       image: member3.jpg
       social-media:
           - name: twitter
@@ -90,7 +90,7 @@ team-section:
           - name: instagram
             account: https://www.instagram.com/
     - name: Nole Djövel
-      position: Position2
+      position: Data Scientist
       image: member5.jpg
       social-media:
           - name: twitter
@@ -104,7 +104,7 @@ team-section:
           - name: instagram
             account: https://www.instagram.com/
     - name: Helen Withmore
-      position: Position3
+      position: Full Stack developer
       image: member4.jpg
       social-media:
           - name: twitter
@@ -131,8 +131,12 @@ section-quality:
       - name: Training for companies
         percentage: 60%
   text-image: Lorem ipsum dolor
-  image: team-section.jpeg 
-
+  image:
+    type: image # or svg
+    name: Untitled-2.png
+    id: '' # if svg
+    alt: 'Phone' # if image
+    
 social-media:
     - name: twitter
       svg-image: icon-twitter

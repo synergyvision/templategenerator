@@ -1,4 +1,5 @@
 .blog{
+    
         @include abscenter;
         justify-content: space-between;
 
@@ -6,12 +7,16 @@
             justify-content: center;
             align-items: center;
         }
+  
+
     &__content{
         align-self: flex-start;
         width: 70%;
         @include respond(tab-land){
             width: 80%;
         }
+
+
         .blog-card{
             margin: 0 auto;
             margin-top: 30px;
@@ -85,10 +90,10 @@
 
 .blog__side, .blog-post__side{
     width: calc(30%);
-    align-self: flex-start;
-    padding: 0 20px 0 0;
+    padding-right: 20px;
     @include respond(tab-land){
        width: 90%;
+       flex-direction: row;
        align-self: center;
        justify-content: center;
    }
@@ -98,89 +103,101 @@
            margin: 20px 0;
            
        }
-       .blog-small{
-           display: flex;
-           flex-direction: column;
-
+       .blog__side__cards{
+            width: 100%;
+            @include abscenter;
+            flex-direction: column;
+            
            @include respond(tab-land){
-               @include abscenter;
-               flex-direction: row;
+            flex-direction: row;
+            
            }
-               .blog-card__small{
-                   margin: 0 auto;
-                   margin-top: 30px;
-                   box-shadow: 0 5px 10px rgba(black,.3);
-                   border-radius: 5px;
-                  
-                   width:100%;
-                   @include respond(tab-land){
-                       width: 320px;
-                   }
-                   @include abscenter;
 
-                   flex-wrap: nowrap;
-                   transition: all .3s;
-                   &:hover{
-                       transform: scale(1.05);
-                   }
-                   &__img{
-                       width:35%;
-                       height: auto;
-                       img{
-                           margin: 0 auto;
-                           height: auto;
-                           width: 100%;
-                       }
-                   }
-                   &__info{
-                       width: 65%;
-                       display: flex;
-                       flex-direction: column;
-                       padding:20px;
-                       color: var(--color-secondary);
-                       
-                       & > *{
-                           margin-bottom: 15px;
-                       }
-                       .title{
-                           font-size: 1.6rem;
-                           font-weight: 600;
-                           letter-spacing: 1.4px;
-                           
-                       }
-
-                       a{
-                           background-color: transparent;
-                           border: 1px solid var(--color-primary);
-                           color:var(--color-primary);
-                           border-radius: 100%;
-                           padding: 10px;
-                           font-size: 1.8rem;
-                           font-weight: 600;
-                           text-decoration: none;
-                           align-self: flex-end;
-                           width: 30px;
-                           height: 30px;
-                           margin-right: 20px;
-                           position: relative;
-                           box-shadow: 0 2.5px 5px rgba(black,.2);
-                           transition: all .2s;
-                           &:hover{
-                               color: var(--color-secondary-light);
-                               border-color: var(--color-secondary-light);;
-                               transform: scale(0.9);
-                           }
-                           .plus{
-                               position: absolute;
-                               top: 50%; left: 50%;
-                               transform: translate(-50%,-50%);
-                           }
-                       }
-                   }
-               }
+          .blog-small{
+            display: flex;
+            flex-direction: column;     
+            width: auto;
+            @include respond(tab-land){
+                @include abscenter;
+                flex-direction: row;
+                margin: 20px;
+                
+            }
+                .blog-card__small{
+                    margin-top: 30px;
+                    box-shadow: 0 5px 10px rgba(black,.3);
+                    border-radius: 5px;
+                   
+                    width:100%;
+                    @include respond(tab-land){
+                        width: 320px;
+                    }
+                    @include abscenter;
+ 
+                    flex-wrap: nowrap;
+                    transition: all .3s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                    &__img{
+                        width:35%;
+                        height: auto;
+                        img{
+                            margin: 0 auto;
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                    &__info{
+                        width: 65%;
+                        display: flex;
+                        flex-direction: column;
+                        padding:20px;
+                        color: var(--color-secondary);
+                        
+                        & > *{
+                            margin-bottom: 15px;
+                        }
+                        .title{
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            letter-spacing: 1.4px;
+                            
+                        }
+ 
+                        a{
+                            background-color: transparent;
+                            border: 1px solid var(--color-primary);
+                            color:var(--color-primary);
+                            border-radius: 100%;
+                            padding: 10px;
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            text-decoration: none;
+                            align-self: flex-end;
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 20px;
+                            position: relative;
+                            box-shadow: 0 2.5px 5px rgba(black,.2);
+                            transition: all .2s;
+                            &:hover{
+                                color: var(--color-secondary-light);
+                                border-color: var(--color-secondary-light);;
+                                transform: scale(0.9);
+                            }
+                            .plus{
+                                position: absolute;
+                                top: 50%; left: 50%;
+                                transform: translate(-50%,-50%);
+                            }
+                        }
+                    }
+                }
+        }
        }
-   
-   }
+
+}
 
 .blog-card__info__svg{
     fill: var(--color-secondary-light);
@@ -229,10 +246,11 @@
     
             & > * {
                 margin-right: 10px;
+                font-size: 1.4rem;
             }
             .text{
                 text-decoration: none;
-                color: var(--color-secondary);
+                color: var(--color-secondary);              
                 transition: all .2s;
                 &:hover{
                     text-decoration: underline;
@@ -255,6 +273,7 @@
             margin-top: 20px;
             & > *{
                 margin-right: 10px;
+                font-size: 1.4rem;
             }
         }
     
@@ -285,10 +304,17 @@
     }
     &__side{
         width: 30%;
-        
+        @include respond(tab-land){
+            width: 90%;
+        }
+
         .btn-text{
-            margin-top: 20px !important;
+            margin: 0 auto;
+            margin-top: 30px;
             @include abscenter;
+            @include respond(tab-land){
+                width: 100px;
+            }
             color: var(--color-secondary);
             font-size: 1.6rem;
             border-color: var(--color-secondary);

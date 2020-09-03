@@ -12,6 +12,12 @@ sections:
   services:
     title: Our services
   banner:
+    moving-wave: true
+    image:
+      type: svg
+      name: 'home.svg#'
+      id: home
+      alt: '' 
     title-secondary: Welcome to Synplus
     title-primary: The bests in software development 
     description:

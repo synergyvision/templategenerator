@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include global/head.html %}
 <body>	
 	{% include corporate-template/header.html %}
 	   {{ content }} 	
@@ -19,6 +19,7 @@
 		--color-primary-light: {{site.data.corporate-template.colors.color-primary-light}};
 		--color-secondary: {{site.data.corporate-template.colors.color-secondary}};
 		--color-secondary-light: {{site.data.corporate-template.colors.color-secondary-light}};
+		--color-grey-light: {{site.data.corporate-template.colors.color-grey-light}};
 		--color-terciary: {{site.data.corporate-template.colors.color-terciary}};
 		--color-secondary-transparent:{{site.data.corporate-template.colors.color-secondary-transparent}}
 		--contact-background: url({{site.data.corporate-template.global.assets.images | relative_url }}{{site.data.corporate-template.home.sections.form.background}});

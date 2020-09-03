@@ -29,7 +29,8 @@ layout: corporate
     <div class="blog-post__side">
         <div class="blog__side__title">{{site.data.corporate-template.blog.posts.top.title}}</div>
         {% assign tops=0 %}
-        {% for spost in site.blogs %}
+        <div class="blog__side__cards">
+            {% for spost in site.blogs %}
             {% if tops < site.data.corporate-template.blog.posts.top.quantity %}
                 {% if spost.top %}
                     {% assign tops=tops | plus:1 %}
@@ -37,6 +38,7 @@ layout: corporate
                 {% endif %}
             {% endif %}
         {% endfor %}
+        </div>
         <a href="{{'blog.html' | prepend: site.baseurl}}" class="btn-text"> See all &rarr;</a>
         <div class="mt-big abscenter">
             {{ site.data.corporate-template.blog.posts.twitter.embebed}}

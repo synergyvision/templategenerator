@@ -2,8 +2,10 @@
     height: 90vh;
     background-color: white;
     width: 100%;
-
+    position: relative;
+   
     .center{
+        z-index: 222;
         display: flex;
         justify-content: center;
         align-items: center;

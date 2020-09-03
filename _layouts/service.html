@@ -6,7 +6,7 @@ layout: corporate
 
 <!--Wave-->
 <div style="margin-top: -100px;" >
-    {% include wave.html content='empty-content'
+    {% include global/wave.html content='empty-content'
     color=site.data.corporate-template.colors.color-primary-light %}
 </div>
 <!--Description-->
@@ -17,7 +17,7 @@ layout: corporate
 </div>
 {% include corporate-template/cards/questions-card.html collection=page.frequent-questions.collection %}
 <!--Wave-->
-{% include wave.html content='empty-content'
+{% include global/wave.html content='empty-content'
     color=site.data.corporate-template.colors.color-primary-light %}
 <!--Title-->
 <div class="mtb-big">
@@ -32,7 +32,7 @@ layout: corporate
     {% endif %} 
 {% endfor %} 
 <!--Carousel-->
-{% include carousel.html
-cardsFile='corporate-template/cards/service-card.html' quantity='3.0' cardsCollection=services
+{% include global/carousel.html
+cardsFile='corporate-template/cards/service-card.html' quantity='3.0' cardsCollection=services color=site.data.corporate-template.colors.color-primary
 %}
 
