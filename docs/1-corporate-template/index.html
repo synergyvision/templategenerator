@@ -7,9 +7,9 @@
 
 	<title>Synplus | Dsw</title>
 	<!--FAVICON-->
-	<link rel="stylesheet" href="/templategenerator/css/main.css">
-	<link rel="stylesheet" href="/templategenerator/1-corporate-template/css/main.css">
-	<link rel="canonical" href="templategenerator/1-corporate-template/">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/1-corporate-template/css/main.css">
+	<link rel="canonical" href="/1-corporate-template/">
 
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="The Name or Title Here">
@@ -39,7 +39,7 @@
 <meta property="og:price:currency" content="USD" />
 
   <link rel='stylesheet' id='fontawesome-css'
-    href="/templategenerator/css/font-awesome.css?ver=5.4.1" type='text/css'
+    href="/css/font-awesome.css?ver=5.4.1" type='text/css'
     media='all' />
 </head> 
 
@@ -91,19 +91,19 @@
           <ul>
               
               <li>
-                <a href="templategeneratorus">About us</a>
+                <a href="us">About us</a>
               </li>
               
               <li>
-                <a href="templategeneratorour-clients">Our clients</a>
+                <a href="our-clients">Our clients</a>
               </li>
               
               <li>
-                <a href="templategeneratorteam.html">Our team</a>
+                <a href="team.html">Our team</a>
               </li>
               
               <li>
-                <a href="templategeneratorBlog">Blog</a>
+                <a href="Blog">Blog</a>
               </li>
               
           </ul>           
@@ -250,7 +250,7 @@
     <div class="feature__card">
         <div class="feature__circle">
           <svg class="feature__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-handshake-o"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-handshake-o"></use>
 </svg>
 
 <style>
@@ -293,7 +293,7 @@
     <div class="feature__card">
         <div class="feature__circle">
           <svg class="feature__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-cogs"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-cogs"></use>
 </svg>
 
 <style>
@@ -336,7 +336,7 @@
     <div class="feature__card">
         <div class="feature__circle">
           <svg class="feature__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-paint-brush"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-paint-brush"></use>
 </svg>
 
 <style>
@@ -379,7 +379,7 @@
     <div class="feature__card">
         <div class="feature__circle">
           <svg class="feature__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-wink"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-wink"></use>
 </svg>
 
 <style>
@@ -444,7 +444,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service8.png"/>
+      <img src="/1-corporate-template/assets/images/service8.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -466,7 +466,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service3.png"/>
+      <img src="/1-corporate-template/assets/images/service3.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -488,7 +488,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service6.png"/>
+      <img src="/1-corporate-template/assets/images/service6.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -516,7 +516,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service5.png"/>
+      <img src="/1-corporate-template/assets/images/service5.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -538,7 +538,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service1.png"/>
+      <img src="/1-corporate-template/assets/images/service1.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -560,7 +560,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service7.png"/>
+      <img src="/1-corporate-template/assets/images/service7.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -588,7 +588,7 @@
                             
                                 <div class="post-module">
     <div class="thumbnail">
-      <img src="/templategenerator/1-corporate-template/assets/images/service2.png"/>
+      <img src="/1-corporate-template/assets/images/service2.png"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">
@@ -627,44 +627,6 @@
 </div>
 
 
-<script >
-
-  // carousel
-  let slider_index = 0;
-
-function show_slide(index,side){
-    let slides = document.querySelectorAll('.slide');
-    let dots = document.querySelectorAll('.dot-nav');
-    if (index >= slides.length) slider_index = 0;
-    if (index < 0)  slider_index = slides.length - 1;
-    for (let i=0; i<slides.length;i++){
-        slides[i].style.display = 'none';
-        dots[i].classList.remove('active-dot');
-    };
-    slides[slider_index].style.display = 'block';
-    if (side === 'next')
-    slides[slider_index].style.animation = ' fadenext 1s ';
-    else 
-    slides[slider_index].style.animation = ' fadeprev 1s ';
-    dots[slider_index].classList.add('active-dot')
-}
-
-show_slide(slider_index);
-
-document.querySelector('#arrow-prev').addEventListener('click', ()=>{
-    show_slide(--slider_index,'prev');
-});
-document.querySelector('#arrow-next').addEventListener('click', ()=>{
-    show_slide(++slider_index,'next');
-});
-document.querySelectorAll('.dot-nav').forEach((el)=>{
-        el.addEventListener('click', function (){
-            var dots = Array.prototype.slice.call(this.parentElement.children),
-            dot_index = dots.indexOf(el);
-            show_slide(slider_index = dot_index) 
-        })
-    });
-</script>
 
     </div>
 </div>
@@ -692,7 +654,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
     <a href="https://www.twitter.com/" target=”_blank”>@synplus.team</a> 
     <div class="social-box__item__logo">
         <svg class="social-box__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-twitter-square"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-twitter-square"></use>
 </svg>
 
 <style>
@@ -734,7 +696,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
     <a href="https://www.github.com/" target=”_blank”>syngplus-team</a> 
     <div class="social-box__item__logo">
         <svg class="social-box__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-github-square"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-github-square"></use>
 </svg>
 
 <style>
@@ -776,7 +738,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
     <a href="https://www.facebook.com/" target=”_blank”>Synplus Enterprise</a> 
     <div class="social-box__item__logo">
         <svg class="social-box__svg">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-facebook-square"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-facebook-square"></use>
 </svg>
 
 <style>
@@ -838,7 +800,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
                         <svg class="footer__svg-info">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-location"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-location"></use>
 </svg>
 
 <style>
@@ -876,7 +838,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
                         <svg class="footer__svg-info">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-envelope"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-envelope"></use>
 </svg>
 
 <style>
@@ -914,7 +876,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
                         <svg class="footer__svg-info">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-mobile"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-mobile"></use>
 </svg>
 
 <style>
@@ -956,7 +918,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
 
                 <div class="footer-col__quotes">
                     <svg class="footer__svg-quotes">
-    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-quotes-left"></use>
+    <use xlink:href="/1-corporate-template/assets/svg/sprite.svg#icon-quotes-left"></use>
 </svg>
 
 <style>
@@ -1003,7 +965,7 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-<script src="../javascript/script.js"></script>
+<script src="/javascript/script.js"></script>
 <style lang="scss">
 	:root{
 		--color-primary: #FFC133;
@@ -1012,9 +974,9 @@ document.querySelectorAll('.dot-nav').forEach((el)=>{
 		--color-secondary-light: #58587a;
 		--color-terciary: orange;
 		--color-secondary-transparent:#5548617a
-		--contact-background: url(/templategenerator/1-corporate-template/assets/images/contact-bg.jpeg);
-		--banner-background: url(/templategenerator/1-corporate-template/assets/images/Untitled-2.png);
-		--feature-background: url(/templategenerator/1-corporate-template/assets/images/feature-bg.jpeg);
+		--contact-background: url(/1-corporate-template/assets/images/contact-bg.jpeg);
+		--banner-background: url(/1-corporate-template/assets/images/Untitled-2.png);
+		--feature-background: url(/1-corporate-template/assets/images/feature-bg.jpeg);
 	}
 </style>
 </html>
