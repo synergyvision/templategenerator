@@ -4,6 +4,8 @@ subtitle: Best subtitle ever
 category: Training
 button: Learn more &rarr;
 img: service3.png
+img-type: 'image' #or svg
+
 by: By Stephanie Cruise
 href: https://www.instagram.com/
 quote: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 

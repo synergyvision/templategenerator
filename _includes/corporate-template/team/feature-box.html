@@ -4,7 +4,7 @@
     {% for feature in  include.features  %}
       <div class="team-box__item">
         <div class="team-box__circle">
-          {% include svg.html class='team-box__svg' image=feature.icon directory=svg-directory %}
+          {% include global/svg.html class='team-box__svg' image=feature.icon directory=svg-directory %}
         </div>
         <div class="team-box__text">
             {{ feature.title }}

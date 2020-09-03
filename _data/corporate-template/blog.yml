@@ -1,0 +1,19 @@
+banner: 
+  title: Our blog
+  subtitle: see and enjoy
+  img: 'blog-bg.png' #if svg include an # at the end. ex: 'not-found.svg#'
+  type: 'image'
+  id: # if svg
+
+
+posts:
+  title: All posts
+  button: 'See more &rarr;'
+  post-icon-name: icon-calendar
+  top:
+    title: Top posts
+    quantity: 3
+  twitter:
+    title: Tweets
+    embebed: '<a class="twitter-timeline" data-width="300" data-height="800" href="https://twitter.com/MicrosoftLatam?ref_src=twsrc%5Etfw">Tweets by MicrosoftLatam</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+

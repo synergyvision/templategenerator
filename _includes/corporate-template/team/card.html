@@ -19,7 +19,7 @@
               {% for msocial in include.member.social-media %}
                   {% if social.name == msocial.name %}
                       <a class="team-card-social__1"  href="{{msocial.account}}" target=”_blank”>
-                          {% include svg.html directory=svg-directory image=social.svg-image class=social.class %}
+                          {% include global/svg.html directory=svg-directory image=social.svg-image class=social.class %}
                       </a>  
                   {% endif %}
               {% endfor %}

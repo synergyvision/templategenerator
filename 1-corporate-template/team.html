@@ -2,32 +2,30 @@
 layout: corporate
 ---
 
-<div class="team-bg">
-      <div class="team-bg__side">
-        <div class="team-bg__title">
-          <h1>{{site.data.corporate-template.team.section-title}}</h1> 
-            <div class="team-bg__subtitle">
-              <h1>And share with them</h1> 
-            </div>
-        </div>    
-    </div>
-    <div class="team-bg__side">
-      <div class="team-bg__side__svg">
-        {% include svg.html directory='../../1-corporate-template/assets/svg/team.svg#' image='team' class='team-svg' %}
-      </div>
-    </div>
-</div>
+<!--Banner-->
 
-{% include corporate-template/team/feature-box.html features=site.data.corporate-template.team.features %}
+{% include corporate-template/sections-banner.html
+title=site.data.corporate-template.team.title
+subtitle=site.data.corporate-template.team.subtitle
+img=site.data.corporate-template.team.bg-image.img
+type=site.data.corporate-template.team.bg-image.type
+id=site.data.corporate-template.team.bg-image.id %}
+
+<!--Features-->
+{% include corporate-template/team/feature-box.html
+features=site.data.corporate-template.team.features %}
+
+<!--Qualities-->
 <div class="mt-big">
-{% include corporate-template/team/qualities-box.html %}
+  {% include corporate-template/team/qualities-box.html %}
 </div>
 
+<!--Members-->
 <div class="mt-bigger">
-  {% include corporate-template/title.html title=site.data.corporate-template.team.team-section.title %}
+  {% include corporate-template/title.html
+  title=site.data.corporate-template.team.team-section.title %}
   <div class="abscenter mtb-bigger">
     {% for member in site.data.corporate-template.team.team-section.members %}
-        {% include corporate-template/team/card.html member=member %}
-    {% endfor %}  
+    {% include corporate-template/team/card.html member=member %} {% endfor %}
   </div>
 </div>

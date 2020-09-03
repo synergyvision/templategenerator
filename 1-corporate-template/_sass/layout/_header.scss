@@ -199,13 +199,24 @@
     }
 
     &__svg{
-      width: 50rem;
-      height: 50rem;
-
+      width: 60rem;
+      height: 60rem;
+      position: relative;
       @include respond(phone){
         display: none;
       }
+        #blob-two{
+           
+        }
+        .home-svg{
+          position: absolute;
+          width: 50rem;
+          height: 50rem;
+          top:50%; left: 50%;
+          transform: translate(-50%,-50%);
+        }
     }
+   
 }
 
 .header {
@@ -218,11 +229,11 @@
     padding-bottom: 50px;
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
     }
     
-    &:before {
+    /*&:before {
         content: "";
         width: 50%;
         height: 100%;
@@ -235,7 +246,7 @@
         @include respond(tab-port) {
           visibility: hidden;
         }
-      }
+      } */
 
       &__title {
         display: flex;

@@ -6,7 +6,7 @@
     {% for feature in site.data.corporate-template.home.sections.features.feature %}
     <div class="feature__card">
         <div class="feature__circle">
-          {% include svg.html image=feature.icon
+          {% include global/svg.html image=feature.icon
           directory=svg-directory
           class='feature__svg' %}
         </div>

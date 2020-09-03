@@ -1,0 +1,19 @@
+<div class="quote-card">
+    <div class="quote-card__circle">
+        {% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#" %}
+        {% include global/svg.html directory=svg-directory image='icon-quotes-left' class='quotes' %}
+    </div>
+    <div class="quote-card__text">
+        {{include.card.text}}
+    </div>
+    <div class="quote-card__line"></div>
+    <div class="quote-card__member">
+            <div class="circle">
+                <img src="{{site.data.corporate-template.global.assets.images}}{{include.card.member.image.name}}" alt="{{include.card.member.image.alt}}">
+            </div>
+            <div class="info">
+                <div class="name">{{include.card.member.name}}</div>
+                <div class="position">{{include.card.member.position}}</div>
+            </div>
+    </div>
+</div>

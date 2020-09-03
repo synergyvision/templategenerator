@@ -43,3 +43,8 @@
 .abscenter{
     @include abscenter;
 }
+
+.hide{
+    display: none;
+	opacity: 0;
+}
