@@ -28,6 +28,8 @@ github_username:  stephanie-cruz
 #paginate_path: "/blog/page:num/"
 # Build settings
 
+destination: docs
+
 sass:
   load_paths:
         - _sass
