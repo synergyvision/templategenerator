@@ -30,7 +30,7 @@ layout: corporate
         <div class="blog__side__title">{{site.data.corporate-template.blog.posts.top.title}}</div>
         {% assign tops=0 %}
         <div class="blog__side__cards">
-            {% for spost in site.blogs %}
+            {% for spost in site.corporate-blogs %}
             {% if tops < site.data.corporate-template.blog.posts.top.quantity %}
                 {% if spost.top %}
                     {% assign tops=tops | plus:1 %}

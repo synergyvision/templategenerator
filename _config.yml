@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl: "templategenerator" # the subpath of your site, e.g. /blog
+baseurl: "templategenerator" # "" 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #gems: [jekyll-paginate]
@@ -35,12 +35,12 @@ kramdown:
 #collections_dir: 1-corporate-template
 
 collections:
-  services:
+  corporate-services:
     output: true
-    permalink: templategenerator/1-corporate-template/:path.html
-  blogs:
+    permalink: 1-corporate-template/services/:path.html
+  corporate-blogs:
     output: true
-    permalink: templategenerator/1-corporate-template/:path.html
+    permalink: 1-corporate-template/blogs/:path.html
  
 
 defaults:
