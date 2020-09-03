@@ -18,19 +18,19 @@
                     %}
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
-                        {% include svg.html directory=svg-directory image='icon-location' class='footer__svg-info' %}
+                        {% include global/svg.html directory=svg-directory image='icon-location' class='footer__svg-info' %}
                     </div>
                     <div class="footer-col__item__text">{{site.data.corporate-template.footer.direction}}</div>
                 </div>
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
-                        {% include svg.html directory=svg-directory image='icon-envelope' class='footer__svg-info' %}
+                        {% include global/svg.html directory=svg-directory image='icon-envelope' class='footer__svg-info' %}
                     </div>
                     <div class="footer-col__item__text">{{site.data.corporate-template.footer.email}}</div>
                 </div>
                 <div class="footer-col__item">
                     <div class="footer-col__item__svg">
-                        {% include svg.html directory=svg-directory image='icon-mobile' class='footer__svg-info' %}
+                        {% include global/svg.html directory=svg-directory image='icon-mobile' class='footer__svg-info' %}
                     </div>
                     {% for phone in site.data.corporate-template.footer.phones %}
                         <div class="footer-col__item__text">{{phone.number}}</div>
@@ -41,7 +41,7 @@
                 {% assign image-directory={{site.data.corporate-template.global.assets.images  | relative_url }}
                     %}
                 <div class="footer-col__quotes">
-                    {% include svg.html directory=svg-directory image='icon-quotes-left' class='footer__svg-quotes' %}
+                    {% include global/svg.html directory=svg-directory image='icon-quotes-left' class='footer__svg-quotes' %}
                 </div>
                 <p class="footer-col__message">{{site.data.corporate-template.footer.member-message}}</p>
                 <img class="footer-col__member" src="{{image-directory}}/{{site.data.corporate-template.footer.member-image}}" alt="{{site.data.corporate-template.footer.member-alt}}">

@@ -1,6 +1,6 @@
 <div class="row">
     <div id="slider-container" >
-        <p id="arrow-prev" class="slider-arrow ">&#10094;</p>
+        <p id="arrow-prev" class="slider-arrow" style=" color: {{include.color}};">&#10094;</p>
         {% capture slices %} {{include.cardsCollection| size | ceil | divided_by : include.quantity | ceil }}  {% endcapture %}
         {% assign i = 0 %}
         {% for slice in (1..slices) %}
@@ -17,7 +17,7 @@
                 </div>
             </div>           
        {% endfor %}  
-        <p id="arrow-next" class="slider-arrow ">&#10095;</p>        
+        <p id="arrow-next" class="slider-arrow " style=" color: {{include.color}};">&#10095;</p>        
     </div>
     
     <div id="dots-wrapper" class="">

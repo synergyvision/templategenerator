@@ -9,7 +9,7 @@
         {% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#" %}
         <div class="more">
             <div class="update">
-                {% include svg.html directory=svg-directory image=include.img class='blog-card__info__svg' %}
+                {% include global/svg.html directory=svg-directory image=include.img class='blog-card__info__svg' %}
                 <p>{{include.post.created}}</p> <p style="margin-left:10px;">{{include.post.date | date: "%b %d, %y"}}</p>
             </div>
             <a class="btn-text" href="{{include.post.url}}">{{include.button}}</a>

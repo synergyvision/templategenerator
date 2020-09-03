@@ -1,0 +1,37 @@
+banner:
+  title: Know about us
+  subtitle: lorem ipsum dolor
+  image:
+    name: 'us.svg#'
+    type: svg
+    id: us
+
+our:
+  - title: Our vision
+    svg-name: 'icon-eye'
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
+    reverse: false
+  - title: Our mission
+    svg-name: 'icon-key'
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
+    reverse: true
+
+quotes:
+  - id: 1
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
+    member:
+      name: Katy Hernandez
+      position: Graphic Designer
+      image:
+        alt: Katy
+        name: member2-face.jpg
+  - id: 2
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    member:
+      name: Nole Djökel
+      position: Data Scientist
+      image:
+        alt: Nole
+        name: member5-face.jpg
+      
+      
