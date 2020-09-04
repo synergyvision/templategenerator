@@ -3,9 +3,11 @@
     class="main-nav"
   >
     <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.global.baseUrl | prepend: include.url | prepend: site.baseurl }}">
-        <img
+      {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.header.logo | relative_url }}
+        %} 
+      <img
         class="logo"
-        src="{{site.data.corporate-template.global.assets.images  | relative_url  }}{{site.data.corporate-template.header.logo}}"
+        src="{{image-directory}}"
         alt="Logo"
       />
     </a>  

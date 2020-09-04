@@ -179,7 +179,7 @@
 .our-section .our-text .line { width: 100px; height: 2px; background-color: var(--color-primary); margin: 15px auto; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
 @media only screen and (max-width: 56.25em) { .our-section .our-text { width: 80%; } }
 
-.feature { background-position: center; background-size: cover; background-repeat: no-repeat; padding: 50px 0; /* background-image: linear-gradient( to bottom, rgba(white, 1) 0%, rgba(white, .8) 50%, rgba(white, 0) 100%, ), var(--feature-background); */ background-color: var(--color-secondary); }
+.feature { background-position: center; background-size: cover; background-repeat: no-repeat; padding: 50px 0; background-color: var(--color-secondary); }
 @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) { .feature { -webkit-clip-path: polygon(0 0%, 50% 10%, 100% 0%, 100% 100%, 50% 90%, 0 100%); clip-path: polygon(0 0%, 50% 10%, 100% 0%, 100% 100%, 50% 90%, 0 100%); } }
 .feature__text-counter { font-size: 2.5rem; font-weight: 500; letter-spacing: 2px; margin-top: 20px; text-align: center; }
 .feature__text-message { letter-spacing: 2px; margin-top: 5px; font-size: 1.5rem; }

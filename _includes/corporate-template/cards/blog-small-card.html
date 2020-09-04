@@ -1,7 +1,9 @@
 <div class="blog-small">
     <div class="blog-card__small">
         <div class="blog-card__small__img">
-            <img src="{{site.data.corporate-template.global.assets.images}}{{include.post.image}}" alt="{{include.post.alt}}">
+            {% assign image-directory={{site.data.corporate-template.global.assets.images | append: include.post.image | relative_url }}
+        %} 
+            <img src="{{image-directory}}" alt="{{include.post.alt}}">
         </div>
         <div class="blog-card__small__info">
             {% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#" %}

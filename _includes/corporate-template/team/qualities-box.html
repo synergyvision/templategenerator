@@ -9,7 +9,9 @@
       {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.team.section-quality.image.name }}{% endcapture %}
       {% include global/svg.html directory=svg-directory image=site.data.corporate-template.team.section-quality.image.id class='image'  %}
     {% else %}
-    <img class="image" src="{{site.data.corporate-template.global.assets.images | relative_url }}{{site.data.corporate-template.team.section-quality.image.name}}" alt="{{site.data.corporate-template.team.section-quality.image.alt}}">
+    {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.team.section-quality.image.name | relative_url }}
+      %}
+    <img class="image" src="{{image-directory}}" alt="{{site.data.corporate-template.team.section-quality.image.alt}}">
     {% endif %} 
     </div>
     <div class="team-qualities__sections">

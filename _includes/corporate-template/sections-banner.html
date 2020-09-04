@@ -13,8 +13,10 @@
             {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: include.img }}{% endcapture %}
             {% include global/svg.html directory=svg-directory image=include.id class='team-svg'  %}
         {% else %}
+        {% assign image-directory={{site.data.corporate-template.global.assets.images | append: include.img | relative_url }}
+        %} 
           <img
-            src="{{site.data.corporate-template.global.assets.images | relative_url}}{{ include.img }}"
+            src="{{image-directory}}"
             alt=""
           />
         {% endif %}

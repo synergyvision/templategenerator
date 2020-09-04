@@ -9,7 +9,9 @@
     <div class="quote-card__line"></div>
     <div class="quote-card__member">
             <div class="circle">
-                <img src="{{site.data.corporate-template.global.assets.images}}{{include.card.member.image.name}}" alt="{{include.card.member.image.alt}}">
+                {% assign image-directory={{site.data.corporate-template.global.assets.images | append: include.card.member.image.name | relative_url }}
+                %} 
+                <img src="{{image-directory}}" alt="{{include.card.member.image.alt}}">
             </div>
             <div class="info">
                 <div class="name">{{include.card.member.name}}</div>
