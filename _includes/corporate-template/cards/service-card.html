@@ -1,6 +1,8 @@
 <div class="post-module">
     <div class="thumbnail">
-      <img src="{{site.data.corporate-template.global.assets.images | relative_url }}{{include.card.img}}"/>
+      {% assign image-directory={{site.data.corporate-template.global.assets.images | append: include.card.img | relative_url }}
+                %} 
+      <img src="{{image-directory}}"/>
     </div>
     <!-- Post Content-->
     <div class="post-content">

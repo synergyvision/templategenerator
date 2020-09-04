@@ -2,13 +2,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-   // margin: 50px 0;
     padding: 50px 0;
-   /* background-image: linear-gradient(
-            to bottom, rgba(white, 1) 0%,
-            rgba(white, .8) 50%,
-            rgba(white, 0) 100%,
-        ), var(--feature-background); */
+  
     background-color: var(--color-secondary);
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(

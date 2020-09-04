@@ -3,10 +3,10 @@
     <div class="row us-col-container mt-big">
         <div class="us-col us-col__1 ">
             <div class="composition">
-                {% assign image-directory={{site.data.corporate-template.global.assets.images  | relative_url }}
-                    %}
                 {% for image in site.data.corporate-template.home.sections.why-us.composition %}
-                    <img class="composition__photo" src="{{image-directory}}/{{image.image}}" alt="">
+                    {% assign image-directory={{site.data.corporate-template.global.assets.images | append: image.image | relative_url }}
+                    %}   
+                <img class="composition__photo" src="{{image-directory}}" alt="">
                 {% endfor %}
             </div>
         </div>

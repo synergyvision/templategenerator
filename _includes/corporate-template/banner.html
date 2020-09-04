@@ -29,7 +29,9 @@
           {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.home.sections.banner.image.name }}{% endcapture %}
           {% include global/svg.html directory=svg-directory image=site.data.corporate-template.home.sections.banner.image.id class='home-svg'  %}
       {% else %}
-          <img class="home-svg" src="{{site.data.corporate-template.global.assets.images}}{{site.data.corporate-template.home.sections.banner.image.name}}" alt="{{site.data.corporate-template.home.sections.banner.image.name.alt}}">
+      {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.home.sections.banner.image.name | relative_url }}
+        %}
+          <img class="home-svg" src="{{image-directory}}" alt="{{site.data.corporate-template.home.sections.banner.image.name.alt}}">
       {% endif %}
       {% if site.data.corporate-template.home.sections.banner.moving-wave == true %}
         <svg id="blob-two" x="0px" y="0px" viewBox="0 0 288 288">

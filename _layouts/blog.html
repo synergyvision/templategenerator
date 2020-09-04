@@ -20,8 +20,9 @@ layout: corporate
           <div class="created">{{page.created}} {{page.date | date: "%b %d, %y" }}</div>
       </div>
       <div class="blog-post__article__line"></div>
-    
-      <img class="blog-post__article__image" src="{{site.data.corporate-template.global.assets.images}}{{page.image}}" alt="">
+      {% assign image-directory=site.data.corporate-template.global.assets.images | append: page.image | relative_url 
+      %}
+      <img class="blog-post__article__image" src="{{image-directory}}" alt="">
       <div class="blog-post__article__content">
         {{page.content}}
       </div>
