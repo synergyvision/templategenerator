@@ -1,7 +1,7 @@
 <div class="our-section mtb-big">
     {% for card in include.collection %} 
     {% assign reverse= forloop.index | modulo: 2 %}
-        <div class="our-card-content {% if reverse == 0 %} reverse {% endif %}">
+        <div class="our-card-content {% if reverse == 0 %} reverse js-animated-right {% else %} js-animated-left {% endif %}">
             <div class="our-card">
                 <div class="our-card__text">
                     <div class="title">{{card.title}}</div>
