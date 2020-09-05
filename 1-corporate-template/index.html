@@ -5,6 +5,8 @@ layout: corporate
 {% include corporate-template/home/us.html %}
 {% include corporate-template/home/features.html %}
 {% include corporate-template/home/services.html %}
-{% include global/wave.html content='corporate-template/home/contact-form.html' color=site.data.corporate-template.colors.color-primary-light %}
+<section id="{{site.data.corporate-template.home.sections.form.id}}">
+    {% include global/wave.html content='corporate-template/home/contact-form.html' color=site.data.corporate-template.colors.color-primary-light %}
+</section>
 {% include corporate-template/home/social-media.html %}
 

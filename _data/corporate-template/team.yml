@@ -133,7 +133,7 @@ section-quality:
   text-image: Lorem ipsum dolor
   image:
     type: image # or svg
-    name: Untitled-2.png
+    name: phone.png
     id: '' # if svg
     alt: 'Phone' # if image
     

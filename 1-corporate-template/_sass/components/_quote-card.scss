@@ -10,9 +10,9 @@
         border-radius: 100%;
         background-color: var(--color-grey-light);
         position: relative;
-        width: 80px; height: 80px;
+        width: 8rem; height: 8rem;
         .quotes{
-            width: 40px; height: 40px;
+            width: 4rem; height: 4rem;
             fill: var(--color-secondary-light);
             position: absolute;
             top: 50%; left: 50%;
@@ -21,9 +21,14 @@
     }
     &__text{
         padding:20px;
+        margin:10px 0;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
         color: var(--color-secondary);
+        @include respond(phone){
+            padding: 5px;
+        }
     }
     &__line{
         background-color: var(--color-secondary);
@@ -33,6 +38,10 @@
     &__member{
         @include abscenter;
         margin-top: 20px;
+
+        & > *{
+            margin-top: 10px;
+        }
         .circle{
             width: 50px;
             height: 50px;

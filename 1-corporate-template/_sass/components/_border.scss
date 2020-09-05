@@ -4,10 +4,11 @@
 
     &__primary{
       transform: translateY(-20%);
-      height: 300px;
+      height: 100px;
       background-color: var(--color-primary-light);
       
-      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        height: 300px; 
         -webkit-clip-path: polygon(
         0 0%, 50% 20%, 100% 0%, 100% 70%, 50% 90%, 0% 70%
         ); 
@@ -34,9 +35,10 @@
      
     &__secondary{
       background-color: var(--color-primary);
-      height: 150px;
+     
       
-      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+         height: 150px;  
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 80%, 0% 100%);
         clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 20%, 50% 80%, 0% 20%);
        

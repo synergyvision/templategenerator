@@ -1,5 +1,9 @@
 .progress-bar{
-    width: 400px;
+    width: 40rem;
+
+    @include respond(phone){
+        width: 80vw;
+    }
 
     &__text{
         @include abscenter;

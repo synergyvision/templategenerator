@@ -15,6 +15,9 @@
         @include respond(tab-land){
             width: 80%;
         }
+        @include respond(tab-port){
+            width: 100%;
+        }
 
 
         .blog-card{
@@ -25,8 +28,9 @@
             padding: 20px;
             width:80%;
             @include abscenter;
-            @include respond(tab-port){
+            @include respond(phone){
                 flex-direction: column;
+                padding: 5px;
             }
             flex-wrap: nowrap;
             transition: all .3s;
@@ -36,12 +40,16 @@
 
             &__img{
                 width:25%;
-                @include respond(tab-port){
-                    width: 50%;
-                }
                 height: auto;
+                padding:10px;
+                @include abscenter;
+                @include respond(tab-port){
+                    width: 200px;
+                    height: 200px;
+                }
+                
                 img{
-                    margin: 0 auto;
+                   
                     height: auto;
                     width: 100%;
                 }
@@ -52,7 +60,10 @@
                 flex-direction: column;
                 padding:20px;
                 color: var(--color-secondary);
-    
+                
+                @include respond(tab-port){
+                    padding: 5px;
+                }
 
     
                 & > *{
@@ -63,6 +74,10 @@
                     font-weight: 600;
                     letter-spacing: 1.4px;
                     
+                }
+                .by{
+                    font-weight: 500;
+                    font-size: 1.2rem;
                 }
                 .description{
                     font-size: 1.4rem;
@@ -92,6 +107,7 @@
     width: calc(30%);
     padding-right: 20px;
     @include respond(tab-land){
+       padding-right: 0px;
        width: 90%;
        flex-direction: row;
        align-self: center;
@@ -100,8 +116,10 @@
        &__title{
            font-size: 2.5rem;
            color: var(--color-secondary);
-           margin: 20px 0;
-           
+           margin-top: 60px;
+           @include respond(tab-land){
+               margin-left: 10%;
+           }
        }
        .blog__side__cards{
             width: 100%;
@@ -116,22 +134,18 @@
           .blog-small{
             display: flex;
             flex-direction: column;     
-            width: auto;
+            width: 300px;
+            margin: 20px !important;
             @include respond(tab-land){
                 @include abscenter;
                 flex-direction: row;
-                margin: 20px;
                 
             }
                 .blog-card__small{
                     margin-top: 30px;
                     box-shadow: 0 5px 10px rgba(black,.3);
-                    border-radius: 5px;
-                   
+                    border-radius: 5px;  
                     width:100%;
-                    @include respond(tab-land){
-                        width: 320px;
-                    }
                     @include abscenter;
  
                     flex-wrap: nowrap;
@@ -142,6 +156,7 @@
                     &__img{
                         width:35%;
                         height: auto;
+                        padding: 5px;
                         img{
                             margin: 0 auto;
                             height: auto;
@@ -152,7 +167,7 @@
                         width: 65%;
                         display: flex;
                         flex-direction: column;
-                        padding:20px;
+                        padding:2rem 1.5rem;
                         color: var(--color-secondary);
                         
                         & > *{
@@ -170,14 +185,12 @@
                             border: 1px solid var(--color-primary);
                             color:var(--color-primary);
                             border-radius: 100%;
-                            padding: 10px;
                             font-size: 1.8rem;
                             font-weight: 600;
                             text-decoration: none;
                             align-self: flex-end;
-                            width: 30px;
-                            height: 30px;
-                            margin-right: 20px;
+                            width: 3rem;
+                            height: 3rem;
                             position: relative;
                             box-shadow: 0 2.5px 5px rgba(black,.2);
                             transition: all .2s;
@@ -201,14 +214,18 @@
 
 .blog-card__info__svg{
     fill: var(--color-secondary-light);
-    height: 20px;
-    width: 20px;
+    height: 1.8rem;
+    width: 1.8rem;
     transition: all .2s;
 }
 
-.update{
-    justify-self: flex-start;
+.update{  
     @include abscenter;
+   justify-content: flex-start;
+    & > *{
+        align-self: flex-start;
+    }
+
     &:hover{
         color: var(--color-primary);
 
@@ -216,14 +233,13 @@
             fill:var(--color-primary);
         }
     }
+
     p{
         margin-left: 10px;
         font-weight: 500;
         font-size: 1.2rem;
         transition: all .2s;
-        @include respond(tab-port){
-            margin-bottom: 20px;
-        }
+       
     }
 }
 
@@ -292,7 +308,7 @@
         }
         &__content{
             width: 100%;
-            padding:20px 5%;
+            padding:20px 10% 0 0;
             text-align: justify;
             font-size: 1.6rem;
             color: var(--color-secondary);
@@ -300,6 +316,10 @@
             letter-spacing: 1.4px;
             text-indent: 40px ;
             line-height: 2 ;
+
+            @include respond(tab-land){
+                padding:20px 0 0 0;
+            }
         }
     }
     &__side{
