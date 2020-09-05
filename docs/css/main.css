@@ -31,6 +31,32 @@
 
 .hide { display: none; opacity: 0; }
 
+@-webkit-keyframes bounceIn { from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; -webkit-transform: scale3d(0.3, 0.3, 0.3); transform: scale3d(0.3, 0.3, 0.3); }
+  20% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); }
+  40% { -webkit-transform: scale3d(0.9, 0.9, 0.9); transform: scale3d(0.9, 0.9, 0.9); }
+  60% { opacity: 1; -webkit-transform: scale3d(1.03, 1.03, 1.03); transform: scale3d(1.03, 1.03, 1.03); }
+  80% { -webkit-transform: scale3d(0.97, 0.97, 0.97); transform: scale3d(0.97, 0.97, 0.97); }
+  to { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } }
+@keyframes bounceIn { from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { opacity: 0; -webkit-transform: scale3d(0.3, 0.3, 0.3); transform: scale3d(0.3, 0.3, 0.3); }
+  20% { -webkit-transform: scale3d(1.1, 1.1, 1.1); transform: scale3d(1.1, 1.1, 1.1); }
+  40% { -webkit-transform: scale3d(0.9, 0.9, 0.9); transform: scale3d(0.9, 0.9, 0.9); }
+  60% { opacity: 1; -webkit-transform: scale3d(1.03, 1.03, 1.03); transform: scale3d(1.03, 1.03, 1.03); }
+  80% { -webkit-transform: scale3d(0.97, 0.97, 0.97); transform: scale3d(0.97, 0.97, 0.97); }
+  to { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); } }
+.bounceIn { -webkit-animation-duration: 0.75s; animation-duration: 0.75s; -webkit-animation-name: bounceIn; animation-name: bounceIn; }
+
 @keyframes fadenext { 0% { opacity: 0; transform: translateX(-500px); }
   100% { opacity: 1; transform: translateX(0); } }
 @keyframes fadeprev { 0% { opacity: 0; transform: translateX(500px); }
@@ -51,6 +77,8 @@
 
 @keyframes percentage { from { width: 0; }
   to { width: 100%; } }
+.animatedPercentage { animation-name: percentage; -webkit-animation-name: percentage; animation-duration: 5s; }
+
 *, *::before, *::after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; font-family: 'Lato', sans-serif; }
 
 html { /* font-size: 10px; /* 1 rem is exactly 10 px now*/ font-size: 62.5%; /* 10px / 16px */ }
@@ -175,8 +203,8 @@ section:focus { outline: none; }
 .progress-bar__text__name { font-size: 1.6rem; letter-spacing: 1.2px; }
 .progress-bar__text__percentage { font-size: 1.8rem; }
 .progress-bar__content { width: 100%; height: 5px; border-radius: 10px; background-color: transparent; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-.progress-bar__content__top .percentage { height: 5px; border-radius: 10px; padding-top: 2px !important; animation-name: percentage; animation-duration: 5s; transition: all .2s; position: relative; }
-.progress-bar__content__top .percentage__circle { position: absolute; top: 50%; right: 0; transform: translateY(-50%); height: 16px; width: 16px; border-radius: 100%; background-color: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+.progress-bar__content__top__percentage { height: 5px; border-radius: 10px; padding-top: 2px !important; transition: all .2s; position: relative; }
+.progress-bar__content__top__percentage__circle { position: absolute; top: 50%; right: 0; transform: translateY(-50%); height: 16px; width: 16px; border-radius: 100%; background-color: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 @keyframes from0to360 { from { transform: rotate(0); }
   to { transform: rotate(360deg); } }

@@ -28,12 +28,11 @@
         box-shadow: 0 5px 10px rgba(black,.2);
 
         &__top{
-            .percentage{ 
+            &__percentage{ 
                 height: 5px;
                 border-radius: 10px;
                 padding-top: 2px !important;
-                animation-name: percentage;
-                animation-duration: 5s;
+                
                 transition: all .2s;
                 position: relative;
                 &__circle{

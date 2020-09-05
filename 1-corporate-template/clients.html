@@ -24,7 +24,7 @@ type=site.data.corporate-template.clients.banner.image.type
     {% include corporate-template/title.html title=site.data.corporate-template.clients.sections.clients.title %}
 
     <!--Logos-->
-    <div class="mt-big abscenter row">
+    <div class="logos-container mt-big abscenter row">
         {% for card in site.data.corporate-template.clients.sections.clients.collection %}
             {% include corporate-template/cards/logo-card.html card=card %}
         {% endfor %}
@@ -36,10 +36,13 @@ type=site.data.corporate-template.clients.banner.image.type
         {% include corporate-template/title.html title=site.data.corporate-template.clients.sections.testimony.title %}
     </div>
 
-    <div class="mt-bigger abscenter row" style="justify-content: space-around !important;">
+    <div class="clients-quote-container mt-bigger abscenter row" style="justify-content: space-around !important;">
             {% for client-card in site.data.corporate-template.clients.sections.testimony.collection %}
                 {% include corporate-template/cards/client-quote-card.html person=client-card %}
             {% endfor %}
     </div>
     
 
+<script>
+  
+</script>
