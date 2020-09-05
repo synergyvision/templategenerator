@@ -4,9 +4,8 @@
 .line{
   width:100px;
   height: 2.5px;
-  background-color:#FFC133;
+  background-color: var(--color-primary);
 }
-//mover
 
 
 
@@ -25,11 +24,10 @@
 
       &__logo{
         margin-right: auto;
-
           img {
-            height:80px;
+            height:8rem;
             width: auto;
-            margin-left:20px;
+            margin-left:2rem;
             z-index: 6;
             cursor: pointer;
           }
@@ -43,6 +41,11 @@
         position: relative;
         cursor: pointer;
         transition: all .4s ease;
+        display: none;
+
+        @include respond(tab-port){
+          display: block;
+        }
 
         &:hover{
           background-color: var(--color-secondary-light);
@@ -151,6 +154,8 @@
             }
           }
           
+
+        
       }
 
 
@@ -160,11 +165,18 @@
         display: flex;
         align-items: center;
         
+        .block{
+          display: block !important;
+        }
+
         li{
           justify-self: flex-end;
-          margin-right: 40px;
+          margin-right: 4rem;
           z-index: 6 !important;
-
+          @include respond(tab-port){
+            //margin-right: 0;
+            display: none;
+          }
           a:link, a:visited{
             padding: 8px;
             color: var(--color-secondary);
@@ -194,17 +206,21 @@
     width:90%;
     margin: 0 auto;
     padding-top: 100px;
-    @include respond(tab-port) {       
-        flex-direction: column;
+    @include respond(tab-land) {   
+      padding-top: 180px;   
+      flex-direction: column;
     }
 
     &__svg{
       width: 60rem;
       height: 60rem;
       position: relative;
+ 
       @include respond(phone){
-        display: none;
+        width: 30rem;
+        height: 30rem;
       }
+
         #blob-two{
            
         }
@@ -214,6 +230,10 @@
           height: 50rem;
           top:50%; left: 50%;
           transform: translate(-50%,-50%);
+          @include respond(phone){
+            width: 20rem;
+            height: 20rem;
+          }
         }
     }
    
@@ -230,7 +250,7 @@
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
       clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
-    }
+    } 
     
     /*&:before {
         content: "";
@@ -252,7 +272,11 @@
         flex-direction: column;
         z-index:5;
         width:45%;
-        
+        @include respond(tab-land){
+          text-align: center;
+          width: 70%;
+        }
+
         @include respond(tab-port) {
             width: 90%;
            // background-color: rgba(black, .1);
@@ -260,6 +284,14 @@
         }
         @include respond(phone) {
           top:25%;
+        }
+
+        .line{
+          @include respond(tab-land){
+            @include abscenter;
+             align-self: center;
+             text-align: center;
+          }
         }
       }
       &__title-description{

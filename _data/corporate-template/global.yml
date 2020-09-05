@@ -1,5 +1,11 @@
-
-title: Synplus | Dsw
+site:
+    title: Synplus | Dsw
+    css: '/1-corporate-template/css/main.css'
+    favicon: logo-small.png
+    directories:
+        svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'
+        images: /1-corporate-template/assets/images/
+        svg-directory: '/1-corporate-template/assets/svg/'
 
 corporate-base-url: /1-corporate-template/
 

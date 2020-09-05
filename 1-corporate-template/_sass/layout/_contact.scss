@@ -120,6 +120,10 @@
   
   .form__input-side1{
     display: flex;
-    width: 100%;
-}
+    width: 90%;
+
+      @include respond(tab-port){
+        flex-direction: column;
+      }
+  }
 

@@ -2,6 +2,7 @@
     background-color: var(--color-secondary);
     padding-bottom: 40px;
     height: auto;
+    margin: 0 auto;
     margin-top: auto;
 
     &__container{
@@ -45,7 +46,7 @@
         flex-direction: column;
         
 
-        &:not(:last-child){
+        & > *{
             margin-right: 40px;
         }
 

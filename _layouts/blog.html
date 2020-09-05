@@ -5,9 +5,9 @@ layout: corporate
 <div class="blog-post row">
     <div class="blog-post__article">
         <div class="blog-post__article__path">
-            <a href="{{ site.data.corporate-template.global.baseUrl | prepend: site.baseurl }}" class="text">{{site.title}}</a>
+            <a href="{{ site.data.corporate-template.global.baseUrl | prepend: site.data.corporate-template.global.corporate-base-url | prepend: site.baseurl | relative_url }}" class="text">{{site.data.corporate-template.global.site.title}}</a>
             <div class="arrow">>></div>
-            <a href="{{ 'blog.html'  | prepend: site.baseurl }}" class="text">Blog</a>
+            <a href="{{ 'blog.html' | prepend: site.data.corporate-template.global.corporate-base-url | prepend: site.baseurl | relative_url }}" class="text">Blog</a>
             <div class="arrow">>></div>
             <a class="text"> {{page.title}}</a>
       </div>
@@ -40,7 +40,7 @@ layout: corporate
             {% endif %}
         {% endfor %}
         </div>
-        <a href="{{'blog.html' | prepend: site.baseurl}}" class="btn-text"> See all &rarr;</a>
+        <a href="{{'blog.html' | prepend: site.data.corporate-template.global.corporate-base-url | prepend: site.baseurl | relative_url }}" class="btn-text"> See all &rarr;</a>
         <div class="mt-big abscenter">
             {{ site.data.corporate-template.blog.posts.twitter.embebed}}
         </div>

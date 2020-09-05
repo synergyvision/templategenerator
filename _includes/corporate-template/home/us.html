@@ -1,4 +1,4 @@
-<div class="mt-neg-bigger">
+<section class="us-section">
     {% include corporate-template/title.html title=site.data.corporate-template.home.sections.why-us.title %}
     <div class="row us-col-container mt-big">
         <div class="us-col us-col__1 ">
@@ -21,13 +21,14 @@
                 </div>
                 {% endfor %}
                 <div class="us-col-container mt-big">
-                    {% include corporate-template/button-primary.html title=site.data.corporate-template.home.sections.why-us.button
-                        type=2 %}
+                    {% assign page=site.data.corporate-template.home.sections.why-us.button.to | prepend: site.data.corporate-template.global.corporate-base-url | relative_url %}
+                    {% include corporate-template/button-primary.html title=site.data.corporate-template.home.sections.why-us.button.title
+                        type=2  to=site.data.corporate-template.home.sections.why-us.button.to-type id=page  %}
                 </div>
             </div>
                
         </div>
     </div>
    
-</div>
+</section>
 

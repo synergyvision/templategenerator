@@ -34,8 +34,8 @@
           </div>
           <ul>
               {% for section in site.data.corporate-template.header.titles %}
-              <li>
-                <a href="{{section.url | prepend: include.url | relative_url   }}">{{section.title}}</a>
+              <li class="block">
+                <a href="{{section.url | prepend: include.url | relative_url }}">{{section.title}}</a>
               </li>
               {% endfor %}
           </ul>           

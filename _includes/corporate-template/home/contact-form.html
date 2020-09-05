@@ -1,10 +1,19 @@
 
-    <div class="book__form ">
+<div class="book__form" >
         <form action="" class="form">
             <div class="form__text-side">
                     {% include corporate-template/title.html title=site.data.corporate-template.home.sections.form.title %}
-                    {% assign svg-directory='/1-corporate-template/assets/svg/contact.svg' | relative_url | append: '#' %}
-                    {% include global/svg.html directory=svg-directory image='mail' class='form__svg'  %}
+                    {% if site.data.corporate-template.home.sections.form.image.type == 'svg' %}
+                        {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.home.sections.form.image.name }}{% endcapture %}
+                        {% include global/svg.html directory=svg-directory image=site.data.corporate-template.home.sections.form.image.id class='form__svg'  %}
+                    {% else %}
+                    {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.home.sections.form.image.name | relative_url }}
+                    %} 
+                        <img
+                            src="{{image-directory}}"
+                            alt="{{site.data.corporate-template.home.sections.form.image.alt}}"
+                        />
+                    {% endif %}
             </div>
             <div class="form__input-side">
                 <div class="form__input-side1">
@@ -26,4 +35,4 @@
                 </div>
             </div>
             </form>
-        </div>      
+</div>      
