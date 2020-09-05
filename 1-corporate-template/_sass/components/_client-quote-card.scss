@@ -1,0 +1,73 @@
+.client-quote-card{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 8px;
+    margin: 40px 20px;
+    box-shadow: 0 5px 15px rgba(black,.2);
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+        transform: scale(1.1);
+    }
+
+   
+
+    .circle{
+        position: absolute;
+        left: 20px;
+        top: 0;
+        transform: translateY(-50%);
+        width: 100px; height: 100px;
+        border-radius: 100%;
+        background-color: var(--color-grey-light);
+        box-shadow: 0 5px 15px rgba(black,.2);
+        
+        img{
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 100%;
+            width: 80px; height: 80px;
+            
+        }
+    }
+
+    .quotes-svg{
+        width: 55px; height: 55px;
+        position: absolute;
+        right: 10px;
+        top:0;
+        transform: translateY(-50%) rotate(188deg);
+        fill: var(--color-secondary-light);
+    }
+
+    .content{
+        @include abscenter;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 200px;
+        .name{
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+    
+        }
+    
+        .quote{
+            padding: 10px;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+
+        .stars{
+            align-self: flex-end;
+            margin-top: auto;
+        }
+
+    }
+
+    
+}

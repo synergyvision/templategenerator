@@ -1,0 +1,8 @@
+<div class="logo-card">
+    {% assign image-directory= site.data.corporate-template.global.assets.images | append: include.card.image | relative_url %}
+   <a href="{{include.card.href}}" target="_blank">
+        <img src="{{image-directory}}" alt="{{include.card.alt}}">
+   </a>
+</div>
+
+

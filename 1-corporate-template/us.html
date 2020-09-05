@@ -1,6 +1,7 @@
 ---
 layout: corporate
 title: About us | Synplus
+page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, maiores soluta dolor eius error dicta, architecto porro velit quibusdam animi voluptatum repellendus numquam praesentium possimus nobis, consectetur omnis. Inventore, veniam?
 ---
 
 <!--Banner-->
@@ -13,9 +14,10 @@ type=site.data.corporate-template.us.banner.image.type
 id=site.data.corporate-template.us.banner.image.id %}
 
 <!--Wave-->
-{% include global/wave.html content='empty-content'
-color=site.data.corporate-template.colors.color-primary-light %}
-
+<div style="margin-top: -100px;">
+  {% include global/wave.html content='empty-content'
+  color=site.data.corporate-template.colors.color-primary-light %}
+</div>
 <!--Features-->
 
 {% include corporate-template/cards/us-feature-card.html collection=site.data.corporate-template.us.features %}

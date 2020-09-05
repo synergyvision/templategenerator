@@ -1,0 +1,19 @@
+{% assign svg-directory={{site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#"}} %}
+
+<div class="client-quote-card">
+    <div class="circle">
+        {% assign image-directory= site.data.corporate-template.global.assets.images | append: include.person.image | relative_url 
+            %}
+        <img  src="{{image-directory}}" alt="{{include.person.alt}}">
+    </div>
+        {% include global/svg.html directory=svg-directory image='icon-quotes-left' class='quotes-svg' %}
+    <div class="content">
+        <div class="name">{{include.person.name}}</div>
+        <div class="quote">{{include.person.text | truncate: 250 }}</div>
+        <div class="stars">
+            {% include global/score.html score=include.person.score %}
+        </div>
+    </div>
+    
+</div>
+

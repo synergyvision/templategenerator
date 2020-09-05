@@ -1,0 +1,13 @@
+.start-container{
+    @include abscenter;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    .star-svg{
+        margin: 0 5px;
+        padding-top: auto;
+        height: 20px;
+        width: 20px;
+        fill: rgb(255, 216, 43);
+    }
+}

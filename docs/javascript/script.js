@@ -110,7 +110,5 @@ var typed = new Typed('#typed', {
     $('.social-box').waypoint(function(direction){
         $('.social-box').addClass('animated fadeInLeft');  
     },{offset:'100%;'})
-
-    
  
 

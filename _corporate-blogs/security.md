@@ -2,6 +2,7 @@
 layout: blog
 id: 1
 title: Learn about security
+page-image: blog-3.png # for social media links
 by: By Katy Hernandez
 created: Created at 
 date: 2014-04-09

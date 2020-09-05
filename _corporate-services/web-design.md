@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Web Design
+page-image: service2.png # for social media links
 subtitle: Best subtitle ever
 category: Technology
 button: Learn more &rarr;

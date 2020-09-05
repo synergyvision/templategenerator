@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Access Control
+page-image: service8.png # for social media links
 subtitle: Best subtitle ever
 category: Security
 button: Learn more &rarr;

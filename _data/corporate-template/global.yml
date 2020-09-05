@@ -1,6 +1,10 @@
 site:
     title: Synplus | Dsw
+    description: This is the site description
+    creator: '@creator-example'
+    twitter: 'your-twitter-account'
     css: '/1-corporate-template/css/main.css'
+    logo-social-media: logo-small.png
     favicon: logo-small.png
     directories:
         svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'

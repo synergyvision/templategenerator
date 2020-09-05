@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Corporate images
+page-image: service5.png # for social media links
 subtitle: Best subtitle ever
 category: Design
 button: Learn more &rarr;

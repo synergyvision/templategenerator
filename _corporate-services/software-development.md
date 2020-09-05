@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Software development
+page-image: service7.png # for social media links
 subtitle: Best subtitle ever
 category: Technology
 button: Learn more &rarr;

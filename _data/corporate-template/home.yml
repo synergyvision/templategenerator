@@ -42,6 +42,7 @@ sections:
       type: svg
       id: mail
       alt: '' #if image
+    your-email: your-email@your-domain.com
     inputs:
       - input: input1
         name: Full Name
