@@ -1,0 +1,45 @@
+---
+layout: corporate
+title: Our clients | Synplus
+page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, maiores soluta dolor eius error dicta, architecto porro velit quibusdam animi voluptatum repellendus numquam praesentium possimus nobis, consectetur omnis. Inventore, veniam?
+page-image: clients-section.png
+---
+
+<!--Banner-->
+
+{% include corporate-template/sections-banner.html
+title=site.data.corporate-template.clients.banner.title
+subtitle=site.data.corporate-template.clients.banner.subtitle
+img=site.data.corporate-template.clients.banner.image.name
+type=site.data.corporate-template.clients.banner.image.type
+%}
+<!--Wave-->
+<div style="margin-top: -100px;">
+    {% include global/wave.html content='empty-content'
+    color=site.data.corporate-template.colors.color-primary-light %}
+</div>
+
+<!--Clients-->
+    <!--Title-->
+    {% include corporate-template/title.html title=site.data.corporate-template.clients.sections.clients.title %}
+
+    <!--Logos-->
+    <div class="mt-big abscenter row">
+        {% for card in site.data.corporate-template.clients.sections.clients.collection %}
+            {% include corporate-template/cards/logo-card.html card=card %}
+        {% endfor %}
+    </div>
+
+<!--Their words-->
+    <!--Title-->
+    <div class="mt-big">
+        {% include corporate-template/title.html title=site.data.corporate-template.clients.sections.testimony.title %}
+    </div>
+
+    <div class="mt-bigger abscenter row" style="justify-content: space-around !important;">
+            {% for client-card in site.data.corporate-template.clients.sections.testimony.collection %}
+                {% include corporate-template/cards/client-quote-card.html person=client-card %}
+            {% endfor %}
+    </div>
+    
+

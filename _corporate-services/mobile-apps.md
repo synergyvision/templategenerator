@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Mobile Apps
+page-image: service1.png # for social media links
 subtitle: Best subtitle ever
 category: Technology
 button: Learn more &rarr;

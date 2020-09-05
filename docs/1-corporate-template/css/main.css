@@ -92,6 +92,23 @@
 
 .circle-animated__four { background: rgba(0, 0, 0, 0.012); border: 2px solid; border-color: var(--color-secondary-light) transparent var(--color-primary-light) transparent; border-radius: 50%; box-sizing: content-box; height: 168px; width: 168px; position: absolute; z-index: -3; top: 15%; left: 15%; animation: circle-move 15s ease infinite; }
 
+.logo-card { width: 200px; height: 100px; margin: 20px; background-color: #fff; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 10px; border-radius: 8px; position: relative; cursor: pointer; transition: all .2s; }
+.logo-card::after { left: 50%; bottom: 0; transform: translateX(-50%); width: 0%; height: 0%; content: ''; margin: 0 auto; position: absolute; border-bottom: 5px solid var(--color-primary-light); transition: all .2s; }
+.logo-card:hover { box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.1); transform: scale(1.1); }
+.logo-card:hover::after { width: 90%; height: 90%; }
+.logo-card a { width: 100%; height: 100%; z-index: 10; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+.logo-card a img { width: 100%; max-height: 100%; }
+
+.client-quote-card { position: relative; width: 400px; height: 250px; border-radius: 8px; margin: 40px 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); color: var(--color-secondary); cursor: pointer; transition: all .2s; }
+.client-quote-card:hover { transform: scale(1.1); }
+.client-quote-card .circle { position: absolute; left: 20px; top: 0; transform: translateY(-50%); width: 100px; height: 100px; border-radius: 100%; background-color: var(--color-grey-light); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+.client-quote-card .circle img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; width: 80px; height: 80px; }
+.client-quote-card .quotes-svg { width: 55px; height: 55px; position: absolute; right: 10px; top: 0; transform: translateY(-50%) rotate(188deg); fill: var(--color-secondary-light); }
+.client-quote-card .content { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; flex-direction: column; margin-top: 50px; height: 200px; }
+.client-quote-card .content .name { font-size: 2rem; font-weight: 600; letter-spacing: 1.2px; }
+.client-quote-card .content .quote { padding: 10px; font-size: 1.6rem; text-align: center; }
+.client-quote-card .content .stars { align-self: flex-end; margin-top: auto; }
+
 .footer { background-color: var(--color-secondary); padding-bottom: 40px; height: auto; margin: 0 auto; margin-top: auto; }
 .footer__container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; align-items: flex-start !important; padding: 0 10%; }
 .footer__wave { background-color: var(--color-secondary); }
@@ -233,7 +250,8 @@
 @media only screen and (max-width: 56.25em) { .form__text-side { width: 100%; } }
 .form__input-side { width: 75%; padding-left: 40px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; flex-direction: column; }
 @media only screen and (max-width: 56.25em) { .form__input-side { width: 100%; margin-top: 25px; padding-left: 0px; } }
-.form__button { width: max-content; }
+.form__button { width: max-content; position: relative; }
+.form__button__input { cursor: pointer; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; }
 .form__input { font-family: inherit; color: inherit; font-size: 20px; padding: 15px 20px; border-radius: 2px; background-color: rgba(255, 255, 255, 0.5); border: none; border-bottom: 3px solid var(--color-primary); width: 100%; display: block; transition: all 0.3s; }
 @media only screen and (max-width: 56.25em) { .form__input { width: 100%; } }
 .form__input:focus { outline: none; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); border-bottom: 3px solid var(--color-secondary); }
