@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl:  "templategenerator" #  "" #
+baseurl: "templategenerator" # "" # 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #gems: [jekyll-paginate]
 #paginate: 4
-#paginate_path: "/blog/page:num/"
+#paginate_path: "1-corporate-template/blogs/page:num/"
 # Build settings
 
 destination: docs
@@ -42,6 +42,8 @@ collections:
     output: true
     permalink: 1-corporate-template/blogs/:path.html
  
+#plugins:
+#    - jekyll-paginate-v2
 
 defaults:
   - scope:
