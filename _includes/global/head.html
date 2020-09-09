@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="{{'/css/main.css' | relative_url }}">
 	<link rel="stylesheet" href="{{ include.site.css | relative_url }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-{% if page.page-image %}
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
+		{% if page.page-image %}
 	{% assign image-directory= include.site.directories.images | append: page.page-image | relative_url 
 		%}
 {% else %}
@@ -41,7 +41,5 @@
 	rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
 	/>
-  <link rel='stylesheet' id='fontawesome-css'
-    href="{{ "/css/font-awesome.css?ver=5.4.1" | relative_url }}" type='text/css'
-    media='all' />
+
 </head> 

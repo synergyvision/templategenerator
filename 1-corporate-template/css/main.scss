@@ -1,29 +1,30 @@
 ---
+layout: stylesheet
 ---
-
 
 @import 
         "global-abstracts/mixins",
-        "base/typography",
-        "base/animations",
-        "components/border",
-        "components/buttons",
-        "components/service-cards",
-        "components/composition",
-        "components/question-cards",
-        "components/quote-card",
-        "components/animated-circles",
-        "components/logo-card",
-        "components/client-quote-card",
-        "layout/footer",
-        "layout/header",
-        "layout/us",
-        "layout/feature",
-        "layout/contact",
-        "layout/team",
-        "layout/social",
-        "layout/service",
-        "layout/404",
-        "layout/blog"
+        "corporate-base/base",
+        "corporate-base/typography",
+        "corporate-base/animations",
+        "corporate-components/border",
+        "corporate-components/buttons",
+        "corporate-components/service-cards",
+        "corporate-components/composition",
+        "corporate-components/question-cards",
+        "corporate-components/quote-card",
+        "corporate-components/animated-circles",
+        "corporate-components/logo-card",
+        "corporate-components/client-quote-card",
+        "corporate-layout/footer",
+        "corporate-layout/header",
+        "corporate-layout/us",
+        "corporate-layout/feature",
+        "corporate-layout/contact",
+        "corporate-layout/team",
+        "corporate-layout/social",
+        "corporate-layout/service",
+        "corporate-layout/404",
+        "corporate-layout/blog"
 
 

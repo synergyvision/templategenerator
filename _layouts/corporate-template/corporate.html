@@ -5,12 +5,10 @@
 	{% include corporate-template/header.html url=site.data.corporate-template.global.corporate-base-url %}
 	   {{ content }} 	
 	{% include corporate-template/footer.html %}
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-	<script src="{{ '/javascript/script.js' | relative_url }}"></script>
+	{% include global/scripts.html %}
+	{% for js in site.data.corporate-template.global.site.directories.js.collection %}
+		<script src="{{ site.data.corporate-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
+	{% endfor %}
 </body>
 
 <style lang="scss">

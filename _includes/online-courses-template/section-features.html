@@ -1,0 +1,26 @@
+
+<section class="section-us row">
+    <div class="section-us__images">
+        {% assign image-directory= {{site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.home.us.images[0].name | relative_url }} %}
+        <div class="image-container">
+            <img class="image" src="{{image-directory}}" alt="{{site.data.online-courses-template.home.us.images[0].alt}}">
+            {% assign image-directory= {{site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.home.us.images[1].name | relative_url }} %}
+            <img class="image-small" src="{{image-directory}}" alt="{{site.data.online-courses-template.home.us.images[1].alt}}">
+        </div>
+        
+        
+    </div>
+    <div class="section-us__text">
+        {% for feature in site.data.online-courses-template.home.us.collection %}
+            <div class="text-box">
+                <div class="text">{{feature.text}}</div>
+                <div class="line"></div>
+            </div>
+        {% endfor %}
+        <div class="button mt-big">
+            {% include online-courses-template/global/button.html btn=site.data.online-courses-template.home.us.button %}
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,12 @@
+{% assign
+    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#"}} %}
+<div class="header__categories">
+    <div class="header__categories__icon">
+      {% include global/svg.html directory=svg-directory image=include.link.icon
+      class='icon' %}
+    </div>
+    {% if include.link.name  %}
+      <div class="title">{{include.link.name}}</div>
+    {% endif %}
+</div>

@@ -1,0 +1,39 @@
+<div class="footer">
+    <div class="footer__logo">
+        {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.footer.logo.image | relative_url 
+            %}
+        <img src="{{image-directory}}" alt="{{site.data.online-courses-template.footer.logo.alt}}">
+    </div>
+    <div class="footer__links">
+        {% assign linksLenght=site.data.online-courses-template.footer.links | size | divided_by : 4.0  | ceil %}
+        {% assign counter=0 %}
+        {% for li in (1..linksLenght) %}
+            <li>
+                {% for a in (1..4) %}
+                    {% if site.data.online-courses-template.footer.links[counter] %}
+                        <a href="">{{site.data.online-courses-template.footer.links[counter].name}}</a>
+                        {% assign counter= counter | plus:1 %}
+                    {% endif %}
+                {% endfor %}
+            </li>
+        {% endfor %}
+    </div>
+    <div class="footer__box">
+        {% include online-courses-template/global/selector.html options=site.data.online-courses-template.footer.lenguage-selector %}
+        <div class="social-media">
+            {% assign
+                svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+                | relative_url | append: "#"}} %}
+            {% for icon in site.data.online-courses-template.footer.social-media %}
+                <a href="{{icon.href}}" target="_blank">
+                    {% include global/svg.html directory=svg-directory image=icon.icon class='icon' %}
+                </a>        
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="footer__copyright">
+        {{site.data.online-courses-template.footer.copyright}}
+    </div>
+</div>
+

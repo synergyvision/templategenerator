@@ -1,5 +1,5 @@
 ---
-layout: service
+layout: corporate-template/service
 title: Training for companies
 page-image: service3.png # for social media links
 subtitle: Best subtitle ever

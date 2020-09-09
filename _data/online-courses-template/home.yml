@@ -1,0 +1,25 @@
+us:
+  title: title
+  images:
+    - name: section1.jpeg
+      alt: Section1 pic
+    - name: section1-1.jpg
+      alt: Section2 pic
+  collection:
+      - text: Aprende de las principales universidades y empresas
+      - text: Encuentra opciones flexibles y asequibles
+      - text: Domina las habilidades con un aprendizaje profundo
+      - text: Obtén credenciales reconocidas por la industria
+  button:
+    text: Enroll now
+    href: '#'
+    type: primary
+
+features:
+    collection:
+      - text: Aprende las ultimas tecnologías
+        icon: feature-one
+      - text: Prepárate para una carrera
+        icon: feature-two
+      - text: Obtén un certificado o título
+        icon: feature-tree
