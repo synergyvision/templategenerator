@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: corporate-template/blog
 id: 1
 title: Learn about security
 page-image: blog-3.png # for social media links

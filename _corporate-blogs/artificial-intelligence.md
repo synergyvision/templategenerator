@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: corporate-template/blog
 id: 2
 title: Artificial intelligence
 page-image: blog-1.png # for social media links

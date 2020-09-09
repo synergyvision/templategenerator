@@ -1,0 +1,35 @@
+logo: 
+  image: 'Coursing.png'
+  alt: 'Logo'
+  
+links: 
+    - name: Teach on Coursing
+    - name: Our blog
+    - name: About us
+    - name: Contact us
+    - name: Help and support
+    - name: Terms
+    - name: Privacy Policy
+    - name: Allies
+
+social-media:
+    - name: Twitter
+      icon: icon-twitter-square
+      href: 'https://www.twitter.com'
+    - name: Facebook
+      icon: icon-facebook-square
+      href: 'https://www.facebook.com' 
+    - name: Linkedin
+      icon: icon-linkedin
+      href: 'https://www.linkedin.com'
+    - name: Instagram
+      icon: icon-instagram-square
+      href: 'https://www.instagram.com'
+
+copyright: '&copy; 2020 Coursing, Inc.'
+
+lenguage-selector:
+    - name: English
+      default: true
+    - name: Spanish
+

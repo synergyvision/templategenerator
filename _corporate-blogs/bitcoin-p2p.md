@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: corporate-template/blog
 id: 3
 title: Bitcoin P2P
 page-image: blog-2.png # for social media links

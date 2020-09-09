@@ -1,0 +1,13 @@
+{% assign
+    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#"}} %}
+<section class="section-features">
+    {% for feature in site.data.online-courses-template.home.features.collection %}
+        <div class="feature-box">
+            {% include global/svg.html directory=svg-directory image=feature.icon class='icon' %}
+            <div class="text">
+                {{feature.text}}
+            </div>
+        </div>
+    {% endfor %}  
+</section>
