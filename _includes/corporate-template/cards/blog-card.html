@@ -1,11 +1,13 @@
 <div class="blog-card">
     <div class="blog-card__img">
-        <img src="{{site.data.corporate-template.global.assets.images}}{{include.post.image}}" alt="{{include.post.alt}}">
+        {% assign image-directory={{site.data.corporate-template.global.assets.images | append: include.post.image | relative_url }}
+        %}
+        <img src="{{image-directory}}" alt="{{include.post.alt}}">
     </div>
     <div class="blog-card__info">
         <div class="title">{{include.post.title}}</div>
         <div class="by">{{include.post.by}}</div>
-        <div class="description">{{include.post.description | truncatewords: 50 }}</div>
+        <div class="description">{{include.post.description | truncatewords: 30 }}</div>
         {% assign svg-directory=site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#" %}
         <div class="more">
             <div class="update">

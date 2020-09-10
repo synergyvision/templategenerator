@@ -1,0 +1,16 @@
+<section class="section-community">
+    <div class="section-community__title">
+       <h1>{{site.data.online-courses-template.home.team.title}}</h1> 
+        <div class="line"></div>
+        <p>
+            {{site.data.online-courses-template.home.team.subtitle}}
+        </p>
+    </div>
+    <div class="section-community__content">
+        {% assign image-directory= site.data.online-courses-template.global.site.directories.images  
+            %}
+            {% for member in site.data.online-courses-template.home.team.collection %}
+                {% include online-courses-template/cards/community-card.html member=member image-directory=image-directory %}
+            {% endfor %}
+    </div> 
+</section>

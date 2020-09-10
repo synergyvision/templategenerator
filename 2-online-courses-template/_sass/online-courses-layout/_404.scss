@@ -1,0 +1,33 @@
+.not-found-page{
+    padding-top: 90px; 
+    height: 80vh;
+    @include abscenter;
+}
+.not-found-container{
+    width: 350px;
+    padding: 20px 10px;
+    height: 400px;
+    background-color: #fff;
+    color: gray;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(black,.4);
+    @include abscenter;
+    text-align: center;
+    flex-direction: column;
+    & > *{
+        margin:10px 0;
+    }
+    .line{
+        height: 2px;
+        width: 100px;
+        background-color: var(--color-primary);
+    }
+    h1{
+        font-size: 4rem;
+        
+    }
+    p{
+        font-size: 2rem;
+
+    }
+}

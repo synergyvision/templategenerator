@@ -1,5 +1,7 @@
 ---
-layout: corporate
+layout: corporate-template/corporate
+title: About us | Synplus
+page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, maiores soluta dolor eius error dicta, architecto porro velit quibusdam animi voluptatum repellendus numquam praesentium possimus nobis, consectetur omnis. Inventore, veniam?
 ---
 
 <!--Banner-->
@@ -12,21 +14,34 @@ type=site.data.corporate-template.us.banner.image.type
 id=site.data.corporate-template.us.banner.image.id %}
 
 <!--Wave-->
+<div style="margin-top: -100px;">
+  {% include global/wave.html content='empty-content'
+  color=site.data.corporate-template.colors.color-primary-light %}
+</div>
+<!--Features-->
+
+{% include corporate-template/cards/us-feature-card.html collection=site.data.corporate-template.us.features %}
+
+<!--Wave-->
 {% include global/wave.html content='empty-content'
 color=site.data.corporate-template.colors.color-primary-light %}
 
-<!--'Our' section-->
-<div class="row">
-  {% for card in site.data.corporate-template.us.our %} {% include
-  corporate-template/cards/our-card.html title=card.title svg=card.svg-name
-  text=card.text reverse=card.reverse %} {% endfor %}
-</div>
+
+<!--'Our' section--> 
+  {% include corporate-template/title.html title=site.data.corporate-template.us.our.title %}
+
+  {% include
+  corporate-template/cards/our-card.html collection=site.data.corporate-template.us.our.collection %}
+
+<!--Quote carousel-->
+{% include corporate-template/title.html title='What our team have to say' %}
 
 <div class="us-quote row">
-  <div class="us-quote__card">
+  <div class="us-quote__card ">
     {% include global/carousel.html
+    id=1
     cardsFile='corporate-template/cards/quote-card.html' quantity='1.0'
-    cardsCollection=site.data.corporate-template.us.quotes
+    cardsCollection=site.data.corporate-template.us.quotes.collection
     color=site.data.corporate-template.colors.color-secondary-light %}
   </div>
   <div class="us-quote__blob">

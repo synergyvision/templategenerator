@@ -11,5 +11,5 @@
 
 ## docs generation
 
-`jekyll build -d docs`
+`jekyll build` or `bundle exec jekyll build`
 

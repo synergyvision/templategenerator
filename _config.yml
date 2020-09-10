@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl: "templategenerator" # the subpath of your site, e.g. /blog
+baseurl:  "templategenerator" # "" #
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+repository: synergyvision/templategenerator
 #gems: [jekyll-paginate]
 #paginate: 4
-#paginate_path: "/blog/page:num/"
+#paginate_path: "1-corporate-template/blogs/page:num/"
 # Build settings
 
 destination: docs
@@ -28,20 +28,28 @@ sass:
   load_paths:
         - _sass
         - 1-corporate-template/_sass
-
+        - 2-online-courses-template/_sass
+  style: compressed
+  
 kramdown:
   input: GFM
 
 #collections_dir: 1-corporate-template
 
 collections:
-  services:
+  corporate-services:
     output: true
-    permalink: templategenerator/1-corporate-template/:path.html
-  blogs:
+    permalink: 1-corporate-template/services/:path.html
+  corporate-blogs:
     output: true
-    permalink: templategenerator/1-corporate-template/:path.html
+    permalink: 1-corporate-template/blogs/:path.html
  
+plugins:
+#    - jekyll-minifier
+#    - jekyll-paginate-v2
+
+
+
 
 defaults:
   - scope:
@@ -57,6 +65,7 @@ defaults:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
+
 exclude:
   - propuesta
 #   - Gemfile.lock

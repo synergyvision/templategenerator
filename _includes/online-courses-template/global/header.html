@@ -1,0 +1,36 @@
+
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.logo.img | relative_url 
+  %}
+<div class="header">
+  <div class="header__logo">
+    <a href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.header.logo.href | prepend: site.baseurl | relative_url }}">
+      <img
+        src="{{image-directory}}"
+        alt="{{site.data.online-courses-template.header.logo.alt}}"
+      />
+    </div>
+  </a>
+  {% for links in site.data.online-courses-template.header.first-sections %}
+    {% include online-courses-template/header-links.html link=links %}
+  {% endfor %}
+
+  {% include online-courses-template/search-input.html placeholder=site.data.online-courses-template.header.search-input.placeholder %}
+  <div class="header__info">
+      {% for links in site.data.online-courses-template.header.second-sections %}
+          {% include online-courses-template/header-links.html link=links %}
+      {% endfor %}
+      <div class="header__profile">
+        <div class="header__profile__pic">
+          {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.profile.pic | relative_url 
+            %}
+          <img
+            src="{{image-directory}}"
+            alt="{{site.data.online-courses-template.header.profile.alt}}"
+          />
+        </div>
+        <i class="arrow-up"></i>
+      </div>
+  </div>
+
+</div>
+

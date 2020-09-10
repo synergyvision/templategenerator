@@ -1,29 +1,59 @@
 
-    <div class="book__form ">
-        <form action="" class="form">
+<div class="book__form" >
+        <form class="form" action="https://formspree.io/stephaniecruzcastelli@gmail.com" method="POST">
             <div class="form__text-side">
                     {% include corporate-template/title.html title=site.data.corporate-template.home.sections.form.title %}
-                    {% assign svg-directory='/1-corporate-template/assets/svg/contact.svg' | relative_url | append: '#' %}
-                    {% include global/svg.html directory=svg-directory image='mail' class='form__svg'  %}
+                    {% if site.data.corporate-template.home.sections.form.image.type == 'svg' %}
+                        {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.home.sections.form.image.name }}{% endcapture %}
+                        {% include global/svg.html directory=svg-directory image=site.data.corporate-template.home.sections.form.image.id class='form__svg'  %}
+                    {% else %}
+                    {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.home.sections.form.image.name | relative_url }}
+                    %} 
+                        <img
+                            src="{{image-directory}}"
+                            alt="{{site.data.corporate-template.home.sections.form.image.alt}}"
+                        />
+                    {% endif %}
             </div>
             <div class="form__input-side">
                 <div class="form__input-side1">
                     <div class="form__group">
-                        <input type="" class="form__input" placeholder="{{site.data.corporate-template.home.sections.form.inputs[0].name}}" id="{{site.data.corporate-template.home.sections.form.inputs[0].name.id}}" required>
-                        <label for="{{site.data.corporate-template.home.sections.form.inputs[0].name.id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[0].name}}</label>
+                        <input name="{{site.data.corporate-template.home.sections.form.inputs[0].id}}" type="text" class="form__input" placeholder="{{site.data.corporate-template.home.sections.form.inputs[0].name}}" id="{{site.data.corporate-template.home.sections.form.inputs[0].id}}" required>
+                        <label for="{{site.data.corporate-template.home.sections.form.inputs[0].id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[0].name}}</label>
                     </div>
                     <div class="form__group">
-                        <input type="email" class="form__input" placeholder="{{site.data.corporate-template.home.sections.form.inputs[1].email}}" id="{{site.data.corporate-template.home.sections.form.inputs[1].email.id}}" required>
-                        <label for="{{site.data.corporate-template.home.sections.form.inputs[1].email.id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[1].email}}</label>
+                        <input name="{{site.data.corporate-template.home.sections.form.inputs[1].id}}" type="email" class="form__input" placeholder="{{site.data.corporate-template.home.sections.form.inputs[1].email}}" id="{{site.data.corporate-template.home.sections.form.inputs[1].id}}" required>
+                        <label for="{{site.data.corporate-template.home.sections.form.inputs[1].id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[1].email}}</label>
                     </div>
                 </div>
                 <div class="form__group">
-                    <input type="" class="form__input" placeholder="{{site.data.corporate-template.home.sections.form.inputs[2].message}}" id="{{site.data.corporate-template.home.sections.form.inputs[2].message.id}}" required>
-                    <label for="{{site.data.corporate-template.home.sections.form.inputs[2].message.id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[2].message}}</label>
+                    <input name="{{site.dara.corporate-template.home.sections.form.inputs[2].id}}" type="text" class="form__input" placeholder="{{site.data.corporate-template.home.sections.form.inputs[2].message}}" id="{{site.data.corporate-template.home.sections.form.inputs[2].id}}" required>
+                    <label for="{{site.data.corporate-template.home.sections.form.inputs[2].id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[2].message}}</label>
                 </div>
                 <div class="form__button">
                     {% include corporate-template/button-primary.html type=1 title=site.data.corporate-template.home.sections.form.button %}  
+                    <input type="submit" class="form__button__input">
                 </div>
             </div>
             </form>
-        </div>      
+</div>      
+<!--
+<form
+  action="https://formspree.io/FORM_ID"
+  method="POST"
+>
+  <label>
+    Your Name:
+    <input type="text" name="name">
+  </label>
+  <label>
+    Your Email:
+    <input type="email" name="_replyto">
+  </label>
+  <label>
+    Message:
+    <textarea name="message"></textarea>
+  </label>
+  <input type="submit" value="Send">
+</form>
+-->

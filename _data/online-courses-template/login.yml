@@ -1,0 +1,39 @@
+logo: 'Coursing.png'
+
+login:
+  selector: Login
+  fields:
+    - name: Email
+      icon: icon-envelope
+      type: email
+    - name: Password
+      icon: icon-locked
+      type: password
+  btn:
+    text: 'Log in'
+    type: primary
+    href: ''
+signup:
+  selector: SignUp
+  fields:
+    - name: Full name
+      icon: icon-user
+      type: text
+    - name: Email
+      icon: icon-envelope
+      type: email
+    - name: Password
+      icon: icon-locked
+      type: password
+    - name: Repeat password
+      icon: icon-locked
+      type: password
+  checkboxs:
+    - text:  I want to take the most of Coursing and receive emails with the latest news
+      checked: true
+    - text: I accept the terms and conditions
+      cheked: false
+  btn:
+    text: 'Sign up'
+    type: primary
+    href: ''

@@ -1,5 +1,8 @@
 ---
-layout: corporate
+layout: corporate-template/corporate
+title: Blog | Synplus
+page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, maiores soluta dolor eius error dicta, architecto porro velit quibusdam animi voluptatum repellendus numquam praesentium possimus nobis, consectetur omnis. Inventore, veniam?
+page-image: blog-bg.png
 ---
 
 <!--Banner-->
@@ -23,7 +26,7 @@ type=site.data.corporate-template.blog.banner.type %}
     <div class="blog__content">
         <!--Title-->
         {% include corporate-template/title.html title=site.data.corporate-template.blog.posts.title %}
-        {% assign sorted-blogs= site.blogs | sort: "date"  %}
+        {% assign sorted-blogs= site.corporate-blogs | sort: "date"  %}
         <div class="mt-bigger">
             {% for post in sorted-blogs %} {%
                 include corporate-template/cards/blog-card.html post=post
@@ -37,7 +40,7 @@ type=site.data.corporate-template.blog.banner.type %}
             <div class="blog__side__title">{{site.data.corporate-template.blog.posts.top.title}}</div>
             {% assign tops=0 %}
             <div class="blog__side__cards">
-                {% for spost in site.blogs %}
+                {% for spost in site.corporate-blogs %}
                     {% if tops < site.data.corporate-template.blog.posts.top.quantity %}
                         {% if spost.top %}
                             {% assign tops=tops | plus:1 %}
@@ -51,3 +54,4 @@ type=site.data.corporate-template.blog.banner.type %}
             </div>
     </div>
 </div>
+

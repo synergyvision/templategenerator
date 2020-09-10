@@ -1,18 +1,17 @@
 ---
+layout: stylesheet
 ---
 
 @import 
-
 	"global-base/typography",
 	"global-abstracts/mixins",
 	"global-base/utilities",
 	"global-base/animations",
 	"global-base/base",
 	"global-abstracts/variables",
-	"layout/header",
-	"layout/footer",
 	"global-components/navigation",
 	"global-components/carousel",
 	"global-components/buttons",
 	"global-components/progress-bar",
-	"global-components/organic-blob-circle"
+	"global-components/organic-blob-circle",
+	"global-components/score"
