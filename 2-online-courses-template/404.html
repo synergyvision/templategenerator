@@ -1,0 +1,15 @@
+---
+layout: online-courses-template/online-courses
+permalink: /404.html
+---
+
+
+<div class="not-found-page" >
+    {% assign not-found= site.data.online-courses-template.not-found %}
+    <div class="not-found-container">
+        <h1>{{not-found.title}}</h1>
+        <div class="line"></div>
+        <p>{{not-found.subtitle}}</p>
+        {% include online-courses-template/global/button.html btn=not-found.btn %}
+    </div>
+</div>

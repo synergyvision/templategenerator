@@ -30,15 +30,28 @@
             left: 50%;
             transform: translate(-50%,90%);
         }
-        p{
-            text-align: center;
-            font-size: 1.8rem;
-            letter-spacing: 1.2px;
-            font-weight: 400;
+        &__text{
+            display: flex;
+            flex-direction: column;
             @include respond(tab-port){
                 margin-bottom: 40px;
             }
+            .line{
+                width: 100px;
+                height: 2px;
+                background-color: var(--color-primary);
+                margin:10px auto;
+                @include abscenter;
+            }
+            p{
+                text-align: center;
+                font-size: 1.8rem;
+                letter-spacing: 1.2px;
+                font-weight: 400;
+               
+            }
         }
+        
 
         &__buttons{
             @include abscenter;
@@ -48,95 +61,6 @@
 }
 
 
-.section-us{
-    @include abscenter;
-    margin-bottom: 100px;
-     & > *{
-        margin: 100px 0;
-     }
-
-    &__images{
-       width: 50%;
-        @include respond(tab-port){
-            width: 100%;
-        }
-        .image-container{
-           width: max-content;
-           height: max-content;
-           position: relative;
-            .image{
-                box-shadow: 0 5px 10px rgba(black,.2);
-                height: 30rem;
-                width: auto;
-                margin: 0 auto;
-            
-             }
-            .image-small{
-                    box-shadow: 0 5px 10px rgba(black,.2);
-                    position: absolute;
-                    right: -20%;
-                    bottom: -60%;
-                    transform: translateY(-50%) rotate(10deg);
-                    height: 18rem;
-                    width: auto;
-                    @include respond(tab-land){
-                        bottom: -70%;
-                    }
-                
-            }
-        }
-        
-    }
-    &__text{
-        padding-left: 25px;
-        @include respond(tab-port){
-            margin-top:100px;
-        }
-        .text-box{
-            display: flex;
-            flex-direction: column;
-            .text{
-                font-size: 1.6rem;
-                letter-spacing: 1.2px;
-                margin: 15px 0;
-            }
-            .line{
-                width: 100px;
-                height: 2px;
-                background-color: var(--color-primary);
-            }
-           
-        }
-        .button{
-            width: max-content;
-            margin-left: auto;
-        }
-    }
-}
 
 
 
-.section-features{
-    height: max-content;
-    padding: 15px;
-    width: 100%;
-    background-image: linear-gradient(to right, var(--color-primary), #16215a);
-    @include abscenter;
-    justify-content: space-around;
-    .feature-box{
-        @include abscenter;
-        margin: 10px 0;
-        .icon{
-            height: 70px; width: 70px;
-            fill:  #fff;
-            margin: 0 15px;
-        }
-        .text{
-            text-align: center;
-            width: 130px;
-            color: #fff;
-            font-size: 1.4rem;
-            letter-spacing: 1.2px;
-        }
-    }
-}

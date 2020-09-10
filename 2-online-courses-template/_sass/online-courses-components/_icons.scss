@@ -8,7 +8,7 @@ $cornflower-blue: #6078ea;
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    border: 3px solid var(--color-primary-transparent);
+    border: 3px solid var(--color-primary);
     transition: opacity 0.25s ease, transform 0.43s $snappy;
     &:after {
       content: "";
@@ -19,7 +19,7 @@ $cornflower-blue: #6078ea;
       border-radius: 3px;
       transform: rotate(-45deg);
       height: 10px;
-      background-color: var(--color-primary-transparent);
+      background-color: var(--color-primary);
     }
 }
 
@@ -39,7 +39,7 @@ $cornflower-blue: #6078ea;
           position:absolute;
           width:20px;
           height:2px;
-          background-color:var(--color-primary-transparent);
+          background-color:var(--color-primary);
           border-radius:2px;
           top:50%;
           transform: translateY(-50%);

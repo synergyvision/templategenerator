@@ -1,0 +1,21 @@
+<div class="section-contact ">
+    <div class="text-side">
+        <div class="title">{{site.data.online-courses-template.home.contact.title}}</div>
+        <div class="subtitle">{{site.data.online-courses-template.home.contact.subtitle}}</div>
+    </div>
+    <div class="form-side">
+        <div class="contact-form">
+        {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.home.contact.form.image.name | relative_url 
+            %}
+            <img src="{{image-directory}}" alt="{{site.data.online-courses-template.home.contact.form.image.alt}}">
+            <div class="text">{{site.data.online-courses-template.home.contact.form.text}}</div>
+            {% for input in site.data.online-courses-template.home.contact.form.inputs %}
+                <div class="contact-input">
+                    <input type="{{input.type}}" placeholder="{{input.name}}" class="contact-input__field" />
+                </div>
+            {% endfor %}
+           
+            {% include online-courses-template/global/button.html btn=site.data.online-courses-template.home.contact.form.button %}
+        </div>
+    </div>
+</div>
