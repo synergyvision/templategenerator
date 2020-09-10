@@ -1,0 +1,54 @@
+
+
+.border {
+
+    &__primary{
+      transform: translateY(-20%);
+      height: 100px;
+      background-color: var(--color-primary-light);
+      
+       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        height: 300px; 
+        -webkit-clip-path: polygon(
+        0 0%, 50% 20%, 100% 0%, 100% 70%, 50% 90%, 0% 70%
+        ); 
+        clip-path: polygon(0 0%, 50% 20%, 100% 0%, 100% 60%, 50% 90%, 0% 60%);
+      }
+  
+        &:before{
+          content: "";
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.2);
+          z-index: 2;
+          visibility: visible;
+          @include respond(tab-port) {
+            visibility: hidden;
+          }
+        }
+    }
+  
+    
+     
+    &__secondary{
+      background-color: var(--color-primary);
+     
+      
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+         height: 150px;  
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 80%, 0% 100%);
+        clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 20%, 50% 80%, 0% 20%);
+       
+      }
+    }
+
+    &__top{
+      transform: translateY(-100%);
+    }
+    
+  
+  }
+    

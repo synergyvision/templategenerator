@@ -1,0 +1,67 @@
+us:
+  title: title
+  images:
+    - name: section1.jpeg
+      alt: Section1 pic
+    - name: section1-1.jpg
+      alt: Section2 pic
+  collection:
+      - text: Aprende de las principales universidades y empresas
+      - text: Encuentra opciones flexibles y asequibles
+      - text: Domina las habilidades con un aprendizaje profundo
+      - text: Obtén credenciales reconocidas por la industria
+  button:
+    text: Enroll now
+    href: 'login.html'
+    type: primary
+
+features:
+    collection:
+      - text: Aprende las ultimas tecnologías
+        icon: feature-one
+      - text: Prepárate para una carrera
+        icon: feature-two
+      - text: Obtén un certificado o título
+        icon: feature-tree
+
+contact:
+    title: Become an instructor now
+    subtitle: Fill out the form, and we will contact you
+    form: 
+      text: Be part of the change
+      image: 
+        name: 'coursing-favicon.png'
+        alt: Coursing logo
+      inputs:
+        - name: Full name
+          type: text
+        - name: Email
+          type: email
+      button:
+        text: 'Send request'
+        type: primary
+
+team:
+  title: 'Meet the top Coursing community'
+  subtitle: More than 40 people already teach in Coursing
+  collection:
+    - name: Ivan Lenden
+      text: Gerente de Recursos Humanos, ZS Associates
+      image: 
+        name: member1.jpg
+        alt: member 1
+    - name: Deyna Reyes
+      text: Graduado de iMBA, Escuela de Negocios Gies de la Universidad de Illinois
+      image: 
+        name: member3.jpg
+        alt: member 3
+    - name: Roger Millman
+      text: Estudiante del Certificado profesional de Ciencia de datos de IBM
+      image: 
+        name: member6.jpg
+        alt: member 6
+    - name: Danil Medvedev
+      text: Desarrollador Web. Scottland
+      image: 
+        name: member4.jpg
+        alt: member 4

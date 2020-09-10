@@ -1,0 +1,26 @@
+<a class="course-card">
+            {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: include.card.image.name | relative_url 
+                %} <!--QUITAR DE AQUI-->
+            <div class="course-card__image">
+               <img src="{{image-directory}}" alt="">
+            </div>
+            <div class="course-card__info">
+                <div class="title">{{include.card.name | truncate: 55 }}</div>
+                <div class="owner">{{include.card.owner}}</div>
+                {% assign
+                    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+                    | relative_url | append: "#"}} %}
+                <div class="stars">
+                    {% include global/score.html score=include.card.score color='dark' size='small' %}
+                </div>
+                <div class="price">
+                    {% if include.card.discount == true  %}
+                        <div class="discount">{{include.card.discount-price}} </div>
+                        {% assign old-price = 'old-price' %}
+                    {% else %}
+                        {% assign old-price = ' ' %}
+                    {% endif %}
+                    <div class="{{old-price}}">{{include.card.price}}</div>
+                </div>
+            </div>
+</a>

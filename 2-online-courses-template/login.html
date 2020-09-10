@@ -1,0 +1,38 @@
+---
+layout: online-courses-template/flat
+title: Coursing | Log in
+---
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+<section class="login-section" >
+    <div class="login-card">
+        {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.login.logo | relative_url 
+            %}
+        <img class="logo" src="{{image-directory}}" alt="{{site.data.online-courses-template.home.contact.image.alt}}">
+        <div class="selector">
+            <a class="a-1 active-btn">
+                  <p>{{site.data.online-courses-template.login.login.selector}}</p>  
+            </a>
+            <a class="a-2">
+                <p>{{site.data.online-courses-template.login.signup.selector}}</p>
+            </a>
+        </div>
+         <div class="content content-1 show-content">
+            {% for input in site.data.online-courses-template.login.login.fields %}
+               {% include online-courses-template/global/login-input.html input=input svg-directory=svg-directory %}
+            {% endfor %}
+            {% include online-courses-template/global/button.html btn=site.data.online-courses-template.login.login.btn %}
+        </div>       
+        <div class="content content-2 hide-content">
+            {% for input in site.data.online-courses-template.login.signup.fields %}
+                {% include online-courses-template/global/login-input.html input=input svg-directory=svg-directory %}
+            {% endfor %}
+            {% for checkbox in site.data.online-courses-template.login.signup.checkboxs %}
+               {% include online-courses-template/global/checkbox.html checkbox=checkbox %}
+            {% endfor %}
+            {% include online-courses-template/global/button.html btn=site.data.online-courses-template.login.signup.btn %}
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,66 @@
+.banner{
+    height: 70vh;
+    width: 100%;
+    margin-bottom:200px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    @include respond(tab-port){
+        margin-bottom: 220px;
+    }
+    &__box{
+        @include abscenter;
+        justify-content: space-between;
+        padding: 40px 25px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,50%);
+        box-shadow: 0 5px 15px rgba(black,.3);
+        background-color: rgb(228, 228, 228);
+        width: 70%;
+        height: max-content;
+        @include respond(tab-port){
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%,90%);
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            @include respond(tab-port){
+                margin-bottom: 40px;
+            }
+            .line{
+                width: 100px;
+                height: 2px;
+                background-color: var(--color-primary);
+                margin:10px auto;
+                @include abscenter;
+            }
+            p{
+                text-align: center;
+                font-size: 1.8rem;
+                letter-spacing: 1.2px;
+                font-weight: 400;
+               
+            }
+        }
+        
+
+        &__buttons{
+            @include abscenter;
+
+        }
+    }
+}
+
+
+
+
+

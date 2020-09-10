@@ -1,0 +1,32 @@
+logo: 
+  img: 'Coursing.png'
+  alt: 'Logo'
+  href: ""
+
+search-input:
+  placeholder: Search...
+
+profile:
+  pic: client-1-face.jpg
+  alt: Profile
+
+first-sections:
+  - name: Categories
+    icon: icon-th-small
+
+second-sections:
+  - icon: icon-heart
+  - icon: icon-shopping-cart
+
+
+banner:
+  image: 'coursing-bg.jpeg'
+  box:
+    text: First-class learning, anytime, anywhere
+    buttons:
+      - text: Log in
+        href: 'login.html'
+        type: primary
+      - text: Sign up
+        href: 'login.html'
+        type: secondary

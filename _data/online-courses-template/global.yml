@@ -1,0 +1,13 @@
+site:
+  title: Coursing | Learn anywhere
+  css: '/2-online-courses-template/css/main.css'
+  favicon: 'coursing-favicon.png'
+  directories:
+    images: /2-online-courses-template/assets/images/
+    svg-icon-directory: '/2-online-courses-template/assets/svg/sprite.svg'
+    js:
+      name: /2-online-courses-template/assets/js/
+      collection: 
+        - name: animations.js
+        - name: global.js
+  base-url: '/2-online-courses-template/'

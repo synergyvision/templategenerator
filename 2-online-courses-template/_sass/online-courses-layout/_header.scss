@@ -1,0 +1,118 @@
+.header{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(black,.2); 
+    background-color: white;
+    @include abscenter;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1;
+
+    .search-input{
+        @include respond(tab-port){
+            display: none;
+        }
+    }
+
+    &__logo{
+        z-index: 2;
+        height: 70px;
+        width: min-content;
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+   
+    &__info{
+        @include abscenter;
+
+        & > *{
+            margin:0 15px;
+        }
+    }
+
+    &__categories{
+        @include abscenter;
+        cursor: pointer;
+        @include respond(tab-land){
+            display: none;
+        }
+
+        &:hover {
+        
+            .title{
+            border-bottom: 3px solid var(--color-primary);
+            }
+            .icon{
+            width: 22px;
+            height: 22px;
+            fill: var(--color-primary);
+            }
+        }
+
+        .title{
+            font-size: 1.4rem;
+            margin: 0 10px;
+            margin-top: 5px;
+            border-bottom: 3px solid transparent;
+            transition: all .2s;
+            padding:10px 0;
+        }
+
+        &__icon{
+            @include abscenter;
+            width: 30px;
+            height: 30px;
+            fill: grey;
+            
+            transition: all .2s;
+           
+            .icon{
+                width: 25px;
+                height: 25px;
+                
+                fill: grey;
+                transition: all .4s;
+            }
+        }
+    }
+
+    &__profile{
+        @include abscenter;
+        cursor: pointer;
+        &__pic{
+            margin-right: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            position: relative;
+            img{
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%,-50%);
+                height: 90%;
+                width: auto;
+                border-radius: 50%;
+            }
+        }
+
+        &:hover .arrow-up{
+            transform: rotate(-135deg);
+         -webkit-transform: rotate(-135deg);
+        }
+
+    }
+   
+   
+} 
+
+
+
+
+
+
+
+

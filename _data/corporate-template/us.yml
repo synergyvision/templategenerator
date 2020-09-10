@@ -6,32 +6,45 @@ banner:
     type: svg
     id: us
 
+features:
+  - id: 1
+    icon: icon-user-tie
+    text: 15 years of experience to give you the best of the the best
+  - id: 2
+    icon: icon-check-square
+    text: Our features will help to improve busines
+  - id: 3
+    icon: icon-banknote
+    text: Competitive Pay Package.
+
 our:
-  - title: Our vision
-    svg-name: 'icon-eye'
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
-    reverse: false
-  - title: Our mission
-    svg-name: 'icon-key'
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
-    reverse: true
+  title: Statement
+  collection:
+    - title: Our vision
+      svg-name: 'icon-eye'
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
+    - title: Our mission
+      svg-name: 'icon-key'
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
 
 quotes:
-  - id: 1
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
-    member:
-      name: Katy Hernandez
-      position: Graphic Designer
-      image:
-        alt: Katy
-        name: member2-face.jpg
-  - id: 2
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    member:
-      name: Nole Djökel
-      position: Data Scientist
-      image:
-        alt: Nole
-        name: member5-face.jpg
+  title: What our team have to say
+  collection:
+    - id: 1
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure?
+      member:
+        name: Katy Hernandez
+        position: Graphic Designer
+        image:
+          alt: Katy
+          name: member2-face.jpg
+    - id: 2
+      text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis hic, inventore maiores, quisquam officia, ullam amet odit consequatur labore minus odio. Repellat veritatis soluta ducimus, similique amet est iure? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      member:
+        name: Nole Djökel
+        position: Data Scientist
+        image:
+          alt: Nole
+          name: member5-face.jpg
       
       

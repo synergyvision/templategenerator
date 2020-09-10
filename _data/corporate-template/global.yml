@@ -1,5 +1,22 @@
+site:
+    title: Synplus | Dsw
+    description: This is the site description
+    creator: '@creator-example'
+    twitter: 'your-twitter-account'
+    css: '/1-corporate-template/css/main.css'
+    logo-social-media: logo-small.png
+    favicon: logo-small.png
+    directories:
+        svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'
+        images: /1-corporate-template/assets/images/
+        svg-directory: '/1-corporate-template/assets/svg/'
+        js: 
+            name: /1-corporate-template/assets/js/
+            collection: 
+                - name: 'animations.js'
 
-baseUrl: /1-corporate-template/
+
+corporate-base-url: /1-corporate-template/
 
 assets:
     svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'

@@ -5,12 +5,16 @@ sections:
     paragraphs:
         - text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio in eos illo similique obcaecati, alias pariatur commodi, qui vero praesentium, magni necessitatibus rem. Dolores cum sapiente optio voluptas hic porro.
         - text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio in eos illo similique obcaecati, alias pariatur commodi, qui vero praesentium, magni necessitatibus rem. Dolores cum sapiente optio voluptas hic porro.
-    button: More about us
+    button: 
+      title: More about us
+      to: us.html
+      to-type: page
     composition:
         - image: composition1.jpeg
         - image: composition2.jpg
   services:
     title: Our services
+    id: our-services
   banner:
     moving-wave: true
     image:
@@ -22,14 +26,23 @@ sections:
     title-primary: The bests in software development 
     description:
     buttons:
-      - title: Discover more
+      - title: Our services
         type: 1 
+        go-to: our-services
+        to: section
       - title: Contact us
         type: 2
-    background: Untitled-2.png
+        go-to: contact-us
+        to: section
   form:
+    id: contact-us
     title: Contact us
-    background: contact-bg.jpeg
+    image: 
+      name: 'contact.svg#'
+      type: svg
+      id: mail
+      alt: '' #if image
+    your-email: your-email@your-domain.com
     inputs:
       - input: input1
         name: Full Name

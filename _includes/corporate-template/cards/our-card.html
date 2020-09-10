@@ -1,15 +1,25 @@
-<div class="our-section {% if include.reverse == true %} reverse {% endif %}">
-    <div class="our-card">
-        <div class="our-card__text">
-            <div class="title">{{include.title}}</div>
-        </div>
-        <div class="our-card__animated-circles">   
-            {% include corporate-template/animated-circles.html %}
-        </div>  
-    </div>
-    <div class="our-text">
-        <div class="line"></div>
-        {{include.text}}   
-    </div>
-</div> 
+<div class="our-section mtb-big">
+    {% for card in include.collection %} 
+    {% assign reverse= forloop.index | modulo: 2 %}
+        <div class="our-card-content {% if reverse == 0 %} reverse js-animated-right {% else %} js-animated-left {% endif %}">
+            <div class="our-card">
+                <div class="our-card__text">
+                    <div class="title">{{card.title}}</div>
+                </div>
+                <div class="our-card__animated-circles">   
+                    {% include corporate-template/animated-circles.html %}
+                </div>  
+                <div class="our-text">
+                    <div class="line"></div>
+                    {{card.text}}   
+                </div>
+            </div>
+            <div class="our-text">
+                <div class="line"></div>
+                {{card.text}}   
+            </div>
+        </div> 
+    {% endfor %}
+</div>
+
 
