@@ -1,0 +1,46 @@
+.contact-form{
+    width: 350px;
+    padding: 20px 10px;
+    height: max-content;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(black,.4);
+    @include abscenter;
+    flex-direction: column;
+    & > *{
+        margin:10px 0;
+    }
+    img{
+        width: 6rem;
+        height: auto;
+    }
+    .text{
+        color: grey;
+        font-size: 1.8rem;
+    }
+}
+.contact-input {
+    margin: 15px 0;
+    position: relative;
+    border: 0;
+    border-bottom: 3px solid var(--color-primary) ;
+    width: 80%;
+    height: 40px;
+    &__field {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px 20px;
+      background: white;
+      border-radius:0 3px 3px 0;
+      box-shadow: 0px 8px 15px rgba(black, 0.1);
+      transition: all 0.4s ease;
+      font-size: 1.6rem !important;
+      color: grey;
+  
+      &:focus {
+        outline: none;
+        box-shadow: 0px 9px 20px rgba(black, 0.3);
+      }
+    }
+}

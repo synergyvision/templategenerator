@@ -3,9 +3,14 @@ layout: online-courses-template/online-courses
 ---
 
 
-{% include online-courses-template/banner.html %}
-{% include online-courses-template/section-features.html %}
-{% include online-courses-template/feature-stripe.html %}
-<div class="" style="height: 800px;">
+{% include online-courses-template/home-sections/banner.html %}
+{% include online-courses-template/home-sections/section-features.html %}
+{% include online-courses-template/home-sections/feature-stripe.html %}
 
-</div>
+<!--Modificar-->
+{% include online-courses-template/home-sections/section-courses.html title='Top development courses' id=1 %}
+{% include online-courses-template/home-sections/section-courses.html title='Top Coursing recommendation' id=2 %}
+
+{% include online-courses-template/home-sections/section-contact.html %}
+{% include online-courses-template/home-sections/section-community.html %}
+

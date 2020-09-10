@@ -1,17 +1,23 @@
 <div class="start-container">
-    ( {{include.score}} )
+    <div class="score">
+
+        ( {{include.score | round: 1 }} )
+
+    </div>
     {% assign score= include.score | floor %}
     {% assign counter=0 %}
+    {% assign primary-class='star-svg' %}
+    {% assign class = primary-class | append: ' ' | append: include.color | append: ' ' | append: include.size %}
     {% for star in (1..score) %}
-        {% include global/svg.html directory=svg-directory image='icon-star-full' class='star-svg' %}
+        {% include global/svg.html directory=svg-directory image='icon-star-full' class=class %}
         {% assign counter=counter | plus: 1 %}
     {% endfor %}
     {% if include.score > score %}
-        {% include global/svg.html directory=svg-directory image='icon-star-half' class='star-svg' %}
+        {% include global/svg.html directory=svg-directory image='icon-star-half' class=class %}
         {% assign counter=counter | plus: 1 %}
     {% endif %}
     {% assign dif=5 | minus: counter %}
     {% for cont in (1..dif) %}
-         {% include global/svg.html directory=svg-directory image='icon-star-empty' class='star-svg' %}
+         {% include global/svg.html directory=svg-directory image='icon-star-empty' class=class %}
     {% endfor %}
 </div>       

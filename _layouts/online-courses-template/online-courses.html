@@ -6,7 +6,10 @@
     {% include online-courses-template/global/header.html %}
        {{ content }} 	
     {% include online-courses-template/global/footer.html %}
-	{% include global/scripts.html %}
+   {% include global/scripts.html %}
+   {% for js in site.data.online-courses-template.global.site.directories.js.collection %}
+		<script src="{{ site.data.online-courses-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
+	{% endfor %}
 </body>
 
 <style lang="scss">

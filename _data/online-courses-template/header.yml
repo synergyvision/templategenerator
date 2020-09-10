@@ -1,6 +1,7 @@
 logo: 
   img: 'Coursing.png'
   alt: 'Logo'
+  href: ""
 
 search-input:
   placeholder: Search...
@@ -24,8 +25,8 @@ banner:
     text: First-class learning, anytime, anywhere
     buttons:
       - text: Log in
-        href: '#'
+        href: 'login.html'
         type: primary
       - text: Sign up
-        href: '#'
+        href: 'login.html'
         type: secondary
