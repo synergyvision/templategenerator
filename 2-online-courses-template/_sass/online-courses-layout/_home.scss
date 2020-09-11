@@ -1,3 +1,24 @@
+.title-container{
+    font-size: 2rem;
+    color: grey;
+    font-weight: 300;
+    @include abscenter;
+    flex-direction: column;
+    margin-bottom: 20px;    
+    & > *{
+        text-align: center;
+        margin: 15px;
+    }
+    .line{
+        width: 150px;
+        height: 2px;
+        background-color: var(--color-primary);
+    }
+    p{
+        font-size: 2rem;
+    }
+}
+
 
 .section-features{
     height: max-content;
@@ -134,28 +155,10 @@
 
 .section-community{
     padding: 5%;
-    &__title{
-        font-size: 2.5rem;
-        color: grey;
-        font-weight: 300;
-        @include abscenter;
-        flex-direction: column;
-        margin-bottom: 20px;    
-        & > *{
-            text-align: center;
-            margin: 15px;
-        }
-        .line{
-            width: 150px;
-            height: 2px;
-            background-color: var(--color-primary);
-        }
-        p{
-            font-size: 2rem;
-        }
-    }
+   
    
     &__content{
         @include abscenter;
     }
 }
+

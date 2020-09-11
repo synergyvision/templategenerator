@@ -12,7 +12,7 @@
                 {% include global/svg.html directory=svg-directory image='icon-calendar' class='blog-card__info__svg' %}
                 <p>{{include.post.created}} {{include.post.date | date: "%b %d, %y"}}</p>
             </div>
-            <a href="{{include.post.url}}"><div class="plus">&plus;</div></a>
+            <a href="{{include.post.url | relative_url}}"><div class="plus">&plus;</div></a>
         </div>
     </div>
 </div>

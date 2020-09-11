@@ -9,4 +9,13 @@
     {% if include.link.name  %}
       <div class="title">{{include.link.name}}</div>
     {% endif %}
+    <div class="dropdown-menu ">
+        {% for link in include.link.sections %}
+          <div class="dropdown-menu__link">          
+                <div class="title-link">{{link.name}}</div>      
+                {% include global/svg.html directory=svg-directory image='icon-keyboard_arrow_right'
+                class='icon-link' %}
+          </div> 
+        {% endfor %}
+    </div>
 </div>

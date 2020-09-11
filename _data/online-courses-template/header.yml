@@ -13,9 +13,20 @@ profile:
 first-sections:
   - name: Categories
     icon: icon-th-small
-
+    sections:
+      - name: Desarrollo web
+      - name: Negocios
+      - name: Finanzas y contabilidad
+      - name: Desarrollo personal
+      - name: Disenño
+      - name: Fotografía
+      - name: Salud y fitness
 second-sections:
   - icon: icon-heart
+    sections:
+      - name: Desarrollo web
+      - name: Negocios
+      - name: Finanzas y contabilidad
   - icon: icon-shopping-cart
 
 

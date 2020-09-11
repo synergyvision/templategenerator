@@ -16,6 +16,8 @@ $(document).on('ready', function() {
     $('.content-2').removeClass('hide-content');
     $('.content-2').addClass('show-content');
   });
+
+
 });
 // search input
 $(document).on('ready', function() {
