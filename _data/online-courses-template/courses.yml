@@ -57,5 +57,81 @@ collection:
       name: 'course-6.png'
       alt: 'Course 6'
       
+detail:
+  instructor:
+    title: Instructor
+    btn: 
+      text: 'Show more &rarr;'
+      href: ''
+      type: primary
+  description:
+    title: Description
+  students-reviews:
+    title: Students feedback
+    buttons-icon:
+      - icon: icon-heart2
+        href: '#'
+    buttons-text:
+      - text: Report
+        hred: '#'
+  buy:
+    buttons:
+      - icon: icon-heart-plus
+        href: '#'
+      - icon: icon-add_shopping_cart
+        href: '#'
 
-      
+
+filter:
+  - title: rating
+    id: rating
+    sections:
+      type: score
+      collection:
+        - text: All
+          checked: true
+        - score: 4.5
+          text: '& up'
+        - score: 3.5
+          text: '& up'
+        - score: 2.5
+          text: '& up'
+        - score: 1.5
+          text: '& up'
+  - title: Course duration
+    id: duration
+    sections:
+      type: number
+      collection:
+        - text: All
+          checked: true
+        - number: 10
+          text: hours or more
+        - number: 20
+          text: hours or more
+        - number: 30
+          text: hours or more
+  - title: Language
+    id: language
+    sections:
+      type: text
+      collection:
+        - text: All
+          checked: true
+        - text: 'English'
+        - text: 'Spanish'
+  - title: price
+    id: price
+    sections:
+       type: number
+       collection:
+         - text: All
+           checked: true
+         - number: 10
+           text: 'or more'
+         - number: 20
+           text: 'or more'
+         - number: 30
+           text: 'or more'
+         - number: 40
+           text: 'or more'

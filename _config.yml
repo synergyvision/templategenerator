@@ -43,7 +43,12 @@ collections:
   corporate-blogs:
     output: true
     permalink: 1-corporate-template/blogs/:path.html
- 
+  online-courses-categories:
+    output: true
+    permalink: 2-online-courses-template/categories/:path.html
+  online-courses-courses:
+    output: true
+    permalink: 2-online-courses-template/courses/:path.html
 plugins:
 #    - jekyll-minifier
 #    - jekyll-paginate-v2

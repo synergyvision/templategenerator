@@ -11,7 +11,7 @@
         <div class="name">{{include.person.name}}</div>
         <div class="quote">{{include.person.text | truncate: 250 }}</div>
         <div class="stars">
-            {% include global/score.html score=include.person.score color='light' %}
+            {% include global/score.html score=include.person.score color='light' text=true %}
         </div>
     </div>
     

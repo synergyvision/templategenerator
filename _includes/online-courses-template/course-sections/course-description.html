@@ -1,0 +1,9 @@
+
+    <div class="title">{{include.title}}</div>
+    <div class="line"></div>
+    {% for text in include.description %}
+        <div class="subtitle">{{text.title}}</div>
+        {% for par in text.paragraphs %}
+         <p>{{par.text}}</p>
+        {% endfor %}
+    {% endfor %}

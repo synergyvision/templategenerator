@@ -9,9 +9,12 @@
     text-decoration: none;
     margin: 15px;
     padding: 10px 25px;
-    
+    @include abscenter;
+    flex-wrap: nowrap;
     &:hover { text-decoration: none; }
     
+   
+
   }
   .btn-1 {
       background: lighten(#6078ea, 3%);  
@@ -19,6 +22,8 @@
     //  box-shadow: 0px 5px 10px darken(black, .05);
       letter-spacing: 1px;
       transition: all 150ms linear;
+
+
 
       &:hover {
         background: darken(#6078ea, 1.5%);
@@ -28,6 +33,12 @@
         text-decoration: none;
         text-shadow: -1px -1px 0 darken(#6078ea, 9.5%);
         transition: all 250ms linear;
+      }
+      .icon{
+          fill: #fff;
+          height: 20px;
+          width: 20px;
+          padding: 0 10px;
       }
     }
     
@@ -40,6 +51,8 @@
       //  box-shadow: 0px 5px 10px darken(black, .05);
         letter-spacing: 1px;
         transition: all 150ms linear;
+           
+      
         &:hover {
             background: darken(#fff, 1.5%);
             border: 1px solid rgba(#000, .05);
@@ -50,4 +63,5 @@
             transition: all 250ms linear;
           }
       }
+      
       

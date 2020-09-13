@@ -29,10 +29,11 @@ title: Coursing | Log in
                 {% include online-courses-template/global/login-input.html input=input svg-directory=svg-directory %}
             {% endfor %}
             {% for checkbox in site.data.online-courses-template.login.signup.checkboxs %}
-               {% include online-courses-template/global/checkbox.html checkbox=checkbox %}
+               {% include online-courses-template/global/checkbox.html checked=checkbox.checked text=checkbox.text %}
             {% endfor %}
             {% include online-courses-template/global/button.html btn=site.data.online-courses-template.login.signup.btn %}
         </div>
     </div>
+    
 </section>
 
