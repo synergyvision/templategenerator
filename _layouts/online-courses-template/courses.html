@@ -1,0 +1,97 @@
+---
+layout: online-courses-template/online-courses
+---
+
+
+<div class="" style="padding-top:90px;"></div>
+{% assign title=page.title | remove:' ' | downcase %}
+<!--Eliminar espacios en blanco de la coleccion courses-->
+{% if title == 'all' %}
+    {% assign allsorted = site.online-courses-courses %}
+{% else %}
+    {% assign allsorted = site.online-courses-courses | where: "categories", title %}
+{% endif %}
+
+{% assign allsortedLenght= allsorted | size | append: ' ' | append: page.results %}
+
+
+<div class="courses-page">
+    <div class="courses-filter">  
+        <div class="btn-wrapper">
+            {% include online-courses-template/global/button.html btn=page.button-primary %}
+            {% include online-courses-template/global/button.html btn=page.button-secondary %}
+
+        </div>
+            {% assign counter = 0 %}
+            {% for filter in site.data.online-courses-template.courses.filter %}
+                {% assign finish=filter.sections.collection | size %}
+                {% assign last=counter | plus: finish %}  
+                <div class="section">
+                    <div class="line"></div>  
+                    <div class="title">
+                        {{filter.title | capitalize }}
+                    </div>
+                    {% if filter.sections.type == 'score' %}
+                        {% for i in filter.sections.collection %}
+                            {% assign all = i.text | remove: ' ' | downcase %}
+                            {% assign counter= counter | plus: 1 %} 
+                            {% if forloop.index == 1 %} 
+                                      {% assign first= counter %}
+                            {% endif %}
+                                {% assign click='selectOnlyThis(this.id,' | append: first | append: ',' | append: last | append: ')' %}
+                            {% if all == 'all' %}
+                                    {% include online-courses-template/global/checkbox.html text=i.text checked=i.checked id=counter click=click  %}
+                            {% else %}
+                                <div class="checkbox-icon-container">
+                                    <!--counter, finish-->
+                                    {% include online-courses-template/global/checkbox.html id=counter click=click  %}
+                                    <div class="checkbox-icon-container mr-auto">
+                                        {% include global/score.html score=i.score text=false color='dark' size='medium' %}  
+                                        <p>{{i.text}}</p>
+                                    </div>              
+                                </div>
+                            {% endif %}                  
+                        {% endfor %}
+                        <!-- should not be-->
+                        {% assign counter=last | plus: 1 %} 
+                    {% else %}
+                        {% for f in filter.sections.collection %}
+                                {% if filter.sections.type == 'number' %}
+                                    {% assign text=f.number | append: ' ' | append: f.text %}
+                                    {% assign value=f.number | remove: ' ' | downcase | append: "'" | prepend: "'"  %}
+                                {% else %}
+                                    {% assign text=f.text %}
+                                    {% assign value=f.text  | remove: ' ' | downcase | append: "'" | prepend: "'" %}
+                                {% endif %}  
+                                {% assign counter= counter | plus: 1 %}  
+                                {{counter}} 
+                                {% if forloop.index == 1 %} 
+                                      {% assign first= counter %}
+                                {% endif %}
+                                {% assign id = filter.id  | remove: ' ' | downcase | append: "'" | prepend: "'" %}
+            
+                                {% assign name= 'showCourses(' | append: id | append: ')' %}
+                                {% include online-courses-template/global/checkbox.html value=value click=name name=id text=text checked=f.checked id=counter   %} 
+                                
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endfor %}    
+    </div>
+    <div class="courses-container" >
+        <div class="mtb-medium">
+            {% include online-courses-template/global/title.html title=page.page-title subtitle=allsortedLenght %}
+        
+        </div>
+
+        <div class="courses">
+            {% for card in allsorted %}
+                <div class="card-cont" identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
+                    {% include online-courses-template/cards/course-card.html card=card %}
+                </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+    
+</div>

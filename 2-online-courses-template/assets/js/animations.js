@@ -1,4 +1,5 @@
 $(document).ready(function() {
+ 
 $('.login-card').waypoint(function(direction){
     $('.login-card').addClass('animated bounceIn'); 
 },{offset:'100%;'})

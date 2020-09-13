@@ -1,5 +1,5 @@
-<div class="title-container">
-    <h1>{{include.title}}</h1> 
+<div class="title-container" >
+    <h1 {% if include.size == 'medium' %} style="font-size:2.5rem !important;" {% endif %}>{{include.title}}</h1> 
      <div class="line"></div>
      <p>
         {{include.subtitle}}

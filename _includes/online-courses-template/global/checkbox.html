@@ -1,4 +1,8 @@
 <label class="label-checkbox">
-    <input type="checkbox" class="option-input checkbox" {% if include.checkbox.checked == true %} checked {% endif %}/>
-    <p>{{include.checkbox.text}}</p>
+<input type="radio" value={{include.value}} name={{include.name}} id="{{include.id}}" onclick="{{include.click}}" class="option-input checkbox" {% if include.checked == true %} checked {% endif %}/>
+    {% if include.text %}    
+        <p>{{include.text}}</p>
+    {% endif %}
 </label>
+
+

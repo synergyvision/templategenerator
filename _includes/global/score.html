@@ -1,9 +1,9 @@
 <div class="start-container">
-    <div class="score">
-
-        ( {{include.score | round: 1 }} )
-
-    </div>
+    {% if include.text==true %}
+        <div class="score">
+            ( {{include.score | round: 1 }} )
+        </div>
+    {% endif %}
     {% assign score= include.score | floor %}
     {% assign counter=0 %}
     {% assign primary-class='star-svg' %}

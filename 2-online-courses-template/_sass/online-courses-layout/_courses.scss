@@ -1,0 +1,68 @@
+
+.courses-page{
+    @include abscenter;
+    align-items: flex-start !important;
+    width: 100%;
+    margin-bottom: 100px;
+    @include respond(phone){
+        flex-direction: column;
+    }
+    .courses-container{
+        @include abscenter;
+        flex-direction: column;
+        width: 75%;
+        .courses{
+            width: 100%;
+            @include abscenter;
+            justify-content: flex-start !important;
+            
+           
+            margin-left: auto;
+            padding: 10px;
+    
+            @include respond(tab-port){
+                justify-content: center !important;
+            }
+        }
+       @include respond(tab-land){
+           width: 66.66%;
+       }
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+    
+    .courses-filter{
+        width: 25%;
+        padding: 15px;
+        .section{
+            .line{
+                margin:5px auto;
+                width: 90%;
+                background-color: grey;
+                height: 1px;
+            }
+            .title{
+                color: grey;
+                font-size: 2rem;
+                padding:15px;
+            }
+        }
+        @include respond(tab-land){
+            width: 33.33%;
+        }
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+}
+
+
+.btn-wrapper{
+    @include abscenter;
+    flex-wrap: nowrap;
+}
+
+.show-course{
+    
+}

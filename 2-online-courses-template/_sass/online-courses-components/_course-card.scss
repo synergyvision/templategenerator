@@ -2,9 +2,10 @@
     display: flex;
 }
 .course-card{
+    display: block;
     margin:20px;
-    min-width: 17.3rem;
-    max-width: 28rem;
+    width: 26rem;
+    height: 35rem;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 5px 10px rgba(black,.3);

@@ -5,9 +5,12 @@ site:
   directories:
     images: /2-online-courses-template/assets/images/
     svg-icon-directory: '/2-online-courses-template/assets/svg/sprite.svg'
+    components: /online-courses-template/
     js:
       name: /2-online-courses-template/assets/js/
       collection: 
         - name: animations.js
         - name: global.js
   base-url: '/2-online-courses-template/'
+
+video-error-message: Ops! It seems like there was a problem showing the video!

@@ -7,7 +7,7 @@
     @include abscenter;
     justify-content: space-between;
     padding: 0 20px;
-    z-index: 1;
+    z-index: 5;
 
     .search-input{
         @include respond(tab-port){
@@ -27,7 +27,7 @@
    
     &__info{
         @include abscenter;
-
+        height: 100%;
         & > *{
             margin:0 15px;
         }
@@ -88,8 +88,15 @@
     }
 
     &__profile{
+        height: 100%;
+        position: relative;
         @include abscenter;
         cursor: pointer;
+        &:hover{
+            .dropdown-menu{
+                display: block !important;
+            }
+        }
         &__pic{
             margin-right: 10px;
             height: 50px;
@@ -119,10 +126,16 @@
 
 
 
+.dropdown-menu--left{
+    left: 10%;
+}
+.dropdown-menu--right{
+    right: 10%;
+}
 .dropdown-menu{
     position: absolute;
-    left: 10%;
     top: 100%;
+    padding: 15px;
     width: max-content;       
     background-color: #fff;
     border-radius: 0 0 5px 5px;
@@ -147,6 +160,9 @@
         cursor: pointer;
         justify-content: space-between;
         padding: 5px 15px;
+        text-decoration: none;
+        color: grey;
+
         &:hover {
         
             .title-link{
@@ -166,6 +182,7 @@
             transition: all .2s;
             padding:10px 0;
             margin-right: 20px;
+            
         }
 
         .icon-link{
@@ -174,6 +191,60 @@
             
             fill: grey;
             transition: all .4s;
+        }
+    }
+
+    .profile-section{
+        display: flex;
+        padding-bottom: 10px;
+        align-items: center;
+        border-bottom: 1px solid $gray;
+        .picture-side{
+            width: 75px;
+            .image{
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 50%;
+                    box-shadow: 0 5px 10px rgba(black,.2);
+                }
+            }
+        }
+        .info-side{
+            width: 200px;
+            font-size: 1.4rem;
+            
+            color: $gray-dark;
+             &> *{
+                 padding:5px 0;
+             }
+             .name{
+                 letter-spacing: 0.5px;
+                 font-weight: bold;
+                 color: var(--color-primary)
+             }
+        }
+    }
+
+    .links-section{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $gray;
+        padding:5px 0;
+        .link{
+            text-decoration: none;
+            padding: 15px;
+            font-size: 1.4rem;
+            color: $gray;
+            transition: all .2s;
+
+            &:hover{
+                color: var(--color-primary);
+
+            }
         }
     }
 }

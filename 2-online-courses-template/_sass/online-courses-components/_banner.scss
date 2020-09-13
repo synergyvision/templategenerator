@@ -1,11 +1,11 @@
 .banner{
     height: 70vh;
-    width: 100%;
+    max-width: 100%;
     margin-bottom:200px;
     background-attachment: fixed;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     @include respond(tab-port){
         margin-bottom: 220px;

@@ -4,7 +4,9 @@
     font-weight: 300;
     @include abscenter;
     flex-direction: column;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;  
+    width: 100%;
+    margin: 0 auto;  
     & > *{
         text-align: center;
         margin: 15px;

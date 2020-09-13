@@ -1,0 +1,423 @@
+.course-detail{
+    display: flex;
+    //flex-wrap: wrap;
+    padding: 150px 5% 0px 5%;
+
+    @include respond(tab-port){
+        flex-direction: column;
+    }
+    .left-side{
+        width:66.66%;
+        margin: 0 5px;
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+
+    .right-side{
+        width: 33.33%;
+        margin: 0 5px;
+        @include abscenter;
+        flex-direction: column;
+        @include respond(tab-port){
+            width: 100%;
+            
+        }
+        & > *{
+            @include respond(tab-port){
+                width: 50%;
+                margin:20px 0;
+            }
+            @include respond(phone){
+                width: 90%;
+            }
+        }
+      
+    }
+
+    &__categories{
+        @include abscenter;       
+        margin: 10px;
+       
+    }
+
+}
+
+.category-block{
+    
+    background-image: linear-gradient(to right, #fff,#fff);
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding: 10px 20px;
+    border: 2px solid  var(--color-primary);
+    border-radius: 100px;
+    width: max-content;
+    cursor: pointer;
+    margin: 10px;
+    transition: all .4s;
+    &:hover{
+        background-image: linear-gradient(to right, var(--color-primary),var(--color-primary));
+        color: #fff;
+        border-color: transparent;
+        transform: scale(1.05);
+        box-shadow: 0 2.5px 5px rgba(black,.2);
+    }
+}
+
+
+
+
+.buy-container{
+    width: 100%;
+    margin:20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(black,.2);
+    padding: 20px 10px;
+    @include abscenter;
+    flex-direction: column;
+    .price{
+        @include abscenter;
+        color: var(--color-primary);
+        & > *{
+            padding: 5px 10px;
+        }
+        .current-price{
+            font-size: 3rem;
+        }
+        .old-price{
+            font-size: 1.5rem;
+            text-decoration-line: line-through;
+        }
+    }
+    .btn-container{
+        @include abscenter;
+
+        a{
+            padding:5px 10px;
+            width: 100px;
+            text-decoration: none;
+            background-color: #fff;
+            border: 2px solid var(--color-primary);
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(black,.2);
+            @include abscenter;
+            margin: 10px;
+            transition: all .3s;
+            &:hover{
+                border: 2px solid #fff;
+                background-color: var(--color-primary);
+                box-shadow: 0 2.5px 5px rgba(black,.2);
+                transform: scale(0.9);
+                .icon{
+                    fill:  #fff;
+                }
+            }
+            .icon{
+                height: 25px; width: 25px;
+                fill: var(--color-primary);
+            }
+        }
+    }
+}
+
+
+
+.instructor-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(black,.2);
+    padding: 20px 10px;
+    .title{
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        padding:10px;
+        font-weight: bold;
+        color: $gray;
+
+    }
+    .name{
+        color: var(--color-primary);
+        font-size: 1.6rem;
+        padding:10px;
+    }
+
+    .short-description{
+        font-size: 1.6rem;
+        padding: 10px;
+        color: $gray;
+        text-align: center;
+        align-self: center;
+    }
+
+    .image{
+        margin:10px 0;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;           
+        align-self: center;
+        cursor: pointer;
+        img{
+            cursor: pointer;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 5px 10px rgba(black,.2);
+        }
+    }
+    .show-more{
+        align-self: flex-end;
+    }
+    .feature-container{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        .feature{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 10px 0;
+            .icon{
+                width: 15px; height: 15px;
+                fill: var(--color-primary);
+                margin:0 10px;
+            }
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+
+.course-description{
+   margin: 0 5px;
+   color: $gray;
+   padding:10px 40px 10px 10px ; // cambair
+   width: 66.66%;
+   @include respond(tab-port){
+        width: 100%;
+        padding: 10px;
+   }
+   & > *{
+       padding: 10px 0;
+   }
+    .title{
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        
+    }
+    .subtitle{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }  
+
+    .line{
+        padding: 0 !important;
+        width: 70%;
+        height: 1px;
+        background-color: $gray;
+    }
+    p{
+        font-size: 1.6rem;
+        line-height: 25px;
+        text-align: justify;
+    }
+}
+
+.course-info{
+    width: 33.33%;
+   // margin:20px 0;
+    & > *{
+        margin:20px 0;
+    }
+
+    @include respond(tab-port){
+        width: 100%;
+    }
+}
+
+.course-section{
+   // width: 33.33%;
+    max-height: 500px;
+    //margin:20px 0;
+    border-radius: 10px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    box-shadow: 0 5px 10px rgba(black,.2);
+    padding: 20px 10px;
+    @include abscenter;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: $gray;
+
+    &::-webkit-scrollbar{
+        width: 7px;
+       
+    }
+    &::-webkit-scrollbar-thumb{
+        width: 7px;
+        background-color: var(--color-primary);
+        border-radius: 5px;
+    }
+
+    .title{
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding:10px;
+    }
+    .sections{
+        margin:10px 0;
+        justify-self: center;
+        @include abscenter;
+        justify-content: flex-start;
+        .section{
+            display: flex;
+            align-items: center;
+            margin:10px 0;
+            .icon{
+                fill: var(--color-primary);
+                height: 20px;width: 20px;
+                margin:10px;
+            }
+            p{
+                max-width: 260px;
+                font-size: 1.6rem;
+                
+            }
+        }
+    }
+}
+
+.students-review{
+    padding: 20px 5% 100px 5%;
+    .title{
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding:10px;
+        color: $gray;
+    }
+    .container{
+        @include abscenter;
+        margin:20px 0;
+    }
+}
+
+
+.student-review-card{
+    box-shadow: 0 5px 10px rgba(black,.2);
+    max-width: 550px;
+    display: flex;
+    color: $gray;
+    margin:10px;
+    @include respond(phone){
+        flex-direction: column;
+    }
+    & > *{
+        padding: 20px;
+    }
+    .image-side{
+        @include abscenter;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-right: 1px solid $gray-light;
+        @include respond(phone){
+            border-right: 0px;
+            border-bottom: 1px solid $gray-light;
+            justify-content: center;
+        }
+        .image{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+        }
+    }
+    .info-side{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        &>*{
+            margin:5px;
+        }
+        .name{
+            font-size: 1.8rem;
+            font-weight: bold;
+
+        }
+        .review{
+            @include abscenter;
+            justify-content: flex-start;
+            font-size: 1.2rem;
+            .date{
+                margin-top: 5px;
+            }
+        }
+        .description{
+            font-size: 1.4rem;
+            max-height:80px;
+            overflow: scroll;
+            padding-right: 10px;
+        }
+        .buttons{
+            align-self: flex-end;
+            height: max-content;
+            @include abscenter;
+            margin:10px 0;
+            & > *{
+                margin-left: 10px;
+            }
+        }
+        
+    }
+}
+
+
+.plane-link{
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1.6rem;
+    color:var(--color-primary);
+    padding: 5px;
+    transition: all .2s;
+    &:hover{
+        border-bottom: 2px solid var(--color-primary);
+    }
+}
+
+// boton circular con icono
+.circle-btn{
+            
+    background-color: #fff;
+    
+    text-decoration: none;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    height: 40px; width: 40px;
+    @include abscenter;
+    transition: all .3s;
+    &:hover{
+        background-color: var(--color-primary);
+        border: 2px solid #fff;
+        .icon{
+            fill: #fff;
+        }
+    }
+    .icon{
+        fill: var(--color-primary);
+        height: 25px; width: 25px;
+        transition: all .3s;
+    }
+}
