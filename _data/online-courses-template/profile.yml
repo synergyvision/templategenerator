@@ -1,6 +1,18 @@
-image:
-  pic: client-1-face.jpg
-  alt: Profile
-info:
-  name: Alexander Zverev
-  email: alexanderzverev@gmail.com
+
+personal-information:
+    left-fields:
+      - input:
+          type: text
+          name: 
+        label: 'Fist names:'
+      - input:
+          type: text
+          name:
+        label: 'Last names:'
+      - input:
+          type: text
+          name:
+        label: Title
+    btn:
+      text: Save changes
+      type: primary

@@ -290,3 +290,18 @@ function showProduct(filterId, value){
 } 
 
 //setTimeout(showProduct,400);
+
+
+/* =========== SHOWING THE COURSE CONTENT SECTION =========== */
+function showCourseContentSection(value){
+ let db = $("input:checkbox[value="+value+"]")[0].checked;
+    if (db == false){
+      $('.section-dropdown[value='+value+']').css('display','none');
+    }
+    else if ( db == true){
+      $('.section-dropdown[value='+value+']').css('display','block');
+    }
+}
+
+/* =========== CLICK ON COURSE CONTENT MODULE =========== */
+

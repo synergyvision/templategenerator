@@ -1,56 +1,75 @@
-
-{% assign image-directory= site.data.online-courses-template.global.site.directories.images
-  %}
-  {% assign
-    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
-    | relative_url | append: "#"}} %}
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %} {% assign
+svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#"}} %} {% assign
+base-url='/2-online-courses-template/' %}
 <div class="header">
   <div class="header__logo">
-    <a href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.header.logo.href | relative_url }}">
+    <a
+      href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.header.logo.href | relative_url }}"
+    >
       <img
         src="{{image-directory  | append: site.data.online-courses-template.header.logo.img | relative_url }}"
         alt="{{site.data.online-courses-template.header.logo.alt}}"
       />
-    </div>
-  </a>
-  {% include online-courses-template/header-links.html link=site.data.online-courses-template.header.categories sections=site.online-courses-categories position='left' svg-directory=svg-directory %}
-
-  {% include online-courses-template/search-input.html placeholder=site.data.online-courses-template.header.search-input.placeholder %}
-  <div class="header__info">
-      {% for links in site.data.online-courses-template.header.header-buttons %}
-          {% include online-courses-template/header-links.html link=links position='right' svg-directory=svg-directory sections=links.sections %}
-      {% endfor %}
-      <div class="header__profile">
-        <div class="header__profile__pic">
-          <img
-            src="{{image-directory | append: site.data.online-courses-template.profile.image.pic | relative_url }}"
-            alt="{{site.data.online-courses-template.profile.image.alt}}"
-          />
-        </div>
-        <i class="arrow-up"></i>
-        <div class="dropdown-menu dropdown-menu--right">
-            <div class="profile-section">
-              <div class="picture-side">
-                    <div class="image">
-                      <img
-                      src="{{image-directory  | append: site.data.online-courses-template.profile.image.pic | relative_url }}"
-                      alt="{{site.data.online-courses-template.profile.image.alt}}"
-                    />
-                    </div>              
-              </div>
-              <div class="info-side">
-                  <div class="name">{{site.data.online-courses-template.profile.info.name | truncate: 30 }}</div> <!--truncate 26-30-->
-                  <div class="email">{{site.data.online-courses-template.profile.info.email | truncate:30 }}</div>
-              </div>
-            </div>
-            <div class="links-section">
-              {% for link in site.data.online-courses-template.header.links-dropdown %}
-                <a class="link" href="{{link.href}}">{{link.title}}</a>
-              {% endfor %}
-            </div>
-        </div>
-      </div>
+    </a>
   </div>
-
+  {% include online-courses-template/header-links.html
+  link=site.data.online-courses-template.header.categories
+  sections=site.online-courses-categories position='left'
+  svg-directory=svg-directory %} {% include
+  online-courses-template/search-input.html
+  placeholder=site.data.online-courses-template.header.search-input.placeholder
+  %}
+  <div class="header__info">
+    {% for links in site.data.online-courses-template.header.header-buttons %}
+    {% include online-courses-template/header-links.html link=links
+    position='right' svg-directory=svg-directory sections=links.sections %} {%
+    endfor %}
+    <div class="header__profile">
+      <div class="header__profile__pic">
+        <img
+          src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url }}"
+          alt="{{site.data.online-courses-template.user.image.alt}}"
+        />
+      </div>
+      <i class="arrow-up"></i>
+      <div class="dropdown-menu dropdown-menu--right">
+        <div class="profile-section">
+          <div class="picture-side">
+            <div class="image">
+              <img
+                src="{{image-directory  | append: site.data.online-courses-template.user.image.pic | relative_url }}"
+                alt="{{site.data.online-courses-template.user.image.alt}}"
+              />
+            </div>
+          </div>
+          <div class="info-side">
+            <div class="name">
+              {{site.data.online-courses-template.user.info.name | append: ' ' |
+              append: site.data.online-courses-template.user.info.lastname |
+              truncate: 30 }}
+            </div>
+            <!--truncate 26-30-->
+            <div class="email">
+              {{site.data.online-courses-template.user.info.email | truncate:30
+              }}
+            </div>
+          </div>
+        </div>
+        {% for section in
+        site.data.online-courses-template.header.links-dropdown.sections %}
+        <div class="links-section">
+          {% for link in section.section %}
+          <a
+            class="link"
+            href="{{link.href | prepend: base-url | relative_url }}"
+            >{{link.title}}</a
+          >
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
-
