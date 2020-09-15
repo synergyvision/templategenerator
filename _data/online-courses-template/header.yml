@@ -20,12 +20,17 @@ header-buttons:
   - icon: icon-shopping-cart
 
 links-dropdown:
-  - title: My courses
-    href: ''
-  - title: My cart
-    href: ''
-  - title: My Wishlist
-    href: ''
+  sections:
+    - section:
+      - title: My courses
+        href: 'my-courses.html'
+      - title: My cart
+        href: ''
+      - title: My Wishlist
+        href: ''
+    - section:
+      - title: My profile
+        href: 'my-profile.html'
 
 banner:
   image: 'coursing-bg.jpeg'

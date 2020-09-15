@@ -11,6 +11,7 @@ site:
       collection: 
         - name: animations.js
         - name: global.js
+        - name: pagination.js
   base-url: '/2-online-courses-template/'
 
 video-error-message: Ops! It seems like there was a problem showing the video!

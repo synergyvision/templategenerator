@@ -1,4 +1,5 @@
 ---
+id: 3
 layout: online-courses-template/course-detail
 identifier: course4
 categories: [development,design]
@@ -83,6 +84,103 @@ students-reviews:
         date: 2020/03/18
         score: 4.5
         text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque.
+
+course-content:
+  - title : 'Section 1: Getting Started'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+  - title: 'Section 2: Using VueJS to Interact with the DOM'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+  - title: 'Section 3: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '3. Lorem ipsum dolir sit amen'
+  - title: 'Section 4: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '3. Lorem ipsum dolir sit amen'
+  - title: 'Section 5: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '3. Lorem ipsum dolir sit amen'
+  - title: 'Section 6: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '4. How the VueJS Template Syntax'
+      - title: '5. How the VueJS Template Syntax'
+      - title: '6. How the VueJS Template Syntax'
+      - title: '7. How the VueJS Template Syntax' #Fix
+  - title: 'Section 6: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '4. How the VueJS Template Syntax'
+      - title: '5. How the VueJS Template Syntax'
+      - title: '6. How the VueJS Template Syntax'
+      - title: '7. How the VueJS Template Syntax' #Fix
+  - title: 'Section 6: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '4. How the VueJS Template Syntax'
+      - title: '5. How the VueJS Template Syntax'
+      - title: '6. How the VueJS Template Syntax'
+      - title: '7. How the VueJS Template Syntax' #Fix
+  - title: 'Section 6: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '4. How the VueJS Template Syntax'
+      - title: '5. How the VueJS Template Syntax'
+      - title: '6. How the VueJS Template Syntax'
+      - title: '7. How the VueJS Template Syntax' #Fix
+  - title: 'Section 6: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '4. How the VueJS Template Syntax'
+      - title: '5. How the VueJS Template Syntax'
+      - title: '6. How the VueJS Template Syntax'
+      - title: '7. How the VueJS Template Syntax' #Fix
+  - title: 'Section 10: Lorem ipsum dolor'
+    modules:
+      - title: '1. Module Introduction'
+      - title: '2. Understanding VueJS Templates '
+      - title: '3. How the VueJS Template Syntax'
+      - title: '4. How the VueJS Template Syntax'
+      - title: '5. How the VueJS Template Syntax'
+      - title: '6. How the VueJS Template Syntax'
+      - title: '7. How the VueJS Template Syntax' #Fix
+
+
+download-buttons:
+  - text: 'Download articles'
+    type: primary
+  - text: 'Download resources'
+    type: primary
+
+questions:
+  - name: Muhamed Alliasime
+    question: I can't find the corrected exercise od excercise 7
+    answer: Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde facere molestias nulla esse cum, quis ea accusamus adipisci, in numquam ab. Illum in quaerat distinctio similique nulla eos magni quis!
+    date: 2020/12/02
 
 
 filters:

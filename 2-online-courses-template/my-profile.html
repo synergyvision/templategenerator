@@ -1,0 +1,58 @@
+---
+layout: online-courses-template/online-courses-header
+title: Coursing | My profile
+---
+
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %}
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+<div class="profile mtb-big">
+  <div class="profile-general-info">
+    <div class="img">
+      <img
+        src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url  }}"
+        alt="{{site.data.online-courses-template.user.image.alt}}"
+      />
+      <div class="file">
+        {% include global/svg.html directory=svg-directory image='icon-attachment' class='icon' %}
+      </div>
+    </div>
+    <div class="name">
+      {{site.data.online-courses-template.user.info.name | append: ' ' | append:
+      site.data.online-courses-template.user.info.lastname}}
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="links">
+      <div class="link link-active">Personal Information</div>
+      <div class="link">Account</div>
+      <div class="link">Public profile</div>
+      <div class="link">Payment methods</div>
+      <div class="link">Privacy</div>
+      <div class="link">Close account</div>
+    </div>
+    <div class="content">
+        <div class="fields">
+            <div class="left-side">
+                {% assign inputs = site.data.online-courses-template.profile.personal-information.left-fields %}          
+                {% for input in inputs %}
+                    {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name='input.input.name' svg-directory=svg-directory %}
+                {% endfor %}
+            </div>
+            <div class="right-side">
+                <div class="login-input">
+                    <label for="">Your description:</label>
+                    <textarea name="" id="" ></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="btn-content">
+            {% include online-courses-template/global/button.html btn=site.data.online-courses-template.profile.personal-information.btn %}
+        </div>
+    </div>
+
+    
+  </div>
+</div>

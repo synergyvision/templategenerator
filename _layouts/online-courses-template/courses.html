@@ -1,9 +1,7 @@
 ---
-layout: online-courses-template/online-courses
+layout: online-courses-template/online-courses-header
 ---
 
-
-<div class="" style="padding-top:90px;"></div>
 {% assign title=page.title | remove:' ' | downcase %}
 <!--Eliminar espacios en blanco de la coleccion courses-->
 {% if title == 'all' %}
@@ -19,8 +17,6 @@ layout: online-courses-template/online-courses
     <div class="courses-filter">  
         <div class="btn-wrapper">
             {% include online-courses-template/global/button.html btn=page.button-primary %}
-            {% include online-courses-template/global/button.html btn=page.button-secondary %}
-
         </div>
             {% assign counter = 0 %}
             {% for filter in site.data.online-courses-template.courses.filter %}
@@ -64,7 +60,7 @@ layout: online-courses-template/online-courses
                                     {% assign value=f.text  | remove: ' ' | downcase | append: "'" | prepend: "'" %}
                                 {% endif %}  
                                 {% assign counter= counter | plus: 1 %}  
-                                {{counter}} 
+                               
                                 {% if forloop.index == 1 %} 
                                       {% assign first= counter %}
                                 {% endif %}
@@ -83,14 +79,16 @@ layout: online-courses-template/online-courses
             {% include online-courses-template/global/title.html title=page.page-title subtitle=allsortedLenght %}
         
         </div>
-
         <div class="courses">
             {% for card in allsorted %}
-                <div class="card-cont" identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
+                <div class="card-cont" value={{forloop.index}} identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
                     {% include online-courses-template/cards/course-card.html card=card %}
                 </div>
             {% endfor %}
+            
         </div>
+        {% assign number-of-pages = allsorted | size | divided_by : 9.0 | ceil %}
+        {% include global/pagination.html number-of-pages=number-of-pages %}   
         
     </div>
     

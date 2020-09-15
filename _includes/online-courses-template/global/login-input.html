@@ -1,4 +1,7 @@
 <div class="login-input">
-    {% include global/svg.html directory=include.svg-directory image=include.input.icon class='icon' %}
-    <input type="{{include.input.type}}" placeholder="{{include.input.name}}" class="login-input__field" />
+    {% if include.label %}
+        <label for="">{{include.label}}</label>
+    {% endif %}
+    {% include global/svg.html directory=include.svg-directory image=include.input-icon class='icon' %}
+    <input type="{{include.input-type}}" placeholder="{{include.input-name}}" class="login-input__field" />
 </div>

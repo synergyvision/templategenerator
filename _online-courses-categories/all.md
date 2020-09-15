@@ -4,9 +4,7 @@ title: All
 page-title: See all courses
 results: results
 button-primary: 
-    text: Filter
+    text: Reset filter
     type: primary
-button-secondary: 
-    text: Lorem
-    type: primary
+
 ---

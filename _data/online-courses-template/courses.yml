@@ -80,6 +80,14 @@ detail:
         href: '#'
       - icon: icon-add_shopping_cart
         href: '#'
+  course-content:
+    title: Course content
+  course-questions:
+    title: 'Q & A'
+    total-questions: 'Total questions:'
+    btn:
+      text: Ask a question
+      type: primary
 
 
 filter:

@@ -1,5 +1,5 @@
 ---
-layout: online-courses-template/flat
+layout: online-courses-template/online-courses-default
 title: Coursing | Log in
 ---
 {% assign
@@ -20,13 +20,13 @@ title: Coursing | Log in
         </div>
          <div class="content content-1 show-content">
             {% for input in site.data.online-courses-template.login.login.fields %}
-               {% include online-courses-template/global/login-input.html input=input svg-directory=svg-directory %}
+               {% include online-courses-template/global/login-input.html input-icon=input.icon input-type=input.type input-name=input.name svg-directory=svg-directory %}
             {% endfor %}
             {% include online-courses-template/global/button.html btn=site.data.online-courses-template.login.login.btn %}
         </div>       
         <div class="content content-2 hide-content">
             {% for input in site.data.online-courses-template.login.signup.fields %}
-                {% include online-courses-template/global/login-input.html input=input svg-directory=svg-directory %}
+                {% include online-courses-template/global/login-input.html input-icon=input.icon input-type=input.type input-name=input.name svg-directory=svg-directory %}
             {% endfor %}
             {% for checkbox in site.data.online-courses-template.login.signup.checkboxs %}
                {% include online-courses-template/global/checkbox.html checked=checkbox.checked text=checkbox.text %}

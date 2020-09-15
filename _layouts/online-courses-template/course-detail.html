@@ -1,18 +1,24 @@
 ---
-layout: online-courses-template/online-courses
+layout: online-courses-template/online-courses-header
 ---
 
 {% assign image-directory=
 site.data.online-courses-template.global.site.directories.images %} {% assign
 svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
-| relative_url | append: "#" %}
+| relative_url | append: "#" %} {% assign member=false %} {% for course-student
+in site.data.online-courses-template.user.courses %} {% if course-student.id ==
+page.identifier %} {% assign member=true %} {% endif %} {% endfor %} {% if
+member == false %}
 <div class="course-detail">
   <div class="left-side">
     {% include online-courses-template/global/title.html title=page.name
-    subtitle=" " size='medium' %} {% include global/video.html
-    source='https://www.youtube.com/watch?v=1PqZ7JBFW3I'
-    error-message=site.data.online-courses-template.global.video-error-message
-    %}
+    subtitle=" " size='medium' %}
+    <div class="video">
+      {% include global/video.html
+      source='https://www.youtube.com/watch?v=1PqZ7JBFW3I' size='medium'
+      error-message=site.data.online-courses-template.global.video-error-message
+      %}
+    </div>
     <div class="course-detail__categories">
       {% for cat in page.categories %} {% include
       online-courses-template/cards/category-card.html name=cat %} {% endfor %}
@@ -31,24 +37,96 @@ svg-directory=site.data.online-courses-template.global.site.directories.svg-icon
 </div>
 
 <div class="course-detail">
-    <div class="course-description">
-        {% include online-courses-template/course-sections/course-description.html
-        title=site.data.online-courses-template.courses.detail.description.title
-        description=page.description
-        %}
-    </div>
+  <div class="course-description-container">
+    {% include online-courses-template/course-sections/course-description.html
+    title=site.data.online-courses-template.courses.detail.description.title
+    description=page.description %}
+  </div>
   <div class="course-info">
-    {% for feature in page.features %}
-            {% include online-courses-template/cards/course-feature-card.html 
-                svg-directory=svg-directory
-                title=feature.title
-                section=feature.collection %}
-    {% endfor %}
-   
+    {% for feature in page.features %} {% include
+    online-courses-template/cards/course-feature-card.html
+    svg-directory=svg-directory title=feature.title section=feature.collection
+    %} {% endfor %}
   </div>
 </div>
 
 {% include online-courses-template/course-sections/students-review.html
-    title=site.data.online-courses-template.courses.detail.students-reviews.title
-    students-reviews=page.students-reviews
-    image-directory=image-directory %}
+title=site.data.online-courses-template.courses.detail.students-reviews.title
+students-reviews=page.students-reviews image-directory=image-directory %} {%
+else %}
+<div class="course-membered">
+  <div class="course-membered--left">
+    {% include global/video.html
+    source='https://www.youtube.com/watch?v=1PqZ7JBFW3I' size='big'
+    error-message=site.data.online-courses-template.global.video-error-message
+    %}
+    <div class="btn-wrapper">
+      {% for download-btns in page.download-buttons %} {% include
+      online-courses-template/global/button.html btn=download-btns %} {% endfor
+      %}
+    </div>
+
+    <div class="mt-big">
+      {% include online-courses-template/global/title.html title=page.name
+      subtitle=" " size='medium' %}
+    </div>
+    <div class="description">
+      {% include online-courses-template/course-sections/course-description.html
+      title=site.data.online-courses-template.courses.detail.description.title
+      description=page.description %}
+    </div>
+    <div class="questions">
+      <div class="title">
+        {{site.data.online-courses-template.courses.detail.course-questions.title}}
+      </div>
+      <div class="line"></div>
+      <div class="questions__info">
+        {% capture total-questions %} {{page.questions | size}} {% endcapture %}
+        <p>
+          {{site.data.online-courses-template.courses.detail.course-questions.total-questions
+          | capitalize | append: total-questions }}
+        </p>
+        {% include online-courses-template/global/button.html
+        btn=site.data.online-courses-template.courses.detail.course-questions.btn
+        %}
+      </div>
+      {% for question in page.questions %}
+      <div class="course-question">
+        <div class="image-side"></div>
+        <div class="content-side"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="course-membered--right">
+    <div class="title">
+      {{site.data.online-courses-template.courses.detail.course-content.title |
+      capitalize}}
+    </div>
+    {% for content in page.course-content %}
+    <div class="section" value="{{forloop.index}}">
+      <div class="section-title">
+        <div class="title">{{content.title}}</div>
+        <i class="arrow-up"></i>
+        {% assign showContent= 'showCourseContentSection(' | append:
+        forloop.index | append: ')' %}
+        <input
+          value="{{forloop.index}}"
+          type="checkbox"
+          onclick="{{showContent}}"
+        />
+      </div>
+      <div class="section-dropdown" value="{{forloop.index}}">
+        {% for module in content.modules %}
+        <div class="title">
+          <p>{{module.title}}</p>
+          {% include online-courses-template/global/checkbox.html
+          checked=checkbox.checked text=checkbox.text %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

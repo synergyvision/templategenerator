@@ -1,0 +1,25 @@
+image:
+  pic: client-1-face.jpg
+  alt: Profile
+info:
+  name: Alexander 
+  lastname: Zverev
+  email: alexanderzverev@gmail.com
+courses:
+  - id: course1
+    completed: 30%
+    rating: 4.5
+  - id: course4
+    completed: 65%
+    rating: 3.5
+  - id: course2
+    completed: 80%
+    rating: 5
+  - id: course7
+    completed: 44%
+    rating: 1.5
+  - id: course5
+    completed: 100%
+    rating: 2.5
+
+

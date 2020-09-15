@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{% include global/head.html site=site.data.online-courses-template.global.site %}
+
+<body>	
+    {{ content }} 	
+    {% include online-courses-template/global/footer.html %}
+   {% include global/scripts.html %}
+   {% for js in site.data.online-courses-template.global.site.directories.js.collection %}
+		<script src="{{ site.data.online-courses-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
+	{% endfor %}
+</body>
+
+<style lang="scss">
+	:root{
+        --color-primary: {{site.data.online-courses-template.colors.color-primary}};
+        --color-primary-dark: {{site.data.online-courses-template.colors.color-primary-dark}}
+        --color-primary-transparent: {{site.data.online-courses-template.colors.color-primary-transparent}};
+        --banner-background: url({{site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.banner.image | relative_url }});
+   }
+</style>
+</html>

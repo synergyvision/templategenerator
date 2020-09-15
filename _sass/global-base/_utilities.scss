@@ -31,7 +31,9 @@
 .mt-bigger{
     margin-top: 100px !important;   
 }
-
+.mb-bigger{
+    margin-bottom: 100px !important;   
+}
 .mtb-bigger{
     margin: 100px 0 !important;   
 }
@@ -42,7 +44,9 @@
 .mr-auto{
     margin-right: auto !important;
 }
-
+.pb-big{
+    padding-bottom: 50px !important;   
+}
 .abscenter{
     @include abscenter;
 }

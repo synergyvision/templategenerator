@@ -1,0 +1,122 @@
+.profile{
+    @include abscenter;
+    flex-direction: column;
+}
+
+.profile-general-info{
+        @include abscenter;
+        flex-direction: column;
+
+        .img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: relative;   
+            cursor: pointer;
+            img{
+                border-radius: 50%;
+                height: auto;
+                width: 100%;
+                background-color: #333;
+                z-index: 1;
+                transition: all .2s;
+                
+            }
+            .file{
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%,-50%);
+                width: 150px;  height: 150px;
+                border-radius: 50%;
+                @include abscenter;
+                z-index: 2;
+
+                .icon{
+                    height: 40px;
+                    width: 40px;
+                    fill: $gray-dark;
+                    transform: scale(0);
+                    transition: all .2s;
+                }
+            }   
+            &:hover{
+                img{
+                   filter: blur(3px) grayscale(1);
+                }  
+                .icon{
+                    transform: scale(1);
+                }         
+            }
+        }
+        
+        .name{
+            margin: 20px 0;
+            font-size: 1.6rem;
+            color: $gray;
+        }
+    
+}
+
+
+.profile-card{
+    
+    width: 80%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2.5px 5px rgba(#333, .2);
+    border: 1px solid $gray-light;
+    display: flex;
+    overflow: hidden;
+    .content{
+        @include abscenter;
+        flex-direction: column;
+        width: 100%;
+        .fields{
+            width: 100%;
+            margin: 0 auto;
+            padding:15px;       
+            @include abscenter;
+            align-items: flex-start;
+            & > *{
+                width: 50%;
+                @include abscenter;
+                flex-direction: column;
+            }
+        }
+        .btn-content{
+            width: 100%;
+            padding:15px;
+            @include abscenter;
+            border-top: 1px solid $gray-light;
+        }
+    }
+    
+
+    .links{
+        padding:10px 0;
+        border-radius: 10px 0 0 10px;
+        border-bottom: 1px solid $gray-light;
+        color: $gray;
+        width: 200px;
+        height: 100% auto;
+        font-size: 1.6rem;   
+        background-color: var(--color-primary); 
+        color: #fff;     
+        cursor: pointer;
+        .link{
+            padding: 20px;
+            border-left: 4px solid transparent;
+            transition: all .3s;
+            &:hover{
+                background-color: #fff;
+                color: var(--color-primary); 
+                border-left: 4px solid var(--color-primary); 
+            }
+        }
+        .link-active{
+            background-color: #fff;
+            color: var(--color-primary); 
+            border-left: 4px solid var(--color-primary); 
+        }
+    }
+}

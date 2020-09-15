@@ -10,17 +10,29 @@
                 {% assign
                     svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
                     | relative_url | append: "#"}} %}
-                <div class="stars">
-                    {% include global/score.html score=include.card.score color='dark' size='small' text=true %}
-                </div>
-                <div class="price">
-                    {% if include.card.discount == true  %}
-                        <div class="discount">{{include.card.discount-price}} </div>
-                        {% assign old-price = 'old-price' %}
-                    {% else %}
-                        {% assign old-price = ' ' %}
-                    {% endif %}
-                    <div class="{{old-price}}">{{include.card.price}}</div>
-                </div>
+                {% if include.bought-info %}
+                    <div class="completed-container">
+                        <div class="percentage">{{include.bought-info.completed}}</div>
+                        <div class="loader">
+                            <div class="current-loader" style="width: {{include.bought-info.completed}};"></div>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        {% include global/score.html score=include.bought-info.rating color='dark' size='small' text=false %}
+                    </div>
+                {% else %}
+                    <div class="stars">
+                        {% include global/score.html score=include.card.score color='dark' size='small' text=true %}
+                    </div>
+                    <div class="price">
+                        {% if include.card.discount == true  %}
+                            <div class="discount">{{include.card.discount-price}} </div>
+                            {% assign old-price = 'old-price' %}
+                        {% else %}
+                            {% assign old-price = ' ' %}
+                        {% endif %}
+                        <div class="{{old-price}}">{{include.card.price}}</div>
+                    </div>
+                {% endif %}
             </div>
 </a>
