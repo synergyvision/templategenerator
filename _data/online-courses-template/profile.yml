@@ -1,18 +1,82 @@
 
-personal-information:
-    left-fields:
-      - input:
-          type: text
-          name: 
-        label: 'Fist names:'
-      - input:
-          type: text
-          name:
-        label: 'Last names:'
-      - input:
-          type: text
-          name:
-        label: Title
-    btn:
-      text: Save changes
-      type: primary
+
+
+sections:
+    - title: Personal information
+      left-fields:
+        - input:
+            type: text
+            name: first-name
+          label: 'Fist names:'
+        - input:
+            type: text
+            name: last-name
+          label: 'Last names:'
+        - input:
+            type: text
+            name: title
+          label: Title
+      right-fields:
+        - input:
+            type: textarea
+            name: description
+          label: Your description
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Account
+      left-fields:
+        - title: 'Account info'
+        - input:
+              type: email
+              name: email
+          label: 'Email:'
+        - input:
+            type: password
+            name: password
+          label: 'Password:'
+      right-fields:
+        - title: 'Change password'
+        - input: 
+            type: password
+            name: password
+          label: 'New Password:'
+        - input:
+            type: password
+            name: password
+          label: 'Repeat password:'
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Profiles
+      btn:
+       - text: Go to my public profile
+         type: primary
+       - text: Go to my instructor profile
+         type: primary
+    - title: Payment methods
+      one-side:
+          - checkbox:
+            checked: true
+            text: Conservar mi información de pago para otras compras
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Privacy
+      one-side:
+          - checkbox:
+            checked: true
+            text: Muestra tu perfil a los usuarios que han iniciado sesión
+          - checkbox:
+            checked: true
+            text: Mostrar los cursos que estás tomando en tu página de perfil
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Close account
+      one-side:
+         - info:
+           text-info: Warning! If you close your account, your subscription to your courses will be canceled and you will lose access forever
+      btn:
+       - text: Close account
+         type: primary

@@ -1,7 +1,5 @@
 
-
 $(document).ready(function(){
-    window.alert('hey bitches im here');
 	// AGREGANDO CLASE ACTIVE AL PRIMER ENLACE ====================
 	$('.category_list .category_item[category="all"]').addClass('ct_item-active');
 
