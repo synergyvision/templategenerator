@@ -1,44 +1,32 @@
+---
+layout: index
+title: Template generador
+---
+{% assign image-directory= site.data.global.site.directories.images  
+    %}
 <div class="index">
-    <h1 class="index-title">Template generador</h1>
-    <a href="/1-corporate-template/">
-        Corporate template
-    </a>
-    <a href="/2-online-courses-template/">
-        Online courses template
-    </a>
+    <h1 class="index-title">
+        <div class="title">Template generator</div>
+        <div class="title-shadow">Template generator</div>
+    </h1>
+    <div class="index-container">
+        <a href="{{'/1-corporate-template/' | relative_url}}">
+            <p>Corporate template</p>
+            <div class="line"></div>
+            <img class="index__image" src="{{image-directory | append: 'corporate.png' | relative_url }}" alt="">
+        </a>
+        <a href="">
+            <p>Culinary blog template</p>
+            <div class="line"></div>
+            <img class="index__image" src="{{image-directory | append: 'culinary-blog.png' | relative_url }}" alt="">
+        </a>
+        <a href="{{'/2-online-courses-template/' | relative_url }}">
+            <p>Online courses template</p>
+            <div class="line"></div>
+            <img class="index__image" src="{{image-directory | append: 'online-courses.png' | relative_url }}" alt="">
+        </a>
+    </div>  
 </div>
 
 
 
-<style> 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
-    .index{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        font-family: 'Roboto', sans-serif;
-    }
-    .index-title{
-        color: rgb(3, 128, 128);
-        margin-bottom: 40px;
-        letter-spacing: 1.5px;
-    }
-
-    a{
-        margin-top: 40px;
-        letter-spacing: 1.2px;
-        text-decoration: none;
-        color:rgb(58, 57, 56);
-        padding: 10px;
-        font-weight: 400;
-        border-bottom: 3px solid transparent;
-        transition: all .2s;
-    }
-    a:hover{
-        border-bottom: 3px solid rgb(3, 128, 128);
-    }
-
-</style>

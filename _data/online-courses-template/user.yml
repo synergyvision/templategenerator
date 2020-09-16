@@ -5,6 +5,22 @@ info:
   name: Alexander 
   lastname: Zverev
   email: alexanderzverev@gmail.com
+  status: Student
+  title: Informatic Engeneer
+  description: Animal lover. Tennis lover. Fullstack developer in Synplus enterprise.
+  social-media:
+    - name: instagram-user
+      text: '@alexanderzverev'
+      href: ''
+    - name: facebook-user
+      text: 'Alexander Zverev'
+      href: ''
+    - name: twitter-user
+      text: '@alexanderzverev'
+      href: ''
+    - name: pinterest-user
+      text: 'Alexander Zverev'
+      href: ''
 profile:
  - name: first-name
    text: Alexander Javier
@@ -18,6 +34,16 @@ profile:
    text: alexanderzverev@gmail.com
  - name: password
    text: 
+ - name: github-user
+   text: alexanderzverev
+ - name: instagram-user
+   text: '@alexanderzverev'
+ - name: facebook-user
+   text: 'Alexander Zverev'
+ - name: twitter-user
+   text: '@alexanderzverev'
+ - name: pinterest-user
+   text: 'Alexander Zverev'
 courses:
   - id: course1
     completed: 30%

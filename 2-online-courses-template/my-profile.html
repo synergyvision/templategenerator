@@ -8,22 +8,24 @@ site.data.online-courses-template.global.site.directories.images %}
 {% assign
     svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
     | relative_url | append: "#" %}
-<div class="profile mtb-big">
-  <div class="profile-general-info">
-    <div class="img">
-      <img
-        src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url  }}"
-        alt="{{site.data.online-courses-template.user.image.alt}}"
-      />
-      <div class="file">
-        {% include global/svg.html directory=svg-directory image='icon-attachment' class='icon' %}
+<div class="title-stripe__no-text">
+    <div class="profile-general-info">
+        <div class="img">
+          <img
+            src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url  }}"
+            alt="{{site.data.online-courses-template.user.image.alt}}"
+          />
+          <div class="file">
+            {% include global/svg.html directory=svg-directory image='icon-attachment' class='icon' %}
+          </div>
+        </div>
+        <div class="name">
+          {{site.data.online-courses-template.user.info.name | append: ' ' | append:
+          site.data.online-courses-template.user.info.lastname}}
+        </div>
       </div>
-    </div>
-    <div class="name">
-      {{site.data.online-courses-template.user.info.name | append: ' ' | append:
-      site.data.online-courses-template.user.info.lastname}}
-    </div>
-  </div>
+</div>
+<div class="profile mtb-bigger">
   <div class="profile-card">
     <div class="links">
         {% for link in site.data.online-courses-template.profile.sections %}
@@ -35,59 +37,17 @@ site.data.online-courses-template.global.site.directories.images %}
         {% if link.one-side %}
             <div class="fields">
                 {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].one-side %} 
-                {% for input in inputs %}         
-                    {% if input.checked %}
-                        {% include online-courses-template/global/checkbox.html checked=input.checked text=input.text %}
-                    {% endif %}
-                    {% if input.text-info %}
-                        <div class="warning-info">
-                            {% include global/svg.html directory=svg-directory image='icon-notification' class='icon' %}
-                           <p>{{input.text-info}}</p> 
-                        </div>           
-                    {% endif %}
-                {% endfor %}
+                {% include online-courses-template/profile/profile-content.html inputs=inputs %}
             </div>
         {% endif %}
         <div class="fields"> 
             <div class="left-side">
-                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].left-fields %}          
-                {% for input in inputs %}
-                    {% if input.title %}
-                        <div class="title">
-                            {{input.title}}
-                        </div>   
-                    {% endif %}          
-                    {% if input.input %}
-                        {% for field in site.data.online-courses-template.user.profile %}
-                            {% if input.input.name == field.name %}
-                                {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name=field.text svg-directory=svg-directory %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                    {% if input.checked %}
-                        {% include online-courses-template/global/checkbox.html checked=input.checked text=input.text %}
-                    {% endif %}
-                {% endfor %}
+                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].left-fields %}
+                {% include online-courses-template/profile/profile-content.html inputs=inputs %}
             </div>
             <div class="right-side">
-                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].right-fields %}          
-                {% for input in inputs %}
-                    {% if input.title %}
-                            <div class="title">
-                                {{input.title}}
-                            </div> 
-                    {% endif %}
-                    {% if input.input %}
-                        {% for field in site.data.online-courses-template.user.profile %}
-                            {% if input.input.name == field.name %}
-                                {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name=field.text svg-directory=svg-directory %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                    {% if input.checked %}
-                        {% include online-courses-template/global/checkbox.html checked=input.checked text=input.text %}
-                    {% endif %}
-                {% endfor %}
+                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].right-fields %}
+                {% include online-courses-template/profile/profile-content.html inputs=inputs %}
             </div>
         </div>
         <div class="btn-content">
