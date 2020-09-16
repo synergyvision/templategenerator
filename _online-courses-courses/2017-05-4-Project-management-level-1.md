@@ -2,7 +2,7 @@
 layout: online-courses-template/course-detail
 identifier: course10
 categories: [development,design]
-name: 'Beginning Project Management: Project Management Level One '
+name: 'Beginning Project Management: Level One '
 owner: Milos Raonic
 price: 45,99$
 discount: true

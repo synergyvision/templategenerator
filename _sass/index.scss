@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+    .index{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Roboto', sans-serif;
+
+    }
+    .index-container{
+        display: flex;
+        justify-content: space-between;
+
+        a{  
+            @include abscenter;
+            flex-direction: column;
+            margin-top: 40px;
+            letter-spacing: 1.2px;
+            text-decoration: none;
+            color:rgb(58, 57, 56);
+            padding: 10px;
+            font-weight: 400;
+            box-shadow: 0 5px 10px rgba(black,.3);
+            border-bottom: 3px solid transparent;
+            transition: all .2s;
+            margin:20px;
+            width: 300px;
+            border-radius: 10px;
+
+            &:hover{
+                box-shadow: 0 2.5px 5px rgba(black,.3);
+                transform: scale(0.95);
+            }
+
+            p{
+                font-size: 1.8rem;
+                padding: 15px;
+            }
+
+            .line{
+                width: 25%;
+                height: 2px;
+                background-color: #FFBA51;
+            }
+
+            .index__image{
+                width: 200px;
+                height: auto;
+            }
+        }
+    }
+  
+   
+    .index-title{
+        letter-spacing: 2px;
+        position: relative;
+        margin-bottom: 100px;
+        width: 100%;
+        @include abscenter;
+        .title{
+            color: #FFBA51;
+            font-size: 3.5rem;
+            z-index: 4;
+        }
+        .title-shadow{
+            color: rgba(202, 202, 202, 0.651);
+            font-size: 4rem;
+            position: absolute;
+            bottom: -50%;
+            z-index: 1;
+        }
+    }
+    

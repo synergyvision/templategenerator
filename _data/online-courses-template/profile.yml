@@ -1,6 +1,4 @@
 
-
-
 sections:
     - title: Personal information
       left-fields:
@@ -24,6 +22,32 @@ sections:
       btn:
        - text: Save changes
          type: primary
+    - title: Social media
+      left-fields:
+        - input:
+            type: text
+            name: github-user
+            icon: icon-github
+        - input:
+            type: text
+            name: instagram-user
+            icon: icon-instagram
+        - input:
+            type: text
+            name: facebook-user
+            icon: icon-facebook
+      right-fields:
+        - input:
+            type: text
+            name: pinterest-user
+            icon: icon-pinterest
+        - input:
+            type: text
+            name: twitter-user
+            icon: icon-twitter
+      btn:
+        - text: Save changes
+          type: primary
     - title: Account
       left-fields:
         - title: 'Account info'
@@ -52,6 +76,7 @@ sections:
       btn:
        - text: Go to my public profile
          type: primary
+         href: 'public-profile.html'
        - text: Go to my instructor profile
          type: primary
     - title: Payment methods
@@ -80,3 +105,21 @@ sections:
       btn:
        - text: Close account
          type: primary
+
+public-profile:
+  description-title: A little bit about me
+  social-media:
+        - name: github-user
+          icon: icon-github
+        - name: instagram-user
+          icon: icon-instagram
+        - name: facebook-user
+          icon: icon-facebook
+        - name: pinterest-user
+          icon: icon-pinterest
+        - name: twitter-user
+          icon: icon-twitter
+  courses-title: "Courses I'm enroll in"
+
+my-courses:
+  title: 'My courses'

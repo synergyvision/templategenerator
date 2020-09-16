@@ -6,6 +6,10 @@
 .profile-general-info{
         @include abscenter;
         flex-direction: column;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%,50%);
 
         .img{
             width: 150px;
@@ -79,7 +83,7 @@
             @include abscenter;
             align-items: flex-start;
 
-
+           
 
             & > * {
                 width: 100%;
@@ -137,3 +141,98 @@
 }
 
 
+.public-profile-pic{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    transform: translate(-50%,50%);
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+
+.public-profile{
+    @include abscenter;
+    flex-direction: column;
+    color: $gray-dark;
+    position: relative;
+    &>*{
+        margin:5px;
+    }
+    &__title{
+        letter-spacing: 1.4px;
+        font-size: 2.8rem;
+    }
+    &__subtitle{
+        letter-spacing: 1.4px;
+        font-size: 1.8rem;
+        font-weight: lighter;
+    }
+    .description{
+        margin:30px 0;
+        @include abscenter;
+        justify-content: space-evenly;
+        font-size: 1.8rem;
+        width: 90%;
+        & > *{
+            width: 45%;
+        }
+
+      
+    }
+}
+
+.social-media-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 9999999;
+
+    .icon-cont{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+        margin-right: 10px;
+        .icon{
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 25px;
+            height: 25px;
+            fill:var(--color-primary);
+           // margin: 10px;
+        }
+    }
+   
+    a{
+        @include abscenter;
+        justify-content: flex-start;
+        text-decoration: none;
+        color: $gray-dark; 
+        font-size: 1.6rem;
+        margin:10px 0;
+        &:hover{
+            .text{
+                transform: scale(1);
+            }
+        }
+    }
+    .text{
+        transform: scale(0);
+        background-color: #fff;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 0 5px 10px rgba(black,.2);
+        padding: 10px;
+        transition: all .2s;
+    }
+}

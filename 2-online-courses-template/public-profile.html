@@ -1,0 +1,52 @@
+---
+layout: online-courses-template/online-courses-header
+title: Coursing | My public profile
+---
+
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %} {% assign
+svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#" %}
+<div class="title-stripe__no-text">
+  <div class="public-profile-pic">
+    <img
+      src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url  }}"
+      alt="{{site.data.online-courses-template.user.image.alt}}"
+    />
+  </div>
+</div>
+
+<div class="public-profile mtb-big">
+  <div class="public-profile__title">
+    {{site.data.online-courses-template.user.info.name | append: ' ' | append:
+    site.data.online-courses-template.user.info.lastname}}
+  </div>
+  <div class="public-profile__subtitle">
+    {{site.data.online-courses-template.user.info.title}}
+  </div>
+  {% include online-courses-template/cards/switch.html
+  text=site.data.online-courses-template.user.info.status %}
+ 
+
+  <div class="social-media-container">
+    {% for sm in site.data.online-courses-template.user.info.social-media %} {%
+    for smt in
+    site.data.online-courses-template.profile.public-profile.social-media %} {%
+    if sm.name == smt.name %}
+    <a href="{{sm.href}}" class="social-media">
+      <div class="icon-cont">
+        {% include global/svg.html directory=svg-directory image=smt.icon
+        class='icon' %}
+      </div>
+      <div class="text">{{sm.text}}</div>
+    </a>
+    {% endif %} {% endfor %} {% endfor %}
+  </div>
+  <div class="row">
+        <h1 class="title-primary mtb-big">
+            {{site.data.online-courses-template.profile.public-profile.courses-title | append: ''}}
+            ({{site.data.online-courses-template.user.courses | size}})
+        </h1>
+  </div>
+  {% include online-courses-template/profile/my-courses.html %}
+</div>

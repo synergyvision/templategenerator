@@ -1,0 +1,23 @@
+     
+{% for input in include.inputs %}
+    {% if input.title %}
+        <div class="title">
+            {{input.title}}
+        </div>   
+    {% endif %}          
+    {% if input.input %}
+        {% assign placeholder = '' %}
+        {% for field in site.data.online-courses-template.user.profile %}
+            {% if input.input.name == field.name %}
+                {% assign placeholder = field.text %}
+            {% endif %}
+        {% endfor %}
+        {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name=placeholder input-icon=input.input.icon svg-directory=svg-directory %}
+    {% endif %}
+    {% if input.checked %}
+        {% include online-courses-template/global/checkbox.html checked=input.checked text=input.text %}
+    {% endif %}
+    {% if input.text-info %}
+        {% include online-courses-template/global/message.html info=input.text-info type=input.type %}         
+    {% endif %}
+{% endfor %}

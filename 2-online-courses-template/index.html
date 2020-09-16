@@ -8,8 +8,8 @@ layout: online-courses-template/online-courses-header
 {% include online-courses-template/home-sections/feature-stripe.html %}
 
 <!--Modificar-->
-{% include online-courses-template/home-sections/section-courses.html title='Top development courses' id=1 %}
-{% include online-courses-template/home-sections/section-courses.html title='Top Coursing recommendation' id=2 %}
+{% include online-courses-template/home-sections/section-courses.html title='Top development courses' id=1 collection=site.online-courses-courses %}
+{% include online-courses-template/home-sections/section-courses.html title='Top Coursing recommendation' id=2 collection=site.online-courses-courses %}
 
 
 {% include online-courses-template/home-sections/section-contact.html %}
