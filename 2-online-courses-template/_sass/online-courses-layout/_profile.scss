@@ -59,7 +59,7 @@
 
 
 .profile-card{
-    
+    min-height: max-content;
     width: 80%;
     border-radius: 10px;
     background-color: #fff;
@@ -68,6 +68,7 @@
     display: flex;
     overflow: hidden;
     .content{
+       // display: none;
         @include abscenter;
         flex-direction: column;
         width: 100%;
@@ -77,11 +78,24 @@
             padding:15px;       
             @include abscenter;
             align-items: flex-start;
-            & > *{
-                width: 50%;
-                @include abscenter;
+
+
+
+            & > * {
+                width: 100%;
+                @include abscenter;  
+
+                .title{
+                    color: $gray;
+                    font-size: 2rem;
+                    margin:10px 0;
+                }
+            }
+            .left-side,.right-side{
+                width: 50% !important;
                 flex-direction: column;
             }
+
         }
         .btn-content{
             width: 100%;
@@ -92,12 +106,13 @@
     }
     
 
+
     .links{
         padding:10px 0;
         border-radius: 10px 0 0 10px;
         border-bottom: 1px solid $gray-light;
         color: $gray;
-        width: 200px;
+        min-width: max-content;
         height: 100% auto;
         font-size: 1.6rem;   
         background-color: var(--color-primary); 
@@ -120,3 +135,5 @@
         }
     }
 }
+
+
