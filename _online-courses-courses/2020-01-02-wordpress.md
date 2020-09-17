@@ -177,11 +177,30 @@ download-buttons:
     type: primary
 
 questions:
-  - name: Muhamed Alliasime
+  - person: 
+      name: Muhamed Alliasime
+      image: 
+        name: client-5-face.jpg
+        alt: client 5
     question: I can't find the corrected exercise od excercise 7
     answer: Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde facere molestias nulla esse cum, quis ea accusamus adipisci, in numquam ab. Illum in quaerat distinctio similique nulla eos magni quis!
     date: 2020/12/02
-
+  - person: 
+      name: Denis Shapovalov
+      image:
+        name: client-4-face.png
+        alt: Client 4
+    question: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    answer: Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde facere molestias nulla esse cum, quis ea accusamus adipisci, in numquam ab. Illum in quaerat distinctio
+    date: 2019/01/02
+  - person: 
+      name: Denis Shapovalov
+      image:
+        name: client-4-face.png
+        alt: Client 4
+    question: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    answer: Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde facere molestias nulla esse cum, quis ea accusamus adipisci, in numquam ab. Illum in quaerat distinctio
+    date: 2019/01/02
 
 filters:
   - name: score

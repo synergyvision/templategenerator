@@ -1,0 +1,14 @@
+<div class="ask-question">
+    <div class="ask-question__title">
+        {% include online-courses-template/global/login-input.html label='Title' input-name='Your title question' input-type='input'  %}
+    </div>
+    <div class="ask-question__description">
+     {% include online-courses-template/global/login-input.html label='Description' input-name='Your description question' input-type='textarea' height='220px' %}
+    </div>
+    <div class="ask-question__btn">
+        {% include online-courses-template/global/button.html
+            btn=site.data.online-courses-template.courses.detail.course-questions.ask-question.btn
+            onclick="backtoQuestions()"
+            %}
+    </div>   
+</div>

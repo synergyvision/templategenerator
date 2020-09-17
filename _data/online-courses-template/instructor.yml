@@ -4,7 +4,12 @@ side-nav:
     href: '#'
   - icon: icon-video
     text: My courses
-    href: ''
+    href: 'instructor-courses.html'
   - icon: icon-message-square
     text: Messages
-    href: ''
+    href: 'instructor-messages.html'
+
+courses:
+  - name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
+    default: true
+  - name: Investing In Stocks The Complete Course! (11 Hour)

@@ -1,18 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
     .index{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include abscenter;
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: max-content;
+        min-height: 100vh;
         font-family: 'Roboto', sans-serif;
-
+       
     }
     .index-container{
-        display: flex;
-        justify-content: space-between;
-
+        @include abscenter;
+        
         a{  
             @include abscenter;
             flex-direction: column;
@@ -56,7 +54,7 @@
     .index-title{
         letter-spacing: 2px;
         position: relative;
-        margin-bottom: 100px;
+        margin: 5rem 0;
         width: 100%;
         @include abscenter;
         .title{

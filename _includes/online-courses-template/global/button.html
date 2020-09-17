@@ -1,7 +1,8 @@
 {% assign
     svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
     | relative_url | append: "#"}} %}
-<a href="{% if include.btn.href %}{{ site.data.online-courses-template.global.site.base-url | append: include.btn.href | relative_url}} {% endif %}" class="btn {% if include.btn.type == 'primary' %} btn-1 {% else %} btn-2 {% endif %}">
+<a {% if include.btn.href %} href="{{ site.data.online-courses-template.global.site.base-url | append: include.btn.href | relative_url}} " {% endif %} class="btn {% if include.btn.type == 'primary' %} btn-1 {% else %} btn-2 {% endif %}"
+    onclick={{include.onclick}}>
    {% if include.icon %}
         <div class="icon-wrapper">
             {% include global/svg.html directory=svg-directory image=include.icon class='icon' %}

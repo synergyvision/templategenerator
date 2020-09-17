@@ -1,0 +1,14 @@
+---
+layout: online-courses-template/instructor-dash
+---
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images
+    %}
+
+<div class="instructor-welcome">
+    
+    <h1 class="title mtb-bigger">
+            Welcome to your instructor dashboard
+    </h1>
+
+    <img src="{{image-directory | append: 'instructor-welcome.png' | relative_url}}" alt="{{chat.image.alt}}" />
+</div>

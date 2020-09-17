@@ -1,6 +1,6 @@
 ---
 layout: online-courses-template/course-detail
-identifier: course5
+identifier: course11
 categories: [development,design]
 name: Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 owner: Milos Raonic

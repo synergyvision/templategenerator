@@ -18,6 +18,7 @@ header-buttons:
       - title: Negocios
       - title: Finanzas y contabilidad
   - icon: icon-shopping-cart
+    href: 'my-cart.html'
 
 links-dropdown:
   sections:
@@ -25,9 +26,9 @@ links-dropdown:
       - title: My courses
         href: 'my-courses.html'
       - title: My cart
-        href: ''
+        href: 'my-cart.html'
       - title: My Wishlist
-        href: ''
+        href: 'my-wishlist.html'
     - section:
       - title: My profile
         href: 'my-profile.html'

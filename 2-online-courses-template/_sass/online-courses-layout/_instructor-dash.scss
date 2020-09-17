@@ -1,6 +1,6 @@
 .instructor-dashboard{
     width: 100%;
-    height: max-content;
+    min-height: 100vh;
 }
 
 .side-nav{
@@ -61,5 +61,20 @@
     .link-active{
         border-left: 3px solid #fff;
         background-color: var(--color-primary-light);
+    }
+}
+
+
+.instructor-welcome{
+    @include abscenter;
+    flex-direction: column;
+    margin-left: 65px;
+    .title{
+        color: $gray;
+        font-size: 3rem;
+    }
+    img{
+        max-width: 60rem;
+        max-height: 60rem;
     }
 }

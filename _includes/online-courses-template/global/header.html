@@ -2,11 +2,11 @@
 site.data.online-courses-template.global.site.directories.images %} {% assign
 svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
 | relative_url | append: "#"}} %} {% assign
-base-url='/2-online-courses-template/' %}
+base-url=site.data.online-courses-template.global.site.base-url %}
 <div class="header">
   <div class="header__logo">
     <a
-      href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.header.logo.href | relative_url }}"
+      href="{{base-url | append: site.data.online-courses-template.header.logo.href | relative_url }}"
     >
       <img
         src="{{image-directory  | append: site.data.online-courses-template.header.logo.img | relative_url }}"
@@ -15,6 +15,7 @@ base-url='/2-online-courses-template/' %}
     </a>
   </div>
   {% include online-courses-template/header-links.html
+  base-url=base-url
   link=site.data.online-courses-template.header.categories
   sections=site.online-courses-categories position='left'
   svg-directory=svg-directory %} 
@@ -27,7 +28,7 @@ base-url='/2-online-courses-template/' %}
   
   <div class="header__info">
     {% for links in site.data.online-courses-template.header.header-buttons %}
-    {% include online-courses-template/header-links.html link=links
+    {% include online-courses-template/header-links.html base-url=base-url link=links
     position='right' svg-directory=svg-directory sections=links.sections %} {%
     endfor %}
     <div class="header__profile">

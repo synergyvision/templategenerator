@@ -1,0 +1,15 @@
+<div class="course-questions">
+    <div class="image-side">
+        <div class="img-container">
+          <img src="{{image-directory | append: include.question.person.image.name | relative_url}}" alt="{{include.question.person.image.alt}}">
+        </div>
+    </div>
+    <div class="content-side">
+        <div class="question"> {{include.question.question}}</div>
+        <div class="answer">{{include.question.answer}}</div>
+        <a class="circle-btn" href="#">
+            {% include global/svg.html directory=svg-directory
+            image='icon-heart2' class='icon' %}
+        </a>
+    </div>
+  </div>
