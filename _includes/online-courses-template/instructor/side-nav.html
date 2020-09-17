@@ -1,0 +1,12 @@
+<div class="side-nav">
+    <img
+    src="{{include.image-directory | append: site.data.online-courses-template.user.image.pic | relative_url  }}"
+    alt="{{site.data.online-courses-template.user.image.alt}}"
+  />
+  {% for link in site.data.online-courses-template.instructor.side-nav %}
+    <a class="link {% if forloop.index == 1 %} link-active {% endif %}" href="{{link.href}}">
+        {% include global/svg.html directory=include.svg-directory image=link.icon class='link__image' %}
+        <div class="text">{{link.text}}</div>
+    </a>
+  {% endfor %}
+</div>

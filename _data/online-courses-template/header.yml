@@ -31,6 +31,9 @@ links-dropdown:
     - section:
       - title: My profile
         href: 'my-profile.html'
+      - title: Log out
+        background: true
+
 
 banner:
   image: 'coursing-bg.jpeg'

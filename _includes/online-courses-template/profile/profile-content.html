@@ -12,7 +12,7 @@
                 {% assign placeholder = field.text %}
             {% endif %}
         {% endfor %}
-        {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name=placeholder input-icon=input.input.icon svg-directory=svg-directory %}
+        {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name=placeholder input-icon=input.input.icon svg-directory=svg-directory height='160px' %}
     {% endif %}
     {% if input.checked %}
         {% include online-courses-template/global/checkbox.html checked=input.checked text=input.text %}

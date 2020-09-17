@@ -17,10 +17,14 @@ base-url='/2-online-courses-template/' %}
   {% include online-courses-template/header-links.html
   link=site.data.online-courses-template.header.categories
   sections=site.online-courses-categories position='left'
-  svg-directory=svg-directory %} {% include
-  online-courses-template/search-input.html
-  placeholder=site.data.online-courses-template.header.search-input.placeholder
-  %}
+  svg-directory=svg-directory %} 
+  <div class="header__search">
+    {% include
+      online-courses-template/search-input.html
+      placeholder=site.data.online-courses-template.header.search-input.placeholder
+      %}
+  </div>
+  
   <div class="header__info">
     {% for links in site.data.online-courses-template.header.header-buttons %}
     {% include online-courses-template/header-links.html link=links
@@ -45,28 +49,27 @@ base-url='/2-online-courses-template/' %}
             </div>
           </div>
           <div class="info-side">
-            <div class="name">
-              {{site.data.online-courses-template.user.info.name | append: ' ' |
-              append: site.data.online-courses-template.user.info.lastname |
-              truncate: 30 }}
-            </div>
-            <!--truncate 26-30-->
-            <div class="email">
-              {{site.data.online-courses-template.user.info.email | truncate:30
-              }}
-            </div>
+              <div class="name">
+                {{site.data.online-courses-template.user.info.name | append: ' ' |
+                append: site.data.online-courses-template.user.info.lastname |
+                truncate: 30 }}
+              </div>
+              <div class="email">
+                {{site.data.online-courses-template.user.info.email | truncate:30
+                }}
+              </div>
           </div>
         </div>
         {% for section in
         site.data.online-courses-template.header.links-dropdown.sections %}
         <div class="links-section">
-          {% for link in section.section %}
-          <a
-            class="link"
-            href="{{link.href | prepend: base-url | relative_url }}"
-            >{{link.title}}</a
-          >
-          {% endfor %}
+            {% for link in section.section %}
+              <a
+                class="link {% if link.background==true %} link-active {% endif %}"
+                href="{{link.href | prepend: base-url | relative_url }}"
+                >{{link.title}}</a
+              >
+            {% endfor %}
         </div>
         {% endfor %}
       </div>
