@@ -79,7 +79,7 @@ sections:
          href: 'public-profile.html'
        - text: Go to my instructor profile
          type: primary
-         href: 'instructor-messages.html'
+         href: 'instructor-welcome.html'
     - title: Payment methods
       one-side:
           - checkbox:
@@ -121,6 +121,30 @@ public-profile:
         - name: twitter-user
           icon: icon-twitter
   courses-title: "Courses I'm enroll in"
-
+  
 my-courses:
   title: 'My courses'
+  
+
+my-wishlist:
+  title: 'My wishlist'
+  total-courses: courses on wishlist
+  empty-wishlist:
+    btn: 
+      text: Go take a look
+      type: primary
+      href: 'categories/all.html'
+
+my-cart:
+  title: 'My cart'
+  total-courses: courses on cart
+  pay:
+    title: 'Total:'
+    btn: 
+      text: Pay now
+      type: primary
+  empty-cart:
+    btn: 
+      text: Go shopping
+      type: primary
+      href: 'categories/all.html'

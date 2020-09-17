@@ -52,8 +52,8 @@ member == false %}
 
 {% include online-courses-template/course-sections/students-review.html
 title=site.data.online-courses-template.courses.detail.students-reviews.title
-students-reviews=page.students-reviews image-directory=image-directory %} {%
-else %}
+students-reviews=page.students-reviews image-directory=image-directory %} 
+{% else %}
 <div class="course-membered">
   <div class="course-membered--left">
     {% include global/video.html
@@ -76,26 +76,40 @@ else %}
       description=page.description %}
     </div>
     <div class="questions">
-      <div class="title">
-        {{site.data.online-courses-template.courses.detail.course-questions.title}}
-      </div>
-      <div class="line"></div>
-      <div class="questions__info">
-        {% capture total-questions %} {{page.questions | size}} {% endcapture %}
-        <p>
-          {{site.data.online-courses-template.courses.detail.course-questions.total-questions
-          | capitalize | append: total-questions }}
-        </p>
-        {% include online-courses-template/global/button.html
-        btn=site.data.online-courses-template.courses.detail.course-questions.btn
-        %}
-      </div>
-      {% for question in page.questions %}
-      <div class="course-question">
-        <div class="image-side"></div>
-        <div class="content-side"></div>
-      </div>
-      {% endfor %}
+        <div class="title">
+          {{site.data.online-courses-template.courses.detail.course-questions.title}}
+        </div>
+        <div class="line"></div>
+        <div class="questions__info">
+          {% capture total-questions %} {{page.questions | size}} {% endcapture %}
+          <p>
+            {{site.data.online-courses-template.courses.detail.course-questions.total-questions
+            | capitalize | append: total-questions }}
+          </p>
+          <div class="btn-ask">
+            {% include online-courses-template/global/button.html
+              btn=site.data.online-courses-template.courses.detail.course-questions.all-questions.btn
+              onclick="askQuestion()"
+              %}
+          </div>
+          <div class="btn-back">
+            {% include online-courses-template/global/button.html
+              btn=site.data.online-courses-template.courses.detail.course-questions.my-question.btn
+              onclick="backtoQuestions()"
+              %}
+          </div>       
+        </div>
+        {% for question in page.questions %}
+          <div class="card-cont">
+            {% include online-courses-template/cards/course-membered-question.html question=question %}
+          </div>
+        {% endfor %}
+        <div class="abscenter mtb-big">
+            {% include global/pagination.html number-of-pages=2 max-per-page=2 %}
+        </div>
+        <div class="questions__info__ask">
+          {% include online-courses-template/course-sections/ask-question.html %}
+        </div>
     </div>
   </div>
   <div class="course-membered--right">

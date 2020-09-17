@@ -1,3 +1,4 @@
+
 {% if include.number-of-pages > 1 %}
     <div class="pagination">
         <a id="prev">&#8810;</a>
@@ -7,3 +8,10 @@
         <a id="next">&#8811;</a>
     </div>
 {% endif %}
+
+<script>    
+var config = {
+		max_per_page: {{include.max-per-page}},
+		page: 1
+};
+</script>

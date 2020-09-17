@@ -1,0 +1,45 @@
+---
+layout: online-courses-template/online-courses-header
+title: Coursing | My wishlist
+
+---
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+<div class="title-stripe__text">
+    {{site.data.online-courses-template.profile.my-wishlist.title}}
+</div>
+
+<div class="row">
+    
+    {% assign cart-lenght= site.data.online-courses-template.user.wishlist-courses | size %}
+    <div class="cart-container">
+        <div class="cart-info">
+            <div class="cart-lenght">
+                {{cart-lenght}} courses on wishlist
+            </div>
+        </div>
+        {% if cart-lenght == 0  %}
+            <div class="empty-cart">
+                {% include global/svg.html directory=svg-directory image='icon-heart' class='icon' %}
+                <div class="text">
+                    <p>Ops! There is no courses in your wishlist</p>
+                    {% include online-courses-template/global/button.html btn=site.data.online-courses-template.profile.my-wishlist.empty-wishlist.btn %}
+                </div>          
+            </div> 
+        {% else %}
+            
+            <div class="cart-cards">
+                {% for card in site.online-courses-courses %}
+                {% for card-cart in site.data.online-courses-template.user.wishlist-courses %}
+                    {% if card.identifier == card-cart.id %}
+                        <div class="card-cont" value={{forloop.index}} identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
+                            {% include online-courses-template/cards/course-card.html card=card %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </div>        
+        {% endif %}
+    </div>   
+</div>

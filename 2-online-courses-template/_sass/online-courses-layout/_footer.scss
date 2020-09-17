@@ -84,7 +84,8 @@
   .custom-select {
     position: relative;
     font-size: 1.6rem;
-    width: 200px;
+    width: max-content;
+    min-width: 200px;
   }
   
   .custom-select select {

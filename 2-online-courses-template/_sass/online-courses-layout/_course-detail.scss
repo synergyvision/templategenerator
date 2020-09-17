@@ -470,7 +470,14 @@
                 @include abscenter;
                 justify-content: space-between;
                 margin:10px;
+
+                .btn-back, &__ask{
+                    display: none;
+                }
+
+                
             }
+
         }
 
         .btn-wrapper{
@@ -564,6 +571,20 @@
 }
 
 
-.course-question{
-        
+
+
+
+.ask-question{
+    
+    @include abscenter;
+    flex-direction: column;
+    margin:30px 0;
+    &> *{
+        width: 90%;
+        @include abscenter
+    }
+    &__btn{
+        width: max-content;
+        margin: 0 auto;
+    }
 }

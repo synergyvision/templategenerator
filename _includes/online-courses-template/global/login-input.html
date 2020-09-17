@@ -4,7 +4,7 @@
     {% endif %}
         {% include global/svg.html directory=include.svg-directory image=include.input-icon class='icon' %}
     {% if include.input-type=='textarea' %}
-<textarea name="" id="" placeholder="{{include.input-name}}" style="height:{{include.height}};"></textarea>
+        <textarea name="" id="" placeholder="{{include.input-name}}" style="height:{{include.height}};"></textarea>
     {% else  %}
         <input type="{{include.input-type}}" placeholder="{{include.input-name}}" class="login-input__field" />
     {% endif %}

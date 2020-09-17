@@ -1,8 +1,5 @@
 (function(){
-	var config = {
-		max_per_page: 9,
-		page: 1
-    },
+
     pages = document.querySelectorAll("#page-btn");
     elements = document.getElementsByClassName('card-cont');
     max_results = elements.length;
@@ -51,6 +48,7 @@
 	}
 
     function update_page(){
+		
         $("html, body").animate({ scrollTop: 0 }, 600);
         $('.card-cont').css('transform', 'scale(0)');
         $('.card-cont').css('display', 'none');
