@@ -1,0 +1,25 @@
+chat:
+  input:
+    type: textarea
+    name: Type your message
+  btn:
+    text: Send
+    type: secondary
+
+chats:
+  - name: Nole Djokovic
+    image:
+      name: client-2-face.jpg
+      alt: client 2
+  - name: Tomas Munster
+    image:
+      name: client-4-face.png
+      alt: client 4
+  - name: Angelic Kerber
+    image:
+      name: client-3-face.jpg
+      alt: client 3
+  - name: Stefano Tsisipas
+    image:
+      name: client-5-face.jpg
+      alt: client 5

@@ -79,6 +79,7 @@ sections:
          href: 'public-profile.html'
        - text: Go to my instructor profile
          type: primary
+         href: 'instructor-messages.html'
     - title: Payment methods
       one-side:
           - checkbox:

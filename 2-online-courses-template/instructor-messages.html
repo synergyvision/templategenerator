@@ -1,0 +1,89 @@
+---
+layout: online-courses-template/instructor-dash
+---
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images
+    %}
+    {% assign type = site.data.online-courses-template.conversations.chat %}
+<div class="instructor-message">
+    <div class="row">
+        <h1 class="title-primary mtb-big">
+            Message your students
+        </h1>
+    </div>
+    <div class="conversation-container ">
+        <div class="people-list" id="people-list">
+            {% include
+                online-courses-template/search-input.html
+                placeholder='Search'
+                %}
+          <ul class="list">
+            {% for chat in site.data.online-courses-template.conversations.chats %}
+                <li>
+                    <div class="img-container">
+                        <img src="{{image-directory | append: chat.image.name | relative_url}}" alt="{{chat.image.alt}}" />
+                    </div>
+                    <div class="about">
+                        <div class="name">{{chat.name}}</div>
+                        <!--<div class="status">
+                            <i class="fa fa-circle online"></i> online
+                        </div> -->
+                    </div>
+                </li>
+            {% endfor %}
+          </ul>
+        </div>  
+        <div class="chat">
+            <div class="chat__header">
+                <div class="img-container">
+                    <img src="{{image-directory | append: 'client-2-face.jpg' | relative_url}}" alt="" />
+                </div>
+                <div class="info">
+                    <div class="inline">
+                        <div class="name">Chat with Nole Djkovic</div>
+                        <div class="chat-status"></div>
+                    </div>
+                    <div class="status">Student</div>
+                </div>
+                
+            </div>
+            <div class="chat__messages">
+                <div class="message-blue">
+                    <p class="message-content">Hi! I have a problem downloading the dependencies, could you help me?</p>
+                    <div class="message-timestamp-left">SMS 13:37</div>
+                </div>
+                <div class="message-orange">
+                    <p class="message-content">Of course! Tell me what problem you have</p>
+                    <div class="message-timestamp-right">SMS 13:37</div>
+                </div>
+                <div class="message-blue">
+                    <p class="message-content">By the way! congratulations on the course, it's excellent. I have learned a lot</p>
+                    <div class="message-timestamp-left">SMS 13:37</div>
+                </div>
+                <div class="message-orange">
+                    <p class="message-content">Haha thanks, I'm glad you like it</p>
+                    <div class="message-timestamp-right">SMS 13:37</div>
+                </div>
+                <div class="message-orange">
+                    <p class="message-content">Haha thanks, I'm glad you like it</p>
+                    <div class="message-timestamp-right">SMS 13:37</div>
+                </div>
+                <div class="message-orange">
+                    <p class="message-content">Haha thanks, I'm glad you like it</p>
+                    <div class="message-timestamp-right">SMS 13:37</div>
+                </div>
+                <div class="message-orange">
+                    <p class="message-content">Haha thanks, I'm glad you like it</p>
+                    <div class="message-timestamp-right">SMS 13:37</div>
+                </div>
+            </div>
+            <div class="chat__textarea">
+               
+                {% include online-courses-template/global/login-input.html input-name=type.input.name input-type=type.input.type height='70px' %}
+            </div>
+            <div class="chat__btn">
+                {% include online-courses-template/global/button.html btn=type.btn %}
+            </div>
+        </div>  
+    </div> <!-- end container -->
+
+</div>

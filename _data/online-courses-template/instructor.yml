@@ -1,0 +1,10 @@
+side-nav:
+  - icon: icon-add-outline
+    text: Create a course
+    href: '#'
+  - icon: icon-video
+    text: My courses
+    href: ''
+  - icon: icon-message-square
+    text: Messages
+    href: ''

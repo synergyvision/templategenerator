@@ -9,11 +9,17 @@
     padding: 0 20px;
     z-index: 5;
 
-    .search-input{
-        @include respond(tab-port){
-            display: none;
+    &__search{
+        width: 330px;
+
+        .search-input{
+            @include respond(tab-port){
+                display: none;
+            }
         }
     }
+
+   
 
     &__logo{
         z-index: 2;
@@ -198,7 +204,7 @@
         display: flex;
         padding-bottom: 10px;
         align-items: center;
-        border-bottom: 1px solid $gray;
+        //border-bottom: 1px solid $gray;
         .picture-side{
             width: 75px;
             .image{
@@ -232,8 +238,9 @@
     .links-section{
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid $gray;
+        border-top: 1px solid $gray;
         padding:5px 0;
+       
         .link{
             text-decoration: none;
             padding: 15px;
@@ -246,7 +253,22 @@
 
             }
         }
+        .link-active{
+            align-self: flex-end;
+            @include abscenter;
+            background-color: var(--color-primary);
+            border-radius: 10px;
+            width: max-content;
+            padding: 15px 25px;
+            color: #fff;
+            transition: all .2s;
+            &:hover{
+                color: #fff !important;
+                transform: scale(0.95);
+            }
+        }
     }
+    
 }
 
 
