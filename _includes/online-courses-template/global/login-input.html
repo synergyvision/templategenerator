@@ -6,6 +6,6 @@
     {% if include.input-type=='textarea' %}
         <textarea name="" id="" placeholder="{{include.input-name}}" style="height:{{include.height}};"></textarea>
     {% else  %}
-        <input type="{{include.input-type}}" placeholder="{{include.input-name}}" class="login-input__field" />
+        <input id={{include.id}} type="{{include.input-type}}" placeholder="{{include.input-name}}" class="login-input__field" />
     {% endif %}
 </div>

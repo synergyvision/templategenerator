@@ -1,4 +1,4 @@
-.btn {
+.button {
     color: #fff;
     cursor: pointer;
     // display: block;
@@ -16,7 +16,7 @@
    
 
   }
-  .btn-1 {
+  .button-1 {
       background: lighten(#6078ea, 3%);  
       border: 1px solid darken(#6078ea, 4%);
     //  box-shadow: 0px 5px 10px darken(black, .05);
@@ -29,7 +29,7 @@
         background: darken(#6078ea, 1.5%);
         border: 1px solid rgba(#000, .05);
         box-shadow: 1px 1px 2px rgba(#fff, .2);
-        color: lighten(#6078ea, 18%); 
+        color: #b1bdf5 !important;
         text-decoration: none;
         text-shadow: -1px -1px 0 darken(#6078ea, 9.5%);
         transition: all 250ms linear;
@@ -44,7 +44,7 @@
     
 
 
-    .btn-2 {
+    .button-2 {
         background: lighten(#fff, 4%);  
         border: 1px solid darken(#fff, 4%);
         color: #6078ea;
@@ -88,4 +88,29 @@
             border-radius: 0 10px 10px 0;
         }
     
+}
+
+// boton circular con icono
+.circle-btn{
+            
+  background-color: #fff;
+  
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  height: 4rem; width: 4rem;
+  @include abscenter;
+  transition: all .3s;
+  &:hover{
+      background-color: var(--color-primary);
+      border: 2px solid #fff;
+      .icon{
+          fill: #fff;
+      }
+  }
+  .icon{
+      fill: var(--color-primary);
+      height: 2.5rem; width: 2.5rem;
+      transition: all .3s;
+  }
 }

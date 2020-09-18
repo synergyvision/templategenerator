@@ -18,11 +18,13 @@ title: Coursing | My cart
             <div class="cart-lenght">
                 {{cart-lenght}} courses on cart
             </div>
+            {% if cart-lenght != 0  %}
             <div class="cart-price">
                 <div class="title">Total:</div>
                   <div class="total-price">74.24$</div>
                 {% include online-courses-template/global/button.html btn=site.data.online-courses-template.profile.my-cart.pay.btn %}
             </div>
+            {% endif %}
         </div>
         
         {% if cart-lenght == 0  %}

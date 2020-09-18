@@ -25,38 +25,6 @@ site.data.online-courses-template.global.site.directories.images %}
         </div>
       </div>
 </div>
-<div class="profile mtb-bigger">
-  <div class="profile-card">
-    <div class="links">
-        {% for link in site.data.online-courses-template.profile.sections %}
-            <div class="link {% if forloop.index == 1 %} link-active {% endif %}" id={{forloop.index}}>{{link.title}}</div> 
-        {% endfor %}
-    </div>
-    {% for link in site.data.online-courses-template.profile.sections %}
-    <div class="content {% if forloop.index == 1 %} active-content {% endif %}" id={{forloop.index}}>
-        {% if link.one-side %}
-            <div class="fields">
-                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].one-side %} 
-                {% include online-courses-template/profile/profile-content.html inputs=inputs %}
-            </div>
-        {% endif %}
-        <div class="fields"> 
-            <div class="left-side">
-                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].left-fields %}
-                {% include online-courses-template/profile/profile-content.html inputs=inputs %}
-            </div>
-            <div class="right-side">
-                {% assign inputs = site.data.online-courses-template.profile.sections[forloop.index0].right-fields %}
-                {% include online-courses-template/profile/profile-content.html inputs=inputs %}
-            </div>
-        </div>
-        <div class="btn-content">
-            {% assign buttons= site.data.online-courses-template.profile.sections[forloop.index0].btn %}  
-            {% for btn in buttons %}
-                {% include online-courses-template/global/button.html btn=btn %}
-            {% endfor %}
-        </div>
-    </div>
-    {% endfor %}
-  </div>
+<div class="profile">
+  {% include online-courses-template/global/card-fields-sections.html sections=site.data.online-courses-template.profile.sections %}
 </div>

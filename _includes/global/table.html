@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+        {% for head in include.header %}
+          <th>{{head.title}}</th>
+        {% endfor %}
+        </tr>
+      </thead>
+      <tbody id="contentTable">
+        {% for content in  include.content %}
+            <tr>
+                {% for field in content.fields %}
+                    <td> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.title}}</a></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>

@@ -61,7 +61,7 @@
             fill: var(--color-primary);
             }
 
-            .dropdown-menu{
+            .dropdown-menu1{
                 display: block !important;
             }
         }
@@ -99,7 +99,7 @@
         @include abscenter;
         cursor: pointer;
         &:hover{
-            .dropdown-menu{
+            .dropdown-menu1{
                 display: block !important;
             }
         }
@@ -138,7 +138,7 @@
 .dropdown-menu--right{
     right: 10%;
 }
-.dropdown-menu{
+.dropdown-menu1{
     position: absolute;
     top: 100%;
     padding: 15px;

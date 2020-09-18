@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 65px;
+    width: 6.5rem;
     height: 100vh;
     background-color: var(--color-primary);
     box-shadow: 0 2.5px 5px rgba(black,.2);
@@ -18,13 +18,13 @@
     flex-direction: column;
     transition: all .2s;
     img{
-        margin: 10px 0 30px 0;
-        width: 50px;
+        margin: 1rem 0 3rem 0;
+        width: 5rem;
         height: auto;
         border-radius: 50%;
     }
     &:hover{
-        width: 250px;
+        width: 25rem;
         .link .text{
             display: block;
             //visibility: visible;
@@ -33,7 +33,7 @@
     }
     .link{
         width: 100%;
-        padding:15px;
+        padding:1.5rem;
         transition: all .3s;
         @include abscenter;
         justify-content: flex-start;
@@ -41,7 +41,7 @@
         border-left: 3px solid transparent;
         text-decoration: none;
         &__image{
-            width: 30px; height: 30px;
+            width: 3rem; height: 3rem;
             fill: #fff;
         }
         &:hover{

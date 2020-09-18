@@ -5,11 +5,11 @@ sections:
         - input:
             type: text
             name: first-name
-          label: 'Fist names:'
+          label: 'Fist names'
         - input:
             type: text
             name: last-name
-          label: 'Last names:'
+          label: 'Last names'
         - input:
             type: text
             name: title
@@ -54,21 +54,21 @@ sections:
         - input:
               type: email
               name: email
-          label: 'Email:'
+          label: 'Email'
         - input:
             type: password
             name: password
-          label: 'Password:'
+          label: 'Password'
       right-fields:
         - title: 'Change password'
         - input: 
             type: password
             name: password
-          label: 'New Password:'
+          label: 'New Password'
         - input:
             type: password
             name: password
-          label: 'Repeat password:'
+          label: 'Repeat password'
       btn:
        - text: Save changes
          type: primary
@@ -139,7 +139,7 @@ my-cart:
   title: 'My cart'
   total-courses: courses on cart
   pay:
-    title: 'Total:'
+    title: 'Total'
     btn: 
       text: Pay now
       type: primary
