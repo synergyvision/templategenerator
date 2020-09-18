@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html >
-{% include global/head.html site=site.data.online-courses-template.global.site %}
+{% include global/head.html site=site.data.online-courses-template.global.site script='online-courses-template/global/script.html' %}
 
 <body>	
     {{ content }} 	
@@ -15,7 +15,7 @@
 	:root{
         --color-primary: {{site.data.online-courses-template.colors.color-primary}};
         --color-primary-light: {{site.data.online-courses-template.colors.color-primary-light}};
-        --color-primary-dark: {{site.data.online-courses-template.colors.color-primary-dark}}
+        --color-primary-dark: {{site.data.online-courses-template.colors.color-primary-dark}};
         --color-primary-transparent: {{site.data.online-courses-template.colors.color-primary-transparent}};
         --banner-background: url({{site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.banner.image | relative_url }});
    }

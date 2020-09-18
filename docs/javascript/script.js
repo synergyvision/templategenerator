@@ -19,8 +19,14 @@ $(document).on('ready', function() {
      $('.content-2').removeClass('hide-content');
      $('.content-2').addClass('show-content');
    });
- 
- 
+ /* =========== FILTER TABLE STUDENTS =========== */
+
+   $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#contentTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
  });
 // search input
 $(document).on('ready', function() {
@@ -303,5 +309,4 @@ function showCourseContentSection(value){
     }
 }
 
-/* =========== CLICK ON COURSE CONTENT MODULE =========== */
 

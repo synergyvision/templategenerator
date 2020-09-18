@@ -9,7 +9,82 @@ side-nav:
     text: Messages
     href: 'instructor-messages.html'
 
+my-courses:
+  title: My courses
+
+sections:
+  module-edit:
+    btn-icon: 'icon-pencil'
+  add-module:
+    btn:
+      text: 'Add module'
+      type: primary
+    popup-edit:
+      input: 
+        type: text
+        label: Module name
+      btn:
+        text: 'Add video'
+        type: secondary
+      btn-add:
+        text: 'Add'
+        type: primary
+
+edit-indo-sections:
+  - title: Description
+    one-side:
+      - input: 
+          type: text
+          name: 
+        label: 'Course title'
+      - input:
+          type: textarea
+          name: 
+        label: Course description
+    btn:
+       - text: Save changes
+         type: primary
+  - title: Includes
+    btn:
+        - text: Save changes
+          type: primary
+  - title: Sections
+    btn:
+       - text: Save changes
+         type: primary
+
 courses:
   - name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
+    id: course4
     default: true
+    student-list:
+      input:
+      student-table:
+        header:
+          - title: Names
+          - title: Email
+          - title: Progress
+        content:
+          - fields: 
+              - title: Stephanie Cruz
+                href: 'stephanie-cruz-profile'
+              - title: stephaniecruzcastelli@gmail.com
+              - title: 70%
+          - fields: 
+              - title:  Milos Raonic
+              - title: milosraonic66@gmail.com
+              - title: 62%
+          - fields: 
+              - title: Denis Shapovalov
+              - title: denisshapovalovv02@yahoo.com
+              - title: 12%
+          - fields: 
+              - title: Grigor Dimitrov
+              - title: grigordimitrov22@hotmail.com
+              - title: 99%
+          - fields: 
+              - title: Dominic Thiem
+              - title: dominicthiem77@gmail.com
+              - title: 45%
   - name: Investing In Stocks The Complete Course! (11 Hour)
+    id: course6

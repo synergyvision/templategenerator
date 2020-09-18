@@ -1,0 +1,86 @@
+.panel-group{
+    margin:10rem 0 !important;
+    cursor: pointer;
+}
+
+.panel-heading{
+    padding: 15px !important;
+    color: $gray-dark !important; 
+    h4{
+        a{
+            font-size: 1.8rem !important;
+            &:hover{
+                color: $gray !important;
+            }
+        }
+    }
+   
+}
+
+.panel-heading-active{
+    background-color: var(--color-primary-light) !important;
+    color: #fff !important;
+}
+
+.panel-body{
+    &__text{
+        @include abscenter;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding:10px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all .3s;
+        @include respond(phone){
+            flex-direction: column;
+        }
+        p{
+            width: calc(100%-5rem);
+        }
+        .icon{
+            height: 15px;
+            width: 15px;
+            fill: var(--color-primary);
+        }
+        &:hover{
+            background-color: $gray-light;
+        }
+    }
+    &__add{
+        width: max-content;
+        margin-left: auto;
+    }
+}
+
+.modal-body{
+    @include abscenter;
+    flex-direction: column;
+
+    &__btn{
+        width: max-content;
+    }
+}
+
+.modal-footer{
+    &__btn{
+        width: max-content;
+        margin-left: auto;
+    }
+}
+
+.panel-group{
+    width: 100%;
+}
+
+.list-group-item{
+    &:hover{
+        background-color: $gray-light;
+    }
+    a{
+        font-size: 1.6rem !important;
+        color: $gray;
+        &:hover{
+            color: var(--color-primary);
+        }
+    }
+}

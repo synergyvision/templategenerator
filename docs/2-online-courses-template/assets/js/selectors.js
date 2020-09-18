@@ -48,39 +48,47 @@ function backtoQuestions(){
      myQuest.style.display='none';
 }
 
-(function(){
-    
-    let activeLink = document.querySelector('.profile-card .links .link-active');
-    let element = document.querySelectorAll('.profile-card .links .link')
-    
-    function showContent(id){
-        $('.profile-card .content').css('transform', 'scale(0)');
-        $('.profile-card .content').css('display', 'none');
-
-       $('.profile-card .content[id='+id+']').css('transform', 'scale(1)');
-       $('.profile-card .content[id='+id+']').css('display', 'block');
-
-       $('.profile-card .links .link-active').removeClass('link-active');
-       $('.profile-card .links .link[id='+id+']').addClass('link-active');
-    }
+function showCourse(id){
+   let courses = document.querySelectorAll('.edit-course');
+   let currentCourse = document.getElementById(id);
+   for(var i = 0; i<courses.length; i++) {
+        courses[i].style.transform='scale(0)';
+        courses[i].style.display='none';
+    }    
+    currentCourse.style.transform='scale(1)';
+    currentCourse.style.display='block';
+}
 
 
-	window.addEventListener("load", function() {
-        $('.profile-card .content').css('transform', 'scale(0)');
-        $('.profile-card .content').css('display', 'none');
 
-        let att = activeLink.getAttribute("id");
-        $('.profile-card .content[id='+att+']').css('transform', 'scale(1)');
-        $('.profile-card .content[id='+att+']').css('display', 'block');
-        for(var i = 0; i<element.length; i++) {
-            element[i].onclick = function(e) { 
-                var page = e.srcElement.getAttribute("id");
-                if(page){
-                   showContent(page);
-                }
-                return false;
-            }; 
-        }      
 
-	});
-})();
+function showContent(id){
+    $('.card-fields-section .content').css('transform', 'scale(0)');
+    $('.card-fields-section .content').css('display', 'none');
+
+   $('.card-fields-section .content[id='+id+']').css('transform', 'scale(1)');
+   $('.card-fields-section .content[id='+id+']').css('display', 'block');
+
+   $('.card-fields-section .links .link-active').removeClass('link-active');
+   $('.card-fields-section .links .link[id='+id+']').addClass('link-active');
+}
+
+let activeLink = document.querySelector('.card-fields-section .links .link-active');
+let element = document.querySelectorAll('.card-fields-section .links .link')
+let content = document.querySelectorAll('.card-fields-section .content');
+for(var i = 0; i<content.length; i++) {
+    content[i].style.transform='scale(0)';
+    content[i].style.display= 'none';
+}
+let att = activeLink.getAttribute("id");
+$('.card-fields-section .content[id='+att+']').css('transform', 'scale(1)');
+$('.card-fields-section .content[id='+att+']').css('display', 'block');
+for(var i = 0; i<element.length; i++) {
+    element[i].onclick = function(e) { 
+        var page = e.srcElement.getAttribute("id");
+        if(page){
+           showContent(page);
+        }
+        return false;
+    }; 
+}      
