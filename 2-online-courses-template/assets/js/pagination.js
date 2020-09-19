@@ -27,9 +27,10 @@
     }
 
     function pager(action, page) {
+       
 		switch (action) {
             case "next":
-				if( (config.page + 1) < no_of_pages ){ 
+				if( (config.page + 1) <= no_of_pages ){ 
 					++config.page;
 				}
 				break; 
@@ -48,8 +49,9 @@
 	}
 
     function update_page(){
-		
-        $("html, body").animate({ scrollTop: 0 }, 600);
+		if (config.scroll == true){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+        }    
         $('.card-cont').css('transform', 'scale(0)');
         $('.card-cont').css('display', 'none');
         let finish = config.page*config.max_per_page;
@@ -62,7 +64,19 @@
         }
 	}
 
+
+    for(var i = 0; i<pages.length; i++) {
+        pages[i].onclick = function(e) { 
+            var page = e.srcElement.getAttribute("page");
+            if(page){
+                pager("goto", page);
+            }
+            return false;
+        }; 
+    }      
+
 	window.addEventListener("load", function() {
         init();     
 	});
 })();
+

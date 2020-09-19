@@ -6,7 +6,8 @@
     background-color: white;
     @include abscenter;
     justify-content: space-between;
-    padding: 0 20px;
+    flex-wrap: nowrap;
+    padding: 0 2rem;
     z-index: 5;
 
     &__search{
@@ -97,6 +98,7 @@
         height: 100%;
         position: relative;
         @include abscenter;
+        flex-wrap: nowrap;
         cursor: pointer;
         &:hover{
             .dropdown-menu1{
@@ -141,7 +143,7 @@
 .dropdown-menu1{
     position: absolute;
     top: 100%;
-    padding: 15px;
+    padding: 1.5rem;
     width: max-content;       
     background-color: #fff;
     border-radius: 0 0 5px 5px;
@@ -205,11 +207,14 @@
         padding-bottom: 10px;
         align-items: center;
         //border-bottom: 1px solid $gray;
+        @include respond(phone){
+            flex-direction: column;
+        }
         .picture-side{
-            width: 75px;
+            width: 7.5rem;
             .image{
-                width: 65px;
-                height: 65px;
+                width: 6.5rem;
+                height: 6.5rem;
                 border-radius: 50%;
                 img{
                     width: 100%;
@@ -220,9 +225,11 @@
             }
         }
         .info-side{
-            width: 200px;
+            width: 20rem;
             font-size: 1.4rem;
-            
+            @include respond(phone){
+                text-align: center;
+            }
             color: $gray-dark;
              &> *{
                  padding:5px 0;
@@ -249,7 +256,7 @@
             transition: all .2s;
 
             &:hover{
-                color: var(--color-primary);
+                color: var(--color-primary) !important;
 
             }
         }

@@ -8,7 +8,10 @@
     background-size: cover;
     position: relative;
     @include respond(tab-port){
-        margin-bottom: 220px;
+        margin-bottom: 320px;
+    }
+    @include respond(tab-port){
+        margin-bottom: 420px;
     }
     &__box{
         @include abscenter;

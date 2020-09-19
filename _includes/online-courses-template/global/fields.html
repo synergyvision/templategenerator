@@ -5,7 +5,7 @@
             {{input.title}}
         </div>   
     {% endif %}          
-    {% if input.input %}
+    {% if input.type == 'input' %}
         {% assign placeholder = '' %}
         {% for field in site.data.online-courses-template.user.profile %}
             {% if input.input.name == field.name %}
@@ -14,10 +14,14 @@
         {% endfor %}
         {% include online-courses-template/global/login-input.html label=input.label  input-type=input.input.type input-name=placeholder input-icon=input.input.icon svg-directory=svg-directory height='160px' %}
     {% endif %}
-    {% if input.checked %}
+    {% if input.type == 'checkbox' %}
         {% include online-courses-template/global/checkbox.html checked=input.checked text=input.text %}
     {% endif %}
-    {% if input.text-info %}
+    {% if input.type == 'info' %}
         {% include online-courses-template/global/message.html info=input.text-info type=input.type %}         
+    {% endif %}
+    {% if input.type == 'component' %}
+        {% assign file = input.name %}
+        {% include {{file}} header=input.header content=table-content %}
     {% endif %}
 {% endfor %}

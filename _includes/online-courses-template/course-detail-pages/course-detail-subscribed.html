@@ -1,0 +1,27 @@
+<div class="course-membered">
+    <div class="course-membered--left">
+        {% include global/video.html
+        source=include.page.video size='big'
+        source-directory=site.data.online-courses-template.global.site.directories.courses-videos
+        error-message=site.data.online-courses-template.global.video-error-message
+        %}
+        <div class="btn-wrapper">
+        {% for download-btns in include.page.download-buttons %} {% include
+        online-courses-template/global/button.html btn=download-btns %} {% endfor
+        %}
+        </div>
+        <div class="mt-big">
+        {% include online-courses-template/global/title.html title=include.page.name
+        subtitle=" " size='medium' %}
+        </div>
+        <div class="description">
+        {% include online-courses-template/course-sections/course-description.html
+        title=site.data.online-courses-template.courses.detail.description.title
+        description=include.page.description %}
+        </div>
+        {% include online-courses-template/course-sections/course-questions.html page=include.page %}
+    </div>
+    <div class="course-membered--right">
+        {% include online-courses-template/course-sections/course-modules-dropdown.html page=include.page %}
+    </div>
+</div>

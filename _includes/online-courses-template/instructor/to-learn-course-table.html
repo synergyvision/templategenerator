@@ -1,0 +1,5 @@
+{% assign content= site.online-courses-courses[1].features[1].collection %}
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+{% include global/table.html header=site.data.online-courses-template.instructor.to-learn-table.header content=content action=site.data.online-courses-template.instructor.to-learn-table.action svg-directory=svg-directory %}

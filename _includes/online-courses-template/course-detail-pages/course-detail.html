@@ -1,0 +1,46 @@
+<div class="course-detail">
+    <div class="left-side">
+        {% include online-courses-template/global/title.html title=include.page.name
+        subtitle=" " size='medium' %}
+        <div class="video">
+            {% include global/video.html
+              source-directory=site.data.online-courses-template.global.site.directories.courses-videos
+            source=include.page.video size='medium'
+            error-message=site.data.online-courses-template.global.video-error-message
+            %}
+        </div>
+        <div class="course-detail__categories">
+            {% for cat in include.page.categories %} {% include
+            online-courses-template/cards/category-card.html name=cat %} {% endfor %}
+        </div>
+    </div>
+    <div class="right-side">
+        {% include online-courses-template/cards/price-card.html price=include.page.price
+        discount-price=include.page.discount-price
+        buttons=site.data.online-courses-template.courses.detail.buy.buttons
+        directory=svg-directory %} 
+        {% include
+        online-courses-template/cards/instructor-card.html
+        title=site.data.online-courses-template.courses.detail.instructor.title
+        btn-more=site.data.online-courses-template.courses.detail.instructor.btn
+        person=include.page.instructor image-directory=image-directory %}
+    </div>
+</div>
+  
+  <div class="course-detail">
+    <div class="course-description-container">
+      {% include online-courses-template/course-sections/course-description.html
+      title=site.data.online-courses-template.courses.detail.description.title
+      description=include.page.description %}
+    </div>
+    <div class="course-info">
+      {% for feature in include.page.features %} {% include
+      online-courses-template/cards/course-feature-card.html
+      svg-directory=svg-directory title=feature.title section=feature.collection
+      %} {% endfor %}
+    </div>
+  </div>
+  
+  {% include online-courses-template/course-sections/students-review.html
+  title=site.data.online-courses-template.courses.detail.students-reviews.title
+  students-reviews=include.page.students-reviews image-directory=image-directory %} 

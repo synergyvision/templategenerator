@@ -18,8 +18,8 @@
     .label-checkbox{
         @include abscenter;
         margin:15px 20px;
+        margin-right: 0 !important;
         flex-wrap: nowrap;
-        margin-right: auto;
         justify-content: flex-start !important;
         p{
             width: 80%;

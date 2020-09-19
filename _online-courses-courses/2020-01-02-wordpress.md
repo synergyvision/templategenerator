@@ -4,10 +4,11 @@ layout: online-courses-template/course-detail
 identifier: course4
 categories: [development,design]
 name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
+video: 11111.mp4
 owner: Alexander Zverev
-price: 45,99$
+price: 45.99$
 discount: true
-discount-price: 40,25$
+discount-price: 40.25$
 score: 3.5
 instructor:
       name: Dominic Thiem
@@ -75,16 +76,23 @@ students-reviews:
             alt: Student 1
         date: 2020/03/18
         score: 4.5
-        text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque. 
+        text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex. 
       - id: 2
-        name: Jhoao Silva Rodriguez
+        name: Viktoria Azarenka
         image:
-            name: member6-face.jpg
-            alt: Student 1
-        date: 2020/03/18
-        score: 4.5
-        text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque.
-
+            name: member5-face.jpg
+            alt: Student 2
+        date: 2020/04/12
+        score: 2
+        text: Nobis hic eum atque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex, deserunt culpa ad! Facilis cumque possimus aliquam. Nobis hic eum atque.
+      - id: 3
+        name: Mateo Berretini
+        image:
+            name: member4-face.jpg
+            alt: Student 4
+        date: 2020/01/01
+        score: 5
+        text: Nobis hic eum atque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum consequatur, vero, nisi ab odit dignissimos aperiam voluptas ex !!!!!
 course-content:
   - title : 'Section 1: Getting Started'
     modules:

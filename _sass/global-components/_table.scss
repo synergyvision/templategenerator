@@ -1,6 +1,12 @@
+.table-responsive{
+    max-height: 400px;
+    overflow: scroll;
+}
+
 table{
     font-size: 1.6rem;
     cursor: pointer;
+    
     thead{
         background-color: var(--color-primary);
         color: #fff;

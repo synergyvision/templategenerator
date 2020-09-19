@@ -27,7 +27,6 @@ svg-directory=site.data.online-courses-template.global.site.directories.svg-icon
   {% include online-courses-template/cards/switch.html
   text=site.data.online-courses-template.user.info.status %}
  
-
   <div class="social-media-container">
     {% for sm in site.data.online-courses-template.user.info.social-media %} {%
     for smt in
@@ -48,5 +47,10 @@ svg-directory=site.data.online-courses-template.global.site.directories.svg-icon
             ({{site.data.online-courses-template.user.courses | size}})
         </h1>
   </div>
+  {% assign courses-lenght = site.data.online-courses-template.user.courses | size %}
+  {% if courses-lenght == 0 %}
+      
+  {% else %}
   {% include online-courses-template/profile/my-courses.html %}
+  {% endif %}
 </div>

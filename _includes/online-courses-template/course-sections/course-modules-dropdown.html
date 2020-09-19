@@ -1,0 +1,28 @@
+<div class="title">
+    {{site.data.online-courses-template.courses.detail.course-content.title |
+    capitalize}}
+</div>
+{% for content in include.page.course-content %}
+    <div class="section" value="{{forloop.index}}">
+        <div class="section-title">
+            <div class="title">{{content.title}}</div>
+            <i class="arrow-up"></i>
+            {% assign showContent= 'showCourseContentSection(' | append:
+            forloop.index | append: ')' %}
+            <input
+            value="{{forloop.index}}"
+            type="checkbox"
+            onclick="{{showContent}}"
+            />
+        </div>
+        <div class="section-dropdown" value="{{forloop.index}}">
+            {% for module in content.modules %}
+            <div class="title">
+            <p>{{module.title}}</p>
+            {% include online-courses-template/global/checkbox.html
+            checked=checkbox.checked text=checkbox.text %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}

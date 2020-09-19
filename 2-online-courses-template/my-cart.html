@@ -10,33 +10,39 @@ title: Coursing | My cart
     {{site.data.online-courses-template.profile.my-cart.title}}
 </div>
 
+<!--Searching for total price courses-->
+{% assign total-price = 0 %}
+{% for card in site.online-courses-courses %}
+    {% for card-cart in site.data.online-courses-template.user.cart-courses %}
+        {% if card.identifier == card-cart.id %}
+            {% if card.discount-price %}
+                {% assign total-price = total-price | plus: card.discount-price %}
+            {% else %}
+                {% assign total-price = total-price | plus: card.price %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+
 <div class="row">
     
     {% assign cart-lenght= site.data.online-courses-template.user.cart-courses | size %}
     <div class="cart-container">
         <div class="cart-info">
             <div class="cart-lenght">
-                {{cart-lenght}} courses on cart
+                {{cart-lenght}} {{site.data.online-courses-template.profile.my-cart.total-courses}}
             </div>
+            {% assign pay-info = site.data.online-courses-template.profile.my-cart.pay-info %}
             {% if cart-lenght != 0  %}
-            <div class="cart-price">
-                <div class="title">Total:</div>
-                  <div class="total-price">74.24$</div>
-                {% include online-courses-template/global/button.html btn=site.data.online-courses-template.profile.my-cart.pay.btn %}
-            </div>
+                {% include online-courses-template/cards/buy-card.html text=pay-info.text currency=pay-info.currency btn=pay-info.btn price=total-price %}
             {% endif %}
         </div>
         
         {% if cart-lenght == 0  %}
-            <div class="empty-cart">
-                {% include global/svg.html directory=svg-directory image='icon-shopping-cart' class='icon' %}
-                <div class="text">
-                    <p>Ops! There is no courses in your cart</p>
-                    {% include online-courses-template/global/button.html btn=site.data.online-courses-template.profile.my-cart.empty-cart.btn %}
-                </div>          
-            </div> 
+            {% assign empty-message= site.data.online-courses-template.profile.my-cart.empty-cart %}
+            {% include online-courses-template/global/empty-message.html message=empty-message.empty-message icon=empty-message.empty-icon btn=empty-message.btn svg-directory=svg-directory  %}
         {% else %}
-            
             <div class="cart-cards">
                 {% for card in site.online-courses-courses %}
                 {% for card-cart in site.data.online-courses-template.user.cart-courses %}

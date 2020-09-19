@@ -8,11 +8,27 @@
         </tr>
       </thead>
       <tbody id="contentTable">
-        {% for content in  include.content %}
+        {% for content in include.content %}
             <tr>
-                {% for field in content.fields %}
-                    <td> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.title}}</a></td>
-                {% endfor %}
+                {% if content.collection %}
+                    {% for field in content.collection %}
+                        <td> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.text}}
+            
+                        </a></td>
+                    {% endfor %}
+                {% else %}
+                    <td> <a {% if field.href %} href="{{content.href | relative_url}}" {% endif %}>{{content.text}}
+                    </a></td>
+                {% endif %}
+                
+                    {% for content in include.action %}
+                    <td class="abscenter">
+                        <a class="circle-btn" href="#">
+                            {% include global/svg.html directory=include.svg-directory
+                                    image=content.icon class='icon' %}
+                        </a>
+                    </td>
+                    {% endfor %}
             </tr>
         {% endfor %}
       </tbody>

@@ -88,7 +88,7 @@ layout: online-courses-template/online-courses-header
             
         </div>
         {% assign number-of-pages = allsorted | size | divided_by : site.data.online-courses-template.courses.max-per-page | ceil %}
-        {% include global/pagination.html number-of-pages=number-of-pages max-per-page=site.data.online-courses-template.courses.max-per-page %}   
+        {% include global/pagination.html number-of-pages=number-of-pages max-per-page=site.data.online-courses-template.courses.max-per-page scroll=true %}   
         
     </div>
     

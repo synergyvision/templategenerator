@@ -64,7 +64,7 @@
     transition: all .4s;
     &:hover{
         background-image: linear-gradient(to right, var(--color-primary),var(--color-primary));
-        color: #fff;
+        color: #fff !important;
         border-color: transparent;
         transform: scale(1.05);
         box-shadow: 0 2.5px 5px rgba(black,.2);
@@ -213,6 +213,9 @@
     margin: 0 5px;
     padding:10px 40px 10px 10px ; 
     color: $gray;
+    @include respond(tab-port){
+        padding: 10px;
+    }
     & > *{
         padding: 10px 0;
     }
@@ -331,6 +334,7 @@
     display: flex;
     color: $gray;
     margin:10px;
+    height: max-content;
     @include respond(phone){
         flex-direction: column;
     }
@@ -383,6 +387,7 @@
         .description{
             font-size: 1.4rem;
             max-height:80px;
+            height: 80px;
             overflow: scroll;
             padding-right: 10px;
         }
@@ -419,8 +424,14 @@
 .course-membered{
     position: relative;
     display: flex;
+    @include respond(tab-port){
+        flex-direction: column;
+    }
     .course-membered--left{
         width: 70%;
+        @include respond(tab-port){
+            width: 100%;
+        }
         color: $gray;
 
         .description{
@@ -466,6 +477,10 @@
     
     .course-membered--right{
         width: 30%;
+        @include respond(tab-port){
+            width: 100%;
+            position: relative;
+        }
         position: fixed;
         right: 0;
         overflow: scroll;

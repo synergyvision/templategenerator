@@ -3,6 +3,9 @@ layout: online-courses-template/instructor-dash
 ---
 {% assign image-directory= site.data.online-courses-template.global.site.directories.images
     %}
+    {% assign
+      svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+      | relative_url | append: "#" %}
 <div class="instructor-courses">
     <div class="row">
         <h1 class="title-primary mtb-big">
@@ -30,7 +33,7 @@ layout: online-courses-template/instructor-dash
     </div>
     
     <section class="edit-course" id="course4">
-          <h1 class="course-title">{{site.online-courses-courses[6].name}}</h1>
+      <h1 class="course-title">{{site.online-courses-courses[6].name}}</h1>
       <div class="abscenter">
           <div class="instructor-courses__inline">
             <div class="instructor-courses-image">
@@ -39,14 +42,16 @@ layout: online-courses-template/instructor-dash
             <div class="instructor-courses-table">
               {% assign students = site.data.online-courses-template.instructor.courses[0].student-list %}
               {% include online-courses-template/global/login-input.html input-type='text' input-name='Search' id="myInput" %}
-              {% include global/table.html header=students.student-table.header content=students.student-table.content %}
+              {% include global/table.html header=students.student-table.header content=students.student-table.content svg-directory=svg-directory %}
             </div>     
           </div>
           <div class="row">
             {% assign sections = site.online-courses-courses[1].course-content %}
             {% include online-courses-template/global/accordion.html sections=sections %}
           </div>
-          {% include online-courses-template/global/card-fields-sections.html sections=site.data.online-courses-template.instructor.edit-indo-sections %}
+        
+          {% assign sections = site.data.online-courses-template.instructor.edit-info-sections %}            
+          {% include online-courses-template/global/card-fields-sections.html sections=sections  %}
       </div>      
     </section>
     

@@ -37,7 +37,7 @@
             }
             .total-price{
                 font-size: 3rem;
-                
+                align-self: center;
             }          
         }
     }
@@ -48,38 +48,5 @@
             width: max-content;
         }
     }
-    .empty-cart{
-        width: max-content;
-        @include abscenter;
-        @include respond(tab-port){
-            flex-direction: column;
-        }
-        margin: 8rem auto;
-        .icon{
-            width: 120px;
-            height: 120px;
-            fill: $gray-light;
-            margin: 10px 0;
-        }
-        .text{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin: 20px;
-            @include respond(tab-port){
-                align-items: center;
-            }
-            p{
-                font-size: 3rem;
-                color: $gray-light;
-                font-weight: bolder;
-                
-            }
-            .btn{
-                margin-left: 20px;
-                width: max-content;
-            }
-        }
-        
-    }
+
 }
