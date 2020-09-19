@@ -1,3 +1,4 @@
+
 side-nav:
   - icon: icon-add-outline
     text: Create a course
@@ -30,27 +31,37 @@ sections:
         text: 'Add'
         type: primary
 
-edit-indo-sections:
+edit-info-sections:
   - title: Description
     one-side:
       - input: 
           type: text
           name: 
+        type: input
         label: 'Course title'
       - input:
           type: textarea
           name: 
+        type: input
         label: Course description
     btn:
        - text: Save changes
          type: primary
   - title: Includes
+    one-side:
+      - component:
+        type: component
+        name: 'online-courses-template/instructor/includes-course-table.html'
     btn:
-        - text: Save changes
+        - text: Add 
           type: primary
   - title: Sections
+    one-side:
+      - component:
+        type: component
+        name: 'online-courses-template/instructor/to-learn-course-table.html'
     btn:
-       - text: Save changes
+       - text: Add
          type: primary
 
 courses:
@@ -65,26 +76,43 @@ courses:
           - title: Email
           - title: Progress
         content:
-          - fields: 
-              - title: Stephanie Cruz
+          - collection: 
+              - text: Stephanie Cruz
                 href: 'stephanie-cruz-profile'
-              - title: stephaniecruzcastelli@gmail.com
-              - title: 70%
-          - fields: 
-              - title:  Milos Raonic
-              - title: milosraonic66@gmail.com
-              - title: 62%
-          - fields: 
-              - title: Denis Shapovalov
-              - title: denisshapovalovv02@yahoo.com
-              - title: 12%
-          - fields: 
-              - title: Grigor Dimitrov
-              - title: grigordimitrov22@hotmail.com
-              - title: 99%
-          - fields: 
-              - title: Dominic Thiem
-              - title: dominicthiem77@gmail.com
-              - title: 45%
+              - text: stephaniecruzcastelli@gmail.com
+              - text: 70%
+          - collection: 
+              - text:  Milos Raonic
+              - text: milosraonic66@gmail.com
+              - text: 62%
+          - collection: 
+              - text: Denis Shapovalov
+              - text: denisshapovalovv02@yahoo.com
+              - text: 12%
+          - collection: 
+              - text: Grigor Dimitrov
+              - text: grigordimitrov22@hotmail.com
+              - text: 99%
+          - collection: 
+              - text: Dominic Thiem
+              - text: dominicthiem77@gmail.com
+              - text: 45%
   - name: Investing In Stocks The Complete Course! (11 Hour)
     id: course6
+
+
+includes-table:
+  header:
+    - title: 'The course includes'
+    - title: Action
+  action: 
+    - name: delete
+      icon: icon-x
+
+to-learn-table:
+  header:
+    - title: 'What they will learn'
+    - title: Action
+  action: 
+    - name: delete
+      icon: icon-x

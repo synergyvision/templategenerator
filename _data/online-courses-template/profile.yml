@@ -5,19 +5,23 @@ sections:
         - input:
             type: text
             name: first-name
+          type: input
           label: 'Fist names'
         - input:
             type: text
             name: last-name
+          type: input
           label: 'Last names'
         - input:
             type: text
             name: title
+          type: input
           label: Title
       right-fields:
         - input:
             type: textarea
             name: description
+          type: input
           label: Your description
       btn:
        - text: Save changes
@@ -28,23 +32,28 @@ sections:
             type: text
             name: github-user
             icon: icon-github
+          type: input
         - input:
             type: text
             name: instagram-user
             icon: icon-instagram
+          type: input
         - input:
             type: text
             name: facebook-user
             icon: icon-facebook
+          type: input
       right-fields:
         - input:
             type: text
             name: pinterest-user
             icon: icon-pinterest
+          type: input
         - input:
             type: text
             name: twitter-user
             icon: icon-twitter
+          type: input
       btn:
         - text: Save changes
           type: primary
@@ -54,20 +63,24 @@ sections:
         - input:
               type: email
               name: email
+          type: input
           label: 'Email'
         - input:
             type: password
             name: password
           label: 'Password'
+          type: input
       right-fields:
         - title: 'Change password'
         - input: 
             type: password
             name: password
+          type: input
           label: 'New Password'
         - input:
             type: password
             name: password
+          type: input
           label: 'Repeat password'
       btn:
        - text: Save changes
@@ -83,6 +96,7 @@ sections:
     - title: Payment methods
       one-side:
           - checkbox:
+            type: checkbox
             checked: true
             text: Conservar mi información de pago para otras compras
       btn:
@@ -91,9 +105,11 @@ sections:
     - title: Privacy
       one-side:
           - checkbox:
+            type: checkbox
             checked: true
             text: Muestra tu perfil a los usuarios que han iniciado sesión
           - checkbox:
+            type: checkbox
             checked: true
             text: Mostrar los cursos que estás tomando en tu página de perfil
       btn:
@@ -102,6 +118,7 @@ sections:
     - title: Close account
       one-side:
          - info:
+           type: info
            text-info: Warning! If you close your account, your subscription to your courses will be canceled and you will lose access forever
       btn:
        - text: Close account
@@ -124,7 +141,14 @@ public-profile:
   
 my-courses:
   title: 'My courses'
-  
+  total-courses: courses on cart
+  empty-courses:
+    btn: 
+      text: Go shopping
+      type: primary
+      href: 'categories/all.html'
+    empty-message: Ops! you still don't have any course
+    empty-icon: icon-wrench
 
 my-wishlist:
   title: 'My wishlist'
@@ -134,12 +158,15 @@ my-wishlist:
       text: Go take a look
       type: primary
       href: 'categories/all.html'
+    empty-message: Ops! There is no courses in your wishlist
+    empty-icon: icon-heart
 
 my-cart:
   title: 'My cart'
   total-courses: courses on cart
-  pay:
-    title: 'Total'
+  pay-info:
+    text: 'Total:' 
+    currency: '$'  
     btn: 
       text: Pay now
       type: primary
@@ -148,3 +175,5 @@ my-cart:
       text: Go shopping
       type: primary
       href: 'categories/all.html'
+    empty-message: Ops! There is no courses in your cart
+    empty-icon: icon-shopping-cart

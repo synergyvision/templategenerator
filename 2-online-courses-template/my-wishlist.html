@@ -16,17 +16,12 @@ title: Coursing | My wishlist
     <div class="cart-container">
         <div class="cart-info">
             <div class="cart-lenght">
-                {{cart-lenght}} courses on wishlist
+                {{cart-lenght}} {{site.data.online-courses-template.profile.my-wishlist.total-courses}}
             </div>
         </div>
         {% if cart-lenght == 0  %}
-            <div class="empty-cart">
-                {% include global/svg.html directory=svg-directory image='icon-heart' class='icon' %}
-                <div class="text">
-                    <p>Ops! There is no courses in your wishlist</p>
-                    {% include online-courses-template/global/button.html btn=site.data.online-courses-template.profile.my-wishlist.empty-wishlist.btn %}
-                </div>          
-            </div> 
+            {% assign empty-message= site.data.online-courses-template.profile.my-wishlist.empty-wishlist %}
+            {% include online-courses-template/global/empty-message.html message=empty-message.empty-message icon=empty-message.empty-icon btn=empty-message.btn svg-directory=svg-directory %}
         {% else %}
             
             <div class="cart-cards">

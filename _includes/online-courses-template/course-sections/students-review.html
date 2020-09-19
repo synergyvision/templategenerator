@@ -1,13 +1,19 @@
-
 <div class="students-review">
     <div class="title">{{include.title}}</div>
     <div class="container">
         {% for review in include.students-reviews %}
-            {% include online-courses-template/cards/students-review-card.html
-                image-directory=include.image-directory 
-                student-review=review
-                %}
+            <div class="card-cont">
+                {% include online-courses-template/cards/students-review-card.html
+                    image-directory=include.image-directory 
+                    student-review=review
+                    %}
+            </div>        
         {% endfor %}
+    </div>
+    {% assign max-per-page = 2.0 %}
+    {% assign number-of-pages= {{include.students-reviews | size | divided_by: max-per-page | ceil}} %}
+    <div class="abscenter">
+        {% include global/pagination.html number-of-pages=number-of-pages max-per-page=max-per-page scroll=false %}
     </div>
 </div>
   

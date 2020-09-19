@@ -546,53 +546,62 @@
 
 <div class="" style="padding-top: 70px;">
         
-<div class="course-membered">
-  <div class="course-membered--left">
-    <div class="video-wrapper"  style="max-width: 900px;
+
+
+
+    <div class="course-membered">
+    <div class="course-membered--left">
+        <div class="video-wrapper"  style="max-width: 900px;
 max-height: 800px;">
-    <div class="video-container">
+    <!--<div class="video-container">
       <iframe
         class="video"
-        src="https://www.youtube.com/watch?v=1PqZ7JBFW3I"
+        src=""
       ></iframe>
      <p> Ops! It seems like there was a problem showing the video!</p>
-    </div>
+    </div> -->
+    <div class="video-container">
+      <video class="video" controls autoplay>
+        <source src ="/templategenerator/online-courses-videos/" type = "video/mp4">
+      </video>
+    </div>   
 </div>
 
-    <div class="btn-wrapper">
-      
-    </div>
 
-    <div class="mt-big">
-      <div class="title-container" >
+
+        <div class="btn-wrapper">
+        
+        </div>
+        <div class="mt-big">
+        <div class="title-container" >
     <h1  style="font-size:2.5rem !important;" >The Complete Vue JS Developer Course – inc. Vue JS 2!</h1> 
      <div class="line"></div>
      <p>
          
      </p>
  </div>
-    </div>
-    <div class="description">
-      <div class="course-description">
+        </div>
+        <div class="description">
+        <div class="course-description">
     <div class="title">Description</div>
     <div class="line"></div>
     
 </div>
 
 
-    </div>
-    <div class="questions">
-        <div class="title">
-          Q & A
         </div>
-        <div class="line"></div>
-        <div class="questions__info">
+        <div class="questions">
+    <div class="title">
+      Q & A
+    </div>
+    <div class="line"></div>
+    <div class="questions__info">
+        
+        <p>
+          Total questions: 0 
+        </p>
+        <div class="btn-ask">
           
-          <p>
-            Total questions: 0 
-          </p>
-          <div class="btn-ask">
-            
 <a  class="button  button-1 "
     onclick="askQuestion()" >
    
@@ -600,9 +609,9 @@ max-height: 800px;">
 </a>
 
 
-          </div>
-          <div class="btn-back">
-            
+        </div>
+        <div class="btn-back">
+          
 <a  class="button  button-1 "
     onclick="backtoQuestions()" >
    
@@ -610,32 +619,10 @@ max-height: 800px;">
 </a>
 
 
-          </div>       
-        </div>
-        
-        <div class="abscenter mtb-big">
-            
-
-    <div class="pagination1">
-        <a id="prev">&#8810;</a>
-        
-            <a class=""  id="page-btn" page=1>1</a>
-        
-            <a class=""  id="page-btn" page=2>2</a>
-        
-        <a id="next">&#8811;</a>
+        </div>       
     </div>
-
-
-<script>    
-var config = {
-		max_per_page: 2,
-		page: 1
-};
-</script>
-        </div>
-        <div class="questions__info__ask">
-          <div class="ask-question">
+    <div class="questions__info__ask">
+      <div class="ask-question">
     <div class="ask-question__title">
         <div class="login-input">
     
@@ -733,15 +720,34 @@ var config = {
 
     </div>   
 </div>
-        </div>
     </div>
-  </div>
-  <div class="course-membered--right">
-    <div class="title">
-      Course content
+    <div class="card-questions-container">
+      
+    </div>
+ 
+    <div class="abscenter mtb-big">
+        
+        
+        
+
+
+<script>    
+var config = {
+		max_per_page: 2.0,
+        page: 1,
+        scroll: false
+};
+</script>
     </div>
     
-  </div>
+</div>
+    </div>
+    <div class="course-membered--right">
+        <div class="title">
+    Course content
+</div>
+
+    </div>
 </div>
 
 

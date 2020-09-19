@@ -1,11 +1,18 @@
 <div class="video-wrapper" {% if include.size == 'medium' %} style="max-width: 600px;
 max-height: 600px;" {% else if include.size == 'big' %} style="max-width: 900px;
 max-height: 800px;"{% endif %}>
-    <div class="video-container">
+    <!--<div class="video-container">
       <iframe
         class="video"
         src="{{include.source}}"
       ></iframe>
      <p> {{include.error-message}}</p>
-    </div>
+    </div> -->
+    <div class="video-container">
+      <video class="video" controls autoplay>
+        <source src ="{{ include.source-directory | append: include.source | relative_url }}" type = "video/mp4">
+      </video>
+    </div>   
 </div>
+
+

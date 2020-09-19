@@ -1,0 +1,42 @@
+<div class="questions">
+    <div class="title">
+      {{site.data.online-courses-template.courses.detail.course-questions.title}}
+    </div>
+    <div class="line"></div>
+    <div class="questions__info">
+        {% capture total-questions %} {{include.page.questions | size}} {% endcapture %}
+        <p>
+          {{site.data.online-courses-template.courses.detail.course-questions.total-questions
+          | capitalize | append: total-questions }}
+        </p>
+        <div class="btn-ask">
+          {% include online-courses-template/global/button.html
+            btn=site.data.online-courses-template.courses.detail.course-questions.all-questions.btn
+            onclick="askQuestion()"
+            %}
+        </div>
+        <div class="btn-back">
+          {% include online-courses-template/global/button.html
+            btn=site.data.online-courses-template.courses.detail.course-questions.my-question.btn
+            onclick="backtoQuestions()"
+            %}
+        </div>       
+    </div>
+    <div class="questions__info__ask">
+      {% include online-courses-template/course-sections/ask-question.html %}
+    </div>
+    <div class="card-questions-container">
+      {% for question in include.page.questions %}
+        <div class="card-cont">
+          {% include online-courses-template/cards/course-membered-question.html question=question %}
+        </div>
+      {% endfor %}
+    </div>
+ 
+    <div class="abscenter mtb-big">
+        {% assign max-per-page=2.0 %}
+        {% assign number-of-pages = page.questions | size | divided_by: max-per-page | ceil  %}
+        {% include global/pagination.html number-of-pages=number-of-pages max-per-page=max-per-page scroll=false %}
+    </div>
+    
+</div>
