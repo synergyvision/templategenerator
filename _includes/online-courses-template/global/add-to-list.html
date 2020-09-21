@@ -1,0 +1,50 @@
+{% assign
+svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#" %}
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div
+      class="panel-heading"
+      data-toggle="collapse"
+      href="#collapsee1"
+    >
+      <h4 class="panel-title">
+        <a>{{include.title}}</a>
+      </h4>
+    </div>
+    <div id="collapsee1" class="panel-collapse collapse in">
+      <ul class="list-group" val={{include.input.id}}></ul>
+    </div>
+  </div>
+</div>
+<div class="abscenter" >
+  {% assign attval = 'val=' | append: include.input.id %}
+  {% include online-courses-template/global/login-input.html id='newItemInput'
+  atts=attval 
+  input-type='text' input-name=include.input.text input-icon=include.input.icon
+  svg-directory=svg-directory %} {% include
+  online-courses-template/global/button.html btn=include.input.btn atts=attval %}
+</div>
+
+<script>
+  var newItemInput = document.querySelectorAll('#newItemInput');
+  for (let i=0; i<newItemInput.length;i++){
+      let val = newItemInput[i].getAttribute('val');
+      $("body").on("click", ".button[val="+val+"]", function (e) {
+        e.preventDefault();
+        if (newItemInput[i].value != "") {
+          $(".list-group[val="+val+"]").append(
+            '<li class="list-group-item" >' +
+              "<a>" +
+              newItemInput[i].value +
+              '</a> <div class="abscenter"> {% for i in include.field-btns %} <a class="plane-link" id="planeLinkRemove"> {{i.name}} </a> {% endfor %} </div> </li>'
+          );
+          newItemInput[i].value = "";
+        }
+      });
+  }
+
+  $("body").on("click", "#planeLinkRemove", function () {
+    $(this).parent().parent().remove();
+  });
+</script>

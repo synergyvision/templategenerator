@@ -1,0 +1,14 @@
+directories:
+  components: /global/
+  images: /images/
+
+site:
+    title: Template generator
+    description: Go checkout my template generator, which includes a corporate template, a online courses template and a culinary blog template.
+    creator: 'Stephanie Cruz'
+    twitter: '@teeetw'
+    logo-social-media: templategenerator-favi.png
+    favicon: templategenerator-favi.png
+    directories:
+      images: /images/
+

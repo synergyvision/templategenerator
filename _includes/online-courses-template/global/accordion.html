@@ -1,0 +1,36 @@
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+
+
+<div class="panel-group" id="accordion">
+    {% for section in include.sections %}
+        <div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion">
+            <h4 class="panel-title">
+            <a href="{{ 'collapse' | append: forloop.index | prepend: '#'}}" data-toggle="collapse" data-parent="#accordion">{{section.title}}</a>
+            </h4>
+        </div>
+        <div id={{ 'collapse' | append: forloop.index}} class="panel-collapse collapse {% if forloop.index == 1 %} in {% endif %}">
+            <div class="panel-body">
+                {% for module in section.modules %}
+                    <div class="panel-body__text">
+                        <p>{{module.title}}</p> 
+                        {% if include.icon %}
+                            <a class="circle-btn" href="{{include.icon.href}}">
+                                {% include global/svg.html directory=svg-directory image=include.icon.icon class='icon' %}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <div class="panel-body__add">
+                    {% include online-courses-template/global/login-input.html input-name=include.edit-info.input.name input-type=include.edit-info.input.name  %}
+                    {% include online-courses-template/global/button.html btn=include.edit-info.btn  %}
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+
+

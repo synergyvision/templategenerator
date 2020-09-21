@@ -1,0 +1,13 @@
+{% assign image-directory=
+    site.data.online-courses-template.global.site.directories.images %}
+{% assign credit-card = site.data.online-courses-template.user.info.credit-card %}
+<div class="credit-card">
+    <div class="credit-card__info">
+        <div class="image">
+            <img src="{{image-directory | append: credit-card.image.name | relative_url}}" alt="{{credit-card.image.alt}}">
+        </div>
+        <div class="number">{{credit-card.number}}</div>
+        <div class="expiration">{{site.data.online-courses-template.credit-card.expiration-title | append: ' ' | append: credit-card.expiration}}</div>
+    </div>
+    {% include online-courses-template/global/button.html btn=site.data.online-courses-template.credit-card.btn-delete %}
+</div>

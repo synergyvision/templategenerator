@@ -1,0 +1,32 @@
+<div class="student-review-card">
+    <div class="image-side">
+      <div class="image">
+        <img
+          src="{{include.image-directory | append: include.student-review.image.name | relative_url }}"
+          alt="{{include.student-review.image.alt}}"
+        />
+      </div>
+    </div>
+    <div class="info-side">
+      <div class="name">{{include.student-review.name}}</div>
+      <div class="review">
+        {% include global/score.html score=include.student-review.score color='dark' size='small'
+        text=false %}
+        <div class="date">{{include.student-review.date}}</div>
+      </div>
+      <div class="description">
+        {{include.student-review.text}}
+      </div>
+      <div class="buttons">
+        {% for btn-1 in site.data.online-courses-template.courses.detail.students-reviews.buttons-text %}
+            <a class="plane-link" href="">{{btn-1.text}}</a>
+        {% endfor %}
+        {% for btn-2 in site.data.online-courses-template.courses.detail.students-reviews.buttons-icon %}
+            <a class="circle-btn" href="#">
+            {% include global/svg.html directory=svg-directory
+            image=btn-2.icon class='icon' %}
+            </a>
+        {% endfor %}
+      </div>
+    </div>
+</div>

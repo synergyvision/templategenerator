@@ -1,0 +1,182 @@
+
+sections:
+    - title: Personal information
+      left-fields:
+        - input:
+            type: text
+            name: first-name
+          type: input
+          label: 'Fist names'
+        - input:
+            type: text
+            name: last-name
+          type: input
+          label: 'Last names'
+        - input:
+            type: text
+            name: title
+          type: input
+          label: Title
+      right-fields:
+        - input:
+            type: textarea
+            name: description
+          type: input
+          label: Your description
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Social media
+      left-fields:
+        - input:
+            type: text
+            name: github-user
+            icon: icon-github
+          type: input
+        - input:
+            type: text
+            name: instagram-user
+            icon: icon-instagram
+          type: input
+        - input:
+            type: text
+            name: facebook-user
+            icon: icon-facebook
+          type: input
+      right-fields:
+        - input:
+            type: text
+            name: pinterest-user
+            icon: icon-pinterest
+          type: input
+        - input:
+            type: text
+            name: twitter-user
+            icon: icon-twitter
+          type: input
+      btn:
+        - text: Save changes
+          type: primary
+    - title: Account
+      left-fields:
+        - title: 'Account info'
+        - input:
+              type: email
+              name: email
+          type: input
+          label: 'Email'
+        - input:
+            type: password
+            name: password
+          label: 'Password'
+          type: input
+      right-fields:
+        - title: 'Change password'
+        - input: 
+            type: password
+            name: password
+          type: input
+          label: 'New Password'
+        - input:
+            type: password
+            name: password
+          type: input
+          label: 'Repeat password'
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Profiles
+      btn:
+       - text: Go to my public profile
+         type: primary
+         href: 'public-profile.html'
+       - text: Go to my instructor profile
+         type: primary
+         href: 'instructor-welcome.html'
+    - title: Payment methods
+      one-side:
+          - checkbox:
+            type: checkbox
+            checked: true
+            text: Conservar mi información de pago para otras compras
+          - component:
+            type: component
+            name: 'online-courses-template/cards/credit-card-edit.html'
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Privacy
+      one-side:
+          - checkbox:
+            type: checkbox
+            checked: true
+            text: Muestra tu perfil a los usuarios que han iniciado sesión
+          - checkbox:
+            type: checkbox
+            checked: true
+            text: Mostrar los cursos que estás tomando en tu página de perfil
+      btn:
+       - text: Save changes
+         type: primary
+    - title: Close account
+      one-side:
+         - info:
+           type: info
+           text-info: Warning! If you close your account, your subscription to your courses will be canceled and you will lose access forever
+      btn:
+       - text: Close account
+         type: primary
+
+public-profile:
+  description-title: A little bit about me
+  social-media:
+        - name: github-user
+          icon: icon-github
+        - name: instagram-user
+          icon: icon-instagram
+        - name: facebook-user
+          icon: icon-facebook
+        - name: pinterest-user
+          icon: icon-pinterest
+        - name: twitter-user
+          icon: icon-twitter
+  courses-title: "Courses I'm enroll in"
+  
+my-courses:
+  title: 'My courses'
+  total-courses: courses on cart
+  empty-courses:
+    btn: 
+      text: Go shopping
+      type: primary
+      href: 'categories/all.html'
+    empty-message: Ops! you still don't have any course
+    empty-icon: icon-wrench
+
+my-wishlist:
+  title: 'My wishlist'
+  total-courses: courses on wishlist
+  empty-wishlist:
+    btn: 
+      text: Go take a look
+      type: primary
+      href: 'categories/all.html'
+    empty-message: Ops! There is no courses in your wishlist
+    empty-icon: icon-heart
+
+my-cart:
+  title: 'My cart'
+  total-courses: courses on cart
+  pay-info:
+    text: 'Total:' 
+    currency: '$'  
+    btn: 
+      text: Pay now
+      type: primary
+  empty-cart:
+    btn: 
+      text: Go shopping
+      type: primary
+      href: 'categories/all.html'
+    empty-message: Ops! There is no courses in your cart
+    empty-icon: icon-shopping-cart

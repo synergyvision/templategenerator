@@ -1,36 +1,79 @@
-
-{% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.logo.img | relative_url 
-  %}
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %} {% assign
+svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#"}} %} {% assign
+base-url=site.data.online-courses-template.global.site.base-url %}
 <div class="header">
   <div class="header__logo">
-    <a href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.header.logo.href | prepend: site.baseurl | relative_url }}">
+    <a
+      href="{{base-url | append: site.data.online-courses-template.header.logo.href | relative_url }}"
+    >
       <img
-        src="{{image-directory}}"
+        src="{{image-directory  | append: site.data.online-courses-template.header.logo.img | relative_url }}"
         alt="{{site.data.online-courses-template.header.logo.alt}}"
       />
-    </div>
-  </a>
-  {% for links in site.data.online-courses-template.header.first-sections %}
-    {% include online-courses-template/header-links.html link=links %}
-  {% endfor %}
-
-  {% include online-courses-template/search-input.html placeholder=site.data.online-courses-template.header.search-input.placeholder %}
-  <div class="header__info">
-      {% for links in site.data.online-courses-template.header.second-sections %}
-          {% include online-courses-template/header-links.html link=links %}
-      {% endfor %}
-      <div class="header__profile">
-        <div class="header__profile__pic">
-          {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.profile.pic | relative_url 
-            %}
-          <img
-            src="{{image-directory}}"
-            alt="{{site.data.online-courses-template.header.profile.alt}}"
-          />
-        </div>
-        <i class="arrow-up"></i>
-      </div>
+    </a>
   </div>
-
+  {% include online-courses-template/header-links.html
+  base-url=base-url
+  link=site.data.online-courses-template.header.categories
+  sections=site.online-courses-categories position='left'
+  svg-directory=svg-directory %} 
+  <div class="header__search">
+    {% include
+      online-courses-template/search-input.html
+      placeholder=site.data.online-courses-template.header.search-input.placeholder
+      %}
+  </div>
+  
+  <div class="header__info">
+    {% for links in site.data.online-courses-template.header.header-buttons %}
+    {% include online-courses-template/header-links.html base-url=base-url link=links
+    position='right' svg-directory=svg-directory sections=links.sections %} {%
+    endfor %}
+    <div class="header__profile">
+      <div class="header__profile__pic">
+        <img
+          src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url }}"
+          alt="{{site.data.online-courses-template.user.image.alt}}"
+        />
+      </div>
+      <i class="arrow-up"></i>
+      <div class="dropdown-menu1 dropdown-menu--right">
+        <div class="profile-section">
+          <div class="picture-side">
+            <div class="image">
+              <img
+                src="{{image-directory  | append: site.data.online-courses-template.user.image.pic | relative_url }}"
+                alt="{{site.data.online-courses-template.user.image.alt}}"
+              />
+            </div>
+          </div>
+          <div class="info-side">
+              <div class="name">
+                {{site.data.online-courses-template.user.info.name | append: ' ' |
+                append: site.data.online-courses-template.user.info.lastname |
+                truncate: 30 }}
+              </div>
+              <div class="email">
+                {{site.data.online-courses-template.user.info.email | truncate:30
+                }}
+              </div>
+          </div>
+        </div>
+        {% for section in
+        site.data.online-courses-template.header.links-dropdown.sections %}
+        <div class="links-section">
+            {% for link in section.section %}
+              <a
+                class="link {% if link.background==true %} link-active {% endif %}"
+                href="{{link.href | prepend: base-url | relative_url }}"
+                >{{link.title}}</a
+              >
+            {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
-

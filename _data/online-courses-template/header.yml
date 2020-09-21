@@ -6,17 +6,34 @@ logo:
 search-input:
   placeholder: Search...
 
-profile:
-  pic: client-1-face.jpg
-  alt: Profile
 
-first-sections:
-  - name: Categories
-    icon: icon-th-small
+categories:
+  name: Categories
+  icon: icon-th-small
 
-second-sections:
+header-buttons:
   - icon: icon-heart
+    sections:
+      - title: Desarrollo web
+      - title: Negocios
+      - title: Finanzas y contabilidad
   - icon: icon-shopping-cart
+    href: 'my-cart.html'
+
+links-dropdown:
+  sections:
+    - section:
+      - title: My courses
+        href: 'my-courses.html'
+      - title: My cart
+        href: 'my-cart.html'
+      - title: My Wishlist
+        href: 'my-wishlist.html'
+    - section:
+      - title: My profile
+        href: 'my-profile.html'
+      - title: Log out
+        background: true
 
 
 banner:

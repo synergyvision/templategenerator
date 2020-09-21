@@ -1,0 +1,24 @@
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+<div class="abscenter">
+    {% assign my-courses = 0 %}
+    {% for course in site.online-courses-courses %}
+        {% for student-course in site.data.online-courses-template.user.courses %}
+            {% if course.identifier == student-course.id %}
+                <div class="card-cont" identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
+                    {% include online-courses-template/cards/course-card.html card=course bought-info=student-course %}
+                </div>
+                {% assign my-courses = my-courses | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}  
+    {% if my-courses == 0 %}
+        {% assign empty-message= site.data.online-courses-template.profile.my-courses.empty-courses %}
+        {% include online-courses-template/global/empty-message.html message=empty-message.empty-message icon=empty-message.empty-icon btn=empty-message.btn svg-directory=svg-directory %}
+    {% endif %}
+    </div>
+<div class="abscenter mt-big pb-big">
+    {% assign number-of-pages = site.data.online-courses-template.user.courses | size | divided_by: 9.0 | ceil %}
+    {% include global/pagination.html number-of-pages=number-of-pages scroll=true %} 
+</div>

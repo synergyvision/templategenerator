@@ -1,9 +1,8 @@
 .login-section{
-    background-image: linear-gradient(to right, var(--color-primary), #16215a);
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
     @include abscenter;
-    height: max-content;
     padding:100px 0;
-
+    height: max-content;
 }
 
 $gray: gray;
@@ -67,6 +66,9 @@ $gray-dark: #333;
         width: 100%;
         @include abscenter;
         flex-direction: column;
+        .label-checkbox{
+            align-self: flex-start;
+        }
     }
     .hide-content{
         display: none;
@@ -82,7 +84,7 @@ $gray-dark: #333;
     border: 0;
     border-bottom: 3px solid var(--color-primary) ;
     width: 90%;
-    height: 60px;
+    height: max-content;
     
     .icon{
         height: 20px; width: 20px;
@@ -94,11 +96,18 @@ $gray-dark: #333;
         transform: translateY(-50%);
     }
 
+    label{
+        display: block;
+        font-size: 1.6rem !important;
+        color: $gray-dark !important;
+        font-weight: normal !important;
+        margin:10px;
+    }
 
-    &__field {
+    &__field, textarea {
       border: 0;
       width: 100%;
-      height: 100%;
+      height: 60px;
       padding: 10px 20px;
       padding-left: 50px !important;
       background: white;
@@ -112,6 +121,10 @@ $gray-dark: #333;
         outline: none;
         box-shadow: 0px 9px 20px rgba(black, 0.3);
       }
+    }
+    textarea{
+        
+        resize: none;
     }
 }
 
