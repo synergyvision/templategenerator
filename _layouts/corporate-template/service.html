@@ -3,7 +3,6 @@ layout: corporate-template/corporate
 ---
 
 {% include corporate-template/sections-banner.html title=page.title subtitle=page.subtitle img=page.img type=page.img-type %}
-
 <!--Wave-->
 <div style="margin-top: -100px;" >
     {% include global/wave.html content='empty-content'
@@ -23,7 +22,6 @@ layout: corporate-template/corporate
 <div class="mtb-big">
     {% include corporate-template/title.html title=page.other-services.title %}
 </div>
-
 <!--Filtrando servicios para no mostrar servicio actual-->
 {% assign services = "" | split: ',' %} 
 {% for service in site.corporate-services %} 

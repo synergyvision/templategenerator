@@ -1,17 +1,21 @@
 .banner{
     height: 70vh;
-    width: 100%;
+    max-width: 100%;
     margin-bottom:200px;
     background-attachment: fixed;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     @include respond(tab-port){
-        margin-bottom: 220px;
+        margin-bottom: 320px;
+    }
+    @include respond(tab-port){
+        margin-bottom: 420px;
     }
     &__box{
         @include abscenter;
+        flex-wrap: nowrap;
         justify-content: space-between;
         padding: 40px 25px;
         position: absolute;

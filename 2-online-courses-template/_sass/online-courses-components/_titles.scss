@@ -1,0 +1,45 @@
+.title-primary{
+    font-size: 2.5rem;
+    color: grey;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.title-stripe{
+   
+   &__text{
+        padding:50px;
+        background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+        color: #fff;
+        font-size: 3rem;
+        position: relative;
+   }
+
+   &__no-text{
+        height: 150px;
+        width: 100%;
+        background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+        position: relative;
+   }
+    
+}
+
+.image-title{
+     width: 100%;
+     height: 100%;
+     background-color: #fff;
+     border-radius: 10px;
+     padding: 10px;
+     @include abscenter;
+     flex-direction: column;
+     .image-container{
+          width: 30rem;
+          height: 30rem;
+          max-width: 100%;
+          img{
+               width: 100%;
+               height: auto;
+               object-fit: contain;
+          }
+     }
+}

@@ -1,61 +1,101 @@
-collection:
-  - id: 1
-    name: The Complete Vue JS Developer Course – inc. Vue JS 2!
-    owner: Denis Shapovalov
-    price: 18,99$
-    discount: true
-    discount-price: 16,99$
-    score: 4.34565
-    image: 
-      name: 'course-1.png'
-      alt: 'Course 1'
-  - id: 2
-    name: Curso de Node JS en Español - Aprende Fácilmente
-    owner: Stephanie Cruz
-    score: 5
-    price: 12,59$
-    discount: false
-    image: 
-      name: 'course-2.png'
-      alt: 'Course 2'
-  - id: 3
-    name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
-    owner: Alexander Zverev
-    price: 18,99$
-    discount: true
-    discount-price: 15,25$
-    score: 3.5
-    image: 
-      name: 'course-3.png'
-      alt: 'Course 3'
-  - id: 4
-    name: Crea tu Tienda Online en Shopify con Dropshipping - Taller
-    owner: Milos Raonic
-    price: 13,99$
-    discount: false
-    score: 3.3
-    image: 
-      name: 'course-4.png'
-      alt: 'Course 4'
-  - id: 5
-    name: 60 Videotutoriales de Photoshop CC. Aprende paso a paso
-    owner: Angelic Kerber
-    price: 12,99$
-    discount: false
-    score: 4.5
-    image: 
-      name: 'course-5.png'
-      alt: 'Course 5'
-  - id: 6
-    name: Fundamentos escenciales de la Economía 1
-    owner: Nick Kyrgyos
-    price: 11,99$
-    discount: true
-    discount-price: 9,25$
-    score: 2.5
-    image: 
-      name: 'course-6.png'
-      alt: 'Course 6'
-      
+max-per-page: 9.0
 
-      
+  
+
+detail:
+  instructor:
+    title: Instructor
+    btn: 
+      text: 'Show more &rarr;'
+      href: ''
+      type: primary
+  description:
+    title: Description
+  students-reviews:
+    title: Students feedback
+    buttons-icon:
+      - icon: icon-heart2
+        href: '#'
+    buttons-text:
+      - text: Report
+        href: '#'
+  buy:
+    buttons:
+      - icon: icon-heart-plus
+        href: '#'
+      - icon: icon-add_shopping_cart
+        href: '#'
+  course-content:
+    title: Course content
+  course-questions:
+    max-per-page: 2.0
+    title: 'Q & A'
+    total-questions: 'Total questions:'
+    all-questions:
+      btn:
+        text: Ask a question
+        type: primary
+    my-question:
+      btn:
+        text: Back to Questions
+        type: primary
+    ask-question:
+      btn:
+        text: Send
+        type: primary
+    
+
+
+filter:
+  - title: rating
+    id: rating
+    sections:
+      type: score
+      collection:
+        - text: All
+          checked: true
+        - score: 4.5
+          text: '& up'
+        - score: 3.5
+          text: '& up'
+        - score: 2.5
+          text: '& up'
+        - score: 1.5
+          text: '& up'
+  - title: Course duration
+    id: duration
+    sections:
+      type: number
+      collection:
+        - text: All
+          checked: true
+        - number: 10
+          text: hours or more
+        - number: 20
+          text: hours or more
+        - number: 30
+          text: hours or more
+  - title: Language
+    id: language
+    sections:
+      type: text
+      collection:
+        - text: All
+          checked: true
+        - text: 'English'
+        - text: 'Spanish'
+  - title: price
+    id: price
+    sections:
+       type: number
+       collection:
+         - text: All
+           checked: true
+         - number: 10
+           text: 'or more'
+         - number: 20
+           text: 'or more'
+         - number: 30
+           text: 'or more'
+         - number: 40
+           text: 'or more'

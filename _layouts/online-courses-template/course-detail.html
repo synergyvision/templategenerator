@@ -1,0 +1,17 @@
+---
+layout: online-courses-template/online-courses-header
+---
+
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %} {% assign
+svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#" %} {% assign member=false %} {% for course-student
+in site.data.online-courses-template.user.courses %} {% if course-student.id ==
+page.identifier %} {% assign member=true %} {% endif %} {% endfor %} 
+
+
+{% if member == false %}
+    {% include online-courses-template/course-detail-pages/course-detail.html page=page %}
+{% else %}
+    {% include online-courses-template/course-detail-pages/course-detail-subscribed.html page=page %}
+{% endif %}

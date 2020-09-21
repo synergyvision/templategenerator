@@ -1,0 +1,28 @@
+.table-responsive{
+    max-height: 400px;
+    overflow: scroll;
+}
+
+table{
+    font-size: 1.6rem;
+    cursor: pointer;
+    
+    thead{
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+    tbody{
+        tr{
+            td{
+                a{
+                    text-decoration: none;
+                    color: $gray;
+                    &:hover{
+                        text-decoration: none;
+                        color: $gray-dark;
+                    }
+                }
+            }
+        }
+    }
+}

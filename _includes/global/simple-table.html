@@ -1,0 +1,17 @@
+<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading panel-heading-active" data-toggle="collapse" href="#collapsee1">
+        <h4 class="panel-title">
+          <a>{{include.title}}</a>
+        </h4>
+      </div>
+      <div id="collapsee1" class="panel-collapse collapse in">
+          <ul class="list-group">
+            {% for item in include.collection %}
+            {% assign showCourse = include.function | append:  "('" | append: item.id | append: "')" %}
+            <li class="list-group-item" onclick="{{showCourse}}" ><a>{{item.name}}</a></li>
+            {% endfor %}
+          </ul>
+      </div>
+    </div>
+</div>

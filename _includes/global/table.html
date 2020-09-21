@@ -1,0 +1,36 @@
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+        {% for head in include.header %}
+          <th>{{head.title}}</th>
+        {% endfor %}
+        </tr>
+      </thead>
+      <tbody id="contentTable">
+        {% for content in include.content %}
+            <tr>
+                {% if content.collection %}
+                    {% for field in content.collection %}
+                        <td> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.text}}
+            
+                        </a></td>
+                    {% endfor %}
+                {% else %}
+                    <td> <a {% if field.href %} href="{{content.href | relative_url}}" {% endif %}>{{content.text}}
+                    </a></td>
+                {% endif %}
+                
+                    {% for content in include.action %}
+                    <td class="abscenter">
+                        <a class="circle-btn" href="#">
+                            {% include global/svg.html directory=include.svg-directory
+                                    image=content.icon class='icon' %}
+                        </a>
+                    </td>
+                    {% endfor %}
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>

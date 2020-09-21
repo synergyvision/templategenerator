@@ -1,0 +1,65 @@
+---
+layout: online-courses-template/instructor-dash
+title: Instructor dashboard | Courses
+---
+
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %} {% assign
+svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#" %}
+<div class="instructor-courses">
+  <div class="row">
+    <h1 class="title-primary mtb-big">
+      <img
+        class="instructor-courses__img"
+        src="{{image-directory | append: site.data.online-courses-template.instructor.my-courses.title.image | relative_url }}"
+        alt="{{site.data.online-courses-template.instructor.my-courses.title.alt}}"
+      />
+      {{site.data.online-courses-template.instructor.my-courses.title.name}}
+    </h1>
+  </div>
+  <div class="row">
+    {% include global/simple-table.html
+    title=site.data.online-courses-template.instructor.my-courses.courses-table.title
+    collection=site.data.online-courses-template.instructor.courses
+    function='showCourse' %}
+  </div>
+
+  <section class="edit-course" id="course4">
+    
+     
+    {% assign course-title=site.online-courses-courses[6].name %} {% include
+    online-courses-template/global/title.html title=course-title subtitle='' %}
+    <div class="edit-course__content">
+      <div class="image">
+        <img
+          src="{{image-directory | append: site.online-courses-courses[6].image.name | relative_url }}"
+          alt=""
+        />
+      </div>
+      <div class="students-table">
+        {% assign students =
+        site.data.online-courses-template.instructor.courses[0].student-list %}
+        {% include online-courses-template/global/login-input.html
+        input-type='text' input-name='Search' id="myInput" %} {% include
+        global/table.html header=students.student-table.header
+        content=students.student-table.content svg-directory=svg-directory %}
+      </div>
+      <div class="row">
+        {% assign sections = site.online-courses-courses[1].course-content %} {%
+        include online-courses-template/global/accordion.html sections=sections
+        icon=site.data.online-courses-template.instructor.my-courses.sections.modules.edit-btn
+        module-btn=site.data.online-courses-template.instructor.my-courses.sections.modules.module-btn
+        edit-info=site.data.online-courses-template.instructor.my-courses.sections.modules.add-module
+        %}
+      </div>
+      {% assign sections =
+      site.data.online-courses-template.instructor.edit-info-sections %} {%
+      include online-courses-template/global/card-fields-sections.html
+      sections=sections %}
+    </div>
+  </section>
+</div>
+
+{% include global/modal.html title=site.data.online-courses-template.instructor.sections.popup-edit.title id=site.data.online-courses-template.instructor.sections.popup-edit.id file='online-courses-template/instructor/edit-module.html' %}
+

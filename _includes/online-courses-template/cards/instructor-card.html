@@ -1,0 +1,24 @@
+<div class="instructor-container">
+    <div class="title">{{include.title}}</div>
+    <div class="name">{{include.person.name}}</div>
+    <div class="image">
+      <img
+        src="{{ include.image-directory | append: include.person.image.name | relative_url }}"
+        alt="{{include.person.image.alt}}"
+      />
+    </div>
+    <div class="short-description">{{include.person.short-description}}</div>
+    <div class="feature-container">
+        {% for feature in include.person.features %}
+            <div class="feature">
+                {% include global/svg.html directory=svg-directory
+                image=feature.icon class='icon' %}
+                <p>{{feature.text}}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="show-more">
+      {% include online-courses-template/global/button.html
+      btn=include.btn-more %}
+    </div>
+</div>

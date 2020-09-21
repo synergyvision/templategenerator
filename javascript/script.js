@@ -1,22 +1,33 @@
+
+/* ============= SIGN UP SELECTOR  =============== */
 $(document).on('ready', function() {
 
- $(".a-1").click(function(){
-    $('.a-1').addClass('active-btn');
-    $('.a-2').removeClass('active-btn');
-    $('.content-2').removeClass('show-content');
-    $('.content-2').addClass('hide-content');
-    $('.content-1').removeClass('hide-content');
-    $('.content-1').addClass('show-content');
+
+  $(".a-1").click(function(){
+     $('.a-1').addClass('active-btn');
+     $('.a-2').removeClass('active-btn');
+     $('.content-2').removeClass('show-content');
+     $('.content-2').addClass('hide-content');
+     $('.content-1').removeClass('hide-content');
+     $('.content-1').addClass('show-content');
+   });
+   $(".a-2").click(function(){
+     $('.a-2').addClass('active-btn');
+     $('.a-1').removeClass('active-btn');
+     $('.content-1').removeClass('show-content');
+     $('.content-1').addClass('hide-content');
+     $('.content-2').removeClass('hide-content');
+     $('.content-2').addClass('show-content');
+   });
+ /* =========== FILTER TABLE STUDENTS =========== */
+
+   $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#contentTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
   });
-  $(".a-2").click(function(){
-    $('.a-2').addClass('active-btn');
-    $('.a-1').removeClass('active-btn');
-    $('.content-1').removeClass('show-content');
-    $('.content-1').addClass('hide-content');
-    $('.content-2').removeClass('hide-content');
-    $('.content-2').addClass('show-content');
-  });
-});
+ });
 // search input
 $(document).on('ready', function() {
   $('.field').on('focus', function() {
@@ -91,6 +102,7 @@ for (i = 0; i < l; i++) {
     this.classList.toggle("select-arrow-active");
   });
 }
+
 
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
@@ -215,3 +227,85 @@ document.querySelectorAll('.dot-nav-1').forEach((el)=>{
       }
     }
   });
+
+  /* ========== ONLINE COURSES TEMPLATE ============== */
+
+  /* ===== CHECKS ===== */
+
+
+  function selectOnlyThis(id,start,finish,filterId,value) {
+    for (var i = start;i <= finish; i++)
+    {
+        document.getElementById(i).checked = false;
+    }
+    document.getElementById(id).checked = true;
+
+    var selected = new Array();
+        
+    $("input:checkbox:checked").each(function() {
+       selected.push($(this).attr("id"));
+      
+    });
+   showProduct(filterId,value);
+}
+ let array2 = "hola";
+function showCourses(name){
+  let array = [];
+
+  const rbs = document.querySelectorAll('input[name='+name+']');
+  let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+          
+          array.push({name: name, value: selectedValue});
+  console.log(array);
+  console.log(array2);
+  //console.log(array2);
+  //console.log(this.array2);
+  let link = document.querySelectorAll('.card-cont');
+  console.log(link);
+  $('.card-cont').css('transform', 'scale(0)');
+  $('.card-cont').hide();
+    if (link) {
+        let duration = link[0].getAttribute('duration');
+        let price = link[0].getAttribute('price');
+        let score = link[0].getAttribute('score');
+        let language = link[0].getAttribute('language');
+        let id = link[0].getAttribute('identifier');
+      $('.card-cont[identifier='+id+']').show(); 
+      $('.card-cont[identifier='+id+']').css('transform', 'scale(1)'); 
+    }
+}
+
+function hideProduct(){
+  $('.card-cont').hide();
+} 
+function showProduct(filterId, value){
+        
+        $('.card-cont').css('transform', 'scale(0)');
+        $('.card-cont').hide();
+      
+        $('.card-cont['+filterId+'='+value+']').show();
+        $('.card-cont['+filterId+'='+value+']').css('transform', 'scale(1)');
+
+} 
+
+//setTimeout(showProduct,400);
+
+
+/* =========== SHOWING THE COURSE CONTENT SECTION =========== */
+function showCourseContentSection(value){
+ let db = $("input:checkbox[value="+value+"]")[0].checked;
+    if (db == false){
+      $('.section-dropdown[value='+value+']').css('display','none');
+    }
+    else if ( db == true){
+      $('.section-dropdown[value='+value+']').css('display','block');
+    }
+}
+
+

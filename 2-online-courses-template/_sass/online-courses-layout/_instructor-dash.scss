@@ -1,0 +1,79 @@
+.instructor-dashboard{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.side-nav{
+    z-index: 9999;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6.5rem;
+    height: 100vh;
+    background-color: var(--color-primary);
+    box-shadow: 0 2.5px 5px rgba(black,.2);
+    @include abscenter;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: all .2s;
+    @include respond(tab-port){
+        width: 5rem;
+    }
+    img{
+        margin: 1rem 0 3rem 0;
+        width: 5rem;
+        height: auto;
+        border-radius: 50%;
+        @include respond(tab-port){
+            width: 4rem;
+        }
+    }
+    &:hover{
+        width: 25rem;
+        .link .text{
+            display: block;
+            //visibility: visible;
+            transform: translate(0);
+        }
+    }
+    .link{
+        width: 100%;
+        padding:1.5rem;
+        transition: all .3s;
+        @include abscenter;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        border-left: 3px solid transparent;
+        text-decoration: none;
+        @include respond(tab-port){
+            padding: 1rem;
+        }
+        &__image{
+            width: 3rem; height: 3rem;
+            fill: #fff;
+            @include respond(tab-port){
+                width: 2.5rem;
+            }
+        }
+        &:hover{
+            background-color: var(--color-primary-light);
+            border-left: 3px solid #fff;
+           
+        }
+        .text{
+            font-size: 1.6rem;
+            color: #fff;
+            padding: 0 15px;
+            display: none;
+            transform: translate(-200px);
+            transition: all .4s;
+        }
+    }
+    .link-active{
+        border-left: 3px solid #fff;
+        background-color: var(--color-primary-light);
+    }
+}
+
+

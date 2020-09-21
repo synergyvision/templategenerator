@@ -1,9 +1,32 @@
+.title-container{
+    font-size: 2rem;
+    color: grey;
+    font-weight: 300;
+    @include abscenter;
+    flex-direction: column;
+    margin-bottom: 20px;  
+    width: 100%;
+    margin: 0 auto;  
+    & > *{
+        text-align: center;
+        margin: 15px;
+    }
+    .line{
+        width: 150px;
+        height: 2px;
+        background-color: var(--color-primary);
+    }
+    p{
+        font-size: 2rem;
+    }
+}
+
 
 .section-features{
     height: max-content;
     padding: 15px;
     width: 100%;
-    background-image: linear-gradient(to right, var(--color-primary), #16215a);
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
     @include abscenter;
     justify-content: space-around;
     .feature-box{
@@ -41,23 +64,26 @@
            width: max-content;
            height: max-content;
            position: relative;
+           margin: 0 auto;
+           width: 90%;
             .image{
                 box-shadow: 0 5px 10px rgba(black,.2);
-                height: 30rem;
+                
                 width: auto;
                 margin: 0 auto;
-            
+                max-width: 100%;
+                height: auto;
              }
             .image-small{
                     box-shadow: 0 5px 10px rgba(black,.2);
                     position: absolute;
-                    right: -20%;
-                    bottom: -60%;
+                    right: -10%;
+                    bottom: -40%;
                     transform: translateY(-50%) rotate(10deg);
-                    height: 18rem;
+                    height: 15rem;
                     width: auto;
-                    @include respond(tab-land){
-                        bottom: -70%;
+                    @include respond(tab-port){
+                       display: none;
                     }
                 
             }
@@ -94,7 +120,7 @@
 .section-contact{
     height: max-content;
     padding: 10% 5%;
-    background-image: linear-gradient(to right, var(--color-primary), #16215a);
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
     @include abscenter;
     @include respond(tab-port){
 
@@ -134,28 +160,10 @@
 
 .section-community{
     padding: 5%;
-    &__title{
-        font-size: 2.5rem;
-        color: grey;
-        font-weight: 300;
-        @include abscenter;
-        flex-direction: column;
-        margin-bottom: 20px;    
-        & > *{
-            text-align: center;
-            margin: 15px;
-        }
-        .line{
-            width: 150px;
-            height: 2px;
-            background-color: var(--color-primary);
-        }
-        p{
-            font-size: 2rem;
-        }
-    }
+   
    
     &__content{
         @include abscenter;
     }
 }
+

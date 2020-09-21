@@ -17,13 +17,16 @@
   
     .label-checkbox{
         @include abscenter;
-        margin:15px 0;
+        margin:15px 20px;
+        margin-right: 0 !important;
         flex-wrap: nowrap;
-        width: 100%;
+        justify-content: flex-start !important;
+        width: auto !important;
         p{
             width: 80%;
             font-size: 1.4rem;
-            margin-left: 10px;
+            margin: 0 !important;
+            margin-left: 10px !important;
             color: grey;
         }
     }
@@ -47,7 +50,7 @@
     margin-right: 0.5rem;
     outline: none;
     position: relative;
-    z-index: 1000;
+    z-index: 2;
     &:hover {
         background: #9faab7;
       }
@@ -75,11 +78,22 @@
     content: '';
     display: block;
     position: relative;
-    z-index: 100;
+    z-index: 1;
   }
   .option-input.radio {
     border-radius: 50%;
   }
   .option-input.radio::after {
     border-radius: 50%;
+  }
+
+
+  .checkbox-icon-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    p{
+      font-size: 1.6rem;
+      color: grey;
+    }
   }

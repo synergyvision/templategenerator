@@ -1,0 +1,30 @@
+---
+layout: online-courses-template/online-courses-header
+title: Coursing | My profile
+---
+
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %}
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+<div class="title-stripe__no-text">
+    <div class="profile-general-info">
+        <div class="img">
+          <img
+            src="{{image-directory | append: site.data.online-courses-template.user.image.pic | relative_url  }}"
+            alt="{{site.data.online-courses-template.user.image.alt}}"
+          />
+          <div class="file">
+            {% include global/svg.html directory=svg-directory image='icon-attachment' class='icon' %}
+          </div>
+        </div>
+        <div class="name">
+          {{site.data.online-courses-template.user.info.name | append: ' ' | append:
+          site.data.online-courses-template.user.info.lastname}}
+        </div>
+      </div>
+</div>
+<div class="profile">
+  {% include online-courses-template/global/card-fields-sections.html sections=site.data.online-courses-template.profile.sections %}
+</div>

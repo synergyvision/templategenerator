@@ -1,0 +1,18 @@
+<div class="buy-container">
+  <div class="price">
+    {% if include.discount-price %}
+      <div class="current-price">{{include.discount-price}}</div>
+      <div class="old-price">{{include.price}}</div>
+    {% else %}
+    <div class="current-price">{{include.price}}</div>
+    {% endif %}
+  </div>
+  <div class="btn-container">
+    {% for button in include.buttons %} {% include
+    online-courses-template/global/button-secondary.html
+    directory=include.directory
+    href=button.href
+    icon=button.icon
+    %} {% endfor %}
+  </div>
+</div>

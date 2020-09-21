@@ -1,0 +1,29 @@
+<div class="chat" {% if include.size == 'small' %} style="max-height: 500px;
+max-width: 350px; border-radius: 5px;" {% endif %}>
+    <div class="chat__header">
+        <div class="img-container">
+            <img src="{{image-directory | append: include.chat.image.name | relative_url}}" alt="{{include.chat.image.alt}}" />
+        </div>
+        <div class="info">
+            <div class="inline">
+                <div class="name">{{include.chat-data.header.title}} {{include.chat.name}}</div>
+                <div class="chat-status"></div>
+            </div>
+            <div class="status">{{include.chat.status}}</div>
+        </div>     
+    </div>
+    <div class="chat__messages">
+        {% for message in include.chat.chat %}
+            <div {% if message.received %} class="message-received" {% else if message.sent %} class="message-sent" {% endif %}>
+                <p class="message-content" {% if include.size == 'small' %} style="font-size: 1.4rem;" {% endif %}>{{message.received}}{{message.sent}}</p>
+                <div class="message-timestamp-left">{{include.chat-data.message-bottom.title}} {{message.time}}</div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="chat__textarea">    
+        {% include online-courses-template/global/login-input.html input-name=include.chat-data.text-area.title input-type=include.chat-data.text-area.type height='70px' %}
+    </div>
+    <div class="chat__btn">
+        {% include online-courses-template/global/button.html btn=include.chat-data.btn-send %}
+    </div>
+</div> 

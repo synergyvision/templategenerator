@@ -5,3 +5,26 @@
     font-family: 'Kumbh Sans', sans-serif !important;
 
 }
+html{
+    height: 100% !important;
+}
+body{
+    min-height:100vh !important;
+    position:relative;
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+   
+}
+body::-webkit-scrollbar-thumb{
+    width: 7px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+a:hover {
+    color: $gray !important;
+    text-decoration: none !important;
+}
+

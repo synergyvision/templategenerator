@@ -1,0 +1,18 @@
+
+{% if include.number-of-pages > 1 %}
+    <div class="pagination1">
+        <a id="prev">&#8810;</a>
+        {% for i in (1..include.number-of-pages) %}
+            <a class=""  id="page-btn" page={{forloop.index}}>{{forloop.index}}</a>
+        {% endfor %}
+        <a id="next">&#8811;</a>
+    </div>
+{% endif %}
+
+<script>    
+var config = {
+		max_per_page: {{include.max-per-page}},
+        page: 1,
+        scroll: {{include.scroll}}
+};
+</script>

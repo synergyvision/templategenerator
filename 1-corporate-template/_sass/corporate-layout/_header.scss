@@ -246,7 +246,7 @@
     background-position: bottom;
     background-attachment: fixed;
     padding-bottom: 50px;
-
+   
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
       clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
@@ -266,6 +266,8 @@
           visibility: hidden;
         }
       } */
+
+
 
       &__title {
         display: flex;

@@ -1,4 +1,11 @@
 <div class="login-input">
-    {% include global/svg.html directory=include.svg-directory image=include.input.icon class='icon' %}
-    <input type="{{include.input.type}}" placeholder="{{include.input.name}}" class="login-input__field" />
+    {% if include.label %}
+        <label for="">{{include.label}}</label>
+    {% endif %}
+        {% include global/svg.html directory=include.svg-directory image=include.input-icon class='icon' %}
+    {% if include.input-type=='textarea' %}
+        <textarea name="" id="{{include.id}}" placeholder="{{include.input-name}}" style="height:{{include.height}};"></textarea>
+    {% else  %}
+        <input id={{include.id}}  type="{{include.input-type}}" placeholder="{{include.input-name}}" class="login-input__field" {{include.atts}} />
+    {% endif %}
 </div>

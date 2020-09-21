@@ -2,7 +2,7 @@
 <ul
     class="main-nav"
   >
-    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.global.baseUrl | prepend: include.url | prepend: site.baseurl | relative_url }}">
+    <a class="main-nav__logo" style="z-index:6;" href="{{site.data.corporate-template.header.logo-url | prepend: include.url | relative_url }}">
       {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.header.logo | relative_url }}
         %} 
       <img
@@ -16,7 +16,7 @@
     >
       {% for section in site.data.corporate-template.header.titles %}
       <li>
-        <a href="{{section.url | prepend: include.url | prepend: site.baseurl | relative_url }}">{{section.title}}</a>
+        <a href="{{section.url | prepend: include.url  | relative_url }}">{{section.title}}</a>
       </li>
       {% endfor %}
     </div> 
@@ -35,7 +35,7 @@
           <ul>
               {% for section in site.data.corporate-template.header.titles %}
               <li class="block">
-                <a href="{{section.url | prepend: include.url | prepend: site.baseurl | relative_url }}">{{section.title}}</a>
+                <a href="{{section.url | prepend: include.url | relative_url }}">{{section.title}}</a>
               </li>
               {% endfor %}
           </ul>           

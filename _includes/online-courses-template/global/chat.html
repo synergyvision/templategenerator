@@ -1,0 +1,24 @@
+
+{% assign chat-data = site.data.online-courses-template.global.chat %}
+<div class="conversation-container ">
+    <div class="people-list" id="people-list">
+        {% include
+            online-courses-template/search-input.html
+            placeholder=chat-data.search-input.title
+            %}
+      <ul class="list">
+        {% for chat in include.type %}
+            <li>
+                <div class="img-container">
+                    <img src="{{include.image-directory | append: chat.image.name | relative_url}}" alt="{{chat.image.alt}}" />
+                </div>
+                <div class="about">
+                    <div class="name">{{chat.name}}</div>
+                </div>
+            </li>
+        {% endfor %}
+      </ul>
+    </div> 
+    {% assign type = type[0] %} 
+    {% include online-courses-template/global/conversation.html chat-data=chat-data chat=type %}
+</div>

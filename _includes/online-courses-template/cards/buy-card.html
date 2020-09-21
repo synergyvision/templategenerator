@@ -1,0 +1,5 @@
+<div class="cart-price">
+    <div class="title">{{include.text}}</div>
+      <div class="total-price">{{ include.price | append: ' ' | append: include.currency}}</div>
+    {% include online-courses-template/global/button.html btn=include.btn %}
+</div>

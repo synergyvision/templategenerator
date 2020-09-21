@@ -1,0 +1,12 @@
+---
+layout: online-courses-template/online-courses-default
+---
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images
+    %}
+{% assign svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+        | relative_url | append: "#" %}
+
+<div class="instructor-dashboard">
+    {% include online-courses-template/instructor/side-nav.html image-directory=image-directory svg-directory=svg-directory %}
+    {{content}}
+</div>

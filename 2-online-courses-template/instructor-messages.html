@@ -1,0 +1,18 @@
+---
+layout: online-courses-template/instructor-dash
+title: Instructor dashboard | Messages
+
+---
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images
+    %}
+    {% assign type = site.data.online-courses-template.conversations.chats %}
+<div class="instructor-message">
+    <div class="row">
+        <h1 class="title-primary  mtb-big">
+            <img class="instructor-courses__img" src="{{image-directory | append: site.data.online-courses-template.instructor.dashboard-messages.title.image | relative_url }}" alt="{{site.data.online-courses-template.instructor.dashboard-messages.title.alt}}">
+            {{site.data.online-courses-template.instructor.dashboard-messages.title.name}}
+        </h1>
+    </div>
+    {% include online-courses-template/global/chat.html type=type image-directory=image-directory %}
+</div>
+

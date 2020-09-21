@@ -1,0 +1,4 @@
+expiration-title: 'Exp:'
+btn-delete:
+  type: secondary
+  text: 'Delete'

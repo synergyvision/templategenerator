@@ -1,0 +1,21 @@
+.warning-info{
+    background-color: $gray-light;
+    
+    color: $gray-dark;
+    border-radius: 10px;
+    line-height: 25px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: flex-start;
+    .icon{
+            
+            height: 20px;
+            width: 20px;
+            fill: $gray-dark;
+            margin: 10px;
+    }
+    p{
+        padding:20px;
+        width: 90%;
+    }
+}

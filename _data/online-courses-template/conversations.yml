@@ -1,0 +1,42 @@
+chat:
+  input:
+    type: textarea
+    name: Type your message
+  btn:
+    text: Send
+    type: secondary
+
+chats:
+  - name: Nole Djokovic
+    image:
+      name: client-2-face.jpg
+      alt: client 2
+    status: Student
+    chat:
+      - received: Hi! I have a problem downloading the dependencies, could you help me?
+        time: '13:37'
+      - sent: Of course! Tell me what problem you have
+        time: '13:38'
+      - received: By the way! congratulations for the course, It's excellent. I have learned a lot...
+        time: '13:39'
+      - sent: Haha thanks, I'm glad you like it
+        time: '13:39'
+      - sent: Haha thanks, I'm glad you like it
+        time: '13:39'
+      - sent: Haha thanks, I'm glad you like it
+        time: '13:39'
+  - name: Tomas Munster
+    image:
+      name: client-4-face.png
+      alt: client 4
+    status: Student
+  - name: Angelic Kerber
+    image:
+      name: client-3-face.jpg
+      alt: client 3
+    status: Student
+  - name: Stefano Tsisipas
+    image:
+      name: client-5-face.jpg
+      alt: client 5
+    status: Student
