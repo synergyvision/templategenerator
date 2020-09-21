@@ -1,0 +1,43 @@
+<div class="stepper">
+    <div class="stepper-header">
+            <div class="steps">
+                    {% for i in (1..5) %}
+                    <div class="step {% if forloop.index == 1 %} active {% endif %}">
+                        <span>
+                            {{forloop.index}}
+                        </span>	
+                    </div>	
+                    {% endfor %}
+	
+        </div>
+    </div>
+    <div id="cardBody" class="stepper-body">
+        <div class="tabs">
+                <div id="1" class="tab">
+                    {% include online-courses-template/instructor/create-course-sections/basic-info.html info=site.data.online-courses-template.instructor.dashboard-create-course.basic-info %}
+                </div>
+                <div id="2" class="tab">
+                    {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.includes %}
+                    {% include online-courses-template/global/add-to-list.html title=info.title input=info.input  field-btns=info.field-btns %}
+                </div>
+                <div id="3" class="tab">
+                    {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.to-learn %}
+                    {% include online-courses-template/global/add-to-list.html title=info.title input=info.input  field-btns=info.field-btns %}
+                </div>
+                <div id="4" class="tab">
+                    {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.sections %}
+                    {% include online-courses-template/global/add-to-list-group.html title=info.title input=info.input  field-btns=info.field-btns %}
+                </div>
+                <div id="5" class="tab">
+                    {% include online-courses-template/global/image-title.html info=site.data.online-courses-template.instructor.dashboard-create-course.finished %}
+                </div>
+        </div>
+    </div>
+    <div class="stepper-footer">
+      {% include online-courses-template/global/button.html btn=site.data.online-courses-template.global.stepper.btn-prev
+        atts="id='prevBtn'" onclick="next(-1)" %}
+        {% include online-courses-template/global/button.html btn=site.data.online-courses-template.global.stepper.btn-next
+        atts="id='nextBtn'" onclick="next(1)" %}   
+    </div>
+</div>
+

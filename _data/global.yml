@@ -11,3 +11,4 @@ site:
     favicon: templategenerator-favi.png
     directories:
       images: /images/
+

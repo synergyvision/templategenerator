@@ -427,6 +427,7 @@
     @include respond(tab-port){
         flex-direction: column;
     }
+   
     .course-membered--left{
         width: 70%;
         @include respond(tab-port){
@@ -477,6 +478,7 @@
     
     .course-membered--right{
         width: 30%;
+        
         @include respond(tab-port){
             width: 100%;
             position: relative;

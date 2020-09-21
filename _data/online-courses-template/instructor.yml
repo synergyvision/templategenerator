@@ -2,7 +2,7 @@
 side-nav:
   - icon: icon-add-outline
     text: Create a course
-    href: '#'
+    href: 'instructor-create-course.html'
   - icon: icon-video
     text: My courses
     href: 'instructor-courses.html'
@@ -11,7 +11,98 @@ side-nav:
     href: 'instructor-messages.html'
 
 my-courses:
-  title: My courses
+  title: 
+    name: My courses
+    image: my-courses.png
+    alt: Image
+  courses-table:
+    title: Courses
+  sections:
+    modules:
+      edit-btn: 
+        icon: 'icon-pencil'
+        href: '#popup1'
+      add-module:
+        input:
+          type: text
+          name: 'Add a module'
+        btn:
+          text: Add
+          type: primary
+    
+
+dashboard-welcome:
+  title:  Welcome to your instructor dashboard
+  image:
+    name: 'instructor-welcome.png'
+    alt: Welcome image
+
+dashboard-messages:
+  title: 
+    name: Message your students
+    image: message-courses.png
+    alt: Image
+
+dashboard-create-course:
+  title: 
+    name: Let's create a course
+    image: create-course.png
+    alt: Image
+  basic-info:
+    name: 
+      title: Name your course
+      type: text
+    description: 
+      title: Describe your course
+      type: textarea
+    price: 
+      title: Give it a price
+      type: number
+  includes:
+    title: What your course includes
+    input: 
+      id: "1"
+      text: Add an include
+      icon: icon-add-outline
+      btn:
+        text: Add
+        type: secondary
+    field-btns:
+      - name: Remove
+  to-learn:
+    title: What your students will learn
+    input: 
+      id: "2"
+      text: Add a text
+      icon: icon-add-outline
+      btn:
+        text: Add
+        type: secondary
+    field-btns:
+      - name: Remove
+  sections:
+    input: 
+      id: "3"
+      text: Add a text
+      icon: icon-add-outline
+      btn:
+        - text: Add section
+          type: secondary
+          add: title
+        - text: Add module
+          type: secondary
+          add: field
+    field-btns:
+      - name: Upload articles
+      - name: Upload resources
+      - name: Remove
+        type: remove
+  finished:
+    title: Your course has been successfully registered
+    subtitle: We will be activating it soon
+    image:
+      name: completed.png
+      alt: Completedd
 
 sections:
   module-edit:
@@ -20,20 +111,26 @@ sections:
     btn:
       text: 'Add module'
       type: primary
-    popup-edit:
+  popup-edit:
+      id: 'popup1'
+      title: 'Edit module'
       input: 
         type: text
-        label: Module name
+        name: Change the module name
       btn:
-        text: 'Add video'
-        type: secondary
-      btn-add:
-        text: 'Add'
+       - text: 'Add video'
+         type: secondary
+       - text: 'Add resource'
+         type: secondary
+       - text: 'Add article'
+         type: secondary
+      btn-save:
+        text: 'Save changes'
         type: primary
 
 edit-info-sections:
   - title: Description
-    one-side:
+    left-fields-big:
       - input: 
           type: text
           name: 
@@ -44,6 +141,17 @@ edit-info-sections:
           name: 
         type: input
         label: Course description
+    right-fields-small:
+      - input:
+          type: text
+          name: 
+        type: input
+        label: Price
+      - input:
+          type: text
+          name: 
+        type: input
+        label: Discount price
     btn:
        - text: Save changes
          type: primary
@@ -55,11 +163,12 @@ edit-info-sections:
     btn:
         - text: Add 
           type: primary
-  - title: Sections
+  - title: To learn
     one-side:
       - component:
         type: component
         name: 'online-courses-template/instructor/to-learn-course-table.html'
+        parameters: 
     btn:
        - text: Add
          type: primary

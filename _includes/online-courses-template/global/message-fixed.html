@@ -1,0 +1,22 @@
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}   
+    {% assign chat-data = site.data.online-courses-template.global.chat %}
+    {% assign type = site.data.online-courses-template.conversations.chats[0] %}
+
+
+<div class="message-fixed">
+    <div class="chat-fixed displayNone" >
+        {% include online-courses-template/global/conversation.html chat-data=chat-data chat=type size='small' %}
+    </div>
+    <a class="icon-chat-fixed">
+        {% include global/svg.html directory=svg-directory image='icon-message-square' class='icon' %}
+    </a>
+</div>
+
+
+<script>    
+$('.icon-chat-fixed').on('click', function(e){
+    $(".chat-fixed").toggleClass("displayNone");
+});
+</script>

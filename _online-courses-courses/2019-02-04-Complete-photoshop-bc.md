@@ -5,6 +5,7 @@ identifier: course5
 categories: [development,design]
 name: 'Ultimate photoshop training: From begginer to pro'
 owner: Milos Raonic
+video: 11111.mp4
 price: 45.99$
 discount: true
 discount-price: 40,25$

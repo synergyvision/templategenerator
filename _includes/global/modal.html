@@ -1,0 +1,11 @@
+<div id="{{include.id}}" class="overlay">
+	<div class="popup">
+		<h2>{{include.title}}</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+            {% assign file = include.file %}
+			{% include {{file}} %}
+		</div>
+	</div>
+</div>
+

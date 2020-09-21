@@ -5,45 +5,32 @@
 
 <div class="panel-group" id="accordion">
     {% for section in include.sections %}
-    <div class="panel panel-default">
-      <div class="panel-heading" data-toggle="collapse" data-parent="#accordion">
-        <h4 class="panel-title">
-          <a href="{{ 'collapse' | append: forloop.index | prepend: '#'}}" data-toggle="collapse" data-parent="#accordion">{{section.title}}</a>
-        </h4>
-      </div>
-      <div id={{ 'collapse' | append: forloop.index}} class="panel-collapse collapse {% if forloop.index == 1 %} in {% endif %}">
-        <div class="panel-body">
-            {% for module in section.modules %}
-                <div class="panel-body__text"><p>{{module.title}}</p> <a class="circle-btn" href="">{% include global/svg.html directory=svg-directory image='icon-pencil' class='icon' %}</a> </div>
-            {% endfor %}
-            <div class="panel-body__add">
-                {% include online-courses-template/global/button.html btn=site.data.online-courses-template.instructor.sections.add-module.btn atts="data-toggle='modal' data-target='#modalEditCourse'" %}
-                   
+        <div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion">
+            <h4 class="panel-title">
+            <a href="{{ 'collapse' | append: forloop.index | prepend: '#'}}" data-toggle="collapse" data-parent="#accordion">{{section.title}}</a>
+            </h4>
+        </div>
+        <div id={{ 'collapse' | append: forloop.index}} class="panel-collapse collapse {% if forloop.index == 1 %} in {% endif %}">
+            <div class="panel-body">
+                {% for module in section.modules %}
+                    <div class="panel-body__text">
+                        <p>{{module.title}}</p> 
+                        {% if include.icon %}
+                            <a class="circle-btn" href="{{include.icon.href}}">
+                                {% include global/svg.html directory=svg-directory image=include.icon.icon class='icon' %}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <div class="panel-body__add">
+                    {% include online-courses-template/global/login-input.html input-name=include.edit-info.input.name input-type=include.edit-info.input.name  %}
+                    {% include online-courses-template/global/button.html btn=include.edit-info.btn  %}
+                </div>
             </div>
         </div>
-      </div>
-    </div>
+        </div>
     {% endfor %}
 </div>
 
-<div class="modal fade" id="modalEditCourse" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            {% assign add-module = site.data.online-courses-template.instructor.sections.add-module.popup-edit %}
-            <div class="modal-body">
-                {% include online-courses-template/global/login-input.html label=add-module.input.label input-type=add-module.input.type %}
-                <div class="modal-body__btn">
-                    {% include online-courses-template/global/button.html btn=add-module.btn  %}
-                </div> 
-            </div>
-            <div class="modal-footer">
-                <div class="modal-footer__btn">
-                    {% include online-courses-template/global/button.html btn=add-module.btn-add  %}
-                </div> 
-            </div>
-        </div>
-    </div>
-</div>
+

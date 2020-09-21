@@ -1,5 +1,6 @@
 ---
 layout: online-courses-template/instructor-dash
+title: Instructor dashboard 
 ---
 {% assign image-directory= site.data.online-courses-template.global.site.directories.images
     %}
@@ -7,8 +8,8 @@ layout: online-courses-template/instructor-dash
 <div class="instructor-welcome">
     
     <h1 class="title mtb-bigger">
-            Welcome to your instructor dashboard
+           {{site.data.online-courses-template.instructor.dashboard-welcome.title}}
     </h1>
 
-    <img src="{{image-directory | append: 'instructor-welcome.png' | relative_url}}" alt="{{chat.image.alt}}" />
+    <img src="{{image-directory | append: site.data.online-courses-template.instructor.dashboard-welcome.image.name | relative_url}}" alt="{{site.data.online-courses-template.instructor.dashboard-welcome.image.alt}}" />
 </div>

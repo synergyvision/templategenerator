@@ -1,0 +1,46 @@
+.message-fixed{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    @include abscenter;
+    flex-direction: column;
+    align-items: flex-end;
+    .icon-chat-fixed{
+        margin-top: 20px;
+        padding: 10px;
+        background-color: var(--color-primary);
+        height: 60px; width: 60px;
+        border-radius: 50%;
+        box-shadow: 0 2.5px 5px rgba(black,.2);
+        cursor: pointer;
+        @include abscenter;
+        transition: all .2s;
+        &:hover{
+            transform: scale(0.95);
+        }
+        .icon{
+            height: 30px; width: 30px;
+            fill: #fff;
+    
+        }
+    }
+   
+    
+}
+
+.displayNone{
+    display: none;
+    animation: moveUp 1s;
+}
+
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,18 @@
+---
+layout: online-courses-template/instructor-dash
+title: Instructor dashboard | Create a course
+---
+
+{% assign image-directory=
+    site.data.online-courses-template.global.site.directories.images %} 
+
+<div class="instructor-courses" style="margin: 50px 0; margin-left: 65px;">
+    <div class="row">
+        <h1 class="title-primary  mtb-big">
+            <img class="instructor-courses__img" src="{{image-directory | append: site.data.online-courses-template.instructor.dashboard-create-course.title.image | relative_url }}" alt="{{site.data.online-courses-template.instructor.dashboard-create-course.title.alt}}">
+            {{site.data.online-courses-template.instructor.dashboard-create-course.title.name}}
+        </h1>
+        {% include online-courses-template/instructor/create-course-stepper.html   %}
+    </div>
+</div>
+

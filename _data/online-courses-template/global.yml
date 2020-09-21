@@ -13,7 +13,30 @@ site:
         - name: global.js
         - name: pagination.js
         - name: selectors.js
+        - name: stepper.js
     courses-videos: /online-courses-videos/
   base-url: '/2-online-courses-template/'
 
 video-error-message: Ops! It seems like there was a problem showing the video!
+
+stepper:
+  btn-next:
+    text: Next
+    type: primary
+  btn-prev:
+    text: Prev
+    type: primary
+
+chat:
+  search-input:
+    title: Search
+  text-area:
+    title: Type a message
+    type: textarea
+  btn-send:
+    text: Send
+    type: secondary
+  message-bottom:
+    title: 'Message:'
+  header:
+    title: Chat with

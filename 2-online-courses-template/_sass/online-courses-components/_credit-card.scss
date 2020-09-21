@@ -1,0 +1,24 @@
+.credit-card{
+    @include abscenter;
+    justify-content: space-between !important;
+    width: 100%;
+    margin:10px 0;
+    &__info{
+        @include abscenter;
+        &>*{
+            margin:0 7.5px;
+        }
+        .image{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            img{
+                
+                width: 100%;
+                height: auto;
+                object-fit: contain; /* Fit logo in the image size */
+                -o-object-fit: contain; /* Fit logo fro opera browser */
+            }
+        }
+    }
+}
