@@ -1,0 +1,8 @@
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images
+    %}
+<div class="image-title">
+    {% include online-courses-template/global/title.html size='medium' title=include.info.title subtitle=include.info.subtitle %}
+    <div class="image-container">
+        <img src="{{image-directory | append: include.info.image.name | relative-url}}" alt="{{include.info.image.alt}}">
+    </div>
+</div>

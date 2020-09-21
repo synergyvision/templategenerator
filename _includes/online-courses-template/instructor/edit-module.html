@@ -1,0 +1,12 @@
+    <div class="abscenter">
+        {% include online-courses-template/global/login-input.html input-name=site.data.online-courses-template.instructor.sections.popup-edit.input.name input-type=site.data.online-courses-template.instructor.sections.popup-edit.input.type %}
+    </div>
+    <div class="abscenter">
+    {% for btn in site.data.online-courses-template.instructor.sections.popup-edit.btn %}
+        {% include online-courses-template/global/button.html btn=btn %}
+    {% endfor %}
+    </div>
+    <div class="abscenter">
+        {% include online-courses-template/global/button.html btn=site.data.online-courses-template.instructor.sections.popup-edit.btn-save %}
+    </div>
+    

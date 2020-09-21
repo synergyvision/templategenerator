@@ -47,8 +47,12 @@
         }
     }
     &__add{
-        width: max-content;
-        margin-left: auto;
+        @include abscenter;
+        width: 100%;
+        flex-wrap: nowrap;
+        @include respond(tab-port){
+            flex-direction: column;
+        }
     }
 }
 
@@ -76,9 +80,16 @@
         overflow: scroll;
 }
 .list-group-item{
-    &:hover{
-        background-color: $gray-light;
+    display: flex !important;
+    animation: fadeIn 1s;
+    @include abscenter;
+    justify-content: space-between;
+
+    .plane-link{
+        margin: 0 10px;
     }
+
+  
     a{
         font-size: 1.6rem !important;
         color: $gray;
@@ -86,4 +97,10 @@
             color: var(--color-primary);
         }
     }
+
 }
+
+@keyframes fadeIn {
+    0% {opacity: 0.0;}
+    100% {opacity: 1.0;}
+  }

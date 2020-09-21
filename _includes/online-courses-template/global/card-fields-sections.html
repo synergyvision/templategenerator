@@ -13,14 +13,42 @@
                 </div>
             {% endif %}
             <div class="fields"> 
-                <div class="left-side">
-                    {% assign inputs = include.sections[forloop.index0].left-fields %}
-                    {% include online-courses-template/global/fields.html inputs=inputs %}
-                </div>
-                <div class="right-side">
-                    {% assign inputs = include.sections[forloop.index0].right-fields %}
-                    {% include online-courses-template/global/fields.html inputs=inputs %}
-                </div>
+                {% assign inputs = include.sections[forloop.index0].left-fields %}
+                {% if inputs %}
+                    <div class="left-side">
+                        {% include online-courses-template/global/fields.html inputs=inputs %}
+                    </div>
+                {% endif %}
+                {% assign inputs = include.sections[forloop.index0].right-fields %}
+                {% if inputs %}    
+                    <div class="right-side">
+                        {% include online-courses-template/global/fields.html inputs=inputs %}
+                    </div>
+                {% endif %}
+                {% assign inputs = include.sections[forloop.index0].left-fields-big %}
+                {% if inputs %}
+                    <div class="left-side-big">
+                        {% include online-courses-template/global/fields.html inputs=inputs %}
+                    </div>
+                {% endif %}
+                {% assign inputs = include.sections[forloop.index0].left-fields-small %}
+                {% if inputs %}
+                    <div class="left-side-small">
+                        {% include online-courses-template/global/fields.html inputs=inputs %}
+                    </div>
+                {% endif %}
+                {% assign inputs = include.sections[forloop.index0].right-fields-big %}
+                {% if inputs %}
+                    <div class="right-side-big">
+                        {% include online-courses-template/global/fields.html inputs=inputs %}
+                    </div>
+                {% endif %}
+                {% assign inputs = include.sections[forloop.index0].right-fields-small %}
+                {% if inputs %}
+                    <div class="right-side-small">
+                        {% include online-courses-template/global/fields.html inputs=inputs %}
+                    </div>
+                {% endif %}
             </div>
             <div class="btn-content">
                 {% assign buttons= include.sections[forloop.index0].btn %}  

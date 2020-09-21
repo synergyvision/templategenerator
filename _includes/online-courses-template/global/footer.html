@@ -11,7 +11,7 @@
             <li>
                 {% for a in (1..4) %}
                     {% if site.data.online-courses-template.footer.links[counter] %}
-                        <a href="">{{site.data.online-courses-template.footer.links[counter].name}}</a>
+                        <a href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.footer.links[counter].href | relative_url}}">{{site.data.online-courses-template.footer.links[counter].name}}</a>
                         {% assign counter= counter | plus:1 %}
                     {% endif %}
                 {% endfor %}

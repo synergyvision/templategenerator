@@ -7,6 +7,13 @@ info:
   email: alexanderzverev@gmail.com
   status: Student
   title: Informatic Engineer
+  credit-card:
+    type: visa
+    image:
+      name: 'visa-logo.png'
+      alt: Visa
+    number: '**** **** **** 9473'
+    expiration: '05/23'
   description: Animal lover. Tennis lover. Fullstack developer in Synplus enterprise.
   social-media:
     - name: instagram-user

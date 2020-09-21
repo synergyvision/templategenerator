@@ -262,7 +262,6 @@ function showCourses(name){
             }
           
           array.push({name: name, value: selectedValue});
-  window.alert(name+'---'+selectedValue);
   console.log(array);
   console.log(array2);
   //console.log(array2);

@@ -7,6 +7,10 @@
     border: 1px solid $gray-light;
     display: flex;
     overflow: hidden;
+    @include respond(tab-port){
+        flex-direction: column;
+        width: 98%;
+    }
     .content{
         transform: scale(0);
         @include abscenter;
@@ -19,23 +23,41 @@
             @include abscenter;
             align-items: flex-start;
 
-           
-
+            @include respond(tab-port){
+                flex-direction: column;
+            }
             & > * {
                 width: 100%;
                 @include abscenter;  
-
+                
                 .title{
                     color: $gray;
                     font-size: 2rem;
                     margin:10px 0;
                 }
             }
-            .left-side,.right-side{
-                width: 50% !important;
-                flex-direction: column;
+            .label-checkbox{
+                width: 100% !important;
             }
-
+            .left-side,.right-side{
+                width: 50%;
+                flex-direction: column;
+                @include respond(tab-port){
+                    width: 100%;
+                }
+            }
+            .left-side-big,.right-side-big{
+                width: 75%;
+                @include respond(tab-port){
+                    width: 100%;
+                }
+            }
+            .left-side-small,.right-side-small{
+                width: 25%;
+                @include respond(tab-port){
+                    width: 100%;
+                }
+            }
         }
         .btn-content{
             width: 100%;
@@ -58,6 +80,9 @@
         background-color: var(--color-primary); 
         color: #fff;     
         cursor: pointer;
+        @include respond(tab-port){
+            border-radius: 10px 10px 0 0;
+        }
         .link{
             padding: 20px;
             border-left: 4px solid transparent;

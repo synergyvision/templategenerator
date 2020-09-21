@@ -2,8 +2,11 @@
 .instructor-message{
     min-height: 100vh;
     margin: 50px 0;
-    margin-left: 65px;
+    margin-left: 6.5rem;
     @include abscenter;
+    @include respond(tab-port){
+        margin-left: 5rem;
+    }
 }
 .conversation-container {
     margin: 0 auto;
@@ -12,19 +15,41 @@
     border-radius: 5px;
     display: flex;
     height: 630px;
+    @include respond(tab-port){
+        height: max-content;
+        flex-direction: column;
+        max-width: 90%;
+    }
   .people-list{
       width: 270px;
       padding: 15px;
       overflow: scroll;
+      @include respond(tab-port){
+          width: 100%;
+      }
       ul{
-
-          padding: 15px 0;
+        
+            overflow: scroll;
+            margin-bottom: 0px;
+            padding: 15px 0;
+            @include respond(tab-port){
+                height: 130px;
+            }       
           li{
              margin: 5px 0;
              height: 65px;
+             cursor: pointer;
+              padding: 5px;
+              border-radius: 5px;
               @include abscenter;
-                justify-content: flex-start;
-             
+              justify-content: flex-start;
+              transition: all .2s;
+              @include respond(tab-port){
+                justify-content: center;
+              }
+              &:hover{
+                background-color: var(--color-primary-light);
+                }
               .about{
                   margin-left: 10px;
                   .name{
@@ -37,59 +62,64 @@
           }
       }
     }
-    .chat{
-        display: block;
-        background-color: $gray-light;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        width: 500px;
-        overflow: hidden;
-        height: cover;
-        display: flex;
-        flex-direction: column;
-        &__header{
-            padding: 10px;
-            @include abscenter;
-            justify-content: flex-start;
-            border-bottom: 1px solid #fff;
-            .info{
-                margin: 5px;
-                margin-left: 15px;
+
+}
+
+.chat{
+    display: block;
+    background-color: $gray-light;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 500px;
+    overflow: hidden;
+    height: cover;
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-port){
+        width: 100%;
+    }
+    &__header{
+        padding: 10px;
+        @include abscenter;
+        justify-content: flex-start;
+        border-bottom: 1px solid #fff;
+        .info{
+            margin: 5px;
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            color: $gray-dark;
+            .inline{
                 display: flex;
-                flex-direction: column;
-                color: $gray-dark;
-                .inline{
-                    display: flex;
-                    .name{
-                        font-size: 1.6rem;
-                        font-weight: 400;
-                    }
-                    .chat-status{ 
-                        margin: 0 10px;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        background-color: rgb(112, 179, 13);
-                    }
+                .name{
+                    font-size: 1.6rem;
+                    font-weight: 400;
                 }
-                .status{
-                    font-size: 1.2rem;
+                .chat-status{ 
+                    margin: 0 10px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: rgb(112, 179, 13);
                 }
             }
-            
+            .status{
+                font-size: 1.2rem;
+            }
         }
-        &__messages{
-            padding:10px;
-            height: 400px;
-            overflow: scroll;
-        }
-        &__textarea{
-            @include abscenter;
-        }
-        &__btn{
-            width: max-content;
-            align-self: flex-end;
-        }
+        
+    }
+    &__messages{
+        padding:10px;
+        height: 400px;
+        overflow: scroll;
+    }
+    &__textarea{
+        @include abscenter;
+    }
+    &__btn{
+        width: max-content;
+        align-self: flex-end;
     }
 }
 
@@ -109,43 +139,44 @@
       }
 }
 
-.message-blue {
+.message-received {
     max-width:90%;
     line-height: 20px;
     position: relative;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     background-color: #fff;
     width: max-content;
     height:max-content;
     text-align: left;
-    font: 400 1.6rem 'Open Sans', sans-serif !important;
     border: 1px solid #fff;
     border-radius: 10px;
 }
 
 
-.message-orange {
+.message-sent {
     max-width:90%;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     margin-left: calc(100% - 240px);
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--color-primary);
     width: max-content;
     height:max-content;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 2rem;
     text-align: left;
-    font: 400 1.6em 'Open Sans', sans-serif !important;
     border: 1px solid var(--color-primary);
     color: #fff;
     border-radius: 10px;
 }
 .message-content {
-    padding-bottom: 20px;
-    font-size: 1.6rem !important;
+    padding-bottom: 2rem;
+    font-size: 1.6rem ;
+    @include respond(tab-port){
+        font-size: 1.4rem !important;
+    }
 }
 
 .message-timestamp-right {
@@ -164,7 +195,7 @@
     left: 10px;
 }
 
-.message-blue:after {
+.message-received:after {
     content: '';
     position: absolute;
     width: 0;
@@ -176,7 +207,7 @@
     left: -15px;
 }
 
-.message-blue:before {
+.message-received:before {
     content: '';
     position: absolute;
     width: 0;
@@ -188,7 +219,7 @@
     left: -17px;
 }
 
-.message-orange:before {
+.message-sent:before {
     content: '';
     position: absolute;
     width: 0;

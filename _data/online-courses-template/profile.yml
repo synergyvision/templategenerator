@@ -99,6 +99,9 @@ sections:
             type: checkbox
             checked: true
             text: Conservar mi información de pago para otras compras
+          - component:
+            type: component
+            name: 'online-courses-template/cards/credit-card-edit.html'
       btn:
        - text: Save changes
          type: primary

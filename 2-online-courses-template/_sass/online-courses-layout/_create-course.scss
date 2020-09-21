@@ -1,0 +1,6 @@
+.create-course{
+    &-basic-info{
+        @include abscenter;
+        flex-direction: column;
+    }
+}

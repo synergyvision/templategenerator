@@ -5,6 +5,7 @@ identifier: course6
 categories: [development,design]
 name: Investing In Stocks The Complete Course! (11 Hour) 
 owner: Milos Raonic
+video: 11111.mp4
 price: 45,99$
 discount: true
 discount-price: 40,25$

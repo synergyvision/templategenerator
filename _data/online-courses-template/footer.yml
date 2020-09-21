@@ -5,6 +5,7 @@ logo:
 links: 
     - name: Teach on Coursing
     - name: Our blog
+      href: 'blog.html'
     - name: About us
     - name: Contact us
     - name: Help and support

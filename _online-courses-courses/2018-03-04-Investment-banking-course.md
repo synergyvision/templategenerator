@@ -5,6 +5,7 @@ identifier: course9
 categories: [business]
 name: 'The Complete Investment Banking Course 2020'
 owner: Milos Raonic
+video: 11111.mp4
 price: 45,99$
 discount: true
 discount-price: 40,25$

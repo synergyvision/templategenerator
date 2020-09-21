@@ -11,6 +11,8 @@
 }
 
 .title-primary {
+    @include abscenter;
+    justify-content: flex-start;
     color: var(--color-secondary);
     font-size: 3.5rem;
     letter-spacing: 5px;

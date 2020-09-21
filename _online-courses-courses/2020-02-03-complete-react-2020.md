@@ -4,6 +4,7 @@ identifier: course11
 categories: [development,design]
 name: Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 owner: Milos Raonic
+video: 11111.mp4
 price: 45,99$
 discount: true
 discount-price: 40,25$

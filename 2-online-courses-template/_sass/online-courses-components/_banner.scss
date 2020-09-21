@@ -15,6 +15,7 @@
     }
     &__box{
         @include abscenter;
+        flex-wrap: nowrap;
         justify-content: space-between;
         padding: 40px 25px;
         position: absolute;
