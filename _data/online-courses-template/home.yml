@@ -7,8 +7,8 @@ us:
     - name: section1-1.jpg
       alt: Section2 pic
   collection:
-      - text: Aprende de las principales universidades y empresas
-      - text: Encuentra opciones flexibles y asequibles
+      - text: Learn from top universities and companies
+      - text: Find flexible and affordable options
       - text: Domina las habilidades con un aprendizaje profundo
       - text: Obtén credenciales reconocidas por la industria
   button:

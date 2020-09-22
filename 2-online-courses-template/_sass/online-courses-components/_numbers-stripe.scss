@@ -1,0 +1,26 @@
+.numbers-stripe{
+    height: max-content;
+    background-color: $gray-light;
+    padding: 40px 10px;
+    @include abscenter;
+    justify-content: space-around;
+    box-shadow: 0 2.5px 5px rgba(black,.2);
+    .number-box{
+        margin: 20px;
+        @include abscenter;
+        flex-direction: column;
+        .number{
+            font-size: 4.8rem;
+            font-weight: bold;
+            color: transparent;
+            background: linear-gradient(to right, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            background: -moz-linear-gradient(45deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+        }
+        .text{
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-primary)
+        }
+    }
+}

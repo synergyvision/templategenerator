@@ -7,12 +7,7 @@ title: Coursing | Blog
 site.data.online-courses-template.global.site.directories.images %}
 
 <div class="blog" style="">
-  <div
-    class="blog__banner"
-    style="background-image:url({{site.data.online-courses-template.global.site.directories.images | append: 'background-footer.jpg' | relative_url }});"
-  >
-    {% include online-courses-template/global/title.html size='big' title=site.data.online-courses-template.blog.title %}
-  </div>
+  {% include online-courses-template/global/banner-secondary.html title=site.data.online-courses-template.blog.title %}
   <div class="blog__content row">
     <div class="blog-posts">
       {% for blog in site.online-courses-blog %}

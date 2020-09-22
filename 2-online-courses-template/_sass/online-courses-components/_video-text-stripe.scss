@@ -1,0 +1,28 @@
+.video-text-stripe{
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)) !important;
+    height: max-content; 
+    display: flex;
+    @include respond(tab-port){
+        flex-wrap: wrap;
+    }
+    &>*{
+        width: 50%;
+        color: #fff !important;
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+    .title-container{
+        color: #fff !important;
+    }
+    .text{
+        padding: 30px 10px;
+        @include abscenter;
+        flex-direction: column;            
+        p{
+            font-size: 1.6rem;
+            padding: 25px;
+            text-align: center;
+        }
+    }
+}

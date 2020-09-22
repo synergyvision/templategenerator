@@ -1,0 +1,15 @@
+<div class="about-us__story {% if include.item.inverted == true %} about-us__story--inverted {% endif %}">
+    <div class="img">
+      <img
+        src="{{include.image-directory | append: include.item.image.name | relative_url}}"
+        alt="{{include.item.image.alt}}"
+      />
+    </div>
+    <div class="text">
+      {% include online-courses-template/global/title.html size='medium'
+      title=include.item.title %}
+      <p>
+       {{include.item.text}}
+      </p>
+    </div>
+  </div>

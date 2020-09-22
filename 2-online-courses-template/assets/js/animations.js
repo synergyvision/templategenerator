@@ -27,4 +27,16 @@ $('.section-contact > .form-side').waypoint(function(direction){
 $('.community-card').waypoint(function(direction){
     $('.community-card').addClass('animated bounceIn'); 
 },{offset:'100%;'})
+$('.number-box').waypoint(function(direction){
+    $('.number-box').addClass('animated bounceIn'); 
+},{offset:'100%;'})
+$('.about-us__video').waypoint(function(direction){
+    $('.about-us__video > .video').addClass('animated fadeInLeft'); 
+},{offset:'100%;'})
+$('.about-us__video').waypoint(function(direction){
+    $('.about-us__video > .text').addClass('animated fadeInRight'); 
+},{offset:'100%;'})
+$('.about-us__story').waypoint(function(direction){
+    $('.about-us__story > .img').addClass('animated bounceIn'); 
+},{offset:'100%;'})
 });

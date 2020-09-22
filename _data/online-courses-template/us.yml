@@ -1,0 +1,37 @@
+title: About us
+
+numbers:
+  - number: '+356'
+    text: courses
+  - number: '+23'
+    text: instructors
+  - number: +60k
+    text: learners
+  - number: '+100'
+    text: projects
+
+stripe-video: 
+  title: Lorem ipsum dolor' text
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias dolor, sapiente quisquam maxime, consectetur vitae pariatur odio at molestiae minima magni sequi nesciunt. Consequatur facilis aliquam possimus hic ducimus!
+  video: us-1.mp4
+
+stories:
+  - title: Our vision
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias
+          dolor, sapiente quisquam maxime, consectetur vitae pariatur odio at
+          molestiae minima magni sequi nesciunt. Consequatur facilis aliquam
+          possimus hic ducimus!
+    image:
+      name: 'us-1.jpg'
+      alt: Us 1
+    inverted: true
+  - title: Our mission
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias
+          dolor, sapiente quisquam maxime, consectetur vitae pariatur odio at
+          molestiae minima magni sequi nesciunt. Consequatur facilis aliquam
+          possimus hic ducimus!
+    image:
+      name: 'us-2.jpg'
+      alt: Us 2
+    inverted: false
+  
