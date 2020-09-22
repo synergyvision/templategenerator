@@ -18,7 +18,13 @@
       flex-direction: column;
       display: none;
       width: 90%;
-
+      .title-container{
+        h1{
+          @include respond(tab-port){
+            font-size: 3rem;
+          }
+        }
+      }
       .course-title{
         font-size: 4rem;
         color: $gray;

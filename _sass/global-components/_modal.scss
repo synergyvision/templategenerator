@@ -36,8 +36,9 @@
       }
       
       .popup h2 {
+        font-size: 2.5rem;
         margin-top: 0;
-        color: #333;
+        color: $gray;
         font-family: Tahoma, Arial, sans-serif;
       }
       .popup .close {
