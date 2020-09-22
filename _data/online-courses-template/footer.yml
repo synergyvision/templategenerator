@@ -1,18 +1,22 @@
 logo: 
   image: 'Coursing.png'
   alt: 'Logo'
-  
+ 
 links: 
-    - name: Teach on Coursing
     - name: Our blog
       href: 'blog.html'
     - name: About us
       href: 'about-us.html'
-    - name: Contact us
-    - name: Help and support
-    - name: Terms
-    - name: Privacy Policy
+    - name: Our offices
     - name: Allies
+      href: 'allies.html'
+    - name: Help and support
+      href: 'info/help-and-support.html'
+    - name: Terms
+      href: 'info/terms.html'
+    - name: Privacy Policy
+      href: 'info/privacy-policy.html'
+
 
 social-media:
     - name: Twitter

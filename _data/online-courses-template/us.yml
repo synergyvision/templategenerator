@@ -34,4 +34,7 @@ stories:
       name: 'us-2.jpg'
       alt: Us 2
     inverted: false
+
+members:
+  title: Meet all our team
   
