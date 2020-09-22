@@ -31,10 +31,16 @@
     }
     &:hover{
         width: 25rem;
+        @include respond(tab-port){
+            width: 5rem;
+        }
         .link .text{
             display: block;
             //visibility: visible;
             transform: translate(0);
+            @include respond(tab-port){
+                display: none;
+            }
         }
     }
     .link{

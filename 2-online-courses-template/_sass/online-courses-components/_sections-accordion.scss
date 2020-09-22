@@ -83,6 +83,7 @@
     display: flex !important;
     animation: fadeIn 1s;
     @include abscenter;
+    flex-wrap: nowrap;
     justify-content: space-between;
 
     .plane-link{

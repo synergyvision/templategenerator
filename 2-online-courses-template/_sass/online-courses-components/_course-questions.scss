@@ -1,22 +1,26 @@
 .course-questions{
-    margin:30px;
-    padding:20px;
+    margin:3rem 1.5rem;
+    padding:2rem;
     border-radius: 5px;
     border: 1px solid $gray-light;
     @include abscenter;
     flex-wrap: nowrap;
+    @include respond(phone){
+        flex-direction: column;
+    }
     .image-side{
         width: 90px;
         padding: 15px;
+        @include abscenter;
         .img-container {
             box-shadow: 0 2.5px 5px rgba(black,.2);
             position: relative;
-            width: 55px;
-            height: 55px;
+            width: 55px !important;
+            height: 55px !important;
             overflow: hidden;
             border-radius: 50%;
             background-color: #fff;
-        
+            
             img {
                 width: 100%;
                 height: auto;
@@ -34,6 +38,9 @@
         align-items: flex-start;
         & > *{
             padding: 5px 0;
+            @include respond(phone){
+                text-align: center;
+            }
         }
         .question{
             font-size: 1.6rem;
@@ -44,6 +51,9 @@
         }
         .circle-btn{
             align-self: flex-end;
+            @include respond(phone){
+                align-self: center;
+            }
         }
     }
    
