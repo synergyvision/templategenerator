@@ -102,7 +102,7 @@ dashboard-create-course:
     subtitle: We will be activating it soon
     image:
       name: completed.png
-      alt: Completedd
+      alt: Completed
 
 sections:
   module-edit:
