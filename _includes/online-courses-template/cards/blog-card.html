@@ -1,0 +1,14 @@
+<a class="blog-card" href="{{ include.url | relative_url }}">
+    <div class="blog-card__image">
+        <img src="{{include.image-directory | append: include.image.name | relative_url}}" alt="{{include.image.alt}}">
+    </div>
+    <div class="blog-card__content">
+        <div class="title">
+            {{include.title}}
+        </div>
+        <div class="date">{{include.date | date: "%b %d, %y" }}</div>
+        <div class="description">
+            {{include.description | truncate: 300}}
+        </div>
+    </div>
+</a>

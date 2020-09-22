@@ -40,6 +40,7 @@ banner:
   image: 'coursing-bg.jpeg'
   box:
     text: First-class learning, anytime, anywhere
+    second-text: Take the next step in your professional life
     buttons:
       - text: Log in
         href: 'login.html'

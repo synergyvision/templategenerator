@@ -1,8 +1,39 @@
 ---
 layout: online-courses-template/online-courses-header
+title: Coursing | Blog
 ---
 
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %}
 
 <div class="blog" style="">
-
+  <div
+    class="blog__banner"
+    style="background-image:url({{site.data.online-courses-template.global.site.directories.images | append: 'background-footer.jpg' | relative_url }});"
+  >
+    {% include online-courses-template/global/title.html size='big' title=site.data.online-courses-template.blog.title %}
+  </div>
+  <div class="blog__content row">
+    <div class="blog-posts">
+      {% for blog in site.online-courses-blog %}
+            <div class="card-cont">
+                {% include online-courses-template/cards/blog-card.html
+                image-directory=image-directory image=blog.image title=blog.blog-title
+                description=blog.short-description date=blog.date url=blog.url %}
+            </div>
+      {% endfor %}
+      <div class="abscenter mtb-big">
+        {% assign max-per-page=3.0 %} {% assign number-of-pages = site.online-courses-blog | size |
+        divided_by: max-per-page | ceil %} {% include global/pagination.html
+        number-of-pages=number-of-pages max-per-page=max-per-page scroll=true
+        %}
+      </div>
+    </div>
+    <div class="categories">
+        {% for category in site.data.online-courses-template.blog.categories %}
+            {% include online-courses-template/cards/category-card.html
+            name=category.name %} 
+        {% endfor %}
+    </div>
+  </div>
 </div>
