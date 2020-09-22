@@ -18,8 +18,9 @@ site.data.online-courses-template.global.site.directories.images %} {% assign us
     {% include online-courses-template/global/story-stripe.html image-directory=image-directory item=item %}
   {% endfor %}
   <div class="about-us__team">
-    {% include online-courses-template/global/title.html size='big' title='Meet
-    all our team' %}
+      <div class="mtb-big">
+        {% include online-courses-template/global/title.html size='big' title=us.members.title %}
+      </div>
         <div class="members">
             {% for member in site.data.online-courses-template.team.members %}
                 <div class="card-cont">

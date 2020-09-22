@@ -39,4 +39,7 @@ $('.about-us__video').waypoint(function(direction){
 $('.about-us__story').waypoint(function(direction){
     $('.about-us__story > .img').addClass('animated bounceIn'); 
 },{offset:'100%;'})
+$('.banner-secondary').waypoint(function(direction){
+    $('.banner-secondary > .title-container').addClass('animated fadeInRight'); 
+},{offset:'100%;'})
 });

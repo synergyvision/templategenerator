@@ -13,15 +13,14 @@ categories:
 
 header-buttons:
   - icon: icon-heart
-    sections:
-      - title: Desarrollo web
-      - title: Negocios
-      - title: Finanzas y contabilidad
   - icon: icon-shopping-cart
     href: 'my-cart.html'
 
 links-dropdown:
   sections:
+    - section: 
+      - title: All courses
+        href: 'categories/all.html'
     - section:
       - title: My courses
         href: 'my-courses.html'

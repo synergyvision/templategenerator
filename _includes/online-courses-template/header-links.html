@@ -7,15 +7,17 @@
     {% if include.link.name %}
       <div class="title">{{include.link.name}}</div>
     {% endif %}
-    <div
-      class="dropdown-menu1 {% if include.position == 'left' %} dropdown-menu--left {% else if include.position == 'right' %} dropdown-menu--right {% endif %}"
-    >
-      {% for link in include.sections %}
-      <a href="{{link.url | relative_url}}" class="dropdown-menu1__link">
-        <div class="title-link">{{link.title | capitalize }}</div>
-        {% include global/svg.html directory=include.svg-directory
-        image='icon-keyboard_arrow_right' class='icon-link' %}
-      </a>
-      {% endfor %}
-    </div>
+    {% if include.sections %}
+        <div
+          class="dropdown-menu1 {% if include.position == 'left' %} dropdown-menu--left {% else if include.position == 'right' %} dropdown-menu--right {% endif %}"
+        >
+          {% for link in include.sections %}
+          <a href="{{link.url | relative_url}}" class="dropdown-menu1__link">
+            <div class="title-link">{{link.title | capitalize }}</div>
+            {% include global/svg.html directory=include.svg-directory
+            image='icon-keyboard_arrow_right' class='icon-link' %}
+          </a>
+          {% endfor %}
+        </div>
+    {% endif %}
   </div>
