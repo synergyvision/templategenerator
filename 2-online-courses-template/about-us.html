@@ -2,3 +2,37 @@
 layout: online-courses-template/online-courses-header
 title: Coursing | About us
 ---
+
+{% assign image-directory=
+site.data.online-courses-template.global.site.directories.images %} {% assign us
+= site.data.online-courses-template.us %}
+<div class="about-us">
+  {% include online-courses-template/global/banner-secondary.html
+  title=site.data.online-courses-template.us.title %} {% include
+  online-courses-template/global/numbers-stripe.html numbers=us.numbers %} {%
+  include online-courses-template/global/video-text-stripe.html
+  source-video=site.data.online-courses-template.global.site.directories.courses-videos
+  video=us.stripe-video.video title=us.stripe-video.title text=us.stripe-video.text %}
+
+  {% for item in us.stories %}
+    {% include online-courses-template/global/story-stripe.html image-directory=image-directory item=item %}
+  {% endfor %}
+  <div class="about-us__team">
+    {% include online-courses-template/global/title.html size='big' title='Meet
+    all our team' %}
+        <div class="members">
+            {% for member in site.data.online-courses-template.team.members %}
+                <div class="card-cont">
+                    {% include online-courses-template/cards/community-card.html
+                    member=member image-directory=image-directory %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="abscenter mtb-big">
+        {% assign max-per-page=9.0 %} {% assign number-of-pages =
+        site.data.online-courses-template.team.members | size | divided_by:
+        max-per-page | ceil %} {% include global/pagination.html
+        number-of-pages=number-of-pages max-per-page=max-per-page scroll=false %}
+        </div>
+  </div>
+</div>

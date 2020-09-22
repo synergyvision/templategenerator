@@ -1,0 +1,12 @@
+<div class="video-text-stripe">
+    <div class="video">
+        {% include global/video.html
+            source=include.video
+            source-directory=include.source-video
+            %}
+    </div>
+    <div class="text">
+        {% include online-courses-template/global/title.html size='medium' title=include.title  %}
+        <p>{{include.text}}</p>
+    </div> 
+</div>

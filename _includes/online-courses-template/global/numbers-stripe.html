@@ -1,0 +1,8 @@
+<div class="numbers-stripe">
+    {% for number in include.numbers %}
+        <div class="number-box">
+            <div class="number">{{number.number}}</div>
+            <div class="text">{{number.text}}</div>
+        </div>
+    {% endfor %}
+</div>

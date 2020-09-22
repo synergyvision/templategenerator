@@ -1,0 +1,52 @@
+.about-us{
+    &__team{
+        margin:50px 5%;
+        .members{
+            @include abscenter;
+        }
+    }
+
+    &__story{
+        margin: 30px;
+        @include abscenter;
+        flex-wrap: nowrap;
+        height: max-content;
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+        &>*{
+            width: 50%;
+            margin:15px;
+            @include respond(tab-port){
+                width: 100%;
+            }
+        }
+        .img{
+            @include abscenter;
+            height: auto;
+            img{
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+                -o-object-fit: contain;
+            }
+        }
+        .text{
+            @include abscenter;
+            flex-direction: column;
+            color: $gray;
+            
+            p{
+                font-size: 1.6rem;
+                padding: 25px;
+                text-align: center;
+            }
+        }
+    }
+    &__story--inverted{
+        flex-direction: row-reverse;
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+    }
+}
