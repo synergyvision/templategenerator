@@ -1,0 +1,33 @@
+title: Our offices
+
+numbers:
+  - number: 100k
+    text: students
+  - number: '12'
+    text: languages
+  - number: 34k
+    text: courses
+  - number: '25'
+    text: countries
+
+collection:
+  - title: Sydney, Australia
+    text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laudantium omnis distinctio quis perferendis est nemo asperiores commodi voluptas tenetur beatae praesentium illum necessitatibus esse, voluptatibus tempora sequi fugiat quas?
+    image:
+      name: country-1.jpg
+      alt: Office 1
+  - title: Caracas, Venezuela
+    text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laudantium omnis distinctio quis perferendis est nemo asperiores commodi voluptas tenetur beatae praesentium illum necessitatibus esse, voluptatibus tempora sequi fugiat quas?
+    image:
+      name: country-2.jpg
+      alt: Office 2
+  - title: New York, United States
+    text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laudantium omnis distinctio quis perferendis est nemo asperiores commodi voluptas tenetur beatae praesentium illum necessitatibus esse, voluptatibus tempora sequi fugiat quas?
+    image:
+      name: country-3.jpg
+      alt: Office 3
+  - title: Madrid, Spain
+    text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laudantium omnis distinctio quis perferendis est nemo asperiores commodi voluptas tenetur beatae praesentium illum necessitatibus esse, voluptatibus tempora sequi fugiat quas?
+    image:
+      name: country-4.jpg
+      alt: Office 3

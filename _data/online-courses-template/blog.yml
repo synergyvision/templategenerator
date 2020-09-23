@@ -7,3 +7,6 @@ categories:
   - name: Freelance
   - name: Design
   - name: Health
+back-to-blog: 
+  text: '&ShortLeftArrow; Back to blog'
+  href: 'blog.html'

@@ -1,0 +1,25 @@
+---
+layout: online-courses-template/online-courses-header
+title: Coursing | Offices
+---
+{% assign image-directory=
+    site.data.online-courses-template.global.site.directories.images %}
+    
+{% include online-courses-template/global/banner-secondary.html
+    title=site.data.online-courses-template.offices.title %}
+
+{% include online-courses-template/global/numbers-stripe.html numbers=site.data.online-courses-template.offices.numbers %}   
+
+
+{% for i in site.data.online-courses-template.offices.collection %}
+{% assign inverted = forloop.index | modulo: 2 %}
+{% if inverted == 0 %}
+    {% assign inverted = false %}
+{% else %}
+    {% assign inverted = true %}
+{% endif %}
+{%
+    include online-courses-template/global/video-text-stripe.html
+    image-directory=image-directory inverted=inverted
+    image=i.image title=i.title text=i.text %}
+{% endfor %}
