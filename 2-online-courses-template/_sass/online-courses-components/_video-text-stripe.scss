@@ -12,6 +12,12 @@
             width: 100%;
         }
     }
+    .image{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
     .title-container{
         color: #fff !important;
     }
@@ -25,4 +31,8 @@
             text-align: center;
         }
     }
+}
+
+.video-text-stripe--inverted{
+    flex-direction: row-reverse;
 }

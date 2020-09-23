@@ -3,7 +3,7 @@
     padding: 10px;
     flex-wrap: nowrap;
     border-bottom: 1px solid $gray-light;
-    margin: 15px;
+    margin: 15px auto;
     width: 800px;
     max-width: 100%;
     @include respond(tab-port){
@@ -34,6 +34,7 @@
         @include respond(tab-port){     
             border-left: none;
             align-items: center;
+            width: 100%;
         }
         & > *{
             font-size: 1.4rem;

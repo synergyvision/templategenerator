@@ -1,5 +1,5 @@
 .title-container{
-    font-size: 2rem;
+    
     color: grey;
     font-weight: 300;
     @include abscenter;
@@ -10,6 +10,9 @@
     & > *{
         text-align: center;
         margin: 15px;
+    }
+    h1{
+        font-size: 3rem !important;
     }
     .line{
         width: 150px;
@@ -105,6 +108,9 @@
                 font-size: 1.6rem;
                 letter-spacing: 1.2px;
                 margin: 15px 0;
+                @include respond(tab-port){
+                    text-align: center;
+                }
             }
             .line{
                 width: 100px;
@@ -154,7 +160,7 @@
             margin:10px 0;
         }
         .title{
-            font-size: 4.5rem;
+            font-size: 3.5rem;
         }
         .subtitle{
             font-size: 2.8rem;

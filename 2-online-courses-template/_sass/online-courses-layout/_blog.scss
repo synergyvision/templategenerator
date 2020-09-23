@@ -30,6 +30,9 @@
     width: 90%;
     @include abscenter;
     flex-direction: column;
+    .plane-link{
+        align-self: flex-start;
+    }
     &__image{
         max-width: 50rem;
         max-height: 50rem;

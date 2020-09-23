@@ -8,6 +8,7 @@ layout: online-courses-template/online-courses-header
     {{page.blog-title}}
 </div>
 <div class="row blog-content">
+<a class="plane-link" href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.blog.back-to-blog.href | relative_url}}" >{{site.data.online-courses-template.blog.back-to-blog.text}}</a>
     <div class="blog-content__image">
         <img src="{{image-directory | append: page.image.name | relative_url}}" alt="{{page.image.alt}}">
     </div>
