@@ -7,7 +7,6 @@ $(document).ready(function(){
 
 	$('.category_item').click(function(){
 		var catProduct = $(this).attr('category');
-		console.log(catProduct);
 
 		// AGREGANDO CLASE ACTIVE AL ENLACE SELECCIONADO
 		$('.category_item').removeClass('ct_item-active');

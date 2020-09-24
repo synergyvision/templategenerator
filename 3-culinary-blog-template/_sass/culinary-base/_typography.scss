@@ -1,0 +1,13 @@
+.title-primary{
+    h1{
+        font-size: 6rem;
+        color: var(--color-primary-hover);
+    }
+    h2{
+        transform: translate(5%,-80%);
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.6rem;
+        color: var(--color-primary-dark);
+    }
+}

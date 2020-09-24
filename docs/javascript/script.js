@@ -155,7 +155,6 @@ function show_slide(index,index,side){
 }
 
 for (let i=0; i<carousels;i++){
-  console.log(i+1);
     show_slide(slider_index,i+1);
 }
 
@@ -262,12 +261,8 @@ function showCourses(name){
             }
           
           array.push({name: name, value: selectedValue});
-  console.log(array);
-  console.log(array2);
-  //console.log(array2);
-  //console.log(this.array2);
+
   let link = document.querySelectorAll('.card-cont');
-  console.log(link);
   $('.card-cont').css('transform', 'scale(0)');
   $('.card-cont').hide();
     if (link) {
