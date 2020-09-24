@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    {% include global/head.html site=site.data.culinary-blog-template.global.site %}
+    {% assign image-directory=
+        site.data.culinary-blog-template.global.site.directories.images %} 
+    {% assign header-info = site.data.culinary-blog-template.header %}
+    <body>	
+        {% include culinary-blog-template/global/header.html image-directory=image-directory nav-links=header-info.nav-links logo=header-info.logo %}
+        {{ content }} 	
+        {% include global/scripts.html %}
+        {% for js in site.data.culinary-blog-template.global.site.directories.js.collection %}
+            <script src="{{ site.data.culinary-blog-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
+        {% endfor %}
+    </body>
+    <style lang="scss">
+        :root{
+            --color-primary-light: {{site.data.culinary-blog-template.colors.color-primary-light}};
+            --color-primary-dark: {{site.data.culinary-blog-template.colors.color-primary-dark}};
+            --color-primary-hover: {{site.data.culinary-blog-template.colors.color-primary-hover}};
+            --form-background: url({{image-directory | append: site.data.culinary-blog-template.home.newsletter.form.background | relative_url}});
+        }
+    </style>
+</html>

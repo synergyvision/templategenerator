@@ -1,0 +1,17 @@
+<nav class="header">
+    <a class="header__logo">
+        <img src="{{include.image-directory | append: include.logo.name | relative_url}}" alt="{{include.logo.alt}}">
+    </a>
+    <ul class="header__navigation">
+        {% for link in include.nav-links %}
+        <li><a href="{{link.href}}">{{link.name}}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<script>
+    window.addEventListener("scroll", function(){
+        var header= document.querySelector(".header");
+        header.classList.toggle("sticky-header",window.scrollY > 0);
+    })
+</script>

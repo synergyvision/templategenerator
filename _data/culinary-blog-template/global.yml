@@ -1,0 +1,16 @@
+site:
+    title: Haz pan en casa
+    description: This is the site description
+    creator: '@creator-example'
+    twitter: 'your-twitter-account'
+    css: '/3-culinary-blog-template/css/main.css'
+    logo-social-media: 
+    favicon: 
+    directories:
+        svg-icon-directory: 
+        images: /3-culinary-blog-template/assets/images/
+        svg-directory: 
+        js: 
+          name: /3-culinary-blog-template/assets/js/
+          collection: 
+                - name: animations.js
