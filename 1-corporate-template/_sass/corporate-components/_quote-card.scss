@@ -1,7 +1,7 @@
 .quote-card{
     @include abscenter;
     flex-direction: column;
-    box-shadow: 0 5px 10px rgba($color: black, $alpha: .2);
+    box-shadow: $shadow-dark;
     background-color: #fff;
     width: 90%;
     height: auto;

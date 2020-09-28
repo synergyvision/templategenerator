@@ -1,3 +1,4 @@
-color-primary-light: '#d8a763'
-color-primary-hover: '#a57a3e'
-color-primary-dark: '#2c200f'
+color-primary: '#f9b03f'
+color-primary-transparent: '#f9af3fc7'
+color-secondary: '#841c1c'
+color-secondary-dark: '#521010'

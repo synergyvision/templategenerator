@@ -3,7 +3,9 @@
     position:relative;
     @include abscenter;
     padding: 30px;
-
+    @include respond(phone){
+        padding: 30px 10px;
+    }
     .card{
         position: relative;
         max-width:300px;
@@ -14,22 +16,34 @@
         display:flex;
         flex-direction:column;
         overflow: hidden;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        box-shadow: $shadow-dark;
         transition: 0.3s ease-in-out;
-        &:hover{
-            height: 350px;
+        @include respond(tab-port){
+            height: max-content;
             .card__content{
                 visibility: visible;
                 opacity:1;
                 margin-top:0;
                 padding-top: 20px;
-                transition-delay: 0.3s;
+                overflow: hidden !important;
+            }
+        }
+       
+        &:hover{
+            height: max-content;
+            .card__content{
+                visibility: visible;
+                opacity:1;
+                margin-top:0;
+                padding-top: 20px;
+                overflow: hidden !important;
+                //transition-delay: 0.3s;
             }
         }
 
           &__title{
             position: relative;
-            width:260px;
+            width:100%;
             height:auto;
             text-align: center;
             color: var(--color-secondary-light);

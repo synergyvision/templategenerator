@@ -1,26 +1,29 @@
 <div class="table-responsive">
-    <table class="table table-hover table-bordered">
-      <thead>
+    <table class="table table-hover table-bordered" id="id">
+    <thead {% if include.header-bg-color %} style="background-color: {{include.header-bg-color}} !important; color: {{include.header-color}};" {% endif %}>
         <tr>
         {% for head in include.header %}
           <th>{{head.title}}</th>
         {% endfor %}
         </tr>
       </thead>
+      {% assign columns = 0 %}
       <tbody id="contentTable">
         {% for content in include.content %}
             <tr>
                 {% if content.collection %}
                     {% for field in content.collection %}
-                        <td> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.text}}
-            
+                        <td initialValue="{{field.text}}"> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.text | append: field.unity}}
                         </a></td>
+                        {% assign column= column | plus: 1 %}
                     {% endfor %}
+                    {% if forloop.index == 1 %}
+                          {% assign number-of-cols = column %}
+                    {% endif %}
                 {% else %}
-                    <td> <a {% if field.href %} href="{{content.href | relative_url}}" {% endif %}>{{content.text}}
+                    <td initialValue="{{field.text}}" > <a {% if field.href %} href="{{content.href | relative_url}}" {% endif %}>{{content.text | append: field.unity}}
                     </a></td>
                 {% endif %}
-                
                     {% for content in include.action %}
                     <td class="abscenter">
                         <a class="circle-btn" href="#">
@@ -32,5 +35,19 @@
             </tr>
         {% endfor %}
       </tbody>
+        {% if include.footer %}
+        <tfoot>
+            {% assign number-of-cols = number-of-cols | minus: 1 %}        
+              <tr class="total">
+                  <th>{{include.footer.title}}</th>
+                  {% for col in (1..number-of-cols) %}
+                    <th></th>
+                  {% endfor %}
+              </tr>         
+        </tfoot>
+        {% endif %}
     </table>
 </div>
+
+<script>  
+</script>

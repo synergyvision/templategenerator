@@ -1,13 +1,10 @@
 <section>
-    <div class="title-primary">
-        <h1>Top recetas</h1>
-        <h2>DISFRUTALAS CON NOSOTROS</h2>
-    </div>
+    {% include culinary-blog-template/global/title-primary.html title=include.section.title subtitle=include.section.subtitle %}
     <div class="mt-big">
         {% include global/carousel.html
             id=1
             cardsFile='culinary-blog-template/cards/presentation-card.html' quantity='3.0'
-            cardsCollection=site.data.culinary-blog-template.home.top-recepes
-            color=site.data.culinary-blog-template.colors.color-primary-light %}
+            cardsCollection=include.section.collection
+            color=site.data.culinary-blog-template.colors.color-secondary %}
     </div>
 </section>

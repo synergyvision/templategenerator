@@ -1,17 +1,23 @@
-<nav class="header">
+<nav {% if include.sticky == true %} class="sticky-header" {% else %} class="header" {% endif %}>
     <a class="header__logo">
         <img src="{{include.image-directory | append: include.logo.name | relative_url}}" alt="{{include.logo.alt}}">
     </a>
     <ul class="header__navigation">
         {% for link in include.nav-links %}
-        <li><a href="{{link.href}}">{{link.name}}</a></li>
+        <li><a href="{{link.href}}">{{link.name | upcase }}</a></li>
         {% endfor %}
     </ul>
+    {% assign
+        svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+        | relative_url | append: "#" %}
+    {% include global/svg.html directory=svg-directory image='heat-menu' class='header__menu'  %}
 </nav>
 
 <script>
     window.addEventListener("scroll", function(){
         var header= document.querySelector(".header");
-        header.classList.toggle("sticky-header",window.scrollY > 0);
+        if (header){
+            header.classList.toggle("sticky-header",window.scrollY > 0);
+        }
     })
 </script>

@@ -82,7 +82,7 @@ layout: online-courses-template/online-courses-header
         <div class="courses">
             {% for card in allsorted %}
                 <div class="card-cont" value={{forloop.index}} identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
-                    {% include online-courses-template/cards/course-card.html card=card %}
+                    {% include online-courses-template/cards/course-card.html card=card url=card.url %}
                 </div>
             {% endfor %}
             

@@ -1,7 +1,7 @@
 .stepper {
 	background: #fff;
 	border-radius: 10px;
-	box-shadow: 0 0 5px rgba(255,255,255,.04588);
+	box-shadow: $shadow-light;
     width: 100%;
 	&-header{
 		padding: 20px;
@@ -28,7 +28,7 @@
                     font-weight: bold;
                     background:#fff;
                     color: var(--color-primary);
-					box-shadow: 0px 2.5px 5px rgba(black,.2);
+					box-shadow: $shadow-light;
 				}
 			}
 			

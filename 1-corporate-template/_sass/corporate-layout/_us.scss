@@ -8,11 +8,10 @@
 
 .us-col-container{
         @include abscenter;
-
         @include respond(tab-port){
             flex-direction: column;
         }
-    }
+}
     
     .us-col{
         width: 50%; 
@@ -21,6 +20,9 @@
         }
         &__1{
             height: 360px;
+            @include respond(phone){
+                height: max-content;
+            }
         }
         &__text{
             margin: 0 auto;
