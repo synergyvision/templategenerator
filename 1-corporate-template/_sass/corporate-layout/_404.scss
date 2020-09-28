@@ -17,7 +17,7 @@
             height: auto;
             text-align: center;
             color: var(--color-secondary);
-            box-shadow: 0 5px 15px rgba(black,.4);
+            box-shadow: $shadow-dark;
             padding: 20px 20px 40px 20px;
 
             @include respond(tab-port){

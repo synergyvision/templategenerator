@@ -20,7 +20,7 @@
             color:rgb(58, 57, 56);
             padding: 10px;
             font-weight: 400;
-            box-shadow: 0 5px 10px rgba(black,.3);
+            box-shadow: $shadow-dark;
             border-bottom: 3px solid transparent;
             transition: all .2s;
             margin:20px;
@@ -28,7 +28,7 @@
             border-radius: 10px;
 
             &:hover{
-                box-shadow: 0 2.5px 5px rgba(black,.3);
+                box-shadow: $shadow-light;
                 transform: scale(0.95);
             }
 

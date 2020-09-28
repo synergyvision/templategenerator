@@ -1,0 +1,36 @@
+<div class="footer" >
+    <div class="footer__col">
+        <div class="logo">
+            <img src="{{include.image-directory | append: 'logo.png' | relative_url }}" alt="">
+        </div>
+        <div class="social-media">
+            <a href="{{icon.href}}" target="_blank">
+                {% include global/svg.html directory=include.svg-directory image='icon-twitter-square' class='icon' %}
+            </a>
+            <a href="{{icon.href}}" target="_blank">
+                {% include global/svg.html directory=include.svg-directory image='icon-instagram-square' class='icon' %}
+            </a>
+            <a href="{{icon.href}}" target="_blank">
+                {% include global/svg.html directory=include.svg-directory image='icon-facebook-square' class='icon' %}
+            </a>
+            <a href="{{icon.href}}" target="_blank">
+                {% include global/svg.html directory=include.svg-directory image='icon-linkedin' class='icon' %}
+            </a>
+        </div>
+    </div>
+    <div class="footer__col">
+        <div class="quote">
+            <div class="icon">
+                {% include global/svg.html directory=include.svg-directory image='icon-quotes-left' class='icon' %}
+            </div>
+            <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum totam officia modi quas nesciunt ratione ducimus excepturi et, vitae aliquam. Porro, ea illum. Autem animi iure dignissimos in vitae est.</div>
+        </div>
+    </div>
+    <div class="footer__col">
+        <div class="title">Contactanos</div>
+        <div class="section">
+            {% include global/svg.html directory=include.svg-directory image='icon-linkedin' class='icon' %}
+            <div class="text">+58 4241702930</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<section class="quote-section" style="background-image:url({{include.image-directory | append: include.section.background | relative_url }});">
+    
+<div class="quote-card">
+    <div class="quote-card__image">
+        <img src="{{include.image-directory | append: include.section.quote.person.image.name | relative_url}}" alt="{{include.section.quote.person.image.alt}}">
+    </div>
+    <div class="quote-card__content">
+        {% include global/svg.html directory=include.svg-directory image=include.section.quote.icon class='quote-card__content__icon-quote' %}
+        <div class="quote-card__content__text-quote">
+            {{include.section.quote.text}}
+        </div>
+        <div class="quote-card__content__person-quote">
+            {{include.section.quote.person.name}}
+        </div>
+    </div>
+</div>
+</section>

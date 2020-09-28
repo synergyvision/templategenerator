@@ -1,0 +1,14 @@
+icon-section: wheat
+
+
+step-by-step:
+  title: Paso a paso panadero
+  subtitle: Lorem ipsum sit amen fet sit germal
+
+ingredients-table:
+  header:
+    - title: Ingrediente
+    - title: Formula (%)
+    - title: Peso
+  footer:
+    title: 'Total:'

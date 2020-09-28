@@ -11,6 +11,17 @@ side-nav:
     href: 'instructor-messages.html'
 
 my-courses:
+  btn-back: 
+    text: '&leftarrow; Back to dashboard'
+    href: 'instructor-courses.html'
+  students-table:
+    input:
+      name: Search a student
+      type: text
+  image:
+    btn:
+      text: Change image
+      type: primary
   title: 
     name: My courses
     image: my-courses.png
@@ -175,7 +186,7 @@ edit-info-sections:
 
 courses:
   - name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
-    id: course4
+    id: course5
     default: true
     student-list:
       input:

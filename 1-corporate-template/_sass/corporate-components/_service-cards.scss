@@ -8,11 +8,11 @@
 	background: white;
 	height: 37.0rem;
 	width: 25.0rem;
-	box-shadow: 0 0.1875rem 1.5rem rgba(0,0,0,.2);
+	box-shadow: $shadow-dark;
 	overflow: hidden;
 	transition: all 2s linear 0s;
 	&:hover {
-		box-shadow: 0 0.5rem 2rem rgba(0,0,0,.2);
+		
 		.thumbnail {
 		img {
 		  -webkit-transform: scale(1.1);
@@ -33,7 +33,7 @@
 		transition: all 0.3s linear;
 	  }
 	}
-	.xy{
+	.hidden-content{
 	  overflow: hidden;
 	  display: flex;
 	  flex-direction: column;

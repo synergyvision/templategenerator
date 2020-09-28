@@ -5,6 +5,7 @@
 
 table{
     font-size: 1.6rem;
+    background-color: #fff !important;
     cursor: pointer;
     
     thead{
@@ -13,6 +14,7 @@ table{
     }
     tbody{
         tr{
+           
             td{
                 a{
                     text-decoration: none;
@@ -22,6 +24,14 @@ table{
                         color: $gray-dark;
                     }
                 }
+            }
+        }
+    }
+    tfoot{
+        tr.total{
+            background-color: rgb(236, 236, 236);
+            th{
+                font-weight: bold !important;
             }
         }
     }

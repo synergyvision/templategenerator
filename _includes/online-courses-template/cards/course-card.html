@@ -1,6 +1,6 @@
-<a class="course-card" href="{{include.card.url | relative_url}}">
+<a class="course-card" href="{{include.card.url | relative_url}}" >
             {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: include.card.image.name | relative_url 
-                %} <!--QUITAR DE AQUI-->
+                %}
             <div class="course-card__image">
                <img src="{{image-directory}}" alt="{{include.card.image.alt}}">
             </div>

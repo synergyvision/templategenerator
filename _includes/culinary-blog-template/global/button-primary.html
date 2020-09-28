@@ -1,3 +1,3 @@
-<div class="button-primary">
+<div class="button-primary {% if include.inverted == true %} button-primary--inverted {% endif %} " onclick="{{include.onclick}}">
     {{include.title}}
 </div>
