@@ -91,7 +91,7 @@
            width: 25%;
            height: 100%;
            overflow: hidden;
-           box-shadow: 0 5px 10px rgba(black,.2);
+           box-shadow:$shadow-dark;
            @include abscenter;
            flex-direction: column;
            justify-content: flex-start;
@@ -192,7 +192,7 @@
           }
           a:hover, a:active {
             //border-bottom: 2px solid var(--color-primary);
-            box-shadow: 0 5px 10px rgba(rgb(48, 11, 48), .2);
+            box-shadow: $shadow-dark;
           }
       }
     }

@@ -1,0 +1,14 @@
+nav-links:
+  - name: Home
+    href: ''
+  - name: Blog
+    href: ''
+  - name: Gallery
+    href: ''
+  - name: Step by step
+    href: ''
+
+logo:
+  name: logo.png
+  alt: Logo 
+

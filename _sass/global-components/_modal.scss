@@ -1,6 +1,5 @@
     
-    .overlay {
-        margin-left: 6.5rem;
+    .overlay {     
         position: fixed;
         top: 0;
         bottom: 0;
@@ -13,9 +12,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @include respond(tab-port){
-            margin-left: 5rem;
-        }
       }
   
       .overlay:target {
@@ -25,19 +21,22 @@
       
       .popup {
         margin: 0 auto;
+        margin-top: 70px;
         padding: 20px;
         background: #fff;
         border-radius: 5px;
         width: max-content;
         max-width: 90%;
         height: max-content;
+        max-height: 90vh;
         position: relative;
         transition: all 5s ease-in-out;
       }
       
       .popup h2 {
+        font-size: 2.5rem;
         margin-top: 0;
-        color: #333;
+        color: $gray;
         font-family: Tahoma, Arial, sans-serif;
       }
       .popup .close {

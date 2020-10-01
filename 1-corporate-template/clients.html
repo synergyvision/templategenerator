@@ -36,7 +36,7 @@ type=site.data.corporate-template.clients.banner.image.type
         {% include corporate-template/title.html title=site.data.corporate-template.clients.sections.testimony.title %}
     </div>
 
-    <div class="clients-quote-container mt-bigger abscenter row" style="justify-content: space-around !important;">
+    <div class="clients-quote-container " >
             {% for client-card in site.data.corporate-template.clients.sections.testimony.collection %}
                 {% include corporate-template/cards/client-quote-card.html person=client-card %}
             {% endfor %}

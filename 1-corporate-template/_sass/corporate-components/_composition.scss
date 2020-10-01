@@ -1,5 +1,11 @@
 .composition {
   position: relative;
+  height: max-content;
+  @include respond(phone){
+    @include abscenter;
+    flex-direction: column;
+    margin: 20px;
+  }
   &__photo {
     height: 180px;
     box-shadow: 0 15px 40px rgba(black, 0.4);
@@ -10,7 +16,13 @@
     outline-offset: 10px;
 
     @include respond(phone) {
-      height: 90px;
+      position: relative;
+      width: 80%;
+      height: auto;
+      margin: 20px 0;
+      top: 0 !important;
+      left: 0 !important;
+      transform: translate(0) !important;
     }
 
     &:first-child {

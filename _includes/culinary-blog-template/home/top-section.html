@@ -1,0 +1,10 @@
+<section>
+    {% include culinary-blog-template/global/title-primary.html title=include.section.title subtitle=include.section.subtitle %}
+    <div class="mt-big">
+        {% include global/carousel.html
+            id=1
+            cardsFile='culinary-blog-template/cards/presentation-card.html' quantity='3.0'
+            cardsCollection=include.section.collection
+            color=site.data.culinary-blog-template.colors.color-secondary %}
+    </div>
+</section>

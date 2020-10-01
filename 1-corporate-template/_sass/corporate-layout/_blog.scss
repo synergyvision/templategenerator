@@ -23,7 +23,7 @@
         .blog-card{
             margin: 0 auto;
             margin-top: 30px;
-            box-shadow: 0 5px 10px rgba(black,.3);
+            box-shadow: $shadow-dark;
             border-radius: 5px;
             padding: 20px;
             width:80%;
@@ -143,7 +143,7 @@
             }
                 .blog-card__small{
                     margin-top: 30px;
-                    box-shadow: 0 5px 10px rgba(black,.3);
+                    box-shadow: $shadow-dark;
                     border-radius: 5px;  
                     width:100%;
                     @include abscenter;
@@ -192,7 +192,7 @@
                             width: 3rem;
                             height: 3rem;
                             position: relative;
-                            box-shadow: 0 2.5px 5px rgba(black,.2);
+                            box-shadow: $shadow-dark;
                             transition: all .2s;
                             &:hover{
                                 color: var(--color-secondary-light);

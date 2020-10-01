@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% if page.title %}{{ page.title | capitalize }}{% else %}{{ include.site.title | capitalize }}{% endif %}</title>
+	<title>{% if page.title %}{{ page.title  }}{% else %}{{ include.site.title  }}{% endif %}</title>
 	<link rel="shortcut icon" href="{{ include.site.directories.images | append: include.site.favicon | relative_url }}">
 	<link rel="stylesheet" href="{{'/css/main.css' | relative_url }}">
 	<link rel="stylesheet" href="{{ include.site.css | relative_url }}">

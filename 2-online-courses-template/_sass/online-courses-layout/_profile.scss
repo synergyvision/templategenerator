@@ -78,6 +78,9 @@
         height: auto;
         border-radius: 50%;
     }
+    @include respond(tab-port){
+        left: 50%;
+    }
 }
 
 .public-profile{
@@ -85,6 +88,9 @@
     flex-direction: column;
     color: $gray-dark;
     position: relative;
+    @include respond(tab-port){
+        margin-top: 100px !important;
+    }
     &>*{
         margin:5px;
     }

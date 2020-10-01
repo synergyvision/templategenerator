@@ -1,3 +1,10 @@
+.clients-quote-container{
+    width: 90%;
+    margin:50px auto;
+    @include abscenter;
+    justify-content: space-around ;
+}
+
 .client-quote-card{
     position: relative;
     width: 400px;

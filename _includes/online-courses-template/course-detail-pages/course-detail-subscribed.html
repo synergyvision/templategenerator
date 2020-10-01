@@ -4,7 +4,6 @@
         {% include global/video.html
         source=include.page.video size='big'
         source-directory=site.data.online-courses-template.global.site.directories.courses-videos
-        error-message=site.data.online-courses-template.global.video-error-message
         %}
         <div class="btn-wrapper">
         {% for download-btns in include.page.download-buttons %} {% include
@@ -22,8 +21,8 @@
         </div>
         {% include online-courses-template/course-sections/course-questions.html page=include.page %}
     </div>
+    {% include online-courses-template/global/message-fixed.html %}
     <div class="course-membered--right">
         {% include online-courses-template/course-sections/course-modules-dropdown.html page=include.page %}  
     </div>
-    {% include online-courses-template/global/message-fixed.html %}
 </div>

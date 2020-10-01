@@ -13,6 +13,7 @@
 
         @include respond(tab-land){
             width: 90%;
+            padding: 0 !important;
         }
 
         &__title{
@@ -53,8 +54,11 @@
                 fill: rgba(255, 181, 43, 0.678);//#5548617a;
                 position: absolute;
                 top:-25%; left: 0;
-                width:100px; height: 100px;
+                width:10rem; height: 10rem;
                 z-index: 0;
+                @include respond(phone){
+                    top: -15%;
+                }
             }
             p{  
                 text-align: center;
@@ -124,6 +128,7 @@
 
         @include respond(tab-land){
             width: 90%;
+            margin: 0 auto;
             margin-top: 40px;
         }
 

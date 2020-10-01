@@ -19,6 +19,8 @@ site:
 
 video-error-message: Ops! It seems like there was a problem showing the video!
 
+banner-secondary-image: background-footer.jpg
+
 stepper:
   btn-next:
     text: Next

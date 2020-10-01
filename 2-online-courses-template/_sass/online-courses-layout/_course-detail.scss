@@ -59,6 +59,7 @@
     border: 2px solid  var(--color-primary);
     border-radius: 100px;
     width: max-content;
+    height: max-content;
     cursor: pointer;
     margin: 10px;
     transition: all .4s;
@@ -437,12 +438,19 @@
 
         .description{
             margin-left: 30px;
+            @include respond(tab-port){
+                margin: 0 5%;
+            }
         }
 
         .questions{
             display: flex;
             flex-direction: column;
             margin:0 35px;
+            @include respond(tab-port){
+                align-items: center;
+                margin: 0 5%;
+            }
             .title{
                 font-size: 2.4rem;
                 letter-spacing: 1px;
@@ -461,7 +469,9 @@
                 @include abscenter;
                 justify-content: space-between;
                 margin:10px;
-
+                @include respond(tab-port){
+                    justify-content: center;
+                }
                 .btn-back, &__ask{
                     display: none;
                 }
