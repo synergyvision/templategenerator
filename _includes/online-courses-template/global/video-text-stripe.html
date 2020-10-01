@@ -1,0 +1,22 @@
+<div
+  class="video-text-stripe {% if include.inverted == true %} video-text-stripe--inverted {% endif %}"
+>
+  {% if include.video %}
+  <div class="video">
+    {% include global/video.html source=include.video
+    source-directory=include.source-video %}
+  </div>
+  {% endif %} {% if include.image %}
+    <div class="image">
+        <img
+        src="{{image-directory | append: include.image.name | relative_url }}"
+        alt="{{include.image.alt}}"
+        />
+    </div>
+  {% endif %}
+  <div class="text">
+    {% include online-courses-template/global/title.html size='medium'
+    title=include.title %}
+    <p>{{include.text}}</p>
+  </div>
+</div>

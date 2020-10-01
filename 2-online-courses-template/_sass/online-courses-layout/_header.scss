@@ -144,13 +144,14 @@
     position: absolute;
     top: 100%;
     padding: 1.5rem;
-    width: max-content;       
+    min-width: 270px;
+    max-width: max-content;    
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 5px 15px rgba(black,.3);
     overflow: scroll;
     scroll-behavior: smooth;
-    max-height: 80vh;
+    max-height: 85vh;
     display: none;
     transition: all .4s;
     &::-webkit-scrollbar{

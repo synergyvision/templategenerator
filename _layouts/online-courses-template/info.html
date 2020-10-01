@@ -1,0 +1,26 @@
+---
+layout: online-courses-template/online-courses-header
+---
+
+{% include online-courses-template/global/banner-secondary.html
+    title=page.banner-title %}
+    {% assign
+        svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+        | relative_url | append: "#" %}
+<div class="info-page row">
+    {% for content in page.layout-content %}
+        {% if content.title %}
+            <div class='title-primary'>
+                {{content.title}}
+            </div>
+        {% endif %}
+        {% if content.text %}
+            <p>{{content.text}}</p>
+        {% endif %}
+        {% if content.important %}
+            {% include online-courses-template/global/message.html info=content.important %}
+        {% endif %}
+    {% endfor %}
+</div> 
+
+

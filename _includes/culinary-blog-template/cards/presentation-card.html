@@ -1,0 +1,10 @@
+<div class="presentation-card">
+    <div class="image-container">
+        <img src="{{image-directory | append: include.card.image.name | relative_url}}" alt="{{include.card.image.alt}}">
+    </div>
+    <div class="info">
+        <h2 class="name">{{include.card.name}}</h2>
+        {% include global/svg.html directory=svg-directory image='wheat' class='svg-primary svg-primary--small'  %}
+        <a href="#" class="button">Leer mas</a>
+    </div>
+ </div>

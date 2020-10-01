@@ -1,0 +1,99 @@
+banner: 
+  background: header-background2.jpg
+  title:
+    first-line: Haz pan
+    second-line: EN CASA
+
+features:
+  background: feature-section-bg.png
+  collection:
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-1.1.png
+        alt: Feature 1
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-2.1.png
+        alt: Feature 2
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-3.1.png
+        alt: Feature 3
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-4.1.png
+        alt: Feature 4
+
+gallery:
+  - image:
+      name: home-gallery-1.jpeg
+      alt: Home gallery 1
+  - image:
+      name: home-gallery-2.jpg
+      alt: Home gallery 2
+  - image:
+      name: home-gallery-3.jpg
+      alt: Home gallery 3
+  - image:
+      name: home-gallery-4.jpg
+      alt: Home gallery 4
+  - image:
+      name: home-gallery-5.jpg
+      alt: Home gallery 5
+  - image:
+      name: home-gallery-6.jpg
+      alt: Home gallery 6
+  - image:
+      name: home-gallery-7.jpg
+      alt: Home gallery 7
+  - image:
+      name: home-gallery-8.jpg
+      alt: Home gallery 8
+
+newsletter:
+  background: #newsletter-section-bg.png
+  form:
+    background: 'form-background.png'
+    title: Suscribete
+    subtitle: ¿TE GUSTAN LOS ARTICULOS DEL BLOG?
+    inputs:
+      - name: email
+        type: email
+        placeholder: Correo electrónico 
+    btn:
+      text: Suscribete ahora 
+
+
+
+top-recepes:
+  title: Top recetas
+  subtitle: DISFRUTALAS CON NOSOTROS
+  collection:
+      - name: Croissant de mantequilla
+        image:
+          name: bread-1.jpg
+          alt: bread 1
+      - name: Everything Seasoning
+        image:
+            name: bread-2.jpg
+            alt: bread 2
+      - name: Pan trenzado
+        image:
+          name: bread-3.jpg
+          alt: bread 3
+      - name: Pan cacero de orégano
+        image:
+          name: bread-4.jpg
+          alt: bread 4
+
+
+quote-section:
+  background: quote-bg.jpg
+  quote:
+    icon: icon-quotes-left
+    person:
+      name:  Buddy Valastro
+      image: 
+        name: client-5-face.jpg
+        alt: Client face
+    text: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur consequuntur, magnam quod ex, nisi officiis doloremque similique eum beatae cum neque quas dolor amet velit sequi non unde? Odit, incidunt.

@@ -1,0 +1,28 @@
+---
+layout: online-courses-template/online-courses-header
+---
+{% assign image-directory=
+    site.data.online-courses-template.global.site.directories.images %}
+    
+<div class="title-stripe__text">
+    {{page.blog-title}}
+</div>
+<div class="row blog-content">
+<a class="plane-link" href="{{site.data.online-courses-template.global.site.base-url | append: site.data.online-courses-template.blog.back-to-blog.href | relative_url}}" >{{site.data.online-courses-template.blog.back-to-blog.text}}</a>
+    <div class="blog-content__image">
+        <img src="{{image-directory | append: page.image.name | relative_url}}" alt="{{page.image.alt}}">
+    </div>
+    <div class="blog-content__info">
+        <div class="date">{{page.date | date: "%b %d, %y"}}</div>
+        <div class="by">{{site.data.online-courses-template.blog.by-title | append : ' '}}  {{page.author}}</div>
+    </div>
+    <div class="blog-content__categories">
+        {% for cat in page.categories %}
+            {% include online-courses-template/cards/category-card.html
+                name=cat %} 
+        {% endfor %}
+    </div> 
+    <div class="blog-content__text">
+       {{content}}
+    </div> 
+</div>

@@ -2,16 +2,16 @@
   class="banner"
   style="padding-top: 70px;background-image:url({{site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.header.banner.image | relative_url }});"
 >
- <div class="banner__box">
-      <div class="banner__box__text">
-        <p>{{site.data.online-courses-template.header.banner.box.text}}</p>
-        <div class="line"></div>
-        <p>Take the next step in your professional life</p>
-      </div> 
-     <div class="banner__box__buttons">
-        {% for button in site.data.online-courses-template.header.banner.box.buttons %}
-            {% include online-courses-template/global/button.html btn=button %}
-        {% endfor %}
-     </div>   
- </div>
+   <div class="banner__box">
+          <div class="banner__box__text banner__box__text--1">
+            <p>{{site.data.online-courses-template.header.banner.box.text}}</p>
+            <div class="line"></div>
+            <p>{{site.data.online-courses-template.header.banner.box.second-text}}</p>
+          </div> 
+        <div class="banner__box__buttons">
+            {% for button in site.data.online-courses-template.header.banner.box.buttons %}
+                {% include online-courses-template/global/button.html btn=button %}
+            {% endfor %}
+        </div>   
+    </div> 
 </section>

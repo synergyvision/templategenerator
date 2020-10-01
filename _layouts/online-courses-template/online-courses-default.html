@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html >
-{% include global/head.html site=site.data.online-courses-template.global.site script='online-courses-template/global/script.html' %}
+{% include global/head.html site=site.data.online-courses-template.global.site script='global/bootstrap-scripts.html' %}
 
 <body>	
-    {{ content }} 	
-    {% include online-courses-template/global/footer.html %}
+        {{ content }} 	
+   {% include online-courses-template/global/footer.html %}
    {% include global/scripts.html %}
+
    {% for js in site.data.online-courses-template.global.site.directories.js.collection %}
-		<script src="{{ site.data.online-courses-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
-	{% endfor %}
+	<script src="{{ site.data.online-courses-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
+   {% endfor %}
 </body>
 
 <style lang="scss">

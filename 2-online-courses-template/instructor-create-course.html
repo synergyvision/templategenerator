@@ -10,7 +10,8 @@ title: Instructor dashboard | Create a course
     <div class="row">
         <h1 class="title-primary  mtb-big">
             <img class="instructor-courses__img" src="{{image-directory | append: site.data.online-courses-template.instructor.dashboard-create-course.title.image | relative_url }}" alt="{{site.data.online-courses-template.instructor.dashboard-create-course.title.alt}}">
-            {{site.data.online-courses-template.instructor.dashboard-create-course.title.name}}
+            <p>{{site.data.online-courses-template.instructor.dashboard-create-course.title.name}}
+            </p>
         </h1>
         {% include online-courses-template/instructor/create-course-stepper.html   %}
     </div>

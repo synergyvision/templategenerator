@@ -5,7 +5,7 @@
     width: 100%;
     padding: 50px 0;
     @include respond(phone){
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .courses-container{
         @include abscenter;

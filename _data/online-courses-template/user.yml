@@ -61,7 +61,7 @@ courses:
   - id: course2
     completed: 80%
     rating: 5
-  - id: course7
+  - id: course3
     completed: 44%
     rating: 1.5
 cart-courses:

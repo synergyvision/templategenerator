@@ -1,0 +1,12 @@
+title: Our blog
+by-title: 'By '
+categories:
+  - name: Development
+  - name: Business
+  - name: Economist
+  - name: Freelance
+  - name: Design
+  - name: Health
+back-to-blog: 
+  text: '&ShortLeftArrow; Back to blog'
+  href: 'blog.html'

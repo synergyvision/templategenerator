@@ -11,33 +11,54 @@
       height: auto;
       width: 150px;
     }
+}
 
 
-    .edit-course{
+.edit-course{
+  @include abscenter;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  .plane-link{
+    align-self: flex-start;
+  }
+  .title-container{
+    h1{
+      @include respond(tab-port){
+        font-size: 3rem;
+      }
+    }
+  }
+  .course-title{
+    font-size: 4rem;
+    color: $gray;
+    margin: 30px 0;
+    text-align: center;
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
+  }
+  &__content{
       @include abscenter;
       flex-direction: column;
-      display: none;
-      width: 90%;
-
-      .course-title{
-        font-size: 4rem;
-        color: $gray;
-        margin: 30px 0;
-        text-align: center;
-        @include respond(tab-port){
-          font-size: 2rem;
+    &__inline{
+        @include abscenter;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        @include respond(tab-land){
+          flex-wrap: wrap;
         }
-      }
-      &__content{
-          @include abscenter;
-          flex-direction: column;
-
+        &>*{
+          margin: 10px;
+        }
           .image{
-            max-width: 50rem;
-            max-height: 50rem;
-            margin-top: 30px;
+            @include abscenter;
+            width: 50rem;
+            max-width: 90% !important;
+            max-height: auto;
             img{
-              width: 100%;
+              width: 100% !important;
               height: auto;
               object-fit: contain; 
               -o-object-fit: contain;
@@ -49,17 +70,18 @@
           flex-direction: column;
           max-width: 100%;
         }
-      }
-      .instructor-courses-table-edit{
-        
-        border-radius: 10px;
-        box-shadow: 0 5px 10px rgba(black,.2);
-        height: 300px;
-        width: 100%;
-        margin: 50px 0;
-      }
     }
+  }
+  .instructor-courses-table-edit{
+    
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(black,.2);
+    height: 300px;
+    width: 100%;
+    margin: 50px 0;
+  }
 }
+
 
 .instructor-welcome{
   @include abscenter;

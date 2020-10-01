@@ -21,6 +21,7 @@
 
     &__links{
         @include abscenter;
+        align-items: flex-start;
        li{
            display: flex;
            flex-direction: column;
