@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl:  "templategenerator" # "" #
+baseurl: "templategenerator" #  "" # 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 repository: synergyvision/templategenerator
 #gems: [jekyll-paginate]
@@ -59,6 +59,12 @@ collections:
   culinary-blog-recipes:
     output: true
     permalink: 3-culinary-blog-template/recipes/:path.html
+  culinary-blog-courses:
+    output: true
+    permalink: 3-culinary-blog-template/courses/:path.html
+  culinary-blog-techniques:
+    output: true
+    permalink: 3-culinary-blog-template/techniques/:path.html
 plugins:
 #    - jekyll-minifier
 #    - jekyll-paginate-v2

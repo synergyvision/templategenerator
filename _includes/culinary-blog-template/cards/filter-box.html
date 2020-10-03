@@ -1,0 +1,15 @@
+<div class="filter-box" style="margin-top: -5%;">  
+    <div class="filter-box__radios" >
+      {% for input in include.info.filter %}
+          <label class="input-container">
+          <input type="radio" class="option-input radio" {% if input.checked == true %} checked {% endif %} value="{{input.value}}" name="bread-type" />
+              {{input.name}}
+          </label>
+      {% endfor %}
+    </div>
+      <div class="filter-box__input">
+          <input placeholder="{{include.info.search.placeholder}}" data-search />
+          <span> <i>{% include global/svg.html directory=include.svg-directory image=include.info.search.icon class='icon'  %}</i>
+          </span>
+      </div>
+</div>

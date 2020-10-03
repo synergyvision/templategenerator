@@ -150,6 +150,31 @@ section{
         @include respond(tab-port){
             width: 100%;
         }
+        h1{
+            font-size: 3rem !important;
+            color: var(--color-secondary);
+            letter-spacing: 2px;
+        }
+        h2{
+            transform: translate(0) !important;
+            margin-top: 10px !important;
+        }
+        &__button{
+            position: relative;
+            .button-primary{
+                z-index: 2;
+            }
+            input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                filter: opacity(0);
+                z-index: 3;
+                
+            }
+        }
     }
 }
 
@@ -204,6 +229,10 @@ section{
         top: 15%;
         left: 50%;
         transform: translate(-50%,-50%);
+        @include respond(phone){
+            width: 8rem;
+            height: 8rem;
+        }
         img{
             width: 100%;
             height: auto;
@@ -224,6 +253,10 @@ section{
             top: 10%;
             left: 7%;
             transform: rotate(10deg);
+            @include respond(phone){
+                width: 7rem;
+                height: 7rem;
+            }
         }
         &__text-quote{
             font-size: 1.6rem;
@@ -243,3 +276,5 @@ section{
         }
     }
 }
+
+

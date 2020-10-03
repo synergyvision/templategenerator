@@ -1,6 +1,6 @@
 
 <div class="book__form" >
-        <form class="form" action="https://formspree.io/stephaniecruzcastelli@gmail.com" method="POST">
+        <form class="form" action="https://formspree.io/{{site.data.corporate-template.home.sections.form.your-email}}" method="POST">
             <div class="form__text-side">
                     {% include corporate-template/title.html title=site.data.corporate-template.home.sections.form.title %}
                     {% if site.data.corporate-template.home.sections.form.image.type == 'svg' %}
@@ -35,25 +35,6 @@
                     <input type="submit" class="form__button__input">
                 </div>
             </div>
-            </form>
+          </form>
 </div>      
-<!--
-<form
-  action="https://formspree.io/FORM_ID"
-  method="POST"
->
-  <label>
-    Your Name:
-    <input type="text" name="name">
-  </label>
-  <label>
-    Your Email:
-    <input type="email" name="_replyto">
-  </label>
-  <label>
-    Message:
-    <textarea name="message"></textarea>
-  </label>
-  <input type="submit" value="Send">
-</form>
--->
+

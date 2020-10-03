@@ -1,3 +1,6 @@
+.ma-center{
+    margin: 0 auto;
+}
 .u-center-text{
     text-align: center !important;
 }
@@ -47,8 +50,22 @@
 .pb-big{
     padding-bottom: 50px !important;   
 }
+.ptb-big{
+    padding: 50px 0 !important; 
+}
 .abscenter{
     @include abscenter;
+}
+.no-wrap{
+    flex-wrap: nowrap;
+}
+.align-start{
+    align-items: flex-start;
+}
+.column-on-tab-port{
+    @include respond(tab-port){
+        flex-direction: column;
+    }
 }
 
 .hide{

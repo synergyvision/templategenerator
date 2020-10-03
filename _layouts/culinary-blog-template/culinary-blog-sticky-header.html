@@ -1,0 +1,17 @@
+---
+layout: culinary-blog-template/culinary-blog-default
+---
+
+{% assign header-info = site.data.culinary-blog-template.header %}
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+{% assign
+    svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+    
+<!--CONTENT-->
+{% include culinary-blog-template/global/header.html svg-directory=svg-directory image-directory=image-directory nav-links=header-info.nav-links logo=header-info.logo sticky=true base-url=base-url icons=header-info.icons %}
+<div class="" style="margin-bottom:100px; margin-top: 70px;">
+    {{content}}
+</div>

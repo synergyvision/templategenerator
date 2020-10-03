@@ -1,0 +1,10 @@
+logo:
+  image: logo.png
+  alt: Logo Haz pan en casa
+
+title: Oh no!
+subtitle: La página que estas buscando no puede ser encontrada
+
+btn:
+  title: Ir al inicio
+  href: index.html

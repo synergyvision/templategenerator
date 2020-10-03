@@ -1,0 +1,48 @@
+.information{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 800px;
+    @include respond(phone){
+        padding: 20px 0;
+    }
+    &>*{
+        margin: 5px 0;
+    }
+    &__paragraph{
+        font-size: 1.6rem;
+        line-height: 30px;
+      
+    }
+    &__check{
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        
+        .dot{
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            margin: 0 20px 0 10px;
+        }
+        p{
+            margin: 0;
+            width: calc(100% - 15px);
+        }
+    }
+    &__title{
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        font-weight: 600;
+    }
+    &__subtitle{
+        font-size: 2rem;
+        color: var(--color-secondary);
+        font-weight: 600;
+    }
+    .svg-primary{
+        margin-top: -15px !important;
+        margin-left: 20px !important;
+    }
+}

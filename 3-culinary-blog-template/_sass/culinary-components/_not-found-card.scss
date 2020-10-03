@@ -1,0 +1,35 @@
+.not-found{
+    border-radius: 10px;
+    box-shadow: $shadow-light;
+    width: 400px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: -5%;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    padding: 30px 10px;
+    @include abscenter;
+    flex-direction: column;
+    &>*{
+        margin: 10px 0 !important;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .image-container{
+        width: 8.5rem;
+        height: 8.5rem;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    h1{
+        
+        color: var(--color-primary);
+    }
+    h2{
+        font-size: 2rem;
+        color: var(--color-secondary);
+    }
+}

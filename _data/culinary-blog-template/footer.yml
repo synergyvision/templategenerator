@@ -1,0 +1,50 @@
+logo: 
+  name: logo-footer.png
+  alt: Logo
+
+social-media:
+ - icon: icon-twitter-square
+   href: https://www.twitter.com/hazpanencasa
+ - icon: icon-instagram-square
+   href: https://www.instagram.com/hazpanencasa
+ - icon: icon-facebook-square
+   href: https://www.facebook.com/hazpanencasa
+ - icon: icon-linkedin
+   href: https://www.linkedin.com/hazpanencasa
+  
+quote:
+  icon: icon-quotes-left
+  text: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
+      repellat magni ut rerum nemo ullam omnis! Adipisci temporibus architecto
+      pariatur, quae numquam optio nostrum quo, provident maiores quia sunt
+      commodi!
+  member-image:
+    name: member5-face.jpg
+    alt: Sarah
+
+
+instagram-section:
+  title: Estamos en instagram
+  href: https://www.instagram.com/hazpanencasa
+  pictures:
+    - name: footer-1.png
+      alt: Pic1
+    - name: footer-2.png
+      alt: Pic2
+    - name: footer-3.png
+      alt: Pic3
+    - name: footer-4.png
+      alt: Pic4
+
+contacts:
+  title: Contáctanos
+  sections:
+    - icon: icon-mobile
+      text: +58 42417X2930, 212170365X
+    - icon: icon-location
+      text: 60 Wall Street, New York, NY 10018 US
+    - icon: icon-envelope
+      text: hazpanencasa@your-domain.com
+
+
+copyright: Copyright &COPY; 2020. Bakery Theme by Stephanie Cruz

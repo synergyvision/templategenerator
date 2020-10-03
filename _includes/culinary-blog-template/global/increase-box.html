@@ -1,0 +1,21 @@
+<div class="increase-box">
+    <a onclick="incrementDecreaseValue('decrease',{{include.value}})" class="left">-</a>
+        <input class="increase-box__input" type="number" min="1"  value="{{include.value}}" initialValue="{{include.value}}" readonly>
+    <a onclick="incrementDecreaseValue('increment',{{include.value}})" class="right">+</a>
+</div>
+
+<script>
+function incrementDecreaseValue(operation, value)
+{
+    var value = parseInt(document.getElementsByClassName('increase-box__input')[0].value, 10);
+    value = isNaN(value) ? 0 : value;
+    if (operation == 'increment') value++;
+    else {
+        if ( (value-1) > 0 ){
+            value--;
+        }
+    };
+    document.getElementsByClassName('increase-box__input')[0].value = value;
+    changeTableValues(value);
+}
+</script>

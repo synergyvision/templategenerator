@@ -1,7 +1,7 @@
 site:
     title: Haz pan en casa | Venezuela
     description: This is the site description
-    creator: '@creator-example'
+    creator: '@teetw'
     twitter: 'your-twitter-account'
     css: '/3-culinary-blog-template/css/main.css'
     logo-social-media: logo.png
@@ -15,7 +15,10 @@ site:
           name: /3-culinary-blog-template/assets/js/
           collection: 
                 - name: animations.js
-
+                - name: filters.js
+        courses-videos: /culinary-blog-videos/
+    base-url: '/3-culinary-blog-template/'
+    
 icon-scroll-up: 
   show: true
   icon: icon-arrow-up

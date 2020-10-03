@@ -1,7 +1,7 @@
 .presentation-card{
     width: 250px;
     height: 300px;
-    margin: 20px;
+    margin: 35px  20px;
     box-shadow: $shadow-light;
     transition: all .2s;
     &:hover{
@@ -20,7 +20,7 @@
 
         }
     }
-    .info{
+    &__info{
         margin: 20px 0px;
         padding: 0 10px;
         width: 100%;
@@ -66,6 +66,77 @@
             transition: all .3s;
             &:hover{
                 background-color: var(--color-secondary-dark);
+            }
+        }
+    }
+}
+
+.presentation-card--large{
+    @include abscenter;
+    flex-wrap: nowrap;
+    height: 200px !important;
+    max-width: 500px;
+    box-shadow: $shadow-light;
+    padding: 0px;
+    margin: 20px;
+    transition: all .2s;
+    &:hover{
+        transform: scale(1.05);
+        box-shadow:  $shadow-dark;
+    }
+    @include respond(phone){
+        flex-direction: column;
+        height: max-content !important;
+    }
+
+    .image-container{
+        width: 350px;
+        overflow: hidden;
+        height: 100%;
+        @include abscenter;
+        @include respond(phone){
+            width: 200px; height: 200px;
+            margin-top: 20px;
+        }
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+    .presentation-card__info{
+        .button{
+            padding: 10px;
+        }
+    }
+    
+}
+
+
+.presentation-card--small{
+    height: 150px !important;
+    max-width: 350px;
+    @include respond(phone){
+        flex-direction: row !important;
+        margin: 20px 0;
+    }
+    .image-container{
+        width: 200px !important;
+        overflow: hidden;
+        @include respond(phone){
+            width: 200px;
+            height: 100%;
+            margin-top: 0 !important;
+        }
+    }
+    .presentation-card__info{
+        h2{
+            font-size: 1.4rem;
+        }
+        .button{
+            width: 80%;
+            @include respond(phone){
+                width: 100%;
+                
             }
         }
     }
