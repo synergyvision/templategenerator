@@ -1,10 +1,8 @@
-.table-responsive{
-    max-height: 400px;
-    overflow: scroll;
-}
+
 
 table{
     font-size: 1.6rem;
+    background-color: #fff !important;
     cursor: pointer;
     
     thead{
@@ -22,6 +20,14 @@ table{
                         color: $gray-dark;
                     }
                 }
+            }
+        }
+    }
+    tfoot{
+        tr.total{
+            background-color: rgb(236, 236, 236);
+            th{
+                font-weight: bold !important;
             }
         }
     }

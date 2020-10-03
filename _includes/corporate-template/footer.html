@@ -12,31 +12,20 @@
                 
             </div>
             <div class="footer-col">
+                {% assign contact = site.data.corporate-template.footer.contact %}
                 <div class="footer-col__title">
-                   {{site.data.corporate-template.footer.info-title}}
+                   {{contact.title}}
                 </div>
                 {% assign svg-directory={{site.data.corporate-template.global.assets.svg-icon-directory | relative_url | append: "#"}}
                     %}
-                <div class="footer-col__item">
-                    <div class="footer-col__item__svg">
-                        {% include global/svg.html directory=svg-directory image='icon-location' class='footer__svg-info' %}
+                {% for contact in contact.collection %}
+                    <div class="footer-col__item">
+                        <div class="footer-col__item__svg">
+                            {% include global/svg.html directory=svg-directory image=contact.icon class='footer__svg-info' %}
+                        </div>
+                        <div class="footer-col__item__text">{{contact.name}}</div>
                     </div>
-                    <div class="footer-col__item__text">{{site.data.corporate-template.footer.direction}}</div>
-                </div>
-                <div class="footer-col__item">
-                    <div class="footer-col__item__svg">
-                        {% include global/svg.html directory=svg-directory image='icon-envelope' class='footer__svg-info' %}
-                    </div>
-                    <div class="footer-col__item__text">{{site.data.corporate-template.footer.email}}</div>
-                </div>
-                <div class="footer-col__item">
-                    <div class="footer-col__item__svg">
-                        {% include global/svg.html directory=svg-directory image='icon-mobile' class='footer__svg-info' %}
-                    </div>
-                    {% for phone in site.data.corporate-template.footer.phones %}
-                        <div class="footer-col__item__text">{{phone.number}}</div>
-                    {% endfor %}
-                </div>
+                {% endfor %}
             </div>
             <div class="footer-col">
                 {% assign image-directory={{site.data.corporate-template.global.assets.images | append: site.data.corporate-template.footer.member-image | relative_url }}

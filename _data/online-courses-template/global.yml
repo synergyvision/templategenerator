@@ -11,7 +11,6 @@ site:
       collection: 
         - name: animations.js
         - name: global.js
-        - name: pagination.js
         - name: selectors.js
         - name: stepper.js
     courses-videos: /online-courses-videos/

@@ -1,0 +1,29 @@
+---
+layout: culinary-blog-template/culinary-blog-sticky-header
+---
+
+<!--INFORMATION-->
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign
+    svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+{% assign bread-info-section = site.data.culinary-blog-template.recipes-and-courses %}
+{% assign recipe = page.recipe %}
+
+<!--COMPONENTS-->
+    {% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner%}
+    {% include culinary-blog-template/cards/recipe-box.html svg-directory=svg-directory icon=bread-info-section.icon-section page=page %}
+    {% include culinary-blog-template/cards/ingredients-box.html table-content=page.ingredients image-directory=image-directory info=bread-info-section.ingredients column=true table=bread-info-section.ingredients.ingredients-table quantity-box=bread-info-section.ingredients.quantity-box quantity=page.quantity %}
+    <div class="row"> 
+        {% include culinary-blog-template/global/title-primary.html title=bread-info-section.recipes.step-by-step.title subtitle=bread-info-section.recipes..step-by-step.subtitle %}
+        {% include culinary-blog-template/global/accordion.html icon=bread-info-section.icon-section image-directory=image-directory collection=recipe svg-directory=svg-directory icons-prefix='prep-step-' %}
+        <div class="mtb-big">
+            {% include global/carousel.html
+                id=1
+                cardsFile='culinary-blog-template/cards/gallery-card.html' quantity='4.0'
+                cardsCollection=page.gallery
+                color=site.data.culinary-blog-template.colors.color-secondary %}
+        </div>     
+    </div>

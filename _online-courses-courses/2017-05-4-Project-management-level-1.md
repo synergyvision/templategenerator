@@ -157,4 +157,34 @@ filters:
 image: 
       name: 'course-10.png'
       alt: 'Course 10'
+
+student-list:
+      input:
+      student-table:
+        header:
+          - title: Names
+          - title: Email
+          - title: Progress
+        content:
+          - collection: 
+              - text: Stephanie Cruz
+                href: 'stephanie-cruz-profile'
+              - text: stephaniecruzcastelli@gmail.com
+              - text: 70%
+          - collection: 
+              - text:  Milos Raonic
+              - text: milosraonic66@gmail.com
+              - text: 62%
+          - collection: 
+              - text: Denis Shapovalov
+              - text: denisshapovalovv02@yahoo.com
+              - text: 12%
+          - collection: 
+              - text: Grigor Dimitrov
+              - text: grigordimitrov22@hotmail.com
+              - text: 99%
+          - collection: 
+              - text: Dominic Thiem
+              - text: dominicthiem77@gmail.com
+              - text: 45%
 ---

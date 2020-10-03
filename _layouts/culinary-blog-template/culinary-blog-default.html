@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    {% include global/head.html site=site.data.culinary-blog-template.global.site script='global/bootstrap-scripts.html' %}
+    {% assign image-directory=
+        site.data.culinary-blog-template.global.site.directories.images %} 
+    {% assign svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+            | relative_url | append: "#" %}
+    {% assign header-info = site.data.culinary-blog-template.header %}
+    {% assign footer-info = site.data.culinary-blog-template.footer %}
+    
+    <body>	
+        <div class="content">
+            {{ content }} 
+        </div>      
+        {% assign scroll= site.data.culinary-blog-template.global.icon-scroll-up %}
+        {% if scroll.show == true %}	
+            {% include culinary-blog-template/global/button-scroll.html svg-directory=svg-directory icon=scroll.icon %}
+        {% endif %}
+        {% include culinary-blog-template/global/footer.html image-directory=image-directory  svg-directory=svg-directory footer=footer-info %}
+        {% include global/scripts.html %}
+        {% for js in site.data.culinary-blog-template.global.site.directories.js.collection %}
+            <script src="{{ site.data.culinary-blog-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>
+        {% endfor %}
+    </body>
+    <style lang="scss">
+        :root{
+            --color-primary: {{site.data.culinary-blog-template.colors.color-primary}};
+            --color-primary-transparent: {{site.data.culinary-blog-template.colors.color-primary-transparent}};
+            --color-secondary: {{site.data.culinary-blog-template.colors.color-secondary}};
+            --color-secondary-dark: {{site.data.culinary-blog-template.colors.color-secondary-dark}};
+            --form-background: url({{image-directory | append: site.data.culinary-blog-template.home.newsletter.form.background | relative_url}});
+        }
+    </style>
+
+</html>

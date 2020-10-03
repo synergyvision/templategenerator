@@ -1,0 +1,46 @@
+---
+layout: culinary-blog-template/culinary-blog-sticky-header
+---
+
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign
+        svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+        | relative_url | append: "#" %}
+{% assign course = site.data.culinary-blog-template.recipes-and-courses %}
+{% for inf in site.culinary-blog-courses %}
+    {% assign info =  page.url | replace: page.slug , course.info-file %}
+    {% if inf.url == info %}
+            {% assign current-course = inf %}
+    {% endif %}
+{% endfor %}
+{% assign bread-info-section = site.data.culinary-blog-template.recipes-and-courses %}
+
+{% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner  %}
+
+<div class="recipe-box">
+    <div class="recipe-box__header">
+        <h2>{{current-course.title}}</h2>
+        <h3>{{current-course.subtitle}}</h3>
+    </div>
+</div>
+<div class="course-section row">
+    <div class="course-left">
+        {% include culinary-blog-template/global/title-primary.html title=bread-info-section.courses.step-by-step.title subtitle=bread-info-section.courses.step-by-step.subtitle small=true %}
+        {% include culinary-blog-template/cards/steps-box.html steps=bread-info-section.steps page=page %}   
+    </div>
+    <div class="course-right"> 
+        {% include global/video.html
+            source=page.video size='big'
+            source-directory=site.data.culinary-blog-template.global.site.directories.courses-videos
+            %}
+        {% include culinary-blog-template/global/accordion.html icon=bread-info-section.icon-section expanded=false image-directory=image-directory collection=page.recipe svg-directory=svg-directory image=false %}
+        {% if page.url contains 'step-1.html' %}
+            {% include culinary-blog-template/cards/quantity-box.html title=bread-info-section.ingredients.quantity-box.title btn=bread-info-section.ingredients.quantity-box.btn value=current-course.quantity %}
+            {% include global/table.html header=bread-info-section.ingredients.ingredients-table.header content=current-course.ingredients header-bg-color='var(--color-secondary)' header-color='#fff' footer=bread-info-section.ingredients.ingredients-table.footer %}
+        {% endif %}
+    </div>
+</div>
+
+
+

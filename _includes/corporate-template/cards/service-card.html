@@ -4,15 +4,14 @@
                 %} 
       <img src="{{image-directory}}"/>
     </div>
-    <!-- Post Content-->
-    <div class="post-content">
-      <div class="category">{{include.card.category}}</div>
-      <div class="xy">
-        <h1 class="title2">{{include.card.title}}</h1>
-        <h2 class="sub_title">{{include.card.subtitle}}</h2>
-        {% assign description={{include.card.description[0].paragraph | truncatewords 360}} %}
-        <p class="description">{{description}}</p>
-        <a href="{{include.card.url | relative_url }}" class="btn-text hide">{{include.card.button}}</a>
-      </div>
-    </div>
-  </div>
+    <a href="{{include.card.url | relative_url }}" class="post-content">
+        <div class="category">{{include.card.category}}</div>
+        <div class="hidden-content">
+          <h1 class="title2">{{include.card.title}}</h1>
+          <h2 class="sub_title">{{include.card.subtitle}}</h2>
+          {% assign description={{include.card.description[0].paragraph | truncatewords 360}} %}
+          <p class="description">{{description}}</p>
+          <a href="{{include.card.url | relative_url }}" class="btn-text hide">{{include.card.button}}</a>
+        </div>
+    </a>
+</div>

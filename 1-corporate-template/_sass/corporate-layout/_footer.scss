@@ -24,6 +24,9 @@
         margin: 0 auto;
         margin-top: 40px;
         text-align: center !important;
+        @include respond(tab-port){
+            font-weight: 300;
+        }
     }
 
     &__svg-info{
@@ -48,6 +51,9 @@
 
         & > *{
             margin-right: 40px;
+            @include respond(tab-port){
+                margin-right: 0;
+            }
         }
 
         &__quotes{
@@ -60,6 +66,9 @@
             font-size: 1.35rem;
             text-align: end;
             transform: translateY(-20px);
+            @include respond(tab-port){
+                font-weight: 300;
+            }
         }
 
         &__member{
@@ -96,6 +105,9 @@
             text-align: justify;
             font-size: 1.4rem;
             line-height: 200%;
+            @include respond(tab-port){
+                font-weight: 300;
+            }
         }
        
         
@@ -112,6 +124,9 @@
                 font-weight: 100;
                 font-size: 1.5rem;
                 width: 75%;
+                @include respond(tab-port){
+                    font-weight: 300;
+                }
             }
         }
  }

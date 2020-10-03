@@ -28,3 +28,11 @@
       flex-wrap: wrap;
   }
 
+  @mixin background {
+      background-position: center;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size:cover;
+      background-repeat: no-repeat;
+  }

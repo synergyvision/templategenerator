@@ -1,3 +1,24 @@
+$(document).on('ready', function() {
+    /* ============= SIGN UP SELECTOR  =============== */
+    $(".a-1").click(function(){
+        $('.a-1').addClass('active-btn');
+        $('.a-2').removeClass('active-btn');
+        $('.content-2').removeClass('show-content');
+        $('.content-2').addClass('hide-content');
+        $('.content-1').removeClass('hide-content');
+        $('.content-1').addClass('show-content');
+    });
+    
+    $(".a-2").click(function(){
+        $('.a-2').addClass('active-btn');
+        $('.a-1').removeClass('active-btn');
+        $('.content-1').removeClass('show-content');
+        $('.content-1').addClass('hide-content');
+        $('.content-2').removeClass('hide-content');
+        $('.content-2').addClass('show-content');
+    });
+})
+
 function askQuestion(){
 
     /* ========== REMOVING ASK BUTTON ========== */
@@ -74,3 +95,14 @@ for(var i = 0; i<element.length; i++) {
         return false;
     }; 
 }      
+
+/* =========== SHOWING THE COURSE CONTENT SECTION =========== */
+function showCourseContentSection(value){
+    let db = $("input:checkbox[value="+value+"]")[0].checked;
+       if (db == false){
+         $('.section-dropdown[value='+value+']').css('display','none');
+       }
+       else if ( db == true){
+         $('.section-dropdown[value='+value+']').css('display','block');
+       }
+   }

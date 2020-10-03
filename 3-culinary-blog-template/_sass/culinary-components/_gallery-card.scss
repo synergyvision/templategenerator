@@ -1,0 +1,34 @@
+
+.gallery-photo{
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: $shadow-light;
+    @include abscenter;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+        transform: scale(1.05);
+    }
+    .image-container{
+        border-radius: 50%;
+        height: 160px;
+        width: 160px;
+        overflow: hidden;
+        @include abscenter;
+        background-color: black;
+        border: 4px solid #fff;
+        margin-bottom: 10px;
+        img{
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1.4);
+            filter: opacity(0.8);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+---
+layout: culinary-blog-template/culinary-blog-default
+---
+
+<!--INFORMATION-->
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign
+        svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+        | relative_url | append: "#" %}
+{% assign header-info = site.data.culinary-blog-template.header %}
+{% assign home = site.data.culinary-blog-template.home %}
+{% assign quote = site.data.culinary-blog-template.home.quote-section %}
+{% assign top-recipes = site.data.culinary-blog-template.home.top-recipes %}
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+{% assign bread-collection = "" | split: "," %}
+{% for breads in site.culinary-blog-recipes %}
+        {% for top in top-recipes.collection  %}
+            {% if breads.identifier == top.id %}
+                {% assign bread-collection = bread-collection | push: breads.basic-info %}
+            {% endif %}
+        {% endfor %}
+{% endfor %}
+
+
+<!--COMPONENTS-->
+{% include culinary-blog-template/global/header.html svg-directory=svg-directory image-directory=image-directory nav-links=header-info.nav-links logo=header-info.logo base-url=base-url icons=header-info.icons %}
+{% include culinary-blog-template/home/banner.html image-directory=image-directory title=home.banner.title background=home.banner.background %}
+{% include culinary-blog-template/global/stripe.html svg-directory=svg-directory icons=home.stripe %}
+{% include culinary-blog-template/home/features-section.html image-directory=image-directory features=home.features background=home.features.background %}
+{% include culinary-blog-template/home/gallery-section.html image-directory=image-directory collection=home.gallery %}
+{% include culinary-blog-template/home/top-section.html section=top-recipes collection=bread-collection %}
+{% include culinary-blog-template/home/quote-section.html section=quote image-directory=image-directory svg-directory=svg-directory %}
+{% include culinary-blog-template/home/newsletter-section.html image-directory=image-directory svg-directory=svg-directory background=home.newsletter.background form=home.newsletter.form %}
+

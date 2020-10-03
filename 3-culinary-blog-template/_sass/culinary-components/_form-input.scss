@@ -1,0 +1,61 @@
+
+.form{
+
+    &__group{
+       @include abscenter;
+       width: 300px;
+       max-width: 100%;
+       margin-bottom: 10px;
+    }
+
+    &__input{ 
+        font-family: inherit;
+        color: inherit;
+        font-size: 2rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba(#fff, .5);
+        border: none;
+        border-bottom: 3px solid var(--color-secondary);
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+        @include respond(tab-port){width: 100%;}
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(#333, .1);
+            border-bottom: 3px solid var(--color-primary);
+
+
+            &:invalid{
+                border-bottom: 3px solid var(--color-secondary-dark);
+                outline: none;
+            }
+        }
+
+        &::-webkit-input-placeholder{
+            color: var(--color-primary-dark);
+        }
+    }
+
+
+   
+ 
+    &__label{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        margin-right: auto;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown  ~ &__label{  // sibling selector (input y label son hermanos). label tiene que estar ajuro despues del input en el html
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

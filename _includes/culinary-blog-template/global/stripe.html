@@ -1,0 +1,5 @@
+<div class="stripe">
+    {% for icon in include.icons %}
+        {% include global/svg.html directory=include.svg-directory image=icon.icon class='stripe__icon'  %}
+    {% endfor %}
+</div>

@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl:   "templategenerator" # "" #
+baseurl:    "templategenerator" # "" #
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 repository: synergyvision/templategenerator
 #gems: [jekyll-paginate]
@@ -29,6 +29,7 @@ sass:
         - _sass
         - 1-corporate-template/_sass
         - 2-online-courses-template/_sass
+        - 3-culinary-blog-template/_sass
   style: compressed
   
 kramdown:
@@ -55,6 +56,15 @@ collections:
   online-courses-info:
     output: true
     permalink: 2-online-courses-template/info/:path.html
+  culinary-blog-recipes:
+    output: true
+    permalink: 3-culinary-blog-template/recipes/:path.html
+  culinary-blog-courses:
+    output: true
+    permalink: 3-culinary-blog-template/courses/:path.html
+  culinary-blog-techniques:
+    output: true
+    permalink: 3-culinary-blog-template/techniques/:path.html
 plugins:
 #    - jekyll-minifier
 #    - jekyll-paginate-v2

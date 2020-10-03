@@ -1,0 +1,8 @@
+<div class="quantity-box">
+    <div class="quantity-box__increase">
+        <h2>{{include.title}}</h2>
+        {% include culinary-blog-template/global/increase-box.html value=include.value fields=include.btn.change-field %}
+    </div>
+    {% assign function =  'changeTableValues(' | append: include.btn.change-field | append: ')' %} 
+   <!-- {% include culinary-blog-template/global/button-primary.html title=include.btn.text onclick=function %} --> 
+</div>

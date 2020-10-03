@@ -1,0 +1,24 @@
+site:
+    title: Haz pan en casa | Venezuela
+    description: This is the site description
+    creator: '@teetw'
+    twitter: 'your-twitter-account'
+    css: '/3-culinary-blog-template/css/main.css'
+    logo-social-media: logo.png
+    favicon: logo.png
+    directories:
+        svg-icon-directory: '/3-culinary-blog-template/assets/svg/sprite.svg'
+        svg-directory: 
+        images: /3-culinary-blog-template/assets/images/
+        svg-directory: 
+        js: 
+          name: /3-culinary-blog-template/assets/js/
+          collection: 
+                - name: animations.js
+                - name: filters.js
+        courses-videos: /culinary-blog-videos/
+    base-url: '/3-culinary-blog-template/'
+    
+icon-scroll-up: 
+  show: true
+  icon: icon-arrow-up

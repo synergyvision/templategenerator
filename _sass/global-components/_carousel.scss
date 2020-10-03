@@ -6,6 +6,9 @@
 	width:100%;
     height: 100%;
 }
+div[class^='slide-']{
+    width: 90%;
+}
 .slide{
 	width:1000px;
 	height: 100%;
@@ -16,7 +19,7 @@
 	flex-wrap: wrap;
     justify-content: space-around;
 	align-items: center;
-	width: 100%;
+	width: 100% !important;
 	height: 100%;
 
 }

@@ -1,0 +1,10 @@
+<div class="{% if include.large == true %} presentation-card--large {% elsif include.small == true %} presentation-card--large presentation-card--small {% else %} presentation-card  {% endif %}">
+    <div class="image-container">
+        <img src="{{image-directory | append: include.card.primary-image.name | relative_url}}" alt="{{include.card.primary-image.alt}}">
+    </div>
+    <div class="presentation-card__info">
+        <h2 class="name">{% if include.large == true %} {{include.card.name | truncate: 60 }} {% else %} {{include.card.name | truncate: 40 }} {% endif %}</h2>
+        {% include global/svg.html directory=svg-directory image=site.data.culinary-blog-template.recipes-and-courses.cards.icon class='svg-primary svg-primary--small'  %}
+        <a href="{{base-url | append: include.card.url | relative_url}}" class="button">{{site.data.culinary-blog-template.recipes-and-courses.cards.btn}}</a>
+    </div>
+</div>

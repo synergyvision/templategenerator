@@ -1,0 +1,92 @@
+banner: 
+  background: hazpanen.casa-bg.png
+  title:
+    first-line: HAZ PAN
+    second-line: EN.CASA
+
+stripe:
+  - icon: icon-step1
+  - icon: icon-step2
+  - icon: icon-step3
+
+features:
+  background: feature-section-bg.png
+  collection:
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-1.1.png
+        alt: Feature 1
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-2.1.png
+        alt: Feature 2
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-3.1.png
+        alt: Feature 3
+    - name: Lorem ipsum dolor
+      image:
+        name: feature-4.1.png
+        alt: Feature 4
+
+gallery:
+  - image:
+      name: home-gallery-1.jpeg
+      alt: Home gallery 1
+  - image:
+      name: home-gallery-2.jpg
+      alt: Home gallery 2
+  - image:
+      name: home-gallery-3.jpg
+      alt: Home gallery 3
+  - image:
+      name: home-gallery-4.jpg
+      alt: Home gallery 4
+  - image:
+      name: home-gallery-5.jpg
+      alt: Home gallery 5
+  - image:
+      name: home-gallery-6.jpg
+      alt: Home gallery 6
+  - image:
+      name: home-gallery-7.jpg
+      alt: Home gallery 7
+  - image:
+      name: home-gallery-8.jpg
+      alt: Home gallery 8
+
+newsletter:
+  background: #newsletter-section-bg.png
+  form:
+    background: 'form-background.png'
+    title: Suscribete
+    subtitle: ¿TE GUSTAN LOS ARTICULOS DEL BLOG?
+    your-email: scruz.17@est.ucab.edu.ve
+    inputs:
+      - name: email
+        type: email
+        placeholder: Correo electrónico 
+    btn:
+      text: Suscribete ahora 
+
+
+
+top-recipes:
+  title: Top recetas
+  subtitle: Disfrútalas con nosotros
+  collection:
+      - id: bread1
+      - id: bread2
+      - id: bread3
+
+
+quote-section:
+  background: quote-bg.jpg
+  quote:
+    icon: icon-quotes-left
+    person:
+      name:  Buddy Valastro
+      image: 
+        name: client-5-face.jpg
+        alt: Client face
+    text: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur consequuntur, magnam quod ex, nisi officiis doloremque similique eum beatae cum neque quas dolor amet velit sequi non unde? Odit, incidunt.

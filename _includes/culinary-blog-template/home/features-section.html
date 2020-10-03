@@ -1,0 +1,10 @@
+<section class="feature-section" style="background-image:url({{include.image-directory | append: include.features.background | relative_url }});">
+    {% for feature in include.features.collection %}
+        <div class="feature-section__box">
+            <div class="image-container">
+                <img src="{{include.image-directory | append: feature.image.name | relative_url}}" alt="{{feature.image.alt}}">
+            </div>
+            <div class="text">{{feature.name}}</div>
+        </div>
+    {% endfor %}
+</section>

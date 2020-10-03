@@ -2,13 +2,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% if page.title %}{{ page.title | capitalize }}{% else %}{{ include.site.title | capitalize }}{% endif %}</title>
+	<title>{% if page.title %}{{ page.title  }}{% else %}{{ include.site.title  }}{% endif %}</title>
 	<link rel="shortcut icon" href="{{ include.site.directories.images | append: include.site.favicon | relative_url }}">
 	<link rel="stylesheet" href="{{'/css/main.css' | relative_url }}">
 	<link rel="stylesheet" href="{{ include.site.css | relative_url }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
-		{% if page.page-image %}
+{% if page.page-image %}
 	{% assign image-directory= include.site.directories.images | append: page.page-image | relative_url 
 		%}
 {% else %}

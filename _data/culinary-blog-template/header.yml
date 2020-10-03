@@ -1,0 +1,18 @@
+nav-links:
+  - name: Inicio
+    href: 'index.html'
+  - name: Recetas
+    href: 'recipes.html'
+  - name: Cursos
+    href: 'courses.html'
+  - name: TÉcnicas
+    href: 'techniques.html'
+
+logo:
+  name: hazpanen.casa.png
+  alt: Logo 
+  href: 'index.html'
+
+icons:
+  icon-close: icon-x
+  icon-open: icon-menu
