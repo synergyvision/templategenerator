@@ -1,0 +1,23 @@
+<div class="information">
+    {% for inf in include.information %}
+        {% if inf.type == 'paragraph' %}
+            <p class="information__paragraph">
+            {{inf.name}}
+            </p>
+        {% endif %}
+        {% if inf.type == 'check' %}
+            <div class="information__check">
+                <div class="dot"></div>
+                <p>{{inf.name}}</p>
+            </div>
+        {% endif %}
+       {% if inf.type == 'title' %}
+            <div class="information__title">{{inf.name}}</div>
+            {% include global/svg.html directory=include.svg-directory image=site.data.culinary-blog-template.recipes-and-courses.cards.icon class='svg-primary'  %}
+       {% endif %}
+       {% if inf.type == 'subtitle' %}
+       <div class="information__subtitle">{{inf.name}}</div>
+       {% include global/svg.html directory=include.svg-directory image=site.data.culinary-blog-template.recipes-and-courses.cards.icon class='svg-primary'  %}
+       {% endif %}
+    {% endfor %}
+</div>

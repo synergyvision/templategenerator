@@ -1,0 +1,10 @@
+<div class="recipe-box recipe-box--big">
+    <div class="recipe-box__header">
+        <h2>{{include.info.title}}</h2>
+        <h3>{{include.info.subtitle}}</h3>
+    </div>
+    <div class="recipe-box__content" style="{% if include.column == true %} flex-direction: column; {% endif %} background-image:url({{include.image-directory | append: include.info.background | relative_url }});">
+        {% include culinary-blog-template/cards/quantity-box.html title=include.quantity-box.title btn=include.quantity-box.btn value=include.quantity %}
+        {% include global/table.html header=include.table.header content=include.table-content header-bg-color='white' header-color='#333' footer=include.table.footer %}
+    </div>              
+</div>

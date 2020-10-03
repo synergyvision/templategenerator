@@ -1,17 +1,19 @@
-
 <section class="newsletter-section" style="background-image:url({{include.image-directory | append: include.background | relative_url }});">   
     <div class="newsletter-card">
-        <div class="newsletter-card__box">
+        <form class="newsletter-card__box" action="https://formspree.io/{{include.form.your-email}}" method="POST">
             <h1>{{include.form.title}}</h1>
             <h2>{{include.form.subtitle}}</h2>
             {% include global/svg.html directory=svg-directory image='wheat' class='svg-primary'  %}
             {% for input in include.form.inputs %}
                 <div class="form__group">
-                    <input type="{{input.type}}" class="form__input" placeholder="{{input.placeholder}}" id="{{input.name}}" required>
+                    <input type="{{input.type}}" class="form__input" placeholder="{{input.placeholder}}" id="{{input.name}}" name="{{input.name | capitalize}}" required>
                     <label for="{{input.name}}" class="form__label">{{input.placeholder}}</label>
                 </div>
             {% endfor %}
-            {% include culinary-blog-template/global/button-primary.html title=include.form.btn.text %}
-        </div>
+            <div class="newsletter-card__box__button">
+                {% include culinary-blog-template/global/button-primary.html title=include.form.btn.text %}
+                <input type="submit">
+            </div>       
+        </form>
     </div>
 </section>

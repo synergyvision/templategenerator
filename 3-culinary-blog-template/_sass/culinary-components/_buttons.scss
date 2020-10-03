@@ -1,89 +1,101 @@
 
 .button-primary {
-    flex: 1 1 auto;
-    margin: 10px;
-    padding: 10px 20px;
-    border: 3px solid  var(--color-secondary);
-    background-color: #fff;
-    color: var(--color-secondary);
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    overflow:hidden;
-    font-size: 1.6rem;
-    width: max-content;
-    z-index: 5;
-    transition: all .3s;
+  flex: 1 1 auto;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 3px solid  var(--color-secondary);
+  background-color: #fff;
+  color: var(--color-secondary);
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  font-size: 1.6rem;
+  width: max-content;
+  z-index: 5;
+  transition: all .3s;
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background:  var(--color-secondary);    
+    height: 140%;
+    left: -10%;
+      transform: skewX(15deg);  
+      z-index: -1;
+  }
+ 
+  &:hover {
+    cursor: pointer;
+    color:  white;
     &:after {
-      position: absolute;
-      transition: .3s;
-      content: '';
-      width: 0;
-      left: 50%;
-      bottom: 0;
-      height: 3px;
-      background:  var(--color-secondary);    
-      height: 140%;
-      left: -10%;
-        transform: skewX(15deg);  
-        z-index: -1;
+      width: 120%;
     }
-   
-    &:hover {
-      cursor: pointer;
-      color:  white;
-      &:after {
-        width: 120%;
-      }
+  }
+}
+
+.button-primary--inverted{
+  border: 3px solid  #fff;
+  color: #fff;
+  &:after{
+    background-color: #fff;
+  }
+  &:hover{
+    color: var(--color-secondary);
+  }
+}
+
+#top-button {
+  position: relative;
+  display: inline-block;
+  background-color: var(--color-secondary);
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  @include respond(phone){
+    width: 4rem;
+    height: 4rem;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 4rem;
+    width: 4rem;
+    fill: #fff;
+    @include respond(phone){
+      width: 3rem;
+      height: 3rem;
+      
     }
   }
 
-  .button-primary--inverted{
-    border: 3px solid  #fff;
-    color: #fff;
-    &:after{
-      background-color: #fff;
-    }
-    &:hover{
-      color: var(--color-secondary);
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary-dark);
   }
-
-  #top-button {
-    position: relative;
-    display: inline-block;
-    background-color: var(--color-secondary);
-    width: 5rem;
-    height: 5rem;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    transition: background-color .3s, 
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-    .svg{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      height: 4rem;
-      width: 4rem;
-      fill: #fff;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: var(--color-secondary-dark);
-    }
-    &:active {
-      background-color: var(--color-secondary-dark);
-    }
-    &.show {
-      opacity: 1;
-      visibility: visible;
-    }
+  &:active {
+    background-color: var(--color-secondary-dark);
   }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}

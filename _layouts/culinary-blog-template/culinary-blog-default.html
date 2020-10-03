@@ -6,15 +6,17 @@
     {% assign svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
             | relative_url | append: "#" %}
     {% assign header-info = site.data.culinary-blog-template.header %}
+    {% assign footer-info = site.data.culinary-blog-template.footer %}
+    
     <body>	
         <div class="content">
             {{ content }} 
         </div>      
         {% assign scroll= site.data.culinary-blog-template.global.icon-scroll-up %}
         {% if scroll.show == true %}	
-            {% include culinary-blog-template/global/button-scroll.html icon=scroll.icon %}
+            {% include culinary-blog-template/global/button-scroll.html svg-directory=svg-directory icon=scroll.icon %}
         {% endif %}
-        {% include culinary-blog-template/global/footer.html image-directory=image-directory  svg-directory=svg-directory %}
+        {% include culinary-blog-template/global/footer.html image-directory=image-directory  svg-directory=svg-directory footer=footer-info %}
         {% include global/scripts.html %}
         {% for js in site.data.culinary-blog-template.global.site.directories.js.collection %}
             <script src="{{ site.data.culinary-blog-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>

@@ -1,0 +1,58 @@
+.quantity-box{
+    @include abscenter;
+    flex-direction: column;
+    margin: 10px 0;
+    &__increase{
+        @include abscenter;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: $shadow-light;
+        h2{
+            align-self: flex-start;
+            font-size: 2rem;
+            margin: 10px 0 !important;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
+.increase-box{
+    width: 200px;
+    height: 50px;
+    @include abscenter;
+    flex-wrap: nowrap;
+    font-size: 3rem;
+    a{
+        height: 100%;
+        width: 50px;
+        @include abscenter;
+        background-color: var(--color-secondary);
+        color: #fff;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover{
+            background-color: var(--color-secondary-dark);
+            color: #fff !important;
+        }
+        &.left{
+            border-radius: 5px 0 0 5px;
+        }
+        &.right{
+            border-radius:  0 5px 5px 0;
+        }
+    }
+    input{
+        height: 100%;
+        width: 100px;
+        border: none;
+        border: 2px solid var(--color-secondary);
+        padding-left: 10px;
+        color: $gray;
+        &:focus{
+            outline: none;
+        }
+    }
+}

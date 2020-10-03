@@ -1,0 +1,109 @@
+
+banner: banner-background.png
+icon-section: wheat
+
+cards:
+  icon: wheat
+  btn: Leer más
+
+filter:
+  - name: Enriquecidos
+    value: enriquecido
+  - name: Rusticos
+    value: rustico
+  - name: Todos
+    value: all 
+    checked: true
+
+search:
+  placeholder: Busca una receta
+  icon: icon-search
+
+recipes:
+  title: Recetas
+  empty-message:
+    message: No hay coincidencias disponibles
+    icon: icon-mixture
+  step-by-step:
+    title: Paso a paso panadero
+    subtitle: Lorem ipsum sit amen fet sit germal
+courses:
+  title: Cursos
+  empty-message:
+    message: No hay coincidencias disponibles
+    icon: icon-mixture
+  step-by-step:
+    title: Paso a paso
+    subtitle: panadero
+techniques:
+  title: Técnicas
+  quote:
+    person:
+      image: chef.png
+      alt: chef edoardo
+      name: Chef Edoardo
+    message: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quo saepe voluptatum aperiam rerum ipsam odit voluptates sed, consequatur non officia laudantium pariatur asperiores quibusdam, necessitatibus porro nam libero voluptatem.
+  top:
+    title: Top tecnicas
+    subtitle: lorem ipsum dolor
+    collection:
+      - id: techn1
+      - id: techn2
+      - id: techn3
+
+steps:
+  - name: Preparación
+    id: step1
+    slug: step-1
+  - name: Mezcla y amasado
+    id: step2
+    slug: step-2
+  - name: Fermentación en bloque
+    id: step3
+    slug: step-3
+  - name: Manipulación
+    id: step4
+    slug: step-4
+  - name: División y pesado
+    id: step5
+    slug: step-5
+  - name: Preformado
+    id: step6
+    slug: step-6
+  - name: Reposo en mesa (relajación de la masa)
+    id: step7
+    slug: step-7
+  - name: Formado
+    id: step8
+    slug: step-8
+  - name: Barnices, coberturas y cortes
+    id: step9
+    slug: step-9
+  - name: Fermentación final (maduración)
+    id: step10
+    slug: step-10
+  - name: Horneado
+    id: step11
+    slug: step-11
+  - name: Enfriamiento
+    id: step12
+    slug: step-12
+
+info-file: info 
+
+ingredients:
+  title: Ingredientes
+  subtitle:
+  background: feature-section-bg.png
+  quantity-box:
+    title: Cantidad
+    btn: 
+      text: Ver cantidades
+      change-field: 2 # Numero de la columna a cambiar, indique 'all' de ser todas
+  ingredients-table:
+    header:
+      - title: Ingrediente
+      - title: Fórmula (%)
+      - title: Peso (g)
+    footer:
+      title: 'Total:'

@@ -1,3 +1,10 @@
-<div class="button-primary {% if include.inverted == true %} button-primary--inverted {% endif %} " onclick="{{include.onclick}}">
+
+{% if include.href %}
+<a class="button-primary {% if include.inverted == true %} button-primary--inverted {% endif %} "  href="{{include.base-url | append:  include.href | relative_url}}" >
     {{include.title}}
+</a>
+{% else %}
+<div class="button-primary {% if include.inverted == true %} button-primary--inverted {% endif %} " onclick="{{include.onclick}}" >
+{{include.title}}
 </div>
+{% endif %}
