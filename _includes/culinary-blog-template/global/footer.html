@@ -1,36 +1,59 @@
-<div class="footer" >
-    <div class="footer__col">
-        <div class="logo">
-            <img src="{{include.image-directory | append: 'logo.png' | relative_url }}" alt="">
-        </div>
-        <div class="social-media">
-            <a href="{{icon.href}}" target="_blank">
-                {% include global/svg.html directory=include.svg-directory image='icon-twitter-square' class='icon' %}
-            </a>
-            <a href="{{icon.href}}" target="_blank">
-                {% include global/svg.html directory=include.svg-directory image='icon-instagram-square' class='icon' %}
-            </a>
-            <a href="{{icon.href}}" target="_blank">
-                {% include global/svg.html directory=include.svg-directory image='icon-facebook-square' class='icon' %}
-            </a>
-            <a href="{{icon.href}}" target="_blank">
-                {% include global/svg.html directory=include.svg-directory image='icon-linkedin' class='icon' %}
-            </a>
-        </div>
+<div class="footer">
+  <div class="footer__col">
+    <div class="logo">
+      <img
+        src="{{include.image-directory | append: include.footer.logo.name | relative_url }}"
+        alt="{{include.footer.logo.alt}}"
+      />
     </div>
-    <div class="footer__col">
-        <div class="quote">
-            <div class="icon">
-                {% include global/svg.html directory=include.svg-directory image='icon-quotes-left' class='icon' %}
-            </div>
-            <div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum totam officia modi quas nesciunt ratione ducimus excepturi et, vitae aliquam. Porro, ea illum. Autem animi iure dignissimos in vitae est.</div>
-        </div>
+    <div class="social-media">
+      {% for sm in include.footer.social-media %}
+        <a href="{{sm.href}}" target="_blank">
+            {% include global/svg.html directory=include.svg-directory
+            image=sm.icon class='icon' %}
+        </a>
+      {% endfor %}
     </div>
-    <div class="footer__col">
-        <div class="title">Contactanos</div>
+  </div>
+  <div class="footer__col">
+    {% include global/svg.html directory=svg-directory image=include.footer.quote.icon
+    class='quote-icon' %}
+    <p class="quote-text">
+      {{include.footer.quote.text}}
+    </p>
+    <div class="member">
+      <img
+        src="{{include.image-directory | append: include.footer.quote.member-image.name | relative_url }}"
+        alt="{{include.footer.quote.member-image.alt}}"
+      />
+    </div>
+  </div>
+  <div class="footer__col">
+    <div class="title">{{include.footer.instagram-section.title}}</div>
+    <div class="gallery-container">
+      {% for image in include.footer.instagram-section.pictures %}
+        <a href="{{include.footer.instagram-section.href}}" target="_blank" class="img-container">
+            <img
+            src="{{include.image-directory | append: image.name | relative_url }}"
+            alt="{{image.alt}}"
+            />
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="footer__col">
+    <div class="title">{{include.footer.contacts.title}}</div>
+    <div class="sections">
+      {% for section in include.footer.contacts.sections %}
         <div class="section">
-            {% include global/svg.html directory=include.svg-directory image='icon-linkedin' class='icon' %}
-            <div class="text">+58 4241702930</div>
+            {% include global/svg.html directory=include.svg-directory
+            image=section.icon class='icon' %}
+            <div class="text">{{section.text}}</div>
         </div>
+      {% endfor %}
     </div>
+  </div>
+  <div class="footer__copyright">
+      {{include.footer.copyright}}
+  </div>
 </div>

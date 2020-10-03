@@ -1,0 +1,51 @@
+.course-section{
+    display: flex;
+    justify-content: space-between;
+    @include respond(tab-port){
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+    &>*{
+        @include respond(tab-port){
+           width: 100% !important;
+        }
+    }
+    .course-left{
+        width: 30%;
+        padding: 0 20px;
+        @include respond(phone){
+            padding: 0;
+        }
+    }
+    .course-right{
+        width: 70%;
+        
+    }
+}
+
+.steps-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 50px;
+       
+}
+.step{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--color-secondary);
+    cursor: pointer;
+    color: var(--color-secondary-dark);
+    margin: 10px 0;
+    box-shadow: 0 2.5px 5px rgba(0,0,0,.2);
+    transition: all .3s;
+}
+.step-active{
+    background-color: var(--color-secondary) ;
+    color: #fff;
+}
+.step:hover{
+    background-color: var(--color-secondary) ;
+    color: #fff;
+}

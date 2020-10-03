@@ -1,0 +1,40 @@
+---
+layout: culinary-blog-template/culinary-blog-sticky-header
+---
+<!--INFORMATION-->
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign
+        svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+        | relative_url | append: "#" %}
+{% assign bread-info-section = site.data.culinary-blog-template.recipes-and-courses %}
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+
+<!--CONTENT-->
+{% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner title=bread-info-section.courses.title  %}
+{% include culinary-blog-template/cards/filter-box.html svg-directory=svg-directory info=bread-info-section %}
+<div class="abscenter ptb-big">
+    {% for recipe in site.culinary-blog-courses %}
+        {% if recipe.url contains 'info.html' %}
+            <div class="card-cont" data-filter-item data-filter-name="{{recipe.basic-info.name | downcase }}" data-filter-type="{{recipe.type | downcase}}">
+                {% include culinary-blog-template/cards/presentation-card.html card=recipe.basic-info large=true %}
+            </div>
+        {% endif  %}
+    {% endfor %}
+    {% include culinary-blog-template/global/empty-message.html svg-directory=svg-directory info=bread-info-section.recipes.empty-message %}
+</div>
+
+{% assign max-per-page=6.0 %} 
+
+{% assign number-of-pages = 0 %}
+{% for course in site.culinary-blog-courses %}
+    {% if course.url contains 'info.html' %}
+        {% assign number-of-pages = number-of-pages | plus: 1 %}
+    {% endif %}
+{% endfor %}
+{% assign number-of-pages =
+    number-of-pages | divided_by:
+    max-per-page | ceil %} 
+<div class="abscenter">
+    {% include global/pagination.html number-of-pages=number-of-pages max-per-page=max-per-page scroll=true %}
+</div>

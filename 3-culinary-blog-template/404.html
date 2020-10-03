@@ -1,0 +1,21 @@
+---
+layout: culinary-blog-template/culinary-blog-sticky-header
+---
+
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign not-found = site.data.culinary-blog-template.not-found %}
+{% assign bread-info-section = site.data.culinary-blog-template.recipes-and-courses %}
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+
+{% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner   %}
+    <div class="not-found">
+        <div class="image-container">
+            <img src="{{image-directory | append: not-found.logo.image | relative_url}}" alt="{{not-found.logo.alt}}">
+        </div>
+        <h1>{{not-found.title}}</h1>
+        <h2>{{not-found.subtitle}}</h2>
+        {% include culinary-blog-template/global/button-primary.html base-url=base-url title=not-found.btn.title href=not-found.btn.href %}
+    </div>
+
+
