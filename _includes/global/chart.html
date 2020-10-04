@@ -1,0 +1,28 @@
+<canvas class="chart" id="{{include.id}}" width="400" height="400"></canvas>
+
+<style> 
+    canvas{
+        max-width: 250px !important;
+        height: auto !important;
+    }
+    </style>
+<script>
+    var type = '{{include.type}}';
+    var id = '{{include.id}}';
+    var chartData = [];
+    var chartTitle = {
+        display: {% if include.title %} true {% else %} false {% endif %},
+        text: '{{include.title}}'
+    };
+    {% for chart in include.values %}
+        chartData.push({{chart.value}});
+    {% endfor %}
+    var chartColors = [];
+    {% for chart2 in include.colors %}
+        chartColors.push('{{chart2.value}}');
+    {% endfor %}
+    var chartLabels = [];
+    {% for chart3 in include.labels %}
+        chartLabels.push('{{chart3.value}}');
+    {% endfor %}
+ </script>

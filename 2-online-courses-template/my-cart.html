@@ -6,12 +6,15 @@ title: Coursing | My cart
 {% assign
     svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
     | relative_url | append: "#" %}
+{% assign cart-info = site.data.online-courses-template.profile.my-cart
+%}
 <div class="title-stripe__text">
-    {{site.data.online-courses-template.profile.my-cart.title}}
+    {{cart-info.title}}
 </div>
 
 <!--Searching for total price courses-->
 {% assign total-price = 0 %}
+{% assign total-old-price = 0 %}
 {% for card in site.online-courses-courses %}
     {% for card-cart in site.data.online-courses-template.user.cart-courses %}
         {% if card.identifier == card-cart.id %}
@@ -20,39 +23,41 @@ title: Coursing | My cart
             {% else %}
                 {% assign total-price = total-price | plus: card.price %}
             {% endif %}
+            {% assign total-old-price = total-old-price | plus: card.price %}
         {% endif %}
     {% endfor %}
 {% endfor %}
 
-
+{% assign percentage-discount = 100 %}
+{% if total-old-price != 0 %}
+    {% assign percentage = total-price | times: percentage-discount | divided_by : total-old-price %}
+    {% assign percentage-discount = percentage-discount | minus: percentage %}
+{% endif %}
 <div class="row">
-    
     {% assign cart-lenght= site.data.online-courses-template.user.cart-courses | size %}
     <div class="cart-container">
-        <div class="cart-info">
-            <div class="cart-lenght">
-                {{cart-lenght}} {{site.data.online-courses-template.profile.my-cart.total-courses}}
-            </div>
-            {% assign pay-info = site.data.online-courses-template.profile.my-cart.pay-info %}
-            {% if cart-lenght != 0  %}
-                {% include online-courses-template/cards/buy-card.html text=pay-info.text currency=pay-info.currency btn=pay-info.btn price=total-price %}
-            {% endif %}
-        </div>
-        
+        <div class="cart-lenght">
+             {{cart-lenght}} {{cart-info.total-courses}}
+        </div>       
         {% if cart-lenght == 0  %}
-            {% assign empty-message= site.data.online-courses-template.profile.my-cart.empty-cart %}
+            {% assign empty-message= cart-info.empty-cart %}
             {% include online-courses-template/global/empty-message.html message=empty-message.empty-message icon=empty-message.empty-icon btn=empty-message.btn svg-directory=svg-directory  %}
         {% else %}
-            <div class="cart-cards">
-                {% for card in site.online-courses-courses %}
+            <div class="cart-content">
+                {% if cart-lenght != 0  %}
+                    {% include online-courses-template/cards/buy-card.html svg-directory=svg-directory pay-info=cart-info.pay-info   price=total-price old-price=total-old-price discount=percentage-discount  %}
+                {% endif %}
+               <div class="cards">
+                    {% for card in site.online-courses-courses %}
                     {% for card-cart in site.data.online-courses-template.user.cart-courses %}
                         {% if card.identifier == card-cart.id %}
                             <div class="card-cont" value={{forloop.index}} identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
-                                {% include online-courses-template/cards/course-card.html card=card  %}
+                                {% include online-courses-template/cards/course-card.html card=card added=true  %}
                             </div>
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
+               </div>
             </div>        
         {% endif %}
     </div>   

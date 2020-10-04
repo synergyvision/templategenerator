@@ -11,7 +11,6 @@ title: Coursing | My wishlist
 </div>
 
 <div class="row">
-    
     {% assign cart-lenght= site.data.online-courses-template.user.wishlist-courses | size %}
     <div class="cart-container">
         <div class="cart-info">
@@ -29,7 +28,7 @@ title: Coursing | My wishlist
                 {% for card-cart in site.data.online-courses-template.user.wishlist-courses %}
                     {% if card.identifier == card-cart.id %}
                         <div class="card-cont" value={{forloop.index}} identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>
-                            {% include online-courses-template/cards/course-card.html card=card %}
+                            {% include online-courses-template/cards/course-card.html card=card added=true %}
                         </div>
                     {% endif %}
                 {% endfor %}

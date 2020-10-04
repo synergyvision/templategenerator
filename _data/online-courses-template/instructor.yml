@@ -47,6 +47,46 @@ dashboard-welcome:
   image:
     name: 'instructor-welcome.png'
     alt: Welcome image
+  chart-title: Lorem ipsum sit amen
+  chart:
+    - value: 3
+    - value: 2
+    - value: 1.5
+    - value: 7.8
+    - value: 15
+    - value: 6
+    - value: 30
+    - value: 2
+    - value: 12
+    - value: 34
+    - value: 22
+    - value: 11
+  chart-labels:
+    - value: 'January'
+    - value: 'February'
+    - value: 'March'
+    - value: 'April'
+    - value: 'May'
+    - value: 'June'
+    - value: 'July'
+    - value: 'August'
+    - value: 'September'
+    - value: 'October'
+    - value: 'November'
+    - value: December
+  chart-colors:
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
 
 dashboard-messages:
   title: 

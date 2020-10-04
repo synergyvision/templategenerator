@@ -13,6 +13,7 @@
             />
             {% include online-courses-template/global/button.html btn=data.image.btn %}
           </div>
+          
           <div class="students-table">
             {% assign students =
             page.student-list %}
@@ -21,8 +22,7 @@
             {% include global/table.html header=students.student-table.header
             content=students.student-table.content svg-directory=svg-directory %}
           </div>
-      </div>
-      
+      </div>     
         {% assign sections = page.course-content %}
          {%
         include online-courses-template/global/accordion.html sections=sections

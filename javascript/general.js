@@ -105,9 +105,9 @@
     
     
     /* =========== ON PAGE LINKS =========== */
-    
+    /*
       $('a[href*="#"]')
-      /* =========== Remove links that don't actually link to anything =========== */
+      /* =========== Remove links that don't actually link to anything =========== 
       .not('[href="#"]')
       .not('[href="#0"]')
       .click(function(event) {
@@ -142,7 +142,7 @@
         }
       });
     
-    
+    */
       /* ===== CHECKS ===== */
     
     
@@ -189,11 +189,5 @@
           $('.card-cont[identifier='+id+']').css('transform', 'scale(1)'); 
         }
     }
-    
-    
-    
-    
-    
-    
-    
+
     

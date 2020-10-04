@@ -90,17 +90,22 @@
   @include respond(tab-port){
       margin-left: 5rem;
   }
+  .content{
+      @include abscenter;
+      img{
+        width: 600px;
+        height: auto;
+        max-width: 90% !important;
+    }
+
+  }
   .title{
       color: $gray;
       font-size: 3rem;
       text-align: center;
       padding: 0 10px;
   }
-  img{
-      width: 600px;
-      height: auto;
-      max-width: 90% !important;
-  }
+  
 }
 
 .create-course-basic-info{

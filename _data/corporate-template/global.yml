@@ -15,7 +15,6 @@ site:
             collection: 
                 - name: 'animations.js'
 
-
 corporate-base-url: /1-corporate-template/
 
 assets:

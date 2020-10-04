@@ -2,7 +2,7 @@
     background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
     @include abscenter;
     padding:100px 0;
-    height: max-content;
+    height: 100%;
 }
 
 $gray: gray;

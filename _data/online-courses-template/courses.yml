@@ -1,7 +1,9 @@
 max-per-page: 9.0
 
-  
-
+cards:
+  buttons:
+    - btn: icon-trash
+    - btn: icon-save
 detail:
   instructor:
     title: Instructor

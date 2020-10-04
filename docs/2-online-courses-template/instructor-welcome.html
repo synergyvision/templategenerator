@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/templategenerator/2-online-courses-template/css/main.css">
 	<link rel="canonical" href="templategenerator/2-online-courses-template/instructor-welcome.html">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
-		
+
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="Instructor dashboard">
 <meta itemprop="description" content=" ">
@@ -51,7 +51,8 @@
 
 
 <body>	
-        
+   <div class="content">
+      
 
 
 <div class="instructor-dashboard">
@@ -175,17 +176,112 @@
 </div>
     
 
-<div class="instructor-welcome">
-    
+<div class="instructor-welcome">  
     <h1 class="title mtb-bigger">
            Welcome to your instructor dashboard
     </h1>
+    <div class="content">
+        <img src="/templategenerator/2-online-courses-template/assets/images/instructor-welcome.png" alt="Welcome image" />
+        <canvas class="chart" id="chart1" width="400" height="400"></canvas>
 
-    <img src="/templategenerator/2-online-courses-template/assets/images/instructor-welcome.png" alt="Welcome image" />
+<style> 
+    canvas{
+        max-width: 250px !important;
+        height: auto !important;
+    }
+    </style>
+<script>
+    var type = 'bar';
+    var id = 'chart1';
+    var chartData = [];
+    var chartTitle = {
+        display:  true ,
+        text: 'Lorem ipsum sit amen'
+    };
+    
+        chartData.push(3);
+    
+        chartData.push(2);
+    
+        chartData.push(1.5);
+    
+        chartData.push(7.8);
+    
+        chartData.push(15);
+    
+        chartData.push(6);
+    
+        chartData.push(30);
+    
+        chartData.push(2);
+    
+        chartData.push(12);
+    
+        chartData.push(34);
+    
+        chartData.push(22);
+    
+        chartData.push(11);
+    
+    var chartColors = [];
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+    var chartLabels = [];
+    
+        chartLabels.push('January');
+    
+        chartLabels.push('February');
+    
+        chartLabels.push('March');
+    
+        chartLabels.push('April');
+    
+        chartLabels.push('May');
+    
+        chartLabels.push('June');
+    
+        chartLabels.push('July');
+    
+        chartLabels.push('August');
+    
+        chartLabels.push('September');
+    
+        chartLabels.push('October');
+    
+        chartLabels.push('November');
+    
+        chartLabels.push('December');
+    
+ </script>
+    </div>
 </div>
 
 </div>
  	
+   </div>
    <div class="footer">
     <div class="footer__logo">
         
@@ -411,9 +507,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="/templategenerator/javascript/general.js"></script>
 <script src="/templategenerator/javascript/carousel.js"></script>
 <script src="/templategenerator/javascript/table.js"></script>
+<script src="/templategenerator/javascript/pagination.js"></script>
+<script src="/templategenerator/javascript/charts.js"></script>
+
 
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/animations.js"></script>
@@ -425,6 +525,8 @@
 	<script src="/templategenerator/2-online-courses-template/assets/js/selectors.js"></script>
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/stepper.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/filter.js"></script>
    
 </body>
 

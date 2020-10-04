@@ -1,5 +1,6 @@
 ---
 layout: corporate-template/corporate
+title: Not found | 404
 permalink: /404.html
 ---
 
@@ -7,18 +8,17 @@ permalink: /404.html
 <div class="page-404">
   <div class="center animate__animated animate__lightSpeedInLeft">
       <div class="error-message">
-        {% if site.data.corporate-template.not-found.image.type == 'svg' %}
-            {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.not-found.image.name }}{% endcapture %}
-            {% include global/svg.html directory=svg-directory image='not-found' class='error-message__svg'  %}
-        {% else %}
-        {% assign image-directory= site.data.corporate-template.global.assets.images | append: site.data.corporate-template.not-found.image.name | relative_url 
-        %}
-             <img class="error-message__svg" src="{{image-directory}}" alt="{{site.data.corporate-template.not-found.image.alt}}">
-        {% endif %}
-        <h3>{{site.data.corporate-template.not-found.title}}</h3>
-        <p>{{site.data.corporate-template.not-found.subtitle}}</p>
+          {% if site.data.corporate-template.not-found.image.type == 'svg' %}
+              {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.not-found.image.name }}{% endcapture %}
+              {% include global/svg.html directory=svg-directory image='not-found' class='error-message__svg'  %}
+          {% else %}
+              {% assign image-directory= site.data.corporate-template.global.assets.images | append: site.data.corporate-template.not-found.image.name | relative_url 
+              %}
+              <img class="error-message__svg" src="{{image-directory}}" alt="{{site.data.corporate-template.not-found.image.alt}}">
+          {% endif %}
+          <h3>{{site.data.corporate-template.not-found.title}}</h3>
+          <p>{{site.data.corporate-template.not-found.subtitle}}</p>
       </div>
   </div>
-  
 </div>
 

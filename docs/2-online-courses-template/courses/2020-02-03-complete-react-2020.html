@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/templategenerator/2-online-courses-template/css/main.css">
 	<link rel="canonical" href="templategenerator/2-online-courses-template/courses/2020-02-03-complete-react-2020.html">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
-		
+
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="Complete React 2020">
 <meta itemprop="description" content=" ">
@@ -51,7 +51,8 @@
 
 
 <body>	
-          
+   <div class="content">
+        
 <div class="header">
   <div class="header__logo">
     <a
@@ -460,18 +461,12 @@
         <div class="video">
             <div class="video-wrapper"  style="max-width: 600px;
 max-height: 600px;" >
-    <!--<div class="video-container">
-      <iframe
-        class="video"
-        src="11111.mp4"
-      ></iframe>
-     <p> Ops! It seems like there was a problem showing the video!</p>
-    </div> -->
-    <div class="video-container">
-      <video class="video" controls autoplay>
-        <source src ="/templategenerator/online-courses-videos/11111.mp4" type = "video/mp4">
-      </video>
-    </div>   
+    
+      <div class="video-iframe-container">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mACw_G-okPE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com">
+        </iframe>
+      </div>   
+    
 </div>
 
 
@@ -489,8 +484,8 @@ max-height: 600px;" >
         <div class="buy-container">
   <div class="price">
     
-      <div class="current-price">40,25$</div>
-      <div class="old-price">45,99$</div>
+      <div class="current-price">40.25</div>
+      <div class="old-price">45.99</div>
     
   </div>
   <div class="btn-container">
@@ -692,12 +687,17 @@ max-height: 600px;" >
     </div>
     <div class="show-more">
       
-<a  href="/templategenerator/2-online-courses-template/ "  class="button  button-1 "
-    onclick="" >
-   
+
+<a
+  
+  href="/templategenerator/2-online-courses-template/public-profile.html "
+  
+  class="button  button-1 "
+  onclick=""
+  
+>
    Show more &rarr;
 </a>
-
 
     </div>
 </div>
@@ -2115,6 +2115,7 @@ var config = {
 </div>
 
  	
+   </div>
    <div class="footer">
     <div class="footer__logo">
         
@@ -2340,9 +2341,13 @@ var config = {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="/templategenerator/javascript/general.js"></script>
 <script src="/templategenerator/javascript/carousel.js"></script>
 <script src="/templategenerator/javascript/table.js"></script>
+<script src="/templategenerator/javascript/pagination.js"></script>
+<script src="/templategenerator/javascript/charts.js"></script>
+
 
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/animations.js"></script>
@@ -2354,6 +2359,8 @@ var config = {
 	<script src="/templategenerator/2-online-courses-template/assets/js/selectors.js"></script>
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/stepper.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/filter.js"></script>
    
 </body>
 

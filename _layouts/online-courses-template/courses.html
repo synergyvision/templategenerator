@@ -75,10 +75,7 @@ layout: online-courses-template/online-courses-header
             {% endfor %}    
     </div>
     <div class="courses-container" >
-        <div class="mtb-medium">
-            {% include online-courses-template/global/title.html title=page.page-title subtitle=allsortedLenght %}
-        
-        </div>
+        {% include online-courses-template/global/title.html title=page.page-title subtitle=allsortedLenght %}
         <div class="courses">
             {% for card in allsorted %}
                 <div class="card-cont" value={{forloop.index}} identifier="{{card.identifier}}"  {% for i in card.filters %} {{ i.name | remove: ' ' | downcase }}={{i.value}} {% endfor %}>

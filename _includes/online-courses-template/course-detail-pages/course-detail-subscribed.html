@@ -2,7 +2,8 @@
 <div class="course-membered">
     <div class="course-membered--left">
         {% include global/video.html
-        source=include.page.video size='big'
+        source=include.page.video.source size='big'
+        external=include.page.video.external
         source-directory=site.data.online-courses-template.global.site.directories.courses-videos
         %}
         <div class="btn-wrapper">

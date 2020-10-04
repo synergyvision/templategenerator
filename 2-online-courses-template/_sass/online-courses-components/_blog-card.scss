@@ -34,7 +34,7 @@
         @include respond(tab-port){     
             border-left: none;
             align-items: center;
-            width: 100%;
+            width: 100% !important;
         }
         & > *{
             font-size: 1.4rem;
