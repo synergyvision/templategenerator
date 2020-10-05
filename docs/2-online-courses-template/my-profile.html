@@ -51,7 +51,7 @@
 
 
 <body>	
-   <div class="content">
+   <div class="body__content">
         
 <div class="header">
   <div class="header__logo">
@@ -490,26 +490,26 @@
       </div>
 </div>
 <div class="profile">
-  <div class="card-fields-section mtb-bigger">
-    <div class="links">
+  <div class="vertical-card-menu ">
+    <div class=" links">
         
-            <div class="link  link-active " id=1>Personal information</div> 
+            <div class="link  link-active " id=1 onclick="showContent(1, '.vertical-card-menu')">Personal information</div> 
         
-            <div class="link " id=2>Social media</div> 
+            <div class="link " id=2 onclick="showContent(2, '.vertical-card-menu')">Social media</div> 
         
-            <div class="link " id=3>Account</div> 
+            <div class="link " id=3 onclick="showContent(3, '.vertical-card-menu')">Account</div> 
         
-            <div class="link " id=4>Profiles</div> 
+            <div class="link " id=4 onclick="showContent(4, '.vertical-card-menu')">Profiles</div> 
         
-            <div class="link " id=5>Payment methods</div> 
+            <div class="link " id=5 onclick="showContent(5, '.vertical-card-menu')">Payment methods</div> 
         
-            <div class="link " id=6>Privacy</div> 
+            <div class="link " id=6 onclick="showContent(6, '.vertical-card-menu')">Privacy</div> 
         
-            <div class="link " id=7>Close account</div> 
+            <div class="link " id=7 onclick="showContent(7, '.vertical-card-menu')">Close account</div> 
         
     </div>
     
-        <div class="content  active-content " id=1>
+        <div class="content  active-content " id=1  style="display: block; transform: scale(1);" >
             
             <div class="fields"> 
                 
@@ -753,7 +753,7 @@
             </div>
         </div>
     
-        <div class="content " id=2>
+        <div class="content " id=2  style="display: none; transform: scale(0);" >
             
             <div class="fields"> 
                 
@@ -1037,7 +1037,7 @@
             </div>
         </div>
     
-        <div class="content " id=3>
+        <div class="content " id=3  style="display: none; transform: scale(0);" >
             
             <div class="fields"> 
                 
@@ -1301,7 +1301,7 @@
             </div>
         </div>
     
-        <div class="content " id=4>
+        <div class="content " id=4  style="display: none; transform: scale(0);" >
             
             <div class="fields"> 
                 
@@ -1351,7 +1351,7 @@
             </div>
         </div>
     
-        <div class="content " id=5>
+        <div class="content " id=5  style="display: none; transform: scale(0);" >
             
                 <div class="fields">
                      
@@ -1437,7 +1437,7 @@
             </div>
         </div>
     
-        <div class="content " id=6>
+        <div class="content " id=6  style="display: none; transform: scale(0);" >
             
                 <div class="fields">
                      
@@ -1509,7 +1509,7 @@
             </div>
         </div>
     
-        <div class="content " id=7>
+        <div class="content " id=7  style="display: none; transform: scale(0);" >
             
                 <div class="fields">
                      

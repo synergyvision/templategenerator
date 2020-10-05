@@ -8,6 +8,9 @@ video:
   source: https://www.youtube.com/embed/mACw_G-okPE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
   external: true
 price: 45.99
+image: 
+      name: 'course-11.png'
+      alt: 'Course 11'
 currency: $
 discount: true
 discount-price: 40.25
@@ -158,9 +161,7 @@ filters:
     value: "30"
   - name: price
     value: 40
-image: 
-      name: 'course-3.png'
-      alt: 'Course 3'
+
 student-list:
       input:
       student-table:

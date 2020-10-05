@@ -27,11 +27,20 @@ instructor:
             text: 848,327 Students
           - icon: icon-play2
             text: 9 Courses
+edit-info-fields:
+  - name: course-title
+    text: 'Ultimate photoshop training: From begginer to pro'
+  - name: course-description
+    text: Lorem ipsum sit dolor amen
+  - name: course-price
+    text: 45.99
+  - name: course-discount-price
+    text: 40.25
 features:
    - title: This course includes
      collection:
             - icon: icon-play2
-              text: 46.5 hours on-demand video
+              text: 25 hours on-demand video
             - icon: icon-document
               text: 85 articles
             - icon: icon-cloud-download
@@ -41,7 +50,7 @@ features:
    - title: What you will learn
      collection:
             - icon: icon-check1
-              text: Make REAL web applications using cutting-edge technologies
+              text: Make REAL web applications using cutting-edge technologies..
             - icon: icon-check1
               text: Create a complicated yelp-like application from scratch
             - icon: icon-check1

@@ -1,40 +1,11 @@
 {% assign data = site.data.online-courses-template.instructor.my-courses %}
-<section class="edit-course mt-big"> 
-    <a class="plane-link" href="{{ site.data.online-courses-template.global.site.base-url | append: data.btn-back.href | relative_url}}">{{data.btn-back.text}}</a>
+<div class="title-stripe__text">
+  {{page.name}}
+</div>
+<section class="edit-course mt-medium"> 
     {% assign course-title=page.name %} 
-    {% include
-    online-courses-template/global/title.html title=course-title subtitle='' %}
-    <div class="edit-course__content row abscenter">
-      <div class="edit-course__content__inline">
-          <div class="image">
-            <img
-              src="{{image-directory | append: page.image.name | relative_url }}"
-              alt="{{page.image.alt}}"
-            />
-            {% include online-courses-template/global/button.html btn=data.image.btn %}
-          </div>
-          
-          <div class="students-table">
-            {% assign students =
-            page.student-list %}
-            {% include online-courses-template/global/login-input.html
-            input-type=data.students-table.input.type input-name=data.students-table.input.name id="myInput" %} 
-            {% include global/table.html header=students.student-table.header
-            content=students.student-table.content svg-directory=svg-directory %}
-          </div>
-      </div>     
-        {% assign sections = page.course-content %}
-         {%
-        include online-courses-template/global/accordion.html sections=sections
-        icon=site.data.online-courses-template.instructor.my-courses.sections.modules.edit-btn
-        module-btn=site.data.online-courses-template.instructor.my-courses.sections.modules.module-btn
-        edit-info=site.data.online-courses-template.instructor.my-courses.sections.modules.add-module %}
-       
-        {% assign sections = site.data.online-courses-template.instructor.edit-info-sections %} {%
-        include online-courses-template/global/card-fields-sections.html
-        sections=sections %}
-    </div>
-  </section>
+    {% include online-courses-template/global/horizontal-menu.html menu=site.data.online-courses-template.instructor.course-detail %}
+</section>
 
 
 {% include global/modal.html title=site.data.online-courses-template.instructor.sections.popup-edit.title id=site.data.online-courses-template.instructor.sections.popup-edit.id file='online-courses-template/instructor/edit-module.html' %}

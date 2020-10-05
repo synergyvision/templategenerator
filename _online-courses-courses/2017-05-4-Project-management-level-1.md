@@ -7,10 +7,10 @@ owner: Milos Raonic
 video:  
   source: https://www.youtube.com/embed/oC9fUwQyriE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
   external: true
-price: 45,99
+price: 45.99
 currency: $
 discount: true
-discount-price: 40,25
+discount-price: 40.25
 score: 3.5
 instructor:
       name: Dominic Thiem

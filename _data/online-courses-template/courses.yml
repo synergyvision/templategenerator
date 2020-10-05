@@ -47,7 +47,6 @@ detail:
         type: primary
     
 
-
 filter:
   - title: rating
     id: rating

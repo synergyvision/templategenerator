@@ -1,17 +1,21 @@
 ---
 layout: online-courses-template/online-courses-header
 ---
-
-
+<!--Welcome banner-->
 {% include online-courses-template/home-sections/banner.html %}
+<!--Some features-->
 {% include online-courses-template/home-sections/section-features.html %}
+
+<!-- Stripe with some features -->
 {% include online-courses-template/home-sections/feature-stripe.html %}
 
-<!--Modificar-->
-{% include online-courses-template/home-sections/section-courses.html title='Top development courses' id=1 collection=site.online-courses-courses %}
-{% include online-courses-template/home-sections/section-courses.html title='Top Coursing recommendation' id=2 collection=site.online-courses-courses %}
+<!--Course sections-->
+{% include online-courses-template/home-sections/section-courses.html title=site.data.online-courses-template.home.top-dev-courses.title  id=1 collection=site.data.online-courses-template.home.top-dev-courses.collection %}
+{% include online-courses-template/home-sections/section-courses.html title=site.data.online-courses-template.home.top-coursing.title id=2 collection=site.data.online-courses-template.home.top-coursing.collection %}
 
-
+<!--Instructor contact seccion-->
 {% include online-courses-template/home-sections/section-contact.html %}
+
+<!--Community section-->
 {% include online-courses-template/home-sections/section-community.html %}
 

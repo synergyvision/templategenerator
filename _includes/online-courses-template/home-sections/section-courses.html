@@ -1,15 +1,22 @@
-<div class="mtb-bigger">
+{% assign course-collection = "" | split: "," %}
+{% for course in site.online-courses-courses %}
+        {% for top in include.collection  %}
+            {% if course.identifier == top.id %}
+                {% assign course-collection = course-collection | push: course %}
+            {% endif %}
+        {% endfor %}
+{% endfor %}
+
+<div class="mtb-big">
     <div class="row">
         <h1 class="title-primary mtb-big">
             {{include.title}}
         </h1>
-    </div>
-    
+    </div> 
     {% include global/carousel.html
         id=include.id
         cardsFile='online-courses-template/cards/course-card.html' quantity='4.0'
-        cardsCollection=include.collection
+        cardsCollection=course-collection
         color=site.data.online-courses-template.colors.color-primary %}
-
 </div>
 
