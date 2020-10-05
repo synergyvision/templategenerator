@@ -24,12 +24,8 @@ function changeValue(el,val,initialQuantity){
     var value= parseFloat(el.find('td').eq(val).text());
     var initialValue= el.find('td')[val].getAttribute('initialValue');
     value = document.getElementsByClassName('increase-box__input')[0].value * initialValue / initialQuantity;
-<<<<<<< HEAD
 
     value = Math.round(value * 10) / 10;
-=======
-    value = Math.round(value * 100) / 100;
->>>>>>> d5c01ae80bb85357bbbf2002f31d5227b4c67868
     el.find('td')[val].innerHTML = value;
     setTotalValues();
 }
@@ -40,7 +36,6 @@ function changeTableValues(number){
   $('#id tbody').find('tr').each(function (i, el) {   
     if (number == 'all'){
         for (let i=0; i<columns;i++){
-<<<<<<< HEAD
         changeValue($(this),i+1,initialQuantity);
         }
     }
@@ -50,13 +45,3 @@ function changeTableValues(number){
   });  
 }
 
-=======
-            changeValue($(this),i+1,initialQuantity);
-        }
-    }
-    else{
-            changeValue($(this),columns,initialQuantity);            
-    }        
-  });  
-}
->>>>>>> d5c01ae80bb85357bbbf2002f31d5227b4c67868

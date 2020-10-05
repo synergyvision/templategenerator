@@ -5,16 +5,20 @@ identifier: course5
 categories: [development,design]
 name: 'Ultimate photoshop training: From begginer to pro'
 owner: Milos Raonic
-video: 11111.mp4
-price: 45.99$
+video: 
+  source: https://www.youtube.com/embed/sF_jSrBhdlg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
+  external: true
+price: 45.99
 discount: true
-discount-price: 40,25$
+discount-price: 40.25
+currency: $
 score: 3.5
 instructor:
       name: Dominic Thiem
       image:
             name: member6-face.jpg
             alt: Instructor 1
+      href: public-profile.html
       short-description: Developer and Bootcamp Instructor
       features:
           - icon: icon-star-full
@@ -23,11 +27,20 @@ instructor:
             text: 848,327 Students
           - icon: icon-play2
             text: 9 Courses
+edit-info-fields:
+  - name: course-title
+    text: 'Ultimate photoshop training: From begginer to pro'
+  - name: course-description
+    text: Lorem ipsum sit dolor amen
+  - name: course-price
+    text: 45.99
+  - name: course-discount-price
+    text: 40.25
 features:
    - title: This course includes
      collection:
             - icon: icon-play2
-              text: 46.5 hours on-demand video
+              text: 25 hours on-demand video
             - icon: icon-document
               text: 85 articles
             - icon: icon-cloud-download
@@ -37,7 +50,7 @@ features:
    - title: What you will learn
      collection:
             - icon: icon-check1
-              text: Make REAL web applications using cutting-edge technologies
+              text: Make REAL web applications using cutting-edge technologies..
             - icon: icon-check1
               text: Create a complicated yelp-like application from scratch
             - icon: icon-check1

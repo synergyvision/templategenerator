@@ -1,0 +1,6 @@
+.chart{
+    max-width: 450px !important;
+    @include respond(phone){
+        max-width: 80% !important;
+    }
+}

@@ -1,13 +1,30 @@
 {% assign
-    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
-    | relative_url | append: "#"}} %}
-<a {% if include.btn.href %} href="{{ site.data.online-courses-template.global.site.base-url | append: include.btn.href | relative_url}} " {% endif %} class="button {% if include.btn.type == 'primary' %} button-1 {% else %} button-2 {% endif %}"
-    onclick="{{include.onclick}}" {{include.atts}}>
-   {% if include.icon %}
-        <div class="icon-wrapper">
-            {% include global/svg.html directory=svg-directory image=include.icon class='icon' %}
-        </div>
-   {% endif %}
-   {{include.btn.text}}
+svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+| relative_url | append: "#"}} %}
+{% assign base-url = site.data.online-courses-template.global.site.base-url
+ %}
+<a
+  {%
+  if
+  include.href
+  %}
+  href="{{ base-url | append: include.href | relative_url}} "
+  {%
+  elsif
+  include.btn.href
+  %}
+  href="{{ base-url | append: include.btn.href | relative_url}} "
+  {%
+  endif
+  %}
+  class="button {% if include.btn.type == 'primary' %} button-1 {% else %} button-2 {% endif %}"
+  onclick="{{include.onclick}}"
+  {{include.atts}}
+>
+  {% if include.icon %}
+  <div class="icon-wrapper">
+    {% include global/svg.html directory=svg-directory image=include.icon
+    class='icon' %}
+  </div>
+  {% endif %} {{include.btn.text}}
 </a>
-

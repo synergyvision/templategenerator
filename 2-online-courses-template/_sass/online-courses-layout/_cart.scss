@@ -9,54 +9,54 @@
     @include respond(phone){
         width: 100%;
     }
-    .cart-info{     
-        display: flex;
-        justify-content: space-between;
+    .cart-lenght{
         color: $gray;
-        @include respond(tab-port){
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        &>*{
-            margin: 20px;
-        }
-        .cart-lenght{
-            font-size: 2rem;
-            
-        }
-        .cart-price{
-            @include abscenter;
-            flex-direction: column;
-            width: 300px;
-            box-shadow: 0 5px 10px rgba(black,.2);
-            border-radius:5px;
-            padding: 10px;
-            @include respond(phone){
-                max-width: 100%;
-            }
-            &>*{
-                margin: 5px 0;
-            }
-            .title{
-                align-self: flex-start;
-                font-size: 2rem;
-            }
-            .total-price{
-                width: 90%;
-                font-size: 3rem;
-               
-                text-align: center;
-                padding-bottom: 15px;
-                border-bottom: 1px solid var(--color-primary);
-            }          
-        }
-    }  
-    .cart-cards{
+        font-size: 2rem;
+        margin: 20px;
+        
+    }
+    .cart-content{
         @include abscenter;
-        .card-cont{
-            width: max-content;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: flex-start;
+        .cards{
+            @include abscenter;
+            .card-cont{
+                width: max-content;
+            }
         }
     }
 }
 
+.cart-price{
+    @include abscenter;
+    flex-direction: column;
+    width: 300px;
+    box-shadow: 0 5px 10px rgba(black,.2);
+    border-radius:5px;
+    padding: 10px;
+    color:  $gray;
+    @include respond(phone){
+        max-width: 100%;
+    }
+    &>*{
+        margin: 5px 0;
+    }
+    .title{
+        align-self: flex-start;
+        font-size: 2rem;
+    }
+    .total-price{
+        width: 90%;
+        font-size: 3.8rem;
+        font-weight: 600;
+    }  
+    .total-price--small{
+        width: 90%;
+        font-size: 1.6rem;
+        &.total-old-price{
+            text-decoration-line: line-through;
+        }
+    }        
+}

@@ -4,7 +4,9 @@ identifier: techn1
 page-image: technique-2.png #Imagen para redes sociales
 title: El amasado | Tecnicas
 subtitle: Lorem ipsum dolor sit amen
-video: soaft-milk-bread-2.mp4
+video: 
+    source: https://www.youtube.com/embed/Zog-mn9yF0w?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
+    external: true
 basic-info:
   name: El amasado, y sus dos finalidades
   primary-image:

@@ -2,7 +2,9 @@
 layout: culinary-blog-template/culinary-blog-course
 title: Pan de leche | Paso 2
 identifier: step2
-video: soaft-milk-bread-2.mp4
+video: 
+    source: https://www.youtube.com/embed/84nQ6mTDzsw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
+    external: true
 page-image: #Imagen para redes sociales
 recipe:
   - title: Mezcla y amasado

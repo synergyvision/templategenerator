@@ -31,7 +31,8 @@ layout: culinary-blog-template/culinary-blog-sticky-header
     </div>
     <div class="course-right"> 
         {% include global/video.html
-            source=page.video size='big'
+            source=page.video.source size='big'
+            external=page.video.external
             source-directory=site.data.culinary-blog-template.global.site.directories.courses-videos
             %}
         {% include culinary-blog-template/global/accordion.html icon=bread-info-section.icon-section expanded=false image-directory=image-directory collection=page.recipe svg-directory=svg-directory image=false %}

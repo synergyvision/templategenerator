@@ -13,6 +13,7 @@ site:
         - name: global.js
         - name: selectors.js
         - name: stepper.js
+        - name: filter.js
     courses-videos: /online-courses-videos/
   base-url: '/2-online-courses-template/'
 
@@ -41,3 +42,4 @@ chat:
     title: 'Message:'
   header:
     title: Chat with
+

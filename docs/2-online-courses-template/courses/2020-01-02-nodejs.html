@@ -51,7 +51,8 @@
 
 
 <body>	
-          
+   <div class="body__content">
+        
 <div class="header">
   <div class="header__logo">
     <a
@@ -451,11 +452,12 @@
     <div class="course-membered--left">
         <div class="video-wrapper"  style="max-width: 900px;
 max-height: 800px;">
-    <div class="video-container">
-      <video class="video" controls autoplay>
-        <source src ="/templategenerator/online-courses-videos/11111.mp4" type = "video/mp4">
-      </video>
-    </div>   
+    
+      <div class="video-iframe-container">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w-7RQ46RgxU?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com">
+        </iframe>
+      </div>   
+    
 </div>
 
 
@@ -495,22 +497,28 @@ max-height: 800px;">
         </p>
         <div class="btn-ask">
           
-<a  class="button  button-1 "
-    onclick="askQuestion()" >
-   
+
+<a
+  
+  class="button  button-1 "
+  onclick="askQuestion()"
+  
+>
    Ask a question
 </a>
-
 
         </div>
         <div class="btn-back">
           
-<a  class="button  button-1 "
-    onclick="backtoQuestions()" >
-   
+
+<a
+  
+  class="button  button-1 "
+  onclick="backtoQuestions()"
+  
+>
    Back to Questions
 </a>
-
 
         </div>       
     </div>
@@ -604,12 +612,15 @@ max-height: 800px;">
     </div>
     <div class="ask-question__btn">
         
-<a  class="button  button-1 "
-    onclick="backtoQuestions()" >
-   
+
+<a
+  
+  class="button  button-1 "
+  onclick="backtoQuestions()"
+  
+>
    Send
 </a>
-
 
     </div>   
 </div>
@@ -789,6 +800,7 @@ $('.icon-chat-fixed').on('click', function(e){
 </div>
 
  	
+   </div>
    <div class="footer">
     <div class="footer__logo">
         
@@ -1014,27 +1026,24 @@ $('.icon-chat-fixed').on('click', function(e){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="/templategenerator/javascript/general.js"></script>
 <script src="/templategenerator/javascript/carousel.js"></script>
 <script src="/templategenerator/javascript/table.js"></script>
-<<<<<<< HEAD
 <script src="/templategenerator/javascript/pagination.js"></script>
-=======
->>>>>>> d5c01ae80bb85357bbbf2002f31d5227b4c67868
+<script src="/templategenerator/javascript/charts.js"></script>
+
 
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/animations.js"></script>
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/global.js"></script>
    
-<<<<<<< HEAD
-=======
-	<script src="/templategenerator/2-online-courses-template/assets/js/pagination.js"></script>
-   
->>>>>>> d5c01ae80bb85357bbbf2002f31d5227b4c67868
 	<script src="/templategenerator/2-online-courses-template/assets/js/selectors.js"></script>
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/stepper.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/filter.js"></script>
    
 </body>
 

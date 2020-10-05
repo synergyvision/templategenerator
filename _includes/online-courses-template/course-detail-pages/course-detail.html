@@ -5,7 +5,9 @@
         <div class="video">
             {% include global/video.html
               source-directory=site.data.online-courses-template.global.site.directories.courses-videos
-            source=include.page.video size='medium'
+            source=include.page.video.source
+            external=include.page.video.external
+            size='medium'
             error-message=site.data.online-courses-template.global.video-error-message
             %}
         </div>

@@ -65,36 +65,17 @@ function showCourse(id){
 
 
 
-function showContent(id){
-    $('.card-fields-section .content').css('transform', 'scale(0)');
-    $('.card-fields-section .content').css('display', 'none');
+function showContent(id,contentClass){
+    $(contentClass+' .content').css('transform', 'scale(0)');
+    $(contentClass+' .content').css('display', 'none');
 
-   $('.card-fields-section .content[id='+id+']').css('transform', 'scale(1)');
-   $('.card-fields-section .content[id='+id+']').css('display', 'block');
+   $(contentClass+' .content[id='+id+']').css('transform', 'scale(1)');
+   $(contentClass+' .content[id='+id+']').css('display', 'block');
 
-   $('.card-fields-section .links .link-active').removeClass('link-active');
-   $('.card-fields-section .links .link[id='+id+']').addClass('link-active');
+   $(contentClass+' .links .link-active').removeClass('link-active');
+   $(contentClass+' .links .link[id='+id+']').addClass('link-active');
 }
 
-let activeLink = document.querySelector('.card-fields-section .links .link-active');
-let element = document.querySelectorAll('.card-fields-section .links .link')
-let content = document.querySelectorAll('.card-fields-section .content');
-for(var i = 0; i<content.length; i++) {
-    content[i].style.transform='scale(0)';
-    content[i].style.display= 'none';
-}
-let att = activeLink.getAttribute("id");
-$('.card-fields-section .content[id='+att+']').css('transform', 'scale(1)');
-$('.card-fields-section .content[id='+att+']').css('display', 'block');
-for(var i = 0; i<element.length; i++) {
-    element[i].onclick = function(e) { 
-        var page = e.srcElement.getAttribute("id");
-        if(page){
-           showContent(page);
-        }
-        return false;
-    }; 
-}      
 
 /* =========== SHOWING THE COURSE CONTENT SECTION =========== */
 function showCourseContentSection(value){

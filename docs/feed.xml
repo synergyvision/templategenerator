@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/templategenerator/feed.xml" rel="self" type="application/atom+xml" /><link href="/templategenerator/" rel="alternate" type="text/html" /><updated>2020-10-03T11:05:19-04:00</updated><id>/templategenerator/feed.xml</id><title type="html">templategenerator</title></feed>
-=======
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/templategenerator/feed.xml" rel="self" type="application/atom+xml" /><link href="/templategenerator/" rel="alternate" type="text/html" /><updated>2020-09-28T18:42:55-04:00</updated><id>/templategenerator/feed.xml</id><title type="html">templategenerator</title></feed>
->>>>>>> d5c01ae80bb85357bbbf2002f31d5227b4c67868
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/templategenerator/feed.xml" rel="self" type="application/atom+xml" /><link href="/templategenerator/" rel="alternate" type="text/html" /><updated>2020-10-05T10:24:31-04:00</updated><id>/templategenerator/feed.xml</id><title type="html">templategenerator</title></feed>

@@ -4,16 +4,20 @@ identifier: course10
 categories: [development,design]
 name: 'Beginning Project Management: Level One '
 owner: Milos Raonic
-video: 11111.mp4
-price: 45,99$
+video:  
+  source: https://www.youtube.com/embed/oC9fUwQyriE?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
+  external: true
+price: 45.99
+currency: $
 discount: true
-discount-price: 40,25$
+discount-price: 40.25
 score: 3.5
 instructor:
       name: Dominic Thiem
       image:
             name: member6-face.jpg
             alt: Instructor 1
+      href: public-profile.html
       short-description: Developer and Bootcamp Instructor
       features:
           - icon: icon-star-full

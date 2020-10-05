@@ -1,0 +1,8 @@
+<div class="students-table">
+    {% assign students =
+        page.student-list %}
+        {% include online-courses-template/global/login-input.html
+        input-type=data.students-table.input.type input-name=data.students-table.input.name id="myInput" %} 
+        {% include global/table.html header=students.student-table.header
+        content=students.student-table.content svg-directory=svg-directory %}
+</div>

@@ -11,4 +11,3 @@ basic-info:
 ingredients:
     - name: aaaaaaaaaaa
 ---
-

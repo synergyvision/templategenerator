@@ -1,15 +1,17 @@
 <a class="course-card" href="{{include.card.url | relative_url}}" >
             {% assign image-directory= site.data.online-courses-template.global.site.directories.images | append: include.card.image.name | relative_url 
                 %}
+                {% assign
+                    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
+                    | relative_url | append: "#"}} %}
+           
             <div class="course-card__image">
-               <img src="{{image-directory}}" alt="{{include.card.image.alt}}">
+                <img src="{{image-directory}}" alt="{{include.card.image.alt}}">
             </div>
             <div class="course-card__info">
                 <div class="title">{{include.card.name | truncate: 50 }}</div>
                 <div class="owner">{{include.card.owner}}</div>
-                {% assign
-                    svg-directory={{site.data.online-courses-template.global.site.directories.svg-icon-directory
-                    | relative_url | append: "#"}} %}
+                
                 {% if include.bought-info %}
                     <div class="completed-container">
                         <div class="percentage">{{include.bought-info.completed}}</div>
@@ -26,13 +28,20 @@
                     </div>
                     <div class="price">
                         {% if include.card.discount == true  %}
-                            <div class="discount">{{include.card.discount-price}} </div>
+                            <div class="discount">{{include.card.currency | append: include.card.discount-price }} </div>
                             {% assign old-price = 'old-price' %}
                         {% else %}
                             {% assign old-price = ' ' %}
                         {% endif %}
-                        <div class="{{old-price}}">{{include.card.price}}</div>
+                        <div class="{{old-price}}">{{include.card.currency | append: include.card.price }}</div>
                     </div>
                 {% endif %}
             </div>
+            {% if include.added == true %}
+                <div class="abscenter">
+                    {% for icon in site.data.online-courses-template.courses.cards.buttons %}
+                        {% include global/svg.html directory=svg-directory image=icon.btn class='course-card__icon'  %}
+                    {% endfor %}
+                </div>            
+            {% endif %}
 </a>

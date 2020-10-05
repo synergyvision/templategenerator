@@ -1,4 +1,4 @@
-.card-fields-section{
+.vertical-card-menu{
     min-height: max-content;
     width: 80%;
     border-radius: 10px;
@@ -6,6 +6,7 @@
     box-shadow: 0 2.5px 5px rgba(#333, .2);
     border: 1px solid $gray-light;
     display: flex;
+    margin: 10rem auto;
     overflow: hidden;
     @include respond(tab-port){
         flex-direction: column;
@@ -99,4 +100,46 @@
             border-left: 4px solid var(--color-primary); 
         }
     }
+}
+
+.horizontal-menu{
+    @include abscenter;
+      flex-direction: column;
+    .content{
+      width: 100%;
+    }
+    &__links{
+        background-color: var(--color-primary);
+        @include abscenter;
+        width: 100%;
+        border-radius: 5px;
+        border: 3px solid var(--color-primary);
+        max-width: 100%;
+        cursor: pointer;
+        overflow-x: scroll;
+        
+        @include respond(tab-port){
+          flex-direction: column;
+          width: 100%;
+        }
+        li{
+          padding: 15px 25px;
+          list-style: none;
+          color: #fff;
+          font-size: 1.6rem;
+          transition: all .3s;
+          @include respond(tab-port){
+            width: 100%;
+          }
+          &.link-active{
+            background-color: #fff;
+            color: var(--color-primary);
+          }
+          &:hover{
+            background-color: #fff;
+            color: var(--color-primary);
+          }
+        }
+        
+      }
 }

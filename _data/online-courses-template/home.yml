@@ -66,3 +66,26 @@ team:
       image: 
         name: member4.jpg
         alt: member 4
+
+
+top-dev-courses:
+  title: Top development courses
+  collection:
+    - id: course1
+    - id: course4
+    - id: course11
+    - id: course2
+
+top-coursing:
+  title: Top coursing recommendations
+  collection:
+    - id: course9 
+    - id: course8 
+    - id: course3 
+    - id: course10 
+    - id: course5 
+    - id: course6 
+    - id: course1    
+    - id: course2 
+    - id: course4
+    - id: course11     

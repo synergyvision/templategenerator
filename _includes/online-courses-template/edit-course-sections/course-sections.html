@@ -1,0 +1,7 @@
+{% assign sections = page.course-content %}
+          {%
+        include online-courses-template/global/accordion.html sections=sections
+        icon=site.data.online-courses-template.instructor.my-courses.sections.modules.edit-btn
+        module-btn=site.data.online-courses-template.instructor.my-courses.sections.modules.module-btn
+        edit-info=site.data.online-courses-template.instructor.my-courses.sections.modules.add-module %}
+

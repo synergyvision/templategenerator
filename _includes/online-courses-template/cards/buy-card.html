@@ -1,5 +1,22 @@
 <div class="cart-price">
-    <div class="title">{{include.text}}</div>
-      <div class="total-price">{{ include.price | append: ' ' | append: include.currency}}</div>
-    {% include online-courses-template/global/button.html btn=include.btn %}
+  <div class="title">{{include.pay-info.text}}</div>
+  {% assign price = include.price | round: 2 %}
+  <div class="total-price">
+    {{include.pay-info.currency | append: ' ' | append: price }}
+  </div>
+  {% assign old-price = include.old-price | round: 2 %}
+  <div class="total-price--small total-old-price">
+    {{ include.pay-info.currency | append: old-price }}
+  </div>
+  <div class="total-price--small">
+    {{include.discount | round: 2 | append: '%' | append: ' ' | append:
+    include.pay-info.percentage-off-text}}
+  </div>
+  {% include online-courses-template/global/login-input.html
+  svg-directory=include.svg-directory
+  input-name=include.pay-info.cupon-input.name
+  id=include.pay-info.cupon-input.id
+  input-type=include.pay-info.cupon-input.type
+  input-icon=include.pay-info.cupon-input.icon %} {% include
+  online-courses-template/global/button.html btn=include.pay-info.btn %}
 </div>

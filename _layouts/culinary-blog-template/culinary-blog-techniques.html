@@ -22,7 +22,8 @@ layout: culinary-blog-template/culinary-blog-sticky-header
         <h3>{{page.subtitle}}</h3>
     </div>
     {% include global/video.html
-        source=page.video 
+        source=page.video.source
+        external=page.video.external 
         source-directory=site.data.culinary-blog-template.global.site.directories.courses-videos
         %}
 </div>

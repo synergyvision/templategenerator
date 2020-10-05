@@ -1,7 +1,9 @@
 max-per-page: 9.0
 
-  
-
+cards:
+  buttons:
+    - btn: icon-trash
+    - btn: icon-save
 detail:
   instructor:
     title: Instructor
@@ -44,7 +46,6 @@ detail:
         text: Send
         type: primary
     
-
 
 filter:
   - title: rating

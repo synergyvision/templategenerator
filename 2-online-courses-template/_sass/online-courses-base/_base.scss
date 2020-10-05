@@ -5,12 +5,15 @@
     font-family: 'Kumbh Sans', sans-serif !important;
 
 }
-html{
+html, body{
     height: 100% !important;
 }
 body{
-    min-height:100vh !important;
-    position:relative;
+    display: flex;
+    flex-direction: column;
+    &__content {
+        flex: 1 0 auto;
+    }
 }
 
 body::-webkit-scrollbar{
@@ -28,3 +31,7 @@ a:hover {
     text-decoration: none !important;
 }
 
+
+.footer {
+    flex-shrink: 0; 
+}

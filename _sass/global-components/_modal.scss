@@ -14,7 +14,7 @@
         justify-content: center;
       }
   
-      .overlay:target {
+      #popup1:target{
         visibility: visible;
         opacity: 1;
       }
@@ -31,29 +31,31 @@
         max-height: 90vh;
         position: relative;
         transition: all 5s ease-in-out;
-      }
-      
-      .popup h2 {
-        font-size: 2.5rem;
-        margin-top: 0;
-        color: $gray;
-        font-family: Tahoma, Arial, sans-serif;
-      }
-      .popup .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        transition: all 200ms;
-        font-size: 30px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #333;
-      }
-      .popup .close:hover {
-        color: var(--color-primary);
-      }
-      .popup .content {
-        max-height: 30%;
-        overflow: auto;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-top: 0;
+          color: $gray;
+          font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .close {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          transition: all 200ms;
+          font-size: 30px;
+          font-weight: bold;
+          text-decoration: none;
+          color: #333;
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+        .content {
+          max-height: 30%;
+          overflow: auto;
+        }
+        
       }
       
