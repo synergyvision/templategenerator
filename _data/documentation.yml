@@ -1,0 +1,51 @@
+links:
+  - name: Home
+    type: link
+    href: index.html
+    fa-icon: fa-border-all
+    active: true
+  - name: Components
+    type: link
+    fa-icon: fa-layer-group
+    items:
+      - name: Carousel
+        href: documentation/global-components/carousel.html
+      - name: Chart
+        href: documentation/global-components/chart.html
+      - name: Head
+        href: documentation/global-components/head.html
+      - name: Modal
+        href: documentation/global-components/modal.html
+      - name: Navigation
+        href: documentation/global-components/navigation.html
+      - name: Pagination
+        href: documentation/global-components/pagination.html
+      - name: Progress bar
+        href: documentation/global-components/progress-bar.html
+      - name: Score
+        href: documentation/global-components/score.html
+      - name: SVG
+        href: documentation/global-components/svg.html
+      - name: Table
+        href: documentation/global-components/table.html
+      - name: Video
+        href: documentation/global-components/video.html
+      - name: Wave
+        href: documentation/global-components/wave.html
+  - name: Templates
+    type: title
+    fa-icon:
+  - name: Corporate
+    type: link
+    fa-icon: fa-laptop-code
+  - name: Bakery blog
+    type: link
+    fa-icon: fa-bread-slice
+  - name: Online courses
+    type: link
+    fa-icon: fa-graduation-cap
+    items:
+      - name: Live demo
+        href: /2-online-courses-template/
+      - name: Components
+      - name: How to use

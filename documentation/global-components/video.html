@@ -1,0 +1,17 @@
+---
+layout: index/components
+title: Video
+image: 
+    - video.png
+description: This component shows the container of a video, with the possibility that the video is embedded from YouTube or Vimeo or not.
+how-to-use: "{% include global/video.html
+    source='my-video-name' size='big/medium'
+    external=true/false
+    source-directory='my-video-directory'
+    %}"
+parameters:
+- text: "external: If the video is from an external source, set it to true. False if not"
+- text: "sourcer: Video name"
+- text: "source-directory: Indicates the name of the directory if it is a local video."
+- text: "size: Indicates the size of the video. Big if you want the video to adapt to its parent component"
+---

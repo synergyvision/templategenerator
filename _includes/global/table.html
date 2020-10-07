@@ -1,6 +1,6 @@
 <div class="table-responsive">
     <table class="table table-hover table-bordered" id="id">
-    <thead {% if include.header-bg-color %} style="background-color: {{include.header-bg-color}} !important; color: {{include.header-color}};" {% endif %}>
+        <thead {% if include.header-bg-color %} style="background-color: {{include.header-bg-color}} !important; color: {{include.header-color}};" {% endif %}>
         <tr>
         {% for head in include.header %}
           <th>{{head.title}}</th>
@@ -29,12 +29,12 @@
                     </a></td>
                 {% endif %}
                     {% for content in include.action %}
-                    <td class="abscenter">
-                        <a class="circle-btn" href="#">
-                            {% include global/svg.html directory=include.svg-directory
-                                    image=content.icon class='icon' %}
-                        </a>
-                    </td>
+                        <td class="abscenter">
+                            <a class="circle-btn" href="#">
+                                {% include global/svg.html directory=include.svg-directory
+                                        image=content.icon class='icon' %}
+                            </a>
+                        </td>
                     {% endfor %}
             </tr>
         {% endfor %}
@@ -52,6 +52,3 @@
         {% endif %}
     </table>
 </div>
-
-<script>  
-</script>

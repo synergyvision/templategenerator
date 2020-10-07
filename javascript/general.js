@@ -1,5 +1,8 @@
-
-		/* =========== SEARCH INPUT =========== */
+/* ============  INDEX ============ */
+    $(".index-hamburger").click(function(){
+    $(".index").toggleClass("active")
+    })
+    /* =========== SEARCH INPUT =========== */
     $(document).on('ready', function() {
       $('.field').on('focus', function() {
         $('body').addClass('is-focus');

@@ -1,32 +1,51 @@
 ---
-layout: index
+layout: index/default
 title: Template generador
 ---
 {% assign image-directory= site.data.global.site.directories.images  
     %}
-<div class="index" style="background-image: url({{image-directory | append: 'index-bg.png' | relative_url}});">
-    <h1 class="index-title">
-        <div class="title">Template generator</div>
-        <div class="title-shadow">By Stephanie Cruz</div>
-    </h1>
-    <div class="index-container">
-        <a href="{{'/1-corporate-template/' | relative_url}}">
-            <p>Corporate template</p>
-            <div class="line"></div>
-            <img class="index__image" src="{{image-directory | append: 'corporate.png' | relative_url }}" alt="">
-        </a>
-        <a href="{{'/3-culinary-blog-template/' | relative_url}}">
-            <p>Culinary blog template</p>
-            <div class="line"></div>
-            <img class="index__image" src="{{image-directory | append: 'culinary-blog.png' | relative_url }}" alt="">
-        </a>
-        <a href="{{'/2-online-courses-template/' | relative_url }}">
-            <p>Online courses template</p>
-            <div class="line"></div>
-            <img class="index__image" src="{{image-directory | append: 'online-courses.png' | relative_url }}" alt="">
-        </a>
-    </div>  
+
+<div class="welcome-container">
+    <img src="{{image-directory | append: 'templategenerator-favi.png' | relative_url }}" alt="">
+    <h1>Welcome to my template generator</h1>
 </div>
-
-
+<div class="index-section">
+    <div class="title">What is Jekyll ?</div>
+    <p>
+        Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more.
+    </p>
+    <div class="subtitle">
+       🚨 Prerequisites
+    </div>
+    <p>
+        Ruby version 2.5.0 or higher, including all development headers (check your Ruby version using ruby -v)
+RubyGems (check your Gems version using gem -v)
+GCC and Make (check versions using gcc -v,g++ -v, and make -v)
+    </p>
+    <div class="subtitle">
+      🧮 Instructions
+    </div>
+    <p>1. Install the jekyll and bundler gems.        
+    </p>
+    <div class="instruction">gem install jekyll bundler</div>
+    <p>2. Build the site and make it available on a local server
+    </p>
+    <div class="instruction">bundle exec jekyll serve</div>
+    <p>3. Browse to http://localhost:4000</p>
+</div>
+<div class="index-section">
+    <div class="title">100% customizable</div>
+    <p>
+        This documentation was created to help you get the most out of these templates.
+The templates include many pages, features and components, You can then learn to use each of the generated components, modify them and even add them at your convenience. . The structure of the code is modular, so it will be very easy to adapt it to your needs
+    </p>
+    
+</div>
+<div class="index-section">
+    <div class="title">Main Features and Pages
+    </div>
+    <p>
+        Go to the template page to see the main Features and Pages of this amazings jekyll templates.
+    </p>
+</div>
 
