@@ -71,7 +71,15 @@ description:
           - title: 'Who this course is for:'
             paragraphs:
               - text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nulla veniam ipsam corporis reprehenderit blanditiis eligendi distincti quibusdam obcaecati, quis aperiam libero sed in consequatur,exercitatione tempore. Earum, itaque modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur impedit vero sed corrupti dolores eos tenetur earum illum corporis quod dolor, aspernatur eligendi expedita dolorum architecto, dolorem rem fuga dolore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint vitae corrupti esse reiciendis error Dignissimos corporis quo consequuntur voluptates minima consequatur fugit molestias blanditiis, iste aperiam, quidem tenetur. Enim, fugiat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam illo officiis saepe iste, doloremque eum earum amet nostrum molestias exercitationem possimus, repellat esse laborum sequi labore ad? Maiores, quo ratione.
-
+edit-info-fields:
+  - name: course-title
+    text: 'Investing In Stocks The Complete Course! (11 Hour) '
+  - name: course-description
+    text: Lorem ipsum sit dolor amen
+  - name: course-price
+    text: 45.99
+  - name: course-discount-price
+    text: 40.25
 students-reviews:
       - id: 1
         name: Jhoao Silva Rodriguez

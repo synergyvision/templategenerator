@@ -10,16 +10,16 @@ layout: online-courses-template/online-courses-header
     {% assign allsorted = site.online-courses-courses | where: "categories", title %}
 {% endif %}
 
-{% assign allsortedLenght= allsorted | size | append: ' ' | append: page.results %}
+{% assign allsortedLenght= allsorted | size | append: ' ' | append: site.data.online-courses-template.courses.filter.results %}
 
 
 <div class="courses-page">
     <div class="courses-filter">  
         <div class="btn-wrapper">
-            {% include online-courses-template/global/button.html btn=page.button-primary %}
+            {% include online-courses-template/global/button.html btn=site.data.online-courses-template.courses.filter.btn %}
         </div>
             {% assign counter = 0 %}
-            {% for filter in site.data.online-courses-template.courses.filter %}
+            {% for filter in site.data.online-courses-template.courses.filter.collection %}
                 {% assign finish=filter.sections.collection | size %}
                 {% assign last=counter | plus: finish %}  
                 <div class="section">

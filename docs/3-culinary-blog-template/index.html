@@ -156,7 +156,8 @@
     window.addEventListener("scroll", function(){
         var header= document.querySelector(".header");
         if (header){
-            header.classList.toggle("sticky-header",window.scrollY > 0);
+            
+            header.classList.toggle("sticky-header",window.scrollY > 50);
         }
     })
     let menu = document.querySelectorAll('.header__menu');

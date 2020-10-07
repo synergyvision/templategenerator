@@ -3,7 +3,7 @@ layout: corporate-template/blog
 id: 2
 title: Artificial intelligence
 page-image: blog-1.png # for social media links
-created: Created at 
+created: Created at
 date: 2015-04-09
 by: By Stephanie Cruise
 top: true

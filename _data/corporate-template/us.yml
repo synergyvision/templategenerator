@@ -1,5 +1,6 @@
 banner:
   title: Know about us
+  background: home-bg.png
   subtitle: lorem ipsum dolor
   image:
     name: 'us.svg#'

@@ -4,10 +4,10 @@ title: Template generador
 ---
 {% assign image-directory= site.data.global.site.directories.images  
     %}
-<div class="index">
+<div class="index" style="background-image: url({{image-directory | append: 'index-bg.png' | relative_url}});">
     <h1 class="index-title">
         <div class="title">Template generator</div>
-        <div class="title-shadow">Template generator</div>
+        <div class="title-shadow">By Stephanie Cruz</div>
     </h1>
     <div class="index-container">
         <a href="{{'/1-corporate-template/' | relative_url}}">

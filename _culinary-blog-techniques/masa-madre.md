@@ -14,21 +14,6 @@ basic-info:
     alt: Masa madre
   url: 'techniques/masa-madre.html'
 information:
-<<<<<<< HEAD
-  - name: 'El amasado tiene dos finalidades:'
-    type: paragraph
-  - name: 'Mezclar de forma homogénea: agua, harina, sal, levadura y   eventualmente mejoradores.'
-    type: check
-  - check:
-  - title:
-  - paragraph:
-  - subtitle:
-  - parapraph:
-  - check:
-  - check:
-  - check:
-  - check:  
-=======
   - name: 'What is Lorem Ipsum?'
     type: title
   - name: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
@@ -51,5 +36,4 @@ information:
     type: check
   - name: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form
     type: check 
->>>>>>> dev001
 ---

@@ -11,6 +11,7 @@ site:
     favicon: templategenerator-favi.png
     directories:
       images: /images/
+      svg: '/svg/sprite.svg#'
 
 
   

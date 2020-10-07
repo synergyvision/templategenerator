@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
     .index{
         @include abscenter;
         flex-direction: column;
@@ -6,13 +7,14 @@
         height: max-content;
         min-height: 100vh;
         font-family: 'Roboto', sans-serif;
-       
+       @include background;
     }
     .index-container{
         @include abscenter;
         
         a{  
             @include abscenter;
+            justify-content: flex-start;
             flex-direction: column;
             margin-top: 40px;
             letter-spacing: 1.2px;
@@ -21,10 +23,12 @@
             padding: 10px;
             font-weight: 400;
             box-shadow: $shadow-dark;
+            background-color: #fff;
             border-bottom: 3px solid transparent;
             transition: all .2s;
             margin:20px;
             width: 300px;
+            height: 280px;
             border-radius: 10px;
 
             &:hover{
@@ -40,7 +44,7 @@
             .line{
                 width: 25%;
                 height: 2px;
-                background-color: #FFBA51;
+                background-color: #BCE7FF;
             }
 
             .index__image{
@@ -57,16 +61,17 @@
         margin: 5rem 0;
         width: 100%;
         @include abscenter;
+        flex-direction: column;
         .title{
-            color: #FFBA51;
-            font-size: 3.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 4.5rem;
             z-index: 4;
+            color: #BCE7FF;
         }
         .title-shadow{
-            color: rgba(202, 202, 202, 0.651);
-            font-size: 4rem;
-            position: absolute;
-            bottom: -50%;
+            color: #fff;
+            font-size: 2.5rem;
             z-index: 1;
         }
     }

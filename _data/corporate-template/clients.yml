@@ -1,9 +1,11 @@
 banner:
   title: Our clients
+  background: home-bg.png
   subtitle: Lorem ipsum dolor sit
   image:
-    name: clients-section.png
-    type: image
+    name: clients.svg#
+    type: svg
+    id: clients
   
 sections:
     clients:

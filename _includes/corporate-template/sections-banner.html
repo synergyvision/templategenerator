@@ -1,22 +1,22 @@
-<div class="team-bg" style="padding-top: 90px;">
-    <div class="team-bg__side">
-      <div class="team-bg__title ">
+{% assign image-directory=site.data.corporate-template.global.assets.images
+        %} 
+<div class="banner" style="padding-top: 90px; background-image: url({{image-directory | append: include.background | relative_url}});">
+    <div class="banner__side">
+      <div class="banner__title ">
         <h1 class="animate__animated animate__rubberBand">{{ include.title }}</h1>
-        <div class="team-bg__subtitle">
+        <div class="banner__subtitle">
           <h1>{{ include.subtitle }}</h1>
         </div>
       </div>
     </div>
-    <div class="team-bg__side animate__animated animate__backInRight">
-      <div class="team-bg__side__svg">
+    <div class="banner__side animate__animated animate__backInRight">
+      <div class="banner__side__svg">
         {% if include.type == 'svg' %}
             {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: include.img }}{% endcapture %}
             {% include global/svg.html directory=svg-directory image=include.id class='team-svg'  %}
-        {% else %}
-        {% assign image-directory={{site.data.corporate-template.global.assets.images | append: include.img | relative_url }}
-        %} 
+        {% else %} 
           <img
-            src="{{image-directory}}"
+            src="{{image-directory | append: include.img | relative_url}}"
             alt=""
           />
         {% endif %}

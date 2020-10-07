@@ -1,11 +1,11 @@
 ---
 layout: corporate-template/service
 title: Web Design
-page-image: service2.png # for social media links
+page-image: service2-1.png # for social media links
 subtitle: Best subtitle ever
 category: Technology
 button: Learn more &rarr;
-img: service2.png
+img: service2-1.png
 img-type: 'image' #or svg
 by: By Stephanie Cruise
 href: https://www.instagram.com/

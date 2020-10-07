@@ -1,11 +1,11 @@
 ---
 layout: corporate-template/service
 title: Training for companies
-page-image: service3.png # for social media links
+page-image: service3-1.png # for social media links
 subtitle: Best subtitle ever
 category: Training
 button: Learn more &rarr;
-img: service3.png
+img: service3-1.png
 img-type: 'image' #or svg
 by: By Stephanie Cruise
 href: https://www.instagram.com/

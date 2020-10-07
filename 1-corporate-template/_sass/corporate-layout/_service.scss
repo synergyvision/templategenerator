@@ -31,7 +31,7 @@
                 text-transform: uppercase;
                 letter-spacing: 1.25px;
                 text-decoration: none;
-                color: var(--color-secondary-light);
+                color: var(--color-secondary);
                 transition: color .2s;
                 &:hover{
                     color: var(--color-primary);
@@ -39,7 +39,7 @@
             }
             &__svg{
                 margin-left: 10px;
-                fill: var(--color-secondary-light);
+                fill: var(--color-secondary);
                 width: 20px;
                 height: 20px;
                 align-self: center;
@@ -54,7 +54,7 @@
                 fill: rgba(255, 181, 43, 0.678);//#5548617a;
                 position: absolute;
                 top:-25%; left: 0;
-                width:10rem; height: 10rem;
+                width:10rem; height: 10rem;          
                 z-index: 0;
                 @include respond(phone){
                     top: -15%;
@@ -68,7 +68,8 @@
                 letter-spacing: 1.25px;
                 line-height: 40px;
                 font-size: 2.8rem;
-                z-index: 99999999;
+                position: relative;
+                z-index: 1;
             }
         }
 
@@ -175,7 +176,7 @@
                 @include abscenter;
                 justify-content: space-between;
                 font-size: 1.4rem;
-                color: var(--color-secondary-light);
+                color: var(--color-secondary);
                 margin-top: 15px;
                 transition: color .3s;
                 cursor: pointer;
@@ -203,7 +204,7 @@
                 margin-top: 40px;
                 @include abscenter;
                 padding-bottom: 20px;
-                border-bottom: 1px solid var(--color-secondary-light);
+                border-bottom: 1px solid var(--color-secondary);
 
 
                 .circle{
@@ -233,7 +234,7 @@
                     margin-top: 10px;
                     line-height: 20px;
                     font-weight: 600;
-                    color: var(--color-secondary-light);
+                    color: var(--color-secondary);
                     text-align: center;
                     font-size: 1.8rem;
                     &__second{

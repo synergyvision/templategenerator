@@ -192,7 +192,7 @@
                             width: 3rem;
                             height: 3rem;
                             position: relative;
-                            box-shadow: $shadow-dark;
+                            box-shadow: $shadow-light;
                             transition: all .2s;
                             &:hover{
                                 color: var(--color-secondary-light);
@@ -213,7 +213,7 @@
 }
 
 .blog-card__info__svg{
-    fill: var(--color-secondary-light);
+    fill: var(--color-secondary);
     height: 1.8rem;
     width: 1.8rem;
     transition: all .2s;
@@ -304,7 +304,12 @@
         &__image{
             margin-top: 20px;
             width: 40%;
-    
+            @include respond(tab-port){
+                width: 60%;
+            }
+            @include respond(phone){
+                width: 100%;
+            }
         }
         &__content{
             width: 100%;

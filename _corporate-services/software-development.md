@@ -1,11 +1,11 @@
 ---
 layout: corporate-template/service
 title: Software development
-page-image: service7.png # for social media links
+page-image: service7-1.png # for social media links
 subtitle: Best subtitle ever
 category: Technology
 button: Learn more &rarr;
-img: service7.png
+img: service7-1.png
 img-type: 'image' #or svg
 by: By Stephanie Cruise
 href: https://www.instagram.com/

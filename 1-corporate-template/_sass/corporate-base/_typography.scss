@@ -7,15 +7,17 @@
 .title-secondary{
     color: var(--color-secondary);
     font-size: 2.5rem;
-
+    letter-spacing: 4px;
+    margin-bottom: 15px;
 }
 
 .title-primary {
     @include abscenter;
     justify-content: flex-start;
     color: var(--color-secondary);
-    font-size: 3.5rem;
+    font-size: 4rem;
     letter-spacing: 5px;
+    font-weight: 900;
 }
 
 .title-terciary{

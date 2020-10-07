@@ -8,18 +8,17 @@ page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reic
 
 {% include corporate-template/sections-banner.html
 title=site.data.corporate-template.us.banner.title
+background=site.data.corporate-template.us.banner.background
 subtitle=site.data.corporate-template.us.banner.subtitle
 img=site.data.corporate-template.us.banner.image.name
 type=site.data.corporate-template.us.banner.image.type
 id=site.data.corporate-template.us.banner.image.id %}
 
 <!--Wave-->
-<div style="margin-top: -100px;">
   {% include global/wave.html content='empty-content'
   color=site.data.corporate-template.colors.color-primary-light %}
-</div>
+  
 <!--Features-->
-
 {% include corporate-template/cards/us-feature-card.html collection=site.data.corporate-template.us.features %}
 
 <!--Wave-->

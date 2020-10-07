@@ -1,11 +1,11 @@
 ---
 layout: corporate-template/service
 title: Mobile Apps
-page-image: service1.png # for social media links
+page-image: service1-1.png # for social media links
 subtitle: Best subtitle ever
 category: Technology
 button: Learn more &rarr;
-img: service1.png
+img: service1-1.png
 img-type: 'image' #or svg
 by: By Stephanie Cruise
 href: https://www.instagram.com/

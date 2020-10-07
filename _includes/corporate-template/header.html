@@ -43,6 +43,13 @@
  </div>
 </ul>
 
-
+<script>
+   window.addEventListener("scroll", function(){
+        var header= document.querySelector(".main-nav");
+        if (header){
+            header.classList.toggle("main-nav__sticky",window.scrollY > 0);
+        }
+    })
+</script>
 
  

@@ -109,7 +109,14 @@
  </div>
 </ul>
 
-
+<script>
+   window.addEventListener("scroll", function(){
+        var header= document.querySelector(".main-nav");
+        if (header){
+            header.classList.toggle("main-nav__sticky",window.scrollY > 0);
+        }
+    })
+</script>
 
  
 	   <div class="blog-post row">
@@ -254,6 +261,61 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur, d
                 <p>Created at Apr 09, 16</p>
             </div>
             <a href="/templategenerator/1-corporate-template/blogs/bitcoin-p2p.html"><div class="plus">&plus;</div></a>
+        </div>
+    </div>
+</div>
+                
+            
+        
+            
+                
+                    
+                    <div class="blog-small">
+    <div class="blog-card__small">
+        <div class="blog-card__small__img">
+             
+            <img src="/templategenerator/1-corporate-template/assets/images/blog-3.png" alt="Post image">
+        </div>
+        <div class="blog-card__small__info">
+            
+            <div class="title">Lorem ipsum dolir sit</div>
+            <div class="update">
+                <svg class="blog-card__info__svg">
+    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-calendar"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+                <p>Created at Apr 09, 16</p>
+            </div>
+            <a href="/templategenerator/1-corporate-template/blogs/lorem-ipsum.html"><div class="plus">&plus;</div></a>
         </div>
     </div>
 </div>
@@ -471,11 +533,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur, d
 	:root{
 		--color-primary: #FFC133;
 		--color-primary-light: #ffca67;
-		--color-secondary: #2c2c44;
-		--color-secondary-light: #58587a;
+		--color-secondary: #384F56;
+		--color-secondary-light: #00B3A9;
 		--color-grey-light: rgb(233, 233, 233);
 		--color-terciary: orange;
-		--color-secondary-transparent:#5548617a;
+		--color-secondary-transparent:#10B3AA;
 	}
 </style>
 </html>

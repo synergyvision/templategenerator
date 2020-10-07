@@ -117,7 +117,7 @@
                     text-align: center;
                     height: 100%;
                     margin-left: 100px;      
-                    color: var(--color-secondary-light);
+                    color: var(--color-secondary);
                     @include respond(phone){
                         margin-left: 0px;  
                     }
@@ -241,7 +241,7 @@
             width: 100%;
             height: 100%;
             font-size: 2rem;
-            color: var(--color-secondary-light);
+            color: var(--color-secondary);
             font-weight: 600;
             letter-spacing: 1.2px;
             text-align: center;

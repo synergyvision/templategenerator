@@ -109,10 +109,17 @@
  </div>
 </ul>
 
-
+<script>
+   window.addEventListener("scroll", function(){
+        var header= document.querySelector(".main-nav");
+        if (header){
+            header.classList.toggle("main-nav__sticky",window.scrollY > 0);
+        }
+    })
+</script>
 
  
-	   <div class="header">
+	   <div class="header" style="background-image: url(/templategenerator/1-corporate-template/assets/images/home-bg.png);">
   <div class="banner-container">
     <div class="header__title">
           <h2 class="title-secondary">
@@ -214,7 +221,8 @@
        Why us?
     </div>
 </div>
-    <div class="row us-col-container mt-big">
+    <div class="row">
+      <div class="us-col-container mt-big">
         <div class="us-col us-col__1 ">
             <div class="composition">
                 
@@ -252,6 +260,7 @@
             </div>
                
         </div>
+      </div>
     </div>
    
 </section>
@@ -459,18 +468,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service8.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service8-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/access-control.html" class="post-content">
+    <div class="post-content">
         <div class="category">Security</div>
         <div class="hidden-content">
-          <h1 class="title2">Access Control</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/access-control.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Access Control</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/access-control.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/access-control.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -481,18 +491,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service3.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service3-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/company-training.html" class="post-content">
+    <div class="post-content">
         <div class="category">Training</div>
         <div class="hidden-content">
-          <h1 class="title2">Training for companies</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/company-training.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Training for companies</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/company-training.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/company-training.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -503,18 +514,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service6.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service6-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/consultancy.html" class="post-content">
+    <div class="post-content">
         <div class="category">Training</div>
         <div class="hidden-content">
-          <h1 class="title2">Consultancy</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/consultancy.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Consultancy</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/consultancy.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/consultancy.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -531,18 +543,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service5.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service5-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/coporate-images.html" class="post-content">
+    <div class="post-content">
         <div class="category">Design</div>
         <div class="hidden-content">
-          <h1 class="title2">Corporate images</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/coporate-images.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Corporate images</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/coporate-images.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/coporate-images.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -553,18 +566,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service1.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service1-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/mobile-apps.html" class="post-content">
+    <div class="post-content">
         <div class="category">Technology</div>
         <div class="hidden-content">
-          <h1 class="title2">Mobile Apps</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/mobile-apps.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Mobile Apps</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/mobile-apps.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/mobile-apps.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -575,18 +589,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service7.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service7-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/software-development.html" class="post-content">
+    <div class="post-content">
         <div class="category">Technology</div>
         <div class="hidden-content">
-          <h1 class="title2">Software development</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/software-development.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Software development</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/software-development.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/software-development.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -603,18 +618,19 @@
                                 <div class="post-module">
     <div class="thumbnail">
        
-      <img src="/templategenerator/1-corporate-template/assets/images/service2.png"/>
+      <img src="/templategenerator/1-corporate-template/assets/images/service2-1.png"/>
     </div>
-    <a href="/templategenerator/1-corporate-template/services/web-design.html" class="post-content">
+    <div class="post-content">
         <div class="category">Technology</div>
         <div class="hidden-content">
-          <h1 class="title2">Web Design</h1>
-          <h2 class="sub_title">Best subtitle ever</h2>
-          
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
-          <a href="/templategenerator/1-corporate-template/services/web-design.html" class="btn-text hide">Learn more &rarr;</a>
+            <h1 class="title2">Web Design</h1>
+            <h2 class="sub_title">Best subtitle ever</h2>
+            
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore...</p>
+            <a href="/templategenerator/1-corporate-template/services/web-design.html" class="btn-text hide">Learn more &rarr;</a>
+            <a class="more-responsive" href="/templategenerator/1-corporate-template/services/web-design.html"> + </a>
         </div>
-    </a>
+    </div>
 </div>
                                   
                                  
@@ -646,7 +662,7 @@
 
 
 <section id="contact-us">
-    <div style="height: 150px; overflow: hidden; z-index: 4">
+    <div style="height: 150px; overflow: hidden; z-index: 4; margin-bottom: -5px;">
   <svg
     viewBox="0 0 500 150"
     preserveAspectRatio="none"
@@ -737,7 +753,7 @@
 
             </div>
             
-<div style="height: 150px; overflow: hidden; z-index: 4">
+<div style="height: 150px; overflow: hidden; z-index: 4; margin-top: -5px;">
   <svg
     viewBox="0 0 500 150"
     preserveAspectRatio="none"
@@ -1093,11 +1109,11 @@
 	:root{
 		--color-primary: #FFC133;
 		--color-primary-light: #ffca67;
-		--color-secondary: #2c2c44;
-		--color-secondary-light: #58587a;
+		--color-secondary: #384F56;
+		--color-secondary-light: #00B3A9;
 		--color-grey-light: rgb(233, 233, 233);
 		--color-terciary: orange;
-		--color-secondary-transparent:#5548617a;
+		--color-secondary-transparent:#10B3AA;
 	}
 </style>
 </html>
