@@ -32,7 +32,7 @@
 <!-- Open Graph data -->
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ include.site.title }}{% endif %}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.example.com/" /> <!--to be defined-->
+<meta property="og:url" content="{{page.url}}" /> <!--to be defined-->
 <meta property="og:image" content="{{image-directory}}" />
 <meta property="og:description" content="{% if page.page-description %} {{page.page-description |  truncate: 200 }} {% else %} {{include.site.description  |  truncate: 200 }}{% endif %}" />
 <meta property="og:site_name" content="{{include.site.title}}}" />	

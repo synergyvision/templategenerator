@@ -4,6 +4,9 @@
     height: 100vh;
     @include background;
     background-attachment: fixed;
+    @include respond(tab-land){
+        background-attachment: local !important;
+    }
     /*&:after {
         content: "";
         z-index:1;

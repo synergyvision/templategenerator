@@ -1,8 +1,6 @@
 {% include online-courses-template/global/title.html title=site.data.online-courses-template.home.us.title subtitle=site.data.online-courses-template.home.us.subtitle %}
 
-<section class="section-us row">
-  
-   
+<section class="section-us ">
     <div class="section-us__images">
         {% assign image-directory= {{site.data.online-courses-template.global.site.directories.images | append: site.data.online-courses-template.home.us.images[0].name | relative_url }} %}
         <div class="image-container">
