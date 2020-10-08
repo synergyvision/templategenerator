@@ -1,0 +1,103 @@
+---
+layout: index/default
+title: Online courses template | Components
+collection: 
+    - title: Cards
+      collection:
+        - title: Blog-card.html
+          texts:
+            - title: A blog card that displays the main information of the blog. 
+            - title: Parameters
+            - text: 'url: The path to redirect'
+            - text: 'image-directory: The image source directory'
+            - text: 'image: Object wich include: name, the name of tha image. alt: Alternative text to image'
+            - text: 'title: The title of the blog post'
+            - text: 'description: Breve descriptionof the blog post'
+        - title: buy-card.html
+          texts: 
+            - title: This card includes the payment information, including prices, discount prices, coupons etc.
+            - title: 'Parameters:'
+            - text: 'pay-info: Object wich includes: text, the title of the card, currency, the current currency, percentage-off-text, wich displays an "off", coupon-input wich include the parameters of an input, and a btn, wich includes the parameter of a button component'
+            - text: 'price: the current toal price '
+            - text: 'old-price: the total price without discount'
+            - text: 'svg-directory: source of the svg icon'
+        - title: category-card.html
+          texts:
+            - title: This component shows a rounded button
+            - title: 'Parameters:'
+            - text: 'name: Displays the title of the button'
+            - text: 'href: path to redirect'
+        - title: community-card.html
+          texts:
+            - title: This component displays an element with a drop shape, and an image inside
+            - title: 'Parameters:'
+            - text: 'member: Object that includes a name,  a text (short text), and an image, wich includes a name (name of the image), and an alt (alternative to the image)'
+            - text: 'image-directory: The image directory '
+        - title: course-card.html
+          texts:
+            - title:' This component displays the cover page of a course. Including relevant information about it, depending on the parameters passed'
+            - title: 'Parameters:'
+            - text: 'card: Object wich includes a name, owner, image (wich includes a name, and an alt), score (number between 0 and 5), discount (can be true or false), currency, discount-price (if discount equal to true), and an url to redirect'
+            - text: 'bought-info: Displays the progress of the course. Optional. Object wich includes completed (the percentage of completion), rating ( number between 0 and 5)'
+            - text: 'added: Set to true if you want to display the added buttons'
+        - title: course-feature-card.html
+          texts: 
+            - title: This component displays a card with listed texts
+            - title: 'Parameters:'
+            - text: 'title: Displays the name of the card'
+            - text: 'section: Array that includes, an icon, and a text'
+            - text: 'svg-directory: The path of the svg icons'
+        - title: course-membered-questions.html
+          texts: 
+            - title: 'This components displays a card a question card, including the person image, the question and the description.'
+            - title: 'Parameters:'
+            - text: 'question: Object that includes a question (the question by it self), an answer, and a person with an image, wich includes a name and an alt (alternative text to image)'
+        - title: credit-card-edit.html
+          texts:
+                - title: 'This component display a card with the credit card information.'
+                - title:  'Parameters:'
+                - text: 'This component has no parameters, so the information is taken from the data directory'
+        - title: instructor-card.html
+          texts:
+                - title: This component displays a breve profile of an instructor.
+                - title: 'Parameters:'
+                - text: 'title: displays the title of the card'
+                - text: 'person: Object that includes a name, and image (wich includes a name, and an alt), a short-description of the instructor, features (an array wich includes an icon and a text), and a href wich redirect to a page'
+                - text: 'image-directory: directory of the instructor image'
+                - text: 'btn-more: Object that includes the button component parameters'
+        - title: price-card.html
+          texts:
+                - title: 'This component displays a buy card for a course, showing the prices and a list of buttons.'
+                - title: 'Parameters:'
+                - text: 'price: The price of the course'
+                - text: 'discount-price: The price after the discount'
+                - text: 'buttons: An array wich includes an href, and an icon'
+                - text: 'svg-directory: the directory of the svg icons'
+        - title: students-review-card.html  
+          texts:
+                - title: This component displays a card wich shows a person review of a course
+                - title: 'Parameters:'
+                - text: 'student-review: Object that includes a name, a text, an image wich includes a name, and an alt (alternative to the image), an score (a number between  and 5), a date, '
+                - text: 'image-directory: the directory of the image'
+        - title: switch.html
+          texts:
+                - title: This component shows a simple wich displays a text in the left side.
+                - title: 'Parameters:'
+                - text: 'text: Text to display' 
+    - title: Course-detail-pages
+      collection:
+        - title: course-detail-instructor.html
+          texts:
+            - title: This components 
+---
+
+<div class="component__title">
+    Components
+</div>
+
+{% for card in page.collection %}
+    <div class="component__subtitle">
+        {{card.title}}
+    </div>
+    {% include global/accordion.html icon='icon-dot-single' svg-directory=site.data.global.site.directories.svg collection=card.collection  %}
+{% endfor %}

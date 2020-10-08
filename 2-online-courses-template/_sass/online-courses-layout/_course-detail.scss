@@ -474,7 +474,9 @@
                 .btn-back, &__ask{
                     display: none;
                 }
-
+                &__ask{
+                    width: 100%;
+                }
                 
             }
 
