@@ -1,0 +1,58 @@
+---
+layout: index/how-to-use
+title: Corporate template | Components
+directories:
+    - title: 'Directorio "_data"'
+      content:
+        - text: 'Contiene todos aquellos datos que serán utilizados a lo largo de la plantilla.'
+        - collection:
+                - text: 'colors.yml: Incluye los colores que serán utilizados a lo largo de la planilla.'
+                - text: 'blog.yml: Incluye todos los datos utilizados en el blog corporativo. Nota 🚨: No incluye el contenido de las publicaciones del blog.'
+                - text: 'clients.yml: Incluye toda la  informacio4n utilizada en la sección "nuestros clients"'
+                - text: 'footer.yml: Incluye todos los datos mostrados en el pie de página de la plantilla.'
+                - text: 'global.yml: Incluye todos aquellos datos globales. Como:'
+                  list: 
+                    - text: 'Titulo de la página, descripción, cuenta oficial de instagram, etc.'
+                    - text: 'Logo que será mostrado en las redes sociales, favicon, etc.'
+                    - text: 'Directorios de iconos, imagenes, javascript y css.'
+                    - text: 'Dirección base de la plantilla.'
+                - text: 'header.yml: Incluye todos los links utilizados en el encabezado de la plantilla, y los archivos de redirección.'
+                - text: 'home.yml: Incluye todos los datos mostrados en las secciones de inicio de la plantilla, como "por qué nosotros", servicios, "banner", formulario de contacto, caracteristicas, y redes sociales.'
+                - text: 'not-found.yml: Incluye todos los datos que se mostrarán en la página 404/ no encontrado.'
+                - text: 'team.yml: Incluye todos los datos mostrados en la pagina del equipo corporativo, incluyendo titulos, caracteristicas, imagenes, y una lista con información de cada uno de los miembros.'
+                - text: 'us.yml: Incluye todos los datos mostrados en la pagina "Nosotros", incluyendo títulos, características, testimonios, y frases.'
+    - title: 'Directorio _corporate-blogs'
+      content:
+        - text: 'Contiene todos los articulos que contiene el blog corporativo. Cada uno de estos "posts" consiste en un archivo "markdown", donde se especifican su propia metadata como:'
+        - collection:
+            - text: 'Id: Número del post'
+            - text: 'layout: Hace referencia a cómo se mostrarán estos datos. Si desea mostrar todos los datos como indica la plantilla, apunte al layout "corporate-template/blog"'
+            - tect: 'title: titulo del post. by: persona que escribió el post, desctiption: descripcion breve que será mostrada en las cartas de presentaciónd el post, image: nombre de la imagen, alt: texto alternativo a la imágen, date: fecha de creación del post'
+            - text: 'page-image: imagen que será mostrada en las redes sociales al ser compartido el link del post'
+            - text: 'top: Si el post actual se encuentra en las publicaciones top, ponga en true, de lo contrario ponga en false'
+        - text: 'Además de la metadata, cada uno de estos archivos posee un contenido, que hace referencia al post en sí'
+        - text: 'Nota 🚨: Si desea agregar publicaciones al post, agrege un archivo con extensión ".md", y llene los datos'
+    - title: 'Directorio _corporate-services'
+      content:
+        - text: 'Contiene todos los servicios ofrecidos por la empresa. Cada uno de estos servicios consiste en un archivo "markdown" , donde se especifica su propia metadata como:'
+        - collection:
+            - text: 'layout: Hace referencia a cómo se mostrarán estos datos. Si desea mostrar todos los datos como indica la plantilla, apunte al layout "corporate-template/service"'
+            - text: 'title: titulo del servicio, subtitle: subtitulo del servicio, quote: nota relevante del servicio, category: categoria a la que pertenece dicho servicio, img: nombre de la imagen a mostrar, img-type: image de ser una imagen y svg de ser un icono, by: autor de la publicacion'
+            - text: 'button: texto del botón a mostrar en la carta de presentación del servicio.'
+            - text: 'page-image: imagen que será mostrada en las redes sociales al ser compartido el link del post'
+            - text: 'share: información de la seccion de redes sociales. Si desea agregar una nueva red social, añada en el arreglo "icons" un nombre de icono svg, y un link de redirección '
+            - text: 'description: Arreglo que enumera los párrafos de la descripción de un servicio. Estos seran mostrados en el orden especificado.'
+            - text: 'side: Muestra la información de la columna lateral derecha de cada servicio: '
+              list:
+                - text: 'tags: Muestra los tags a los cuales pertenece el servicio, Si desea añadir un nuevo tag, agrege al arreglo "items" un nuevo "title"'
+                - text: 'categories: Muestra las categorias a los cuales pertenece el servicio, Si desea añadir una nueva categoría, agrege al arreglo "tags" un nuevo "title" especificando el nombre de la categoria, y un "percentage" indicando el portentage de relevancia en dicha categoría'
+                - text: 'participants: Muestra un titulo, y una lista con los participantes relevantes en este sercicio. Si desea añadir un nuevo participante añada un nuevo campo en el arreglo list'
+            - text: 'frequen-questions: Muestra un titulo, y una colección de preguntas frecuentes. Cada uno de los campos contiene un question, que indica la pregunta realizada, y un answer que indica la respuesta a dicha pregunta'
+    - title: 'Directorio _layouts'
+      content:
+        - text: 'Contiene todos los layouts utilizados a lo largo de la plantilla'
+        - collection:
+            - text: 'corporate.html: Es el diseño por defecto de la plantilla, que incluye el "head" html y toda la estructura base de un archivo html, el encabezado y el pie de página. Todos los demaas "layouts" utilizan este, puesto que se desea mostrar en todas las pantallas el pie de página y el encabezado.'
+            - text: 'blog.html: Es el diseño que utilizan todos los post incluidos en "_corpotate-blogs", para mostrar su contenido dependiendo de la página actual.'
+            - text: 'service.html: Es el diseño que utilizan todos los servicios incluidos en "_corpotate-services", para mostrar su contenido dependiendo de la página actual.'
+---

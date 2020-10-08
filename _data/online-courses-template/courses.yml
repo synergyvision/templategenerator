@@ -1,7 +1,10 @@
 max-per-page: 9.0
 
-  
-
+cards:
+  buttons:
+    - btn: icon-trash
+    - btn: icon-save
+    
 detail:
   instructor:
     title: Instructor
@@ -36,6 +39,12 @@ detail:
         text: Ask a question
         type: primary
     my-question:
+      title: 
+        label: Title
+        placeholder: Your title question
+      description: 
+        label: Description
+        placeholder: Your question
       btn:
         text: Back to Questions
         type: primary
@@ -44,58 +53,61 @@ detail:
         text: Send
         type: primary
     
-
-
 filter:
-  - title: rating
-    id: rating
-    sections:
-      type: score
-      collection:
-        - text: All
-          checked: true
-        - score: 4.5
-          text: '& up'
-        - score: 3.5
-          text: '& up'
-        - score: 2.5
-          text: '& up'
-        - score: 1.5
-          text: '& up'
-  - title: Course duration
-    id: duration
-    sections:
-      type: number
-      collection:
-        - text: All
-          checked: true
-        - number: 10
-          text: hours or more
-        - number: 20
-          text: hours or more
-        - number: 30
-          text: hours or more
-  - title: Language
-    id: language
-    sections:
-      type: text
-      collection:
-        - text: All
-          checked: true
-        - text: 'English'
-        - text: 'Spanish'
-  - title: price
-    id: price
-    sections:
-       type: number
-       collection:
-         - text: All
-           checked: true
-         - number: 10
-           text: 'or more'
-         - number: 20
-           text: 'or more'
-         - number: 30
-           text: 'or more'
-         - number: 40
-           text: 'or more'
+  results: results
+  btn:
+    text: Reselt filter
+    type: primary
+  collection:
+    - title: rating
+      id: rating
+      sections:
+        type: score
+        collection:
+          - text: All
+            checked: true
+          - score: 4.5
+            text: '& up'
+          - score: 3.5
+            text: '& up'
+          - score: 2.5
+            text: '& up'
+          - score: 1.5
+            text: '& up'
+    - title: Course duration
+      id: duration
+      sections:
+        type: number
+        collection:
+          - text: All
+            checked: true
+          - number: 10
+            text: hours or more
+          - number: 20
+            text: hours or more
+          - number: 30
+            text: hours or more
+    - title: Language
+      id: language
+      sections:
+        type: text
+        collection:
+          - text: All
+            checked: true
+          - text: 'English'
+          - text: 'Spanish'
+    - title: price
+      id: price
+      sections:
+        type: number
+        collection:
+          - text: All
+            checked: true
+          - number: 10
+            text: 'or more'
+          - number: 20
+            text: 'or more'
+          - number: 30
+            text: 'or more'
+          - number: 40
+            text: 'or more'

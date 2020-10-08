@@ -28,6 +28,7 @@
 .blog-content{
     margin: 50px auto !important;
     width: 90%;
+
     @include abscenter;
     flex-direction: column;
     .plane-link{
@@ -37,7 +38,6 @@
         max-width: 50rem;
         max-height: 50rem;
         
-
         img{
             width: 100%;
             height: auto;
@@ -62,13 +62,15 @@
     &__text{
         font-size: 1.8rem;
         text-align: justify;
-
+        width: 100%;
+        margin: 0 auto;
         img{
             justify-content: center;
             max-width: 40rem;
             height: auto;
             margin: 30px auto;
             display: flex;
+            width: 100%;
         }
 
         .title{

@@ -1,65 +1,29 @@
 ---
-layout: culinary-blog-template/culinary-blog-default
+layout: culinary-blog-template/culinary-blog-sticky-header
 ---
 
 <!--INFORMATION-->
 {% assign image-directory=
     site.data.culinary-blog-template.global.site.directories.images %} 
-{% assign header-info = site.data.culinary-blog-template.header %}
 {% assign
     svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
     | relative_url | append: "#" %}
-{% assign bread-section = site.data.culinary-blog-template.bread-detail %}
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+{% assign bread-info-section = site.data.culinary-blog-template.recipes-and-courses %}
+{% assign recipe = page.recipe %}
+
 <!--COMPONENTS-->
-
-
-{% include culinary-blog-template/global/header.html image-directory=image-directory nav-links=header-info.nav-links logo=header-info.logo sticky=true %}
-<div class="" style="margin-bottom:100px; margin-top: 70px;">
-    <div class="banner-secondary" style=" background-image:url({{image-directory | append: 'banner-background.png' | relative_url }});"></div>
-    {% include culinary-blog-template/cards/recepe-box.html svg-directory=svg-directory icon=bread-section.icon-section page=page %}
-    {% assign recipe = page.recepe %}
-
-    <div class="xxx">
-        <div class="recepe-box__header">
-            <h2>Ingredientes</h2>
-            <h3>{{include.page.subtitle}}</h3>
-        </div>
-        <div class="recepe-box__content" style="background-image:url({{image-directory | append: 'feature-section-bg.png' | relative_url }});">
-            {% include global/table.html header=bread-section.ingredients-table.header content=page.ingredients header-bg-color='white' header-color='#333' footer=bread-section.ingredients-table.footer %}
-            <div class="quantity-box">
-                <div class="quantity-box__increase">
-                    <h2>Cantidad</h2>
-                    <div class="increase-box">
-                        <a onclick="incrementDecreaseValue('increment')" class="left">+</a>
-                        <input class="increase-box__input" type="number" min="1" max="30" value="6" initialValue="6" readonly>
-                        <a onclick="incrementDecreaseValue('decrease')" class="right">-</a>
-                    </div>
-                </div>   
-                {% include culinary-blog-template/global/button-primary.html title='Ver cantidades' onclick="changeTableValues(2)" %}  
-            </div>
-        </div>              
+    {% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner%}
+    {% include culinary-blog-template/cards/recipe-box.html svg-directory=svg-directory icon=bread-info-section.icon-section page=page %}
+    {% include culinary-blog-template/cards/ingredients-box.html table-content=page.ingredients image-directory=image-directory info=bread-info-section.ingredients column=true table=bread-info-section.ingredients.ingredients-table quantity-box=bread-info-section.ingredients.quantity-box quantity=page.quantity %}
+    <div class="row"> 
+        {% include culinary-blog-template/global/title-primary.html title=bread-info-section.recipes.step-by-step.title subtitle=bread-info-section.recipes..step-by-step.subtitle %}
+        {% include global/accordion.html icon=bread-info-section.icon-section image-directory=image-directory collection=recipe svg-directory=svg-directory icons-prefix='prep-step-' expanded=true %}
+        <div class="mtb-big">
+            {% include global/carousel.html
+                id=1
+                cardsFile='culinary-blog-template/cards/gallery-card.html' quantity='4.0'
+                cardsCollection=page.gallery
+                color=site.data.culinary-blog-template.colors.color-secondary %}
+        </div>     
     </div>
-    <div class="row">
-       
-        {% include culinary-blog-template/global/title-primary.html title=bread-section.step-by-step.title subtitle=bread-section.step-by-step.subtitle %}
-        {% include culinary-blog-template/global/accordion.html collection=recipe svg-directory=svg-directory %}
-    </div> 
-</div>
-
-<script>
-
-    function incrementDecreaseValue(operation)
-{
-    var value = parseInt(document.getElementsByClassName('increase-box__input')[0].value, 10);
-    value = isNaN(value) ? 0 : value;
-    if (operation == 'increment') value++;
-    else {
-        if ( (value-1) > 0 ){
-            value--;
-        }
-    };
-    document.getElementsByClassName('increase-box__input')[0].value = value;
-}
-
-
-</script>

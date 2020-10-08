@@ -8,23 +8,23 @@ page-image: clients-section.png
 <!--Banner-->
 
 {% include corporate-template/sections-banner.html
+background=site.data.corporate-template.clients.banner.background
 title=site.data.corporate-template.clients.banner.title
 subtitle=site.data.corporate-template.clients.banner.subtitle
 img=site.data.corporate-template.clients.banner.image.name
 type=site.data.corporate-template.clients.banner.image.type
+id=site.data.corporate-template.clients.banner.image.id
 %}
 <!--Wave-->
-<div style="margin-top: -100px;">
     {% include global/wave.html content='empty-content'
     color=site.data.corporate-template.colors.color-primary-light %}
-</div>
 
 <!--Clients-->
     <!--Title-->
     {% include corporate-template/title.html title=site.data.corporate-template.clients.sections.clients.title %}
 
     <!--Logos-->
-    <div class="logos-container mt-big abscenter row">
+    <div class="logos-container mt-big abscenter ">
         {% for card in site.data.corporate-template.clients.sections.clients.collection %}
             {% include corporate-template/cards/logo-card.html card=card %}
         {% endfor %}

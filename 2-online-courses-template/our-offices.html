@@ -12,14 +12,14 @@ title: Coursing | Offices
 
 
 {% for i in site.data.online-courses-template.offices.collection %}
-{% assign inverted = forloop.index | modulo: 2 %}
-{% if inverted == 0 %}
-    {% assign inverted = false %}
-{% else %}
-    {% assign inverted = true %}
-{% endif %}
-{%
-    include online-courses-template/global/video-text-stripe.html
-    image-directory=image-directory inverted=inverted
-    image=i.image title=i.title text=i.text %}
+    {% assign inverted = forloop.index | modulo: 2 %}
+        {% if inverted == 0 %}
+            {% assign inverted = false %}
+        {% else %}
+            {% assign inverted = true %}
+        {% endif %}
+    {%
+        include online-courses-template/global/video-text-stripe.html
+        image-directory=image-directory inverted=inverted
+        image=i.image title=i.title text=i.text video=i.video %}
 {% endfor %}

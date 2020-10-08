@@ -47,6 +47,46 @@ dashboard-welcome:
   image:
     name: 'instructor-welcome.png'
     alt: Welcome image
+  chart-title: Lorem ipsum sit amen
+  chart:
+    - value: 3
+    - value: 2
+    - value: 1.5
+    - value: 7.8
+    - value: 15
+    - value: 6
+    - value: 30
+    - value: 2
+    - value: 12
+    - value: 34
+    - value: 22
+    - value: 11
+  chart-labels:
+    - value: 'January'
+    - value: 'February'
+    - value: 'March'
+    - value: 'April'
+    - value: 'May'
+    - value: 'June'
+    - value: 'July'
+    - value: 'August'
+    - value: 'September'
+    - value: 'October'
+    - value: 'November'
+    - value: December
+  chart-colors:
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
+      - value: '#6078ea'
+      - value: '#99AAFF'
 
 dashboard-messages:
   title: 
@@ -139,28 +179,36 @@ sections:
         text: 'Save changes'
         type: primary
 
+course-detail:
+  - link: Basic Info
+    component: online-courses-template/edit-course-sections/basic-info.html
+  - link: Students
+    component: online-courses-template/edit-course-sections/students-table.html
+  - link: Sections 
+    component: online-courses-template/edit-course-sections/course-sections.html
+
 edit-info-sections:
   - title: Description
     left-fields-big:
       - input: 
           type: text
-          name: 
+          name: course-title
         type: input
         label: 'Course title'
       - input:
           type: textarea
-          name: 
+          name: course-description
         type: input
         label: Course description
     right-fields-small:
       - input:
           type: text
-          name: 
+          name: course-price
         type: input
         label: Price
       - input:
           type: text
-          name: 
+          name: course-discount-price
         type: input
         label: Discount price
     btn:
@@ -179,47 +227,25 @@ edit-info-sections:
       - component:
         type: component
         name: 'online-courses-template/instructor/to-learn-course-table.html'
-        parameters: 
     btn:
        - text: Add
          type: primary
+  - title: Image
+    one-side:
+      - component:
+        type: component
+        name: 'online-courses-template/global/image.html'
+    btn:
+      - text: Change image
+        type: primary
 
 courses:
   - name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
     id: course5
     default: true
-    student-list:
-      input:
-      student-table:
-        header:
-          - title: Names
-          - title: Email
-          - title: Progress
-        content:
-          - collection: 
-              - text: Stephanie Cruz
-                href: 'stephanie-cruz-profile'
-              - text: stephaniecruzcastelli@gmail.com
-              - text: 70%
-          - collection: 
-              - text:  Milos Raonic
-              - text: milosraonic66@gmail.com
-              - text: 62%
-          - collection: 
-              - text: Denis Shapovalov
-              - text: denisshapovalovv02@yahoo.com
-              - text: 12%
-          - collection: 
-              - text: Grigor Dimitrov
-              - text: grigordimitrov22@hotmail.com
-              - text: 99%
-          - collection: 
-              - text: Dominic Thiem
-              - text: dominicthiem77@gmail.com
-              - text: 45%
   - name: Investing In Stocks The Complete Course! (11 Hour)
     id: course6
-
+    
 
 includes-table:
   header:

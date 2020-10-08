@@ -10,11 +10,11 @@
 	<link rel="stylesheet" href="/templategenerator/1-corporate-template/css/main.css">
 	<link rel="canonical" href="templategenerator/1-corporate-template/blogs/bitcoin-p2p.html">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
-		
+
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="Bitcoin P2P">
 <meta itemprop="description" content=" This is the site description">
-<meta itemprop="image" content="/templategenerator/1-corporate-template/assets/images/blog-2.png">
+<meta itemprop="image" content="/templategenerator/1-corporate-template/assets/images/blog-3.png">
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
@@ -22,14 +22,14 @@
 <meta name="twitter:title" content="Bitcoin P2P">
 <meta name="twitter:description" content=" This is the site description">
 <meta name="twitter:creator" content="@creator-example">
-<meta name="twitter:image" content="/templategenerator/1-corporate-template/assets/images/blog-2.png">
+<meta name="twitter:image" content="/templategenerator/1-corporate-template/assets/images/blog-3.png">
 
 
 <!-- Open Graph data -->
 <meta property="og:title" content="Bitcoin P2P" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.example.com/" /> <!--to be defined-->
-<meta property="og:image" content="/templategenerator/1-corporate-template/assets/images/blog-2.png" />
+<meta property="og:image" content="/templategenerator/1-corporate-template/assets/images/blog-3.png" />
 <meta property="og:description" content=" This is the site description" />
 <meta property="og:site_name" content="Synplus | Dsw}" />	
 
@@ -109,7 +109,14 @@
  </div>
 </ul>
 
-
+<script>
+   window.addEventListener("scroll", function(){
+        var header= document.querySelector(".main-nav");
+        if (header){
+            header.classList.toggle("main-nav__sticky",window.scrollY > 0);
+        }
+    })
+</script>
 
  
 	   <div class="blog-post row">
@@ -260,6 +267,61 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur, d
                 
             
         
+            
+                
+                    
+                    <div class="blog-small">
+    <div class="blog-card__small">
+        <div class="blog-card__small__img">
+             
+            <img src="/templategenerator/1-corporate-template/assets/images/blog-3.png" alt="Post image">
+        </div>
+        <div class="blog-card__small__info">
+            
+            <div class="title">Lorem ipsum dolir sit</div>
+            <div class="update">
+                <svg class="blog-card__info__svg">
+    <use xlink:href="/templategenerator/1-corporate-template/assets/svg/sprite.svg#icon-calendar"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+                <p>Created at Apr 09, 16</p>
+            </div>
+            <a href="/templategenerator/1-corporate-template/blogs/lorem-ipsum.html"><div class="plus">&plus;</div></a>
+        </div>
+    </div>
+</div>
+                
+            
+        
         </div>
         <a href="/templategenerator/templategenerator/1-corporate-template/blog.html" class="btn-text"> See all &rarr;</a>
         <div class="mt-big abscenter">
@@ -278,7 +340,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur, d
                     
                     <img src="/templategenerator/1-corporate-template/assets/images/logo-white.png" alt="logo">
                 </div>
-                <div class="footer-col__description"></div>
+                <div class="footer-col__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eius aperiam eligendi vel. Eaque debitis beatae est exercitationem itaque commodi voluptatibus cum soluta corporis</div>
                 
             </div>
             <div class="footer-col">
@@ -455,9 +517,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur, d
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="/templategenerator/javascript/general.js"></script>
 <script src="/templategenerator/javascript/carousel.js"></script>
 <script src="/templategenerator/javascript/table.js"></script>
+<script src="/templategenerator/javascript/pagination.js"></script>
+<script src="/templategenerator/javascript/charts.js"></script>
+
 	
 		<script src="/templategenerator/1-corporate-template/assets/js/animations.js"></script>
 	
@@ -467,11 +533,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consectetur, d
 	:root{
 		--color-primary: #FFC133;
 		--color-primary-light: #ffca67;
-		--color-secondary: #2c2c44;
-		--color-secondary-light: #58587a;
+		--color-secondary: #384F56;
+		--color-secondary-light: #00B3A9;
 		--color-grey-light: rgb(233, 233, 233);
 		--color-terciary: orange;
-		--color-secondary-transparent:#5548617a;
+		--color-secondary-transparent:#10B3AA;
 	}
 </style>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+{% include global/head.html site=site.data.global.site %}
+    <body>	
+        {% assign image-directory= site.data.global.site.directories.images  
+            %}
+
+<div class="index">
+
+    <div class="index__top-navbar">
+        <div class="logo">
+            
+            <img src="{{image-directory | append: 'templategenerator-favi.png' | relative_url }}" alt="">
+        </div>
+        <div class="top_menu">
+        </div>
+    </div>
+    <div class="index__body">
+        
+        <div class="index__body__sidebar-menu">
+            <div class="inner__sidebar_menu">
+                <ul>
+                  {% for link in site.data.documentation.links %}
+                    <li>
+                      <a {% if link.href %} href="{{link.href | relative_url}}" {% endif %} class="{% if link.active == true %} active {% endif %}">
+                        {% if link.fa-icon %} 
+                        <span class="icon">
+                         <i class="fas {{link.fa-icon}}"></i></span> {% endif %}
+                         <span class="list">{{link.name}}</span>
+                       {% if link.items %} <i class="fas fa-angle-down"></i></span> {% endif %}
+                      </a>
+                      {% if link.items %}
+                        <ul class="submenu">
+                            {% for item in link.items %} 
+                            <li>
+                              <a href='{{ item.href | relative_url }}'>
+                                  <span class="icon">
+                                  &dot;</span> 
+                                  <span class="list">{{item.name}}</span>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="index__body__container">
+           {{content}}
+        </div>
+    </div>
+</div>		
+    </body>
+    {% include global/scripts.html %}
+    <script src="https://kit.fontawesome.com/b795eef387.js"></script>
+    <style lang="scss">
+        :root{
+            --color-primary: {{site.data.documentation.color-primary}};
+            --color-secondary: {{site.data.documentation.color-secondary}};
+            --color-secondary-light: {{site.data.documentation.color-secondary-light}};
+        }
+    </style>
+</html>
+

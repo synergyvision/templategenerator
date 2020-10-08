@@ -11,8 +11,7 @@
 	box-shadow: $shadow-dark;
 	overflow: hidden;
 	transition: all 2s linear 0s;
-	&:hover {
-		
+	&:hover {	
 		.thumbnail {
 		img {
 		  -webkit-transform: scale(1.1);
@@ -38,6 +37,20 @@
 	  display: flex;
 	  flex-direction: column;
 	  height: 100%;
+
+		.more-responsive{
+			position: absolute;
+			right: 15px;
+			bottom: 5px;
+			font-size: 4rem;
+			color: var(--color-primary-light);
+			display: none;
+			opacity: 0;
+			@include respond(tab-port){
+				display: block;
+				opacity: 1;
+			}
+		}
 	}
 	.post-content {
 	  position: absolute;
@@ -87,7 +100,6 @@
 		font-size: 1.2rem;
 		line-height: 1.8em;
 	
-
 	  }
 	 
 	}
@@ -112,6 +124,10 @@
 	.post-content{
 	//  translate:;
 	 height: calc(100% - 35px / 2);
+	}
+	.more-responsive{
+		display: none;
+		opacity: 0;
 	}
   }
   

@@ -1,11 +1,11 @@
 ---
 layout: corporate-template/service
 title: Consultancy
-page-image: service6.png # for social media links
+page-image: service6-1.png # for social media links
 subtitle: Best subtitle ever
 category: Training
 button: Learn more &rarr;
-img: service6.png
+img: service6-1.png
 img-type: 'image' #or svg
 by: By Stephanie Cruise
 href: https://www.instagram.com/

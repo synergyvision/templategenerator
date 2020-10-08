@@ -7,34 +7,41 @@ page-image: blog-bg.png
 
 <!--Banner-->
 {% include corporate-template/sections-banner.html
+background=site.data.corporate-template.blog.banner.background
 title=site.data.corporate-template.blog.banner.title
 subtitle=site.data.corporate-template.blog.banner.subtitle
-img=site.data.corporate-template.blog.banner.img
-type=site.data.corporate-template.blog.banner.type %}
+img=site.data.corporate-template.blog.banner.image.img
+type=site.data.corporate-template.blog.banner.image.type
+id=site.data.corporate-template.blog.banner.image.id
+ %}
 
 
 <!--Wave-->
-<div style="margin-top: -100px;">
   {% include global/wave.html content='empty-content'
   color=site.data.corporate-template.colors.color-primary-light %}
-</div>
-
-
 
 <!--Content-->
-<div class="blog mtb-big">
+<div class="blog mb-big">
     <div class="blog__content">
         <!--Title-->
         {% include corporate-template/title.html title=site.data.corporate-template.blog.posts.title %}
         {% assign sorted-blogs= site.corporate-blogs | sort: "date"  %}
         <div class="mt-bigger">
-            {% for post in sorted-blogs %} {%
-                include corporate-template/cards/blog-card.html post=post
-                img=site.data.corporate-template.blog.posts.post-icon-name 
-                button=site.data.corporate-template.blog.posts.button %} {% endfor %}
+            {% for post in sorted-blogs %} 
+                <div class="card-cont">
+                    {%
+                        include corporate-template/cards/blog-card.html post=post
+                        img=site.data.corporate-template.blog.posts.post-icon-name 
+                        button=site.data.corporate-template.blog.posts.button %} 
+                </div>
+            {% endfor %}
         </div>   
-       
-   
+        <div class="abscenter mt-big">
+            {% assign max-per-page=site.data.corporate-template.blog.posts.max-per-page %} {% assign number-of-pages =
+                sorted-blogs | size | divided_by:
+                max-per-page | ceil %} {% include global/pagination.html
+                number-of-pages=number-of-pages max-per-page=max-per-page scroll=true %}
+        </div>
     </div>
     <div class="blog__side">
             <div class="blog__side__title">{{site.data.corporate-template.blog.posts.top.title}}</div>

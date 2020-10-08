@@ -4,7 +4,7 @@
     align-items: flex-start !important;
     width: 100%;
     padding: 50px 0;
-    @include respond(phone){
+    @include respond(tab-port){
         flex-direction: column-reverse;
     }
     .courses-container{

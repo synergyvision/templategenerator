@@ -1,11 +1,11 @@
 ---
 layout: corporate-template/service
 title: Access Control
-page-image: service8.png # for social media links
+page-image: service8-1.png # for social media links
 subtitle: Best subtitle ever
 category: Security
 button: Learn more &rarr;
-img: service8.png
+img: service8-1.png
 img-type: 'image' #or svg
 by: By Stephanie Cruise
 href: https://www.instagram.com/

@@ -1,15 +1,18 @@
 banner: 
   title: Our blog
+  background: home-bg.png
   subtitle: see and enjoy
-  img: 'blog-bg.png' #if svg include an # at the end. ex: 'not-found.svg#'
-  type: 'image'
-  id: # if svg
+  image:
+    img: 'blog.svg#' #if svg include an # at the end. ex: 'not-found.svg#'
+    type: 'svg'
+    id: blog # if svg
 
 
 posts:
   title: All posts
   button: 'See more &rarr;'
   post-icon-name: icon-calendar
+  max-per-page: 3.0
   top:
     title: Top posts
     quantity: 3

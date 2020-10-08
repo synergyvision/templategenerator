@@ -68,4 +68,19 @@ $('.us-col__2').waypoint(function(direction){
 $('.social-box').waypoint(function(direction){
     $('.social-box').addClass('animated fadeInLeft'); 
 },{offset:'100%;'})
+
+$('.feature__card').waypoint(
+    $('.counter').counterUp({
+        time: 4000
+    })
+)
+
+});
+
+
+
+var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 100,
+    showCursor: false
 });

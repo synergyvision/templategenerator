@@ -59,6 +59,12 @@ collections:
   culinary-blog-recipes:
     output: true
     permalink: 3-culinary-blog-template/recipes/:path.html
+  culinary-blog-courses:
+    output: true
+    permalink: 3-culinary-blog-template/courses/:path.html
+  culinary-blog-techniques:
+    output: true
+    permalink: 3-culinary-blog-template/techniques/:path.html
 plugins:
 #    - jekyll-minifier
 #    - jekyll-paginate-v2

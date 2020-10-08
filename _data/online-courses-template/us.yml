@@ -13,7 +13,9 @@ numbers:
 stripe-video: 
   title: Lorem ipsum dolor' text
   text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel alias dolor, sapiente quisquam maxime, consectetur vitae pariatur odio at molestiae minima magni sequi nesciunt. Consequatur facilis aliquam possimus hic ducimus!
-  video: us-1.mp4
+  video: 
+    source: us-1.mp4
+    external: false 
 
 stories:
   - title: Our vision

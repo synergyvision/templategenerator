@@ -19,9 +19,7 @@
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-  .plane-link{
-    align-self: flex-start;
-  }
+
   .title-container{
     h1{
       @include respond(tab-port){
@@ -38,42 +36,8 @@
       font-size: 2rem;
     }
   }
-  &__content{
-      @include abscenter;
-      flex-direction: column;
-    &__inline{
-        @include abscenter;
-        align-items: flex-start;
-        flex-wrap: nowrap;
-        width: 100%;
-        @include respond(tab-land){
-          flex-wrap: wrap;
-        }
-        &>*{
-          margin: 10px;
-        }
-          .image{
-            @include abscenter;
-            width: 50rem;
-            max-width: 90% !important;
-            max-height: auto;
-            img{
-              width: 100% !important;
-              height: auto;
-              object-fit: contain; 
-              -o-object-fit: contain;
-          }
-        }
 
-        .students-table{
-          @include abscenter;
-          flex-direction: column;
-          max-width: 100%;
-        }
-    }
-  }
-  .instructor-courses-table-edit{
-    
+  .instructor-courses-table-edit{ 
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(black,.2);
     height: 300px;
@@ -82,6 +46,20 @@
   }
 }
 
+.students-table{
+  @include abscenter;
+  flex-direction: column;
+  max-width: 100%;
+  .login-input{
+    max-width: 500px !important;
+  }
+  .table-responsive{
+    width: 80%;
+    @include respond(tab-port){
+      width: 100%;
+    }
+  }
+}
 
 .instructor-welcome{
   @include abscenter;
@@ -90,17 +68,22 @@
   @include respond(tab-port){
       margin-left: 5rem;
   }
+  .content{
+      @include abscenter;
+      img{
+        width: 600px;
+        height: auto;
+        max-width: 90% !important;
+    }
+
+  }
   .title{
       color: $gray;
       font-size: 3rem;
       text-align: center;
       padding: 0 10px;
   }
-  img{
-      width: 600px;
-      height: auto;
-      max-width: 90% !important;
-  }
+  
 }
 
 .create-course-basic-info{

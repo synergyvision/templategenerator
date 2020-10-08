@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/templategenerator/2-online-courses-template/css/main.css">
 	<link rel="canonical" href="templategenerator/2-online-courses-template/courses/2020-01-03-Vuejs.html">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
-		
+
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="Vuejs">
 <meta itemprop="description" content=" ">
@@ -51,7 +51,8 @@
 
 
 <body>	
-          
+   <div class="body__content">
+        
 <div class="header">
   <div class="header__logo">
     <a
@@ -451,18 +452,13 @@
     <div class="course-membered--left">
         <div class="video-wrapper"  style="max-width: 900px;
 max-height: 800px;">
-    <!--<div class="video-container">
-      <iframe
-        class="video"
-        src="11111.mp4"
-      ></iframe>
-     <p> </p>
-    </div> -->
+    
     <div class="video-container">
-      <video class="video" controls autoplay>
-        <source src ="/templategenerator/online-courses-videos/11111.mp4" type = "video/mp4">
-      </video>
+        <video class="video" controls autoplay>
+          <source src ="/templategenerator/online-courses-videos/11111.mp4" type = "video/mp4">
+        </video>
     </div>   
+    
 </div>
 
 
@@ -502,27 +498,34 @@ max-height: 800px;">
         </p>
         <div class="btn-ask">
           
-<a  class="button  button-1 "
-    onclick="askQuestion()" >
-   
+
+<a
+  
+  class="button  button-1 "
+  onclick="askQuestion()"
+  
+>
    Ask a question
 </a>
-
 
         </div>
         <div class="btn-back">
           
-<a  class="button  button-1 "
-    onclick="backtoQuestions()" >
-   
+
+<a
+  
+  class="button  button-1 "
+  onclick="backtoQuestions()"
+  
+>
    Back to Questions
 </a>
-
 
         </div>       
     </div>
     <div class="questions__info__ask">
-      <div class="ask-question">
+      
+<div class="ask-question">
     <div class="ask-question__title">
         <div class="login-input">
     
@@ -605,18 +608,21 @@ max-height: 800px;">
     }
 </style>
     
-        <textarea  name="" id="" placeholder="Your description question" style="height:220px;"></textarea>
+        <textarea  name="" id="" placeholder="Your question" style="height:220px;"></textarea>
     
 </div>
     </div>
     <div class="ask-question__btn">
         
-<a  class="button  button-1 "
-    onclick="backtoQuestions()" >
-   
+
+<a
+  
+  class="button  button-1 "
+  onclick="backtoQuestions()"
+  
+>
    Send
 </a>
-
 
     </div>   
 </div>
@@ -796,6 +802,7 @@ $('.icon-chat-fixed').on('click', function(e){
 </div>
 
  	
+   </div>
    <div class="footer">
     <div class="footer__logo">
         
@@ -1021,20 +1028,24 @@ $('.icon-chat-fixed').on('click', function(e){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="/templategenerator/javascript/general.js"></script>
 <script src="/templategenerator/javascript/carousel.js"></script>
 <script src="/templategenerator/javascript/table.js"></script>
+<script src="/templategenerator/javascript/pagination.js"></script>
+<script src="/templategenerator/javascript/charts.js"></script>
+
 
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/animations.js"></script>
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/global.js"></script>
    
-	<script src="/templategenerator/2-online-courses-template/assets/js/pagination.js"></script>
-   
 	<script src="/templategenerator/2-online-courses-template/assets/js/selectors.js"></script>
    
 	<script src="/templategenerator/2-online-courses-template/assets/js/stepper.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/filter.js"></script>
    
 </body>
 

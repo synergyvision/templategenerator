@@ -1,0 +1,40 @@
+---
+layout: index/how-to-use
+title: Culinary blog template | Components
+directories:
+    - title: 'Directorio "_data"'
+      content:
+        - text: 'Contiene todos aquellos datos que serán utilizados a lo largo de la plantilla.'
+        - collection:
+                - text: 'colors.yml: Incluye los colores que serán utilizados a lo largo de la planilla.'
+                - text: 'global.yml: Incluye todos aquellos datos globales. Como:'
+                  list: 
+                    - text: 'Titulo de la página, descripción, cuenta oficial de instagram, etc.'
+                    - text: 'Logo que serà mostrado en las redes sociales, favicon, etc.'
+                    - text: 'Directorios de iconos, imagenes, javascript y css.'
+                    - text: 'Dirección base de la plantilla.'
+                - text: 'home.yml:  Incluye todos aquellos datos que se muestran en los componentes utilizados en la página de inicio de la plantilla.'
+                - text: 'recipes-and-courses.yml: Incluye todos aquellos datos repetitivos y/o globales, como imagen de banner a lo largo de las páginas, iconos, botones generales, filtros, titulos y encabezados de tablas, etc.'
+                - text: 'footer.yml: Incluye todos aquellos datos del pie de página.'
+                - text: 'header.yml: Incluye todos aquellos datos del encabezado.'
+                - text: 'not-found.yml: Incluye los datos mostrados en la página 404 de la plantilla.'
+    - title: 'Directorio "_culinary-blog-recipes"'
+      content:
+        - text: 'Contiene una colección de recetas, y en sí toda aquella información particular, que será usada a lo largo de la plantilla, como paso a paso, ingredientes, score, características, imagen, tipo de pan, etc.'
+        - text: 'Nota 🚨: basic-info es información que será utilizada en las cartas de presentación.'
+        - text: '⚠️ Para añadir una nueva receta, agregue un archivo a este directorio con la extensión ".md" y rellene los datos requeridos.'
+    - title: 'Directorio "_culinary-blog-techniques"'
+      content:
+        - text: 'Contiene una colección de texnicas, y en sí toda aquella información particular, que será usada a lo largo de la plantilla, como video y textos.'
+        - text: 'Nota 🚨: basic-info es información que será utilizada en las cartas de presentación.
+        - text: ⚠️ Para añadir una nueva técnica, agregue un archivo a este directorio con la extensión ".md" y rellene los datos requeridos.'
+    - title: 'Directorio "_culinary-blog-courses"'
+      content:
+        - text: 'Contiene en sí otros directorios que indican el nombre del curso. Estos a su vez contienen una colección de archivos con la extensión ".md".'
+        - text: 'Nota 🚨: Cada archivo contiene un prefijo "step-" , este prefijo podrá ser modificado en data si así se desea. Dichos archivos contienen información del paso como video y textos.'
+        - text: 'Apartando lo archivos que incluyen el prefijo "step-", existe un archivo info que contiene la información del curso en general, como titulos, tipo, imagenes, etc.  '
+    - title: 'Directorio "culinary-blog-videos"'
+      content:
+        - text: 'Contiene en sí todos los videos utilizados a lo largo de la plantilla. Puede agregar más videos a este directorio, o crear otros y cambiando esta dirección en los datos.'
+        - text: 'Nota 🚨: Unicamente aquellos videos internos, de ser el video de alguna fuente externa se indica en los datos, incluyendo el link embebido del video de Youtube, Vimeo, etc.'
+---

@@ -1,0 +1,69 @@
+color-primary: '#2a569c'
+color-secondary: '#6697E8'
+color-secondary-light: '#e1f5ff'
+
+links:
+  - name: Home
+    type: link
+    href: index.html
+    fa-icon: fa-border-all
+    active: true
+  - name: Components
+    type: link
+    fa-icon: fa-layer-group
+    items:
+      - name: Carousel
+        href: documentation/global-components/carousel.html
+      - name: Chart
+        href: documentation/global-components/chart.html
+      - name: Head
+        href: documentation/global-components/head.html
+      - name: Modal
+        href: documentation/global-components/modal.html
+      - name: Navigation
+        href: documentation/global-components/navigation.html
+      - name: Pagination
+        href: documentation/global-components/pagination.html
+      - name: Progress bar
+        href: documentation/global-components/progress-bar.html
+      - name: Score
+        href: documentation/global-components/score.html
+      - name: SVG
+        href: documentation/global-components/svg.html
+      - name: Table
+        href: documentation/global-components/table.html
+      - name: Video
+        href: documentation/global-components/video.html
+      - name: Wave
+        href: documentation/global-components/wave.html
+      - name: Accordion
+        href: documentation/global-components/accordion.html
+  - name: Templates
+    type: title
+    fa-icon:
+  - name: Corporate
+    type: link
+    fa-icon: fa-laptop-code
+    items:
+      - name: Live demo
+        href: /1-corporate-template/
+      - name: How to use
+        href: documentation/corporate-template/how-to-use.html
+  - name: Bakery blog
+    type: link
+    fa-icon: fa-bread-slice
+    items:
+      - name: Live demo
+        href: /3-culinary-blog-template/
+      - name: How to use
+        href: documentation/culinary-blog-template/how-to-use.html
+  - name: Online courses
+    type: link
+    fa-icon: fa-graduation-cap
+    items:
+      - name: Live demo
+        href: /2-online-courses-template/
+      - name: Components
+        href: documentation/online-courses-template/components.html
+      - name: How to use
+        href: documentation/online-courses-template/how-to-use.html

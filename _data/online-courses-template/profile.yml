@@ -173,6 +173,12 @@ my-cart:
     btn: 
       text: Pay now
       type: primary
+    cupon-input:
+      type: text
+      name: Add a coupon
+      icon: icon-offer
+      id: 1
+    percentage-off-text: 'off'
   empty-cart:
     btn: 
       text: Go shopping
@@ -180,3 +186,5 @@ my-cart:
       href: 'categories/all.html'
     empty-message: Ops! There is no courses in your cart
     empty-icon: icon-shopping-cart
+  
+  

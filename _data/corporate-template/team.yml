@@ -1,10 +1,12 @@
-title: Meet our fabulous team
-subtitle: And share with them
-bg-image:
-    id: 'team'
-    type: 'svg' #or image
-    img: 'team.svg#'
-    
+
+banner:
+  title: Meet our fabulous team
+  subtitle: And share with them
+  image:
+      id: 'team'
+      type: 'svg' #or image
+      img: 'team.svg#'
+  background: home-bg.png
 
 features:
     - title: We build your dream
@@ -133,7 +135,7 @@ section-quality:
   text-image: Lorem ipsum dolor
   image:
     type: image # or svg
-    name: phone.png
+    name: phone-1.png
     id: '' # if svg
     alt: 'Phone' # if image
     

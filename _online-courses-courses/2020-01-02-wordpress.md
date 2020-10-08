@@ -4,17 +4,21 @@ layout: online-courses-template/course-detail
 identifier: course4
 categories: [development,design]
 name: WordPress Avanzado Bloques Gutenberg Post Types y Taxonomías
-video: 11111.mp4
+video: 
+  source: https://www.youtube.com/embed/KibbYf9avko?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
+  external: true
 owner: Alexander Zverev
-price: 45.99$
+price: 45.99
 discount: true
-discount-price: 40.25$
+discount-price: 40.25
+currency: $
 score: 3.5
 instructor:
       name: Dominic Thiem
       image:
             name: member6-face.jpg
             alt: Instructor 1
+      href: public-profile.html
       short-description: Developer and Bootcamp Instructor
       features:
           - icon: icon-star-full

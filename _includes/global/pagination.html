@@ -1,11 +1,15 @@
-
+{% assign svg-directory = site.data.global.site.directories.svg %}
 {% if include.number-of-pages > 1 %}
     <div class="pagination1">
-        <a id="prev">&#8810;</a>
+        <a id="prev">
+            {% include global/svg.html directory=svg-directory image='icon-arrow-left' class='svg'  %}
+        </a>
         {% for i in (1..include.number-of-pages) %}
-            <a class=""  id="page-btn" page={{forloop.index}}>{{forloop.index}}</a>
+            <a {% if forloop.index == 1 %} class="active" {% endif %}  id="page-btn" page={{forloop.index}}>{{forloop.index}}</a>
         {% endfor %}
-        <a id="next">&#8811;</a>
+        <a id="next">
+            {% include global/svg.html directory=svg-directory image='icon-arrow-right' class='svg'  %}
+        </a>
     </div>
 {% endif %}
 

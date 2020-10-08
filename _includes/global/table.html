@@ -1,6 +1,6 @@
 <div class="table-responsive">
     <table class="table table-hover table-bordered" id="id">
-    <thead {% if include.header-bg-color %} style="background-color: {{include.header-bg-color}} !important; color: {{include.header-color}};" {% endif %}>
+        <thead {% if include.header-bg-color %} style="background-color: {{include.header-bg-color}} !important; color: {{include.header-color}};" {% endif %}>
         <tr>
         {% for head in include.header %}
           <th>{{head.title}}</th>
@@ -13,8 +13,12 @@
             <tr>
                 {% if content.collection %}
                     {% for field in content.collection %}
-                        <td initialValue="{{field.text}}"> <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>{{field.text | append: field.unity}}
-                        </a></td>
+                        <td initialValue="{{field.text}}" {% if forloop.index != 1 %}
+                            style="text-align: end;" {% endif %} > 
+                            <a {% if field.href %} href="{{field.href | relative_url}}" {% endif %}>
+                                {{field.text | append: field.unity}}
+                            </a>
+                        </td>
                         {% assign column= column | plus: 1 %}
                     {% endfor %}
                     {% if forloop.index == 1 %}
@@ -25,12 +29,12 @@
                     </a></td>
                 {% endif %}
                     {% for content in include.action %}
-                    <td class="abscenter">
-                        <a class="circle-btn" href="#">
-                            {% include global/svg.html directory=include.svg-directory
-                                    image=content.icon class='icon' %}
-                        </a>
-                    </td>
+                        <td class="abscenter">
+                            <a class="circle-btn" href="#">
+                                {% include global/svg.html directory=include.svg-directory
+                                        image=content.icon class='icon' %}
+                            </a>
+                        </td>
                     {% endfor %}
             </tr>
         {% endfor %}
@@ -38,16 +42,13 @@
         {% if include.footer %}
         <tfoot>
             {% assign number-of-cols = number-of-cols | minus: 1 %}        
-              <tr class="total">
+              <tr class="total" >
                   <th>{{include.footer.title}}</th>
                   {% for col in (1..number-of-cols) %}
-                    <th></th>
+                    <th style="text-align: end;"></th>
                   {% endfor %}
               </tr>         
         </tfoot>
         {% endif %}
     </table>
 </div>
-
-<script>  
-</script>

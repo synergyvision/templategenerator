@@ -2,14 +2,15 @@
 layout: online-courses-template/instructor-dash
 title: Instructor dashboard 
 ---
-{% assign image-directory= site.data.online-courses-template.global.site.directories.images
-    %}
-
-<div class="instructor-welcome">
-    
+{% assign image-directory= site.data.online-courses-template.global.site.directories.images %}
+{% assign welcome-dash = site.data.online-courses-template.instructor.dashboard-welcome
+ %}
+<div class="instructor-welcome">  
     <h1 class="title mtb-bigger">
-           {{site.data.online-courses-template.instructor.dashboard-welcome.title}}
+           {{welcome-dash.title}}
     </h1>
-
-    <img src="{{image-directory | append: site.data.online-courses-template.instructor.dashboard-welcome.image.name | relative_url}}" alt="{{site.data.online-courses-template.instructor.dashboard-welcome.image.alt}}" />
+    <div class="content">
+        <img src="{{image-directory | append: welcome-dash.image.name | relative_url}}" alt="{{welcome-dash.image.alt}}" />
+        {% include global/chart.html id='chart1' type='bar' title=welcome-dash.chart-title labels=welcome-dash.chart-labels values=welcome-dash.chart colors=welcome-dash.chart-colors %}
+    </div>
 </div>

@@ -1,0 +1,43 @@
+---
+layout: culinary-blog-template/culinary-blog-sticky-header
+---
+
+<!--INFORMATION-->
+{% assign image-directory=
+    site.data.culinary-blog-template.global.site.directories.images %} 
+{% assign
+    svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
+{% assign base-url = site.data.culinary-blog-template.global.site.base-url %}
+{% assign bread-info-section = site.data.culinary-blog-template.recipes-and-courses %}
+
+<!--COMPONENTS-->
+
+<!--BANNER-->
+{% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner%}
+<!--VIDEO-HEADER-->
+<div class="recipe-box">
+    <div class="recipe-box__header">
+        <h2>{{page.basic-info.name}}</h2>
+        <h3>{{page.subtitle}}</h3>
+    </div>
+    {% include global/video.html
+        source=page.video.source
+        external=page.video.external 
+        source-directory=site.data.culinary-blog-template.global.site.directories.courses-videos
+        %}
+</div>
+<!--CONTENT-->
+<div class="abscenter align-start no-wrap row column-on-tab-port">
+    {% include culinary-blog-template/global/information.html svg-directory=svg-directory information=page.information %}
+    <div class="ma-center">
+        {% include culinary-blog-template/global/title-primary.html small=true title=bread-info-section.techniques.top.title subtitle=bread-info-section.techniques.top.subtitle %}
+        {% for recipe in site.culinary-blog-techniques %}
+            {% for rec in bread-info-section.techniques.top.collection %}
+                {% if recipe.identifier == rec.id %}
+                    {% include culinary-blog-template/cards/presentation-card.html card=recipe.basic-info small=true %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>

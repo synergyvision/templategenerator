@@ -1,0 +1,105 @@
+
+  .accordion__panel {
+     background-color:#eee;
+     font-size:1.4rem;
+     line-height:1.5em; 
+  }
+  .accordion p {
+    margin-left: 10px;
+    width:80%;
+    font-size: 1.6rem;
+  }
+  
+
+  .accordion-container {
+    max-width:960px;
+    margin:0 auto;
+    padding:2em 0 2em 0;
+      .accordion {
+        position:relative;
+          img{
+            width: 180px;
+            height: 180px;
+            margin: 30px;
+          }
+          dl{
+            width: 70%;
+            @include respond(phone){
+              width: 100%;
+            }
+            dt{
+            .accordionTitle{
+              background-color: var(--color-secondary);
+              font-weight: 400;
+              padding: 10px;
+              display: block;
+              text-decoration: none;
+              color: #fff;
+              font-size: 1.6rem;
+              transition: background-color 0.5s ease-in-out;
+              border: 1px solid var(--color-secondary);
+              border-radius: 5px;
+              margin: 10px 0;
+              box-shadow: $shadow-light;
+              &.is-expanded {
+                background-color: var(--color-secondary);
+                color: #fff;
+                 &:before {
+                  
+                   transform:rotate(-225deg);
+                 }
+             }
+              &:hover {
+                background-color: #fff;
+                color: var(--color-secondary);
+              }
+            }
+          }
+          dd{
+            background-color:#eee;
+            font-size:1.4rem;
+            line-height:1.5em; 
+            &.accordionItem {
+                max-height:max-content;
+                overflow:hidden; 
+                transition:max-height 1s;   
+                  .item{
+                      display: flex;
+                      align-items: center;
+                      padding: 10px;
+                  }
+                  &.is-collapsed {
+                    max-height:0;
+                }
+            }
+          }}
+          
+      }
+  }
+
+  .accordion-item-container{
+    @include abscenter;
+
+    flex-wrap: nowrap;
+    @include respond(tab-port){
+      justify-content: center;
+      flex-direction: column !important;
+    }
+  }
+  .accordion-item-container--reverse{
+    flex-direction: row-reverse;
+  }
+
+  .animateIn {
+       animation: accordionIn 0.45s;
+  }
+  .animateOut {
+       animation: accordionOut 0.45s;
+  }
+
+
+  .item-icon{
+    height: 25px;
+    width: 25px;
+    fill: var(--color-primary);
+  }

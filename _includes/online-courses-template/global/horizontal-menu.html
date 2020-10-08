@@ -1,0 +1,12 @@
+<div class="horizontal-menu row abscenter">
+    <ul class="horizontal-menu__links links">
+      {% for i in include.menu %}
+        <li class="link {% if forloop.index == 1 %} link-active {% endif %}" id="{{forloop.index}}" onclick="showContent({{forloop.index}},'.horizontal-menu')">{{i.link}}</li> 
+      {% endfor %}
+    </ul>
+    {% for i in include.menu %}
+      <div class="content" id="{{forloop.index}}" {% if forloop.index != 1 %} style="display: none; transform: scale(0);" {% endif %}>
+          {% include {{i.component}} %}
+      </div> 
+    {% endfor %}      
+</div>

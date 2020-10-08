@@ -16,6 +16,7 @@ sections:
     title: Our services
     id: our-services
   banner:
+    background: home-bg.png
     moving-wave: true
     image:
       type: svg

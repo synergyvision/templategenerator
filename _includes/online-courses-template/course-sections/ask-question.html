@@ -1,9 +1,10 @@
+{% assign my-question = site.data.online-courses-template.courses.detail.course-questions.my-question %}
 <div class="ask-question">
     <div class="ask-question__title">
-        {% include online-courses-template/global/login-input.html label='Title' input-name='Your title question' input-type='input'  %}
+        {% include online-courses-template/global/login-input.html label=my-question.title.label input-name=my-question.title.placeholder input-type='input'  %}
     </div>
     <div class="ask-question__description">
-     {% include online-courses-template/global/login-input.html label='Description' input-name='Your description question' input-type='textarea' height='220px' %}
+     {% include online-courses-template/global/login-input.html label=my-question.description.label input-name=my-question.description.placeholder input-type='textarea' height='220px' %}
     </div>
     <div class="ask-question__btn">
         {% include online-courses-template/global/button.html

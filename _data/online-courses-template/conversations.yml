@@ -1,10 +1,18 @@
+
 chat:
-  input:
+  search-input:
+    title: Search
+  text-area:
+    title: Type a message
     type: textarea
-    name: Type your message
-  btn:
+  btn-send:
     text: Send
     type: secondary
+  message-bottom:
+    title: 'Message:'
+  header:
+    title: Chat with
+
 
 chats:
   - name: Nole Djokovic

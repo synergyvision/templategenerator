@@ -11,9 +11,9 @@ site:
       collection: 
         - name: animations.js
         - name: global.js
-        - name: pagination.js
         - name: selectors.js
         - name: stepper.js
+        - name: filter.js
     courses-videos: /online-courses-videos/
   base-url: '/2-online-courses-template/'
 
@@ -29,16 +29,4 @@ stepper:
     text: Prev
     type: primary
 
-chat:
-  search-input:
-    title: Search
-  text-area:
-    title: Type a message
-    type: textarea
-  btn-send:
-    text: Send
-    type: secondary
-  message-bottom:
-    title: 'Message:'
-  header:
-    title: Chat with
+

@@ -7,7 +7,7 @@
     {% endif %}          
     {% if input.type == 'input' %}
         {% assign placeholder = '' %}
-        {% for field in site.data.online-courses-template.user.profile %}
+        {% for field in include.data %}
             {% if input.input.name == field.name %}
                 {% assign placeholder = field.text %}
             {% endif %}

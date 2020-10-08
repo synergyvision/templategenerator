@@ -1,8 +1,13 @@
 banner: 
-  background: header-background2.jpg
+  background: hazpanen.casa-bg.png
   title:
-    first-line: Haz pan
-    second-line: EN CASA
+    first-line: HAZ PAN
+    second-line: EN.CASA
+
+stripe:
+  - icon: icon-step1
+  - icon: icon-step2
+  - icon: icon-step3
 
 features:
   background: feature-section-bg.png
@@ -56,6 +61,7 @@ newsletter:
     background: 'form-background.png'
     title: Suscribete
     subtitle: ¿TE GUSTAN LOS ARTICULOS DEL BLOG?
+    your-email: scruz.17@est.ucab.edu.ve
     inputs:
       - name: email
         type: email
@@ -65,26 +71,13 @@ newsletter:
 
 
 
-top-recepes:
+top-recipes:
   title: Top recetas
-  subtitle: DISFRUTALAS CON NOSOTROS
+  subtitle: Disfrútalas con nosotros
   collection:
-      - name: Croissant de mantequilla
-        image:
-          name: bread-1.jpg
-          alt: bread 1
-      - name: Everything Seasoning
-        image:
-            name: bread-2.jpg
-            alt: bread 2
-      - name: Pan trenzado
-        image:
-          name: bread-3.jpg
-          alt: bread 3
-      - name: Pan cacero de orégano
-        image:
-          name: bread-4.jpg
-          alt: bread 4
+      - id: bread1
+      - id: bread2
+      - id: bread3
 
 
 quote-section:
