@@ -52,12 +52,17 @@
 
 
 .section-us{
-    @include abscenter;
-    margin-bottom: 100px;
-     & > *{
-        margin: 100px 0;
-     }
-
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 2.5rem 5%  10rem 5% !important;
+    & > * {
+        margin: 10px 0;
+    }
+    @include respond(tab-port){
+        justify-content: center !important;
+    }
     &__images{
        width: 50%;
         @include respond(tab-port){
@@ -68,10 +73,9 @@
            height: max-content;
            position: relative;
            margin: 0 auto;
-           width: 90%;
+           width: 70%;
             .image{
                 box-shadow: 0 5px 10px rgba(black,.2);
-                
                 width: auto;
                 margin: 0 auto;
                 max-width: 100%;
@@ -80,9 +84,9 @@
             .image-small{
                     box-shadow: 0 5px 10px rgba(black,.2);
                     position: absolute;
-                    right: -10%;
-                    bottom: -40%;
-                    transform: translateY(-50%) rotate(10deg);
+                    right: -18%;
+                    bottom: -25%;
+                    transform: rotate(10deg);
                     height: 15rem;
                     width: auto;
                     @include respond(tab-port){
@@ -94,9 +98,9 @@
         
     }
     &__text{
-        padding-left: 25px;
+       // padding-left: 25px;
         @include respond(tab-port){
-            margin-top:100px;
+         width: 100%;
         }
         .text-box{
             display: flex;

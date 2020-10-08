@@ -1,10 +1,10 @@
 .banner{
     height: 70vh;
     max-width: 100%;
-    margin-bottom:20rem;
+    
+    @include background;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     &:after {
@@ -17,14 +17,14 @@
         top: 0;
         background: linear-gradient(270deg,transparent 0,#000 180%);
         z-index:1;
-        @include respond(tab-port){
-            background: none;
-        }
+       
     }
     @include respond(tab-port){
-        background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)) !important;
-        height: max-content;
-        margin-bottom: 15rem;
+       // background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)) !important;
+       // height: max-content;
+       // margin-bottom: 15rem;
+        height: 50vh;
+        background-attachment: local;
     }
     &__box{
         @include abscenter;
@@ -32,30 +32,23 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         padding: 40px 25px;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%,50%);
+        position: relative;
         box-shadow: 0 5px 15px rgba(black,.3);
         background-color: rgb(228, 228, 228);
         width: 70%;
+        margin: -5% auto 5rem auto;
         height: max-content;
         @include respond(tab-port){
             justify-content: center;
             flex-direction: column;
             width: 90%;
-            bottom: 0;
-            left: 50%;
-            background-color: transparent;
-            position: relative;
-            transform: translate(-50%, 0%);
-            box-shadow: none;
-        }
+            //transform: translate(-50%, 0%);  
+        } 
         &__text{
             display: flex;
             flex-direction: column;
             @include respond(tab-port){
-                margin-bottom: 40px;
+                margin-bottom: 4rem;
             }
             .line{
                 width: 100px;
@@ -63,25 +56,24 @@
                 background-color: var(--color-primary);
                 margin:10px auto;
                 @include abscenter;
-                @include respond(tab-port){
-                    background-color: var(--color-primary-light);
-                }
+               
             }
             p{
                 text-align: center;
                 font-size: 1.8rem;
                 letter-spacing: 1.2px;
                 font-weight: 400;
-                @include respond(tab-port){
-                    font-size: 2rem;
-                    color: #fff !important;
-                }
+                
             }
         }
 
         &__buttons{
             @include abscenter;
-
+                .button{
+                    @include respond(phone){
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -115,14 +107,13 @@
         align-items: flex-end !important;
         color: #fff !important;
         @include respond(phone){
-            align-items: center !important;
+           // align-items: center !important;
             width: 90% !important;
         }
     }
     @include respond(phone){
-        background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)) !important;
-        height: 200px;
-        
+       // background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)) !important;
+        height: 200px;     
     }
     
 }
