@@ -9,6 +9,7 @@
 
     <div class="index__top-navbar">
         <div class="logo">
+            
             <img src="{{image-directory | append: 'templategenerator-favi.png' | relative_url }}" alt="">
         </div>
         <div class="top_menu">
@@ -44,14 +45,6 @@
                     </li>
                   {% endfor %}
                 </ul>
-                <div class="index-hamburger">
-                    <div class="inner_hamburger">
-                        <span class="arrow">
-                            <i class="fas fa-long-arrow-alt-left"></i>
-                            <i class="fas fa-long-arrow-alt-right"></i>
-                        </span>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -64,4 +57,12 @@
     </body>
     {% include global/scripts.html %}
     <script src="https://kit.fontawesome.com/b795eef387.js"></script>
+    <style lang="scss">
+        :root{
+            --color-primary: {{site.data.documentation.color-primary}};
+            --color-secondary: {{site.data.documentation.color-secondary}};
+            --color-secondary-light: {{site.data.documentation.color-secondary-light}};
+        }
+    </style>
 </html>
+

@@ -1,3 +1,7 @@
+color-primary: '#2a569c'
+color-secondary: '#6697E8'
+color-secondary-light: '#e1f5ff'
+
 links:
   - name: Home
     type: link
@@ -32,15 +36,27 @@ links:
         href: documentation/global-components/video.html
       - name: Wave
         href: documentation/global-components/wave.html
+      - name: Accordion
+        href: documentation/global-components/accordion.html
   - name: Templates
     type: title
     fa-icon:
   - name: Corporate
     type: link
     fa-icon: fa-laptop-code
+    items:
+      - name: Live demo
+        href: /1-corporate-template/
+      - name: How to use
+        href: documentation/corporate-template/how-to-use.html
   - name: Bakery blog
     type: link
     fa-icon: fa-bread-slice
+    items:
+      - name: Live demo
+        href: /3-culinary-blog-template/
+      - name: How to use
+        href: documentation/culinary-blog-template/how-to-use.html
   - name: Online courses
     type: link
     fa-icon: fa-graduation-cap
@@ -48,4 +64,6 @@ links:
       - name: Live demo
         href: /2-online-courses-template/
       - name: Components
+        href: documentation/online-courses-template/components.html
       - name: How to use
+        href: documentation/online-courses-template/how-to-use.html

@@ -75,7 +75,7 @@ Esta documentación se creó para ayudarlo a aprovechar al máximo estas plantil
       * Titulo de pagina, titulo de blog y descripción
       * Fecha, imagen y autor.
       * Categorias a las que pertenece
-    Además posee (fuera de la metadata) un contenido, que descripbe el el artículo en sí. Nota 🚨: Para omogeneizar el diseño, se encierran los títulos con una etiqueta HTML div y la clase "title"
+    Además posee (fuera de la metadata) un contenido, que describe el el artículo en sí. Nota 🚨: Para omogeneizar el diseño, se encierran los títulos con una etiqueta HTML div y la clase "title"
   Directorio "_online-courses-info"
     - Contiene en sí todos aquellos links mencionados en el pie de pagina que contengan unicamente texto plano, cada una de estas en un archivo ".md". En este caso se listan : "terminos", "políticas de privacidad", y "ayuda y soporte", quienes utilizarán el mismo "layout".
     ¿ Qué contiene cada uno de estos archivos ? : 

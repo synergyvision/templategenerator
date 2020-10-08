@@ -1,0 +1,29 @@
+---
+layout: index/default
+
+---
+
+
+<div class="component__title">
+    Cómo usar
+</div>
+
+{% for item in page.directories %}
+    <div class="index-section">
+        <div class="title">{{item.title}}</div>
+        {% for content in item.content %}
+            <p>{{content.text}}</p>
+            <ul>
+                {% for i in content.collection %}
+                    {% if i.text %} <li>{{i.text}}</li>  {% endif %}
+                    <ul>
+                        {% for child in i.list %}
+                            <li>{{child.text}}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endfor %}

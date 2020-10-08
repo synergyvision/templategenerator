@@ -18,7 +18,7 @@ layout: culinary-blog-template/culinary-blog-sticky-header
     {% include culinary-blog-template/cards/ingredients-box.html table-content=page.ingredients image-directory=image-directory info=bread-info-section.ingredients column=true table=bread-info-section.ingredients.ingredients-table quantity-box=bread-info-section.ingredients.quantity-box quantity=page.quantity %}
     <div class="row"> 
         {% include culinary-blog-template/global/title-primary.html title=bread-info-section.recipes.step-by-step.title subtitle=bread-info-section.recipes..step-by-step.subtitle %}
-        {% include culinary-blog-template/global/accordion.html icon=bread-info-section.icon-section image-directory=image-directory collection=recipe svg-directory=svg-directory icons-prefix='prep-step-' %}
+        {% include global/accordion.html icon=bread-info-section.icon-section image-directory=image-directory collection=recipe svg-directory=svg-directory icons-prefix='prep-step-' expanded=true %}
         <div class="mtb-big">
             {% include global/carousel.html
                 id=1

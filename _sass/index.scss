@@ -11,15 +11,9 @@
                     ul li a .list{
                         display: none;
                       }
-                    .index-hamburger {
-                        .fa-long-arrow-alt-right{
-                            display: block;
-                        }
-                        .fa-long-arrow-alt-left{
-                            display: none;
-                        }
-                    }
+                   
               }
+            
               .index__body .index__body__container{
                 width: calc(100% - 100px);
                 margin-left: 100px;
@@ -33,6 +27,7 @@
             top: 0;
             box-shadow: $shadow-light;
             background-color: #fff;
+            z-index: 9;
             .logo{ 
                 width: 250px;
                 height: 100%;
@@ -53,6 +48,7 @@
                     color: #fff;
                     padding: 20px 0;
                 }
+
             }
 
             .right_info{
@@ -78,7 +74,7 @@
                 position: fixed;
                 top: 65px;
                 left: 0;
-                background: #2a569c;
+                background: var(--color-primary);
                 width: 250px;
                 height: 100%;
                 transition: all 0.3s linear;
@@ -104,7 +100,7 @@
                   //  margin-left: 90px !important;
                 }
                 .welcome-container{
-                    background-color: #2a569c;
+                    background-color: var(--color-primary);
                     border-radius: 5px;
                     padding: 30px;
                     color: #fff;
@@ -113,6 +109,7 @@
                     text-align: center;
                     min-height: 20rem;
                     @include abscenter;
+                    justify-content: flex-start;
                     box-shadow: $shadow-light;
                     img{
                         width: 10rem;
@@ -131,11 +128,11 @@
                         font-size: 3rem;
                         font-weight: 900;
                         letter-spacing: 1.5px;
-                        color: #2a569c;
+                        color: var(--color-primary);
                     }
                     .subtitle{
                         font-size: 2.4rem;
-                        color: #2a569c;
+                        color: var(--color-primary);
                         font-weight: 900;
                         letter-spacing: 1px;
                     }
@@ -149,10 +146,21 @@
                         font-size: 1.6rem;
                     }
                     p{
-                        color: #2a569c;
+                        color: var(--color-primary);
                         margin: 10px 0;
+                        font-size: 1.6rem; 
+                    }
+                    ul{
+                        margin-left: 10px;
                         font-size: 1.6rem;
-                        
+                        color: var(--color-primary);
+                        line-height: 20px;
+                        li{
+                            margin: 5px 0;
+                            ul{
+                                margin: 0 10px;
+                            }
+                        }
                     }
                 }
             }
@@ -171,7 +179,8 @@
                             }
                             ul.submenu{
                                 opacity: 1;
-                                height: 320px;
+                                height: max-content;
+                                max-height: 320px;
                                 overflow: scroll;
                                 display:block;
                             }
@@ -188,7 +197,7 @@
                             font-size: 1.8rem;
                             &:hover{
                                 background-color: #fff !important;
-                                color:  #2a569c !important;
+                                color:  var(--color-primary) !important;
                             }
                         }
                         &:hover, &.active{
@@ -212,33 +221,7 @@
                     }
                     
                 }
-                .index-hamburger{
-                    position: absolute;
-                    top: 10px;
-                    right: -25px;
-                    width: 50px;
-                    height: 50px;
-                    background: #e8edf5;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    @include respond(phone){
-                        top: 10px;
-                        right: 50%;
-                        transform: translateX(50%);
-                        width: 40px;
-                        height: 40px;
-                    }
-                    .arrow{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
-                        .fa-long-arrow-alt-right{
-                            display: none;
-                        }
-                    }
-                    
-                }
+
                 .inner_hamburger{
                     position: absolute;
                     top: 50%;
@@ -265,12 +248,12 @@
         color: #e1f5ff;
         font-weight: 500;
         letter-spacing: 2px;
-        background-color: #2a569c;
+        background-color: var(--color-primary);
         border-radius: 5px;
     }
     p{
         margin: 1.6rem;
-        color: #2a569c;
+        color: var(--color-primary);
         font-size: 2rem;
     }
     .image{
@@ -281,6 +264,9 @@
         img{
             height: 100%;
             margin: 0 10px;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
         }
     }
 
@@ -288,8 +274,8 @@
         margin: 10px 0;
         font-size: 3rem;
         padding: 10px 0;
-        color: #2a569c;
-        border-bottom: 1px solid #2a569c;
+        color: var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
     }
 
     &__instruction{
@@ -301,11 +287,11 @@
         font-size: 2rem;
         font-family: 'Inconsolata', monospace;
         font-weight: 800;
-        color: #2a569c;
+        color: var(--color-primary);
     }
     &__list{
         margin: 2rem;
-        color: #2a569c;
+        color: var(--color-primary);
         font-size: 2rem;
         ul{
             margin: 10px;
