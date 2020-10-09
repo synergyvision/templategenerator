@@ -201,9 +201,8 @@
 
 .course-description-container{
    
-   width: 66.66%;
    @include respond(tab-port){
-        width: 100%;
+       
         padding: 10px;
    }
 
@@ -244,14 +243,9 @@
 }
 
 .course-info{
-    width: 33.33%;
-   // margin:20px 0;
+    width: 100%;
     & > *{
         margin:20px 0;
-    }
-
-    @include respond(tab-port){
-        width: 100%;
     }
 }
 
@@ -271,7 +265,7 @@
 
     &::-webkit-scrollbar{
         width: 7px;
-       
+  
     }
     &::-webkit-scrollbar-thumb{
         width: 7px;

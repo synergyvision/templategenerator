@@ -2,9 +2,9 @@ us:
   title: Learn something new
   subtitle: Every course on Coursing is taught by top instructors from all over the world
   images:
-    - name: section1.jpeg
+    - name: section1.png
       alt: Section1 pic
-    - name: section1-1.jpg
+    - name: section1-1.png
       alt: Section2 pic
   collection:
       - text: Learn from top universities and companies

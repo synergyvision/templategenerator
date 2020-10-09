@@ -130,10 +130,14 @@
   
   .form__input-side1{
     display: flex;
-    width: 90%;
-
+    width: calc(100% + 14px);
+    
+    
       @include respond(tab-port){
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+       
       }
   }
 

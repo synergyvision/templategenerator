@@ -59,15 +59,15 @@ newsletter:
   background: #newsletter-section-bg.png
   form:
     background: 'form-background.png'
-    title: Suscribete
-    subtitle: ¿TE GUSTAN LOS ARTICULOS DEL BLOG?
+    title: Suscríbete
+    subtitle: ¿TE GUSTAN LOS ARTÍCULOS DEL BLOG?
     your-email: scruz.17@est.ucab.edu.ve
     inputs:
       - name: email
         type: email
         placeholder: Correo electrónico 
     btn:
-      text: Suscribete ahora 
+      text: Suscríbete ahora 
 
 
 

@@ -87,6 +87,7 @@
     @include respond(phone){
         flex-direction: column;
         height: max-content !important;
+        width: 250px;
     }
 
     .image-container{

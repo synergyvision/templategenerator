@@ -8,7 +8,6 @@
                         </span>	
                     </div>	
                     {% endfor %}
-	
         </div>
     </div>
     <div id="cardBody" class="stepper-body">
@@ -25,6 +24,7 @@
                     {% include online-courses-template/global/add-to-list.html title=info.title input=info.input  field-btns=info.field-btns %}
                 </div>
                 <div id="4" class="tab">
+                    <div class="title">Add a section, and modules to load your videos and resources</div>
                     {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.sections %}
                     {% include online-courses-template/global/add-to-list-group.html title=info.title input=info.input  field-btns=info.field-btns %}
                 </div>

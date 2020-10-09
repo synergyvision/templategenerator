@@ -16,15 +16,16 @@
             height: 150px;
             border-radius: 50%;
             position: relative;   
+            overflow: hidden;
             cursor: pointer;
+            @include abscenter;
             img{
                 border-radius: 50%;
-                height: auto;
-                width: 100%;
+                height: 100%;
+                width: auto;
                 background-color: #333;
                 z-index: 1;
-                transition: all .2s;
-                
+                transition: all .2s;      
             }
             .file{
                 position: absolute;
@@ -73,10 +74,12 @@
     bottom: 0px;
     left: 20%;
     transform: translate(-50%,50%);
+    overflow: hidden;
+    @include abscenter;
     img{
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
+        width: auto;
+        height: 100%;
+        
     }
     @include respond(tab-port){
         left: 50%;

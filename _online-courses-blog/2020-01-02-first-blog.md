@@ -5,7 +5,7 @@ blog-title: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 short-description: Cum modi doloremque dolore ab sint numquam nemo, culpa quasi laborum. Dolores, assumenda esse. Cumque distinctio est architecto. Quaerat nam sunt in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi vel deleniti, molestias enim optio ipsam quam corrupti nisi voluptate harum debitis voluptatibus porro maxime quisquam eligendi ea iure repudiandae laborum?
 date: April 15, 2020
 image:
-  name: blog-1.jpg
+  name: blog-1.jpeg
   alt: Blog 1
 categories: [Design,Freelance]
 author: Stephanie Cruz

@@ -1,5 +1,6 @@
 <div class="steps-box">
     {% for step in include.steps %}
-        <a class="step {% if step.id == include.page.identifier %} step-active {% endif %}" href="{{  include.page.url | replace: include.page.slug , step.slug }}">{{step.name}}</a>
+    {% assign url = include.page.url | replace: include.page.slug , step.slug %}
+        <a class="step {% if step.id == include.page.identifier %} step-active {% endif %}" href="{{ include.base-url | append: url  | relative_url }}">{{step.name}}</a>
     {% endfor %}
 </div> 

@@ -13,7 +13,7 @@
 
     &__wave{
         background-color: var(--color-secondary);
-        margin: -0.2px 0;
+        margin: -5px 0;
     }
     
     &__copyright{
@@ -34,6 +34,7 @@
         fill: white;
         height: 100%;
         width: 100%;
+        margin-top: -5px;
     }
 
     &__svg-quotes{
