@@ -2,14 +2,14 @@
 layout: culinary-blog-template/culinary-blog-recipe
 identifier: bread3
 title: Pan trenzado # Titulo para redes sociales.
-page-image: bread-3.jpg #Imagen para redes sociales
+page-image: bread-3.png #Imagen para redes sociales
 description: # Descripcion para redes sociales.
 subtitle: Dicta mollitia odit quae maiores ducimus!
 type: enriquecido
 basic-info:
   name: Pan trenzado
   primary-image:
-    name: bread-3.jpg
+    name: bread-3.png
     alt: Pan trenzado
   url: 'recipes/pan-trenzado.html'
 sections:

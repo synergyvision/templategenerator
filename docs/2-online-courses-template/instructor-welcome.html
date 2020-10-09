@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Instructor dashboard</title>
+	<link rel="shortcut icon" href="/templategenerator/2-online-courses-template/assets/images/coursing-favicon.png">
+	<link rel="stylesheet" href="/templategenerator/css/main.css">
+	<link rel="stylesheet" href="/templategenerator/2-online-courses-template/css/main.css">
+	<link rel="canonical" href="templategenerator/2-online-courses-template/instructor-welcome.html">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Instructor dashboard">
+<meta itemprop="description" content=" ">
+<meta itemprop="image" content="/templategenerator/2-online-courses-template/assets/images/">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content=""> 
+<meta name="twitter:title" content="Instructor dashboard">
+<meta name="twitter:description" content=" ">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="/templategenerator/2-online-courses-template/assets/images/">
+
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Instructor dashboard" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/2-online-courses-template/instructor-welcome.html" /> <!--to be defined-->
+<meta property="og:image" content="/templategenerator/2-online-courses-template/assets/images/" />
+<meta property="og:description" content=" " />
+<meta property="og:site_name" content="Coursing | Learn anywhere}" />	
+
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+	/>
+	
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+</head> 
+
+
+<body>	
+   <div class="body__content">
+      
+
+
+<div class="instructor-dashboard">
+    <div class="side-nav">
+    <div class="image-container">
+      <img
+        src="/templategenerator/2-online-courses-template/assets/images/client-1-face.jpg"
+        alt="Profile"
+      />
+    </div>
+  
+    <a class="link  link-active " href="/templategenerator/2-online-courses-template/instructor-create-course.html">
+        <svg class="link__image">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-add-outline"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+        <div class="text">Create a course</div>
+    </a>
+  
+    <a class="link " href="/templategenerator/2-online-courses-template/instructor-courses.html">
+        <svg class="link__image">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-video"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+        <div class="text">My courses</div>
+    </a>
+  
+    <a class="link " href="/templategenerator/2-online-courses-template/instructor-messages.html">
+        <svg class="link__image">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-message-square"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+        <div class="text">Messages</div>
+    </a>
+  
+</div>
+    
+
+<div class="instructor-welcome">  
+    <h1 class="title mtb-bigger">
+           Welcome to your instructor dashboard
+    </h1>
+    <div class="content">
+        <img src="/templategenerator/2-online-courses-template/assets/images/instructor-welcome.png" alt="Welcome image" />
+        <canvas class="chart" id="chart1" width="400" height="400"></canvas>
+
+<style> 
+    canvas{
+        max-width: 250px !important;
+        height: auto !important;
+    }
+    </style>
+<script>
+    var type = 'bar';
+    var id = 'chart1';
+    var chartData = [];
+    var chartTitle = {
+        display:  true ,
+        text: 'Lorem ipsum sit amen'
+    };
+    
+        chartData.push(3);
+    
+        chartData.push(2);
+    
+        chartData.push(1.5);
+    
+        chartData.push(7.8);
+    
+        chartData.push(15);
+    
+        chartData.push(6);
+    
+        chartData.push(30);
+    
+        chartData.push(2);
+    
+        chartData.push(12);
+    
+        chartData.push(34);
+    
+        chartData.push(22);
+    
+        chartData.push(11);
+    
+    var chartColors = [];
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+        chartColors.push('#6078ea');
+    
+        chartColors.push('#99AAFF');
+    
+    var chartLabels = [];
+    
+        chartLabels.push('January');
+    
+        chartLabels.push('February');
+    
+        chartLabels.push('March');
+    
+        chartLabels.push('April');
+    
+        chartLabels.push('May');
+    
+        chartLabels.push('June');
+    
+        chartLabels.push('July');
+    
+        chartLabels.push('August');
+    
+        chartLabels.push('September');
+    
+        chartLabels.push('October');
+    
+        chartLabels.push('November');
+    
+        chartLabels.push('December');
+    
+ </script>
+    </div>
+</div>
+
+</div>
+ 	
+   </div>
+   <div class="footer">
+    <div class="footer__logo">
+        
+        <img src="/templategenerator/2-online-courses-template/assets/images/Coursing.png" alt="Logo">
+    </div>
+    <div class="footer__links">
+        
+        
+        
+            <li>
+                
+                    
+                        <a href="/templategenerator/2-online-courses-template/blog.html">Our blog</a>
+                        
+                    
+                
+                    
+                        <a href="/templategenerator/2-online-courses-template/about-us.html">About us</a>
+                        
+                    
+                
+                    
+                        <a href="/templategenerator/2-online-courses-template/our-offices.html">Our offices</a>
+                        
+                    
+                
+                    
+                        <a href="/templategenerator/2-online-courses-template/info/help-and-support.html">Help and support</a>
+                        
+                    
+                
+            </li>
+        
+            <li>
+                
+                    
+                        <a href="/templategenerator/2-online-courses-template/info/terms.html">Terms</a>
+                        
+                    
+                
+                    
+                        <a href="/templategenerator/2-online-courses-template/info/privacy-policy.html">Privacy Policy</a>
+                        
+                    
+                
+                    
+                
+                    
+                
+            </li>
+        
+    </div>
+    <div class="footer__box">
+        <div class="custom-select mtb-big">
+    <select>   
+        
+            
+                <option value="0">English</option>
+            
+            <option value="1">English</option>
+        
+            
+            <option value="2">Spanish</option>
+        
+    </select>
+</div>
+        <div class="social-media">
+            
+            
+                <a href="https://www.twitter.com" target="_blank">
+                    <svg class="icon">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-twitter-square"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+                </a>        
+            
+                <a href="https://www.facebook.com" target="_blank">
+                    <svg class="icon">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-facebook-square"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+                </a>        
+            
+                <a href="https://www.linkedin.com" target="_blank">
+                    <svg class="icon">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-linkedin"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+                </a>        
+            
+                <a href="https://www.instagram.com" target="_blank">
+                    <svg class="icon">
+    <use xlink:href="/templategenerator/2-online-courses-template/assets/svg/sprite.svg#icon-instagram-square"></use>
+</svg>
+
+<style>
+
+    .home-svg{
+        height: 100%;
+        width: 100%;
+        z-index: 999999;
+    }
+
+    .team__social{
+        height: 25px;
+        width: 25px;
+    }
+
+    .icon-twitter{
+        fill: #1da1f2;
+    }
+    .icon-facebook{
+        fill: #1877f2;
+    }
+    .icon-github{
+        fill:black;
+    }
+    .icon-instagram{
+        fill: #c32aa3;
+    }
+    .icon-pinterest{
+        fill:#bd081c;
+    }
+</style>
+                </a>        
+            
+        </div>
+    </div>
+    <div class="footer__copyright">
+        &copy; 2020 Coursing, Inc.
+    </div>
+</div>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="/templategenerator/javascript/general.js"></script>
+<script src="/templategenerator/javascript/carousel.js"></script>
+<script src="/templategenerator/javascript/table.js"></script>
+<script src="/templategenerator/javascript/pagination.js"></script>
+<script src="/templategenerator/javascript/charts.js"></script>
+
+
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/animations.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/global.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/selectors.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/stepper.js"></script>
+   
+	<script src="/templategenerator/2-online-courses-template/assets/js/filter.js"></script>
+   
+</body>
+
+<style lang="scss">
+	:root{
+        --color-primary: #6078ea;
+        --color-primary-light: #99AAFF;
+        --color-primary-dark: #16215a;
+        --color-primary-transparent: #7183e0a2;
+        --banner-background: url(/templategenerator/2-online-courses-template/assets/images/coursing-bg.jpeg);
+   }
+</style>
+</html>
