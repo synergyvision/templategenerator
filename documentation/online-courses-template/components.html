@@ -3,6 +3,7 @@ layout: index/default
 title: Online courses template | Components
 collection: 
     - title: Cards
+      description: 
       collection:
         - title: Blog-card.html
           texts:
@@ -84,16 +85,18 @@ collection:
                 - title: This component shows a simple wich displays a text in the left side.
                 - title: 'Parameters:'
                 - text: 'text: Text to display' 
-    
+
 ---
 
 <div class="component__title">
     Components
 </div>
-
+{% assign start = 1 %}
 {% for card in page.collection %}
     <div class="component__subtitle">
         {{card.title}}
     </div>
-    {% include global/accordion.html icon='icon-dot-single' svg-directory=site.data.global.site.directories.svg collection=card.collection  expanded=false image=false %}
+    {% include global/accordion.html start=start icon='icon-dot-single' svg-directory=site.data.global.site.directories.svg collection=card.collection  expanded=false image=false %}
+      {% assign collection-lenght = card.collection | size %}
+      {% assign start = start | plus : collection-lenght %}
 {% endfor %}

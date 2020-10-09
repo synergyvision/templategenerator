@@ -4,7 +4,6 @@ layout: index/default
 
     {% assign image-directory= site.data.global.site.directories.images  
         %}
-
 <div class="component">
     <div class="component__title">
         {{page.title}}
@@ -34,7 +33,7 @@ layout: index/default
         <div class="component__subtitle">How it looks like</div>
         <div class="image">
             {% for img in page.image %}
-                <img src="{{ '../../images/' | append: img | relative_url }}" alt="{{page.title}}">
+                <img src="{{ image-directory | append: img | relative_url }}" alt="{{page.title}}">
             {% endfor %}
         </div>
     {% endif %}
