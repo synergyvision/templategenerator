@@ -51,6 +51,7 @@ techniques:
       - id: techn2
       - id: techn3
 
+steps-prefix: 'prep-step-'
 steps:
   - name: Preparación
     id: step1
