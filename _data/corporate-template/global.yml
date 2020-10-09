@@ -17,6 +17,8 @@ site:
 
 corporate-base-url: /1-corporate-template/
 
+home-url: index.html
+
 assets:
     svg-icon-directory: '/1-corporate-template/assets/svg/sprite.svg'
     images: /1-corporate-template/assets/images/

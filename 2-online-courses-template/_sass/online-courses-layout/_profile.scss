@@ -74,10 +74,12 @@
     bottom: 0px;
     left: 20%;
     transform: translate(-50%,50%);
+    overflow: hidden;
+    @include abscenter;
     img{
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
+        width: auto;
+        height: 100%;
+        
     }
     @include respond(tab-port){
         left: 50%;

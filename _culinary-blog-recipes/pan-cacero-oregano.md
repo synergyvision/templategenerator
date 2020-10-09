@@ -93,7 +93,33 @@ recipe:
       texts: 
         - text:  Saca la masa del recipiente tapado y pésala
         - text: Divide la masa en seis (6) porciones.
-        
+    - title: Preformado
+      texts:
+        - text: A cada porción realiza un ​preformado redondo.​ Extiende la porción con el lado liso por debajo y desgasifica con la palma de la mano, realiza pliegues desde los bordes al centro para formar una bola de nuevo. Voltea la bola (el lado liso por arriba), ​bolea​ un poco sin generar mucha tensión y tápalas con una bolsa plástica.
+    - title: Reposo en mesa (relajación de la masa)
+      texts:
+        - text: Deja reposar la masa sobre la mesa de trabajo,tapada por diez (10) minutos.
+    - title: Formado
+      texts:
+        - text: Bolea​ la masa dejando la superficie lisa y suave, genera un poco de tensión sin exagerar. Cuando hay mucha tensión la masa se puede desgarrar (se rompen los alvéolos) cuando crece en el horno.
+    - title: Banrnices, coberturas y cortes
+      texts:
+        - text: Con un envase lleno de agua un (1) centímetro,moja la superficie de cada pastón y en otro recipiente lleno de azúcar dos (2) centímetros coloca el pastón lleno de agua para crear la corteza de azúcar.
+        - text: Coloca todos los pastones en una bandeja engrasada de tres en tres separados medio centímetro uno de otro de cada lado. En la fermentación se pegarán y crecerán hacia arriba.
+    - title: Fermentación final (maduración)
+      texts:
+        - text: Deja reposar los pastones con costra de azúcar, sin tapar, aproximadamente por una (1) hora en un lugar fresco, sin corrientes de aire, a una temperatura entre 24oC y 27oC o hasta que supere la ​prueba de maduración con el dedo​.
+    - title: Horneado
+      texts: 
+        - text:  Enciende el horno media hora antes de hornear a una temperatura de 180oC-355oF. Si tienes un medidor de temperatura en el horno es mejor para conocer la temperatura real del horno.
+        - text: Introduce la bandeja en el medio del horno durante aproximadamente 15 a 20 minutos.
+        - text: Chequea el horno y asegúrate que los panes se hornean de manera uniforme, mueve la bandeja o dale vueltas si hace falta para lograr que se horneen uniformemente.
+        - text: Saca las acemitas del horno cuando tengan un color dorado a tu gusto.
+    - title: Enfriamiento
+      texts:
+        - text: Al sacar las acemitas del horno,muévelas de la bandeja a una rejilla o tabla de madera, en un lugar cálido, queremos que se enfríen y evitar que se condense el aire. Esto genera una miga húmeda y definitivamente daña el resultado.
+        - text: Déjalas reposar, por lo menos veinte (20) minutos.Mucha paciencia! Ya están casi listas. Disfruten las acemitas!!!!
+            
 gallery:
   - image:
       name: croissant-step-1.jpg
