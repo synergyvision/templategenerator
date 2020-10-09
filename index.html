@@ -6,8 +6,11 @@ title: Template generador
     %}
 
 <div class="welcome-container">
-    <img src="{{image-directory | append: 'templategenerator-favi.png' | relative_url }}" alt="">
-    <h1>Welcome to my template generator</h1>
+    <div class="title-container">
+        <h1>Welcome to my template generator</h1>
+        <div class="line"></div>
+    </div>
+    <img src="{{image-directory | append: 'welcome-image.png' | relative_url }}" alt="">
 </div>
 <div class="index-section">
     <div class="title">What is Jekyll ?</div>

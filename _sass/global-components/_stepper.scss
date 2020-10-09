@@ -74,6 +74,11 @@
 					@include respond(tab-port){
 						width: 100%;
 					}
+					.title{
+						color: #fff;
+						text-align: center;
+						font-size: 2rem;
+					}
 			}
 			
 			& .tab.active{

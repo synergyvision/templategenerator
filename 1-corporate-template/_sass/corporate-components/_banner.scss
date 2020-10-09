@@ -6,7 +6,7 @@
     @include abscenter;
     height: max-content;
     justify-content: space-between;
-  
+    @include background;
     @include respond(tab-land){
       justify-content: center;
     }

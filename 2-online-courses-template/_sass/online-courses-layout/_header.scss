@@ -112,11 +112,12 @@
             border-radius: 50%;
             background-color: var(--color-primary);
             position: relative;
+            overflow: hidden;
             img{
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%,-50%);
-                height: 90%;
+                height: 100%;
                 width: auto;
                 border-radius: 50%;
             }
@@ -217,10 +218,11 @@
                 width: 6.5rem;
                 height: 6.5rem;
                 border-radius: 50%;
+                overflow: hidden;
+                @include abscenter;
                 img{
-                    width: 100%;
-                    height: auto;
-                    border-radius: 50%;
+                    width: auto;
+                    height: 100%;
                     box-shadow: 0 5px 10px rgba(black,.2);
                 }
             }

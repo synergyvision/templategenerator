@@ -84,11 +84,7 @@ collection:
                 - title: This component shows a simple wich displays a text in the left side.
                 - title: 'Parameters:'
                 - text: 'text: Text to display' 
-    - title: Course-detail-pages
-      collection:
-        - title: course-detail-instructor.html
-          texts:
-            - title: This components 
+    
 ---
 
 <div class="component__title">
@@ -99,5 +95,5 @@ collection:
     <div class="component__subtitle">
         {{card.title}}
     </div>
-    {% include global/accordion.html icon='icon-dot-single' svg-directory=site.data.global.site.directories.svg collection=card.collection  %}
+    {% include global/accordion.html icon='icon-dot-single' svg-directory=site.data.global.site.directories.svg collection=card.collection  expanded=false image=false %}
 {% endfor %}

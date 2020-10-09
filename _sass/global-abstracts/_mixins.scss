@@ -14,11 +14,11 @@
         @content;
       } //1200 px
     }
-    @if $breakpoint == big-desktop {
+   /* @if $breakpoint == big-desktop {
       @media only screen and (min-width: 112.5em) {
         @content;
       } //1800 px
-    }
+    } */
   }
 
   @mixin abscenter {

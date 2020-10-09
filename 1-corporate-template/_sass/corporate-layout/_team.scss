@@ -172,10 +172,13 @@
     }
     &__sections{
         margin-right: 10%;
+        @include respond(tab-port){
+          margin: 20px !important;
+        }
     }
     &__img{
         @include abscenter;
-        width: 60rem;
+        width: 50%;
         height: auto;
         //outline-offset: 10px;
         //outline: 7px solid var(--color-primary);
