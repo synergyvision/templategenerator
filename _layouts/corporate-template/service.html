@@ -2,7 +2,7 @@
 layout: corporate-template/corporate
 ---
 
-{% include corporate-template/sections-banner.html title=page.title subtitle=page.subtitle img=page.img type=page.img-type %}
+{% include corporate-template/global/sections-banner.html title=page.title subtitle=page.subtitle img=page.img type=page.img-type %}
 <!--Wave-->
 <div style="margin-top: -100px;" >
     {% include global/wave.html content='empty-content'
@@ -12,7 +12,7 @@ layout: corporate-template/corporate
 {% include corporate-template/services/service-description.html service=page %}
 <!--Title-->
 <div class="mtb-big">
-    {% include corporate-template/title.html title=page.frequent-questions.title %}
+    {% include corporate-template/global/title.html title=page.frequent-questions.title %}
 </div>
 {% include corporate-template/cards/questions-card.html collection=page.frequent-questions.collection %}
 <!--Wave-->
@@ -20,7 +20,7 @@ layout: corporate-template/corporate
     color=site.data.corporate-template.colors.color-primary-light %}
 <!--Title-->
 <div class="mtb-big">
-    {% include corporate-template/title.html title=page.other-services.title %}
+    {% include corporate-template/global/title.html title=page.other-services.title %}
 </div>
 <!--Filtrando servicios para no mostrar servicio actual-->
 {% assign services = "" | split: ',' %} 

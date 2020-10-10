@@ -95,6 +95,7 @@ dashboard-messages:
     alt: Image
 
 dashboard-create-course:
+  steps: 5
   title: 
     name: Let's create a course
     image: create-course.png
@@ -132,22 +133,24 @@ dashboard-create-course:
     field-btns:
       - name: Remove
   sections:
-    input: 
-      id: "3"
-      text: Add a text
-      icon: icon-add-outline
-      btn:
-        - text: Add section
-          type: secondary
-          add: title
-        - text: Add module
-          type: secondary
-          add: field
-    field-btns:
-      - name: Upload articles
-      - name: Upload resources
-      - name: Remove
-        type: remove
+    title: Add a section, and modules to load your videos and resources
+    content:
+      input: 
+        id: "3"
+        text: Add a text
+        icon: icon-add-outline
+        btn:
+          - text: Add section
+            type: secondary
+            add: title
+          - text: Add module
+            type: secondary
+            add: field
+      field-btns:
+        - name: Upload articles
+        - name: Upload resources
+        - name: Remove
+          type: remove
   finished:
     title: Your course has been successfully registered
     subtitle: We will be activating it soon

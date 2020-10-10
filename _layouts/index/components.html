@@ -2,40 +2,14 @@
 layout: index/default
 ---
 
-    {% assign image-directory= site.data.global.site.directories.images  
-        %}
 <div class="component">
-    <div class="component__title">
-        {{page.title}}
-    </div> 
-    <div class="component__subtitle">Description</div>
-    <p>{{page.description}}</p>
-    <div class="component__subtitle">How to use</div>
-    <div class="component__instruction">
-        {{page.how-to-use}}
-    </div>
-    <div class="component__list">
-        <div class="component__list__title">
-            Parameters
-        </div>
-        <ul>
-            {% for item in page.parameters %}
-                <li>{{item.text}}</li>
-                <div class="" style="margin-left: 10px;">
-                    {% for i in item.collection %}
-                        <p>{{i}}</p>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </ul>
-    </div>
-    {% if page.image %}
-        <div class="component__subtitle">How it looks like</div>
-        <div class="image">
-            {% for img in page.image %}
-                <img src="{{ image-directory | append: img | relative_url }}" alt="{{page.title}}">
-            {% endfor %}
-        </div>
-    {% endif %}
+    <div class="component__title">Components</div>
+    <div class="component__subtitle"></div>
+    {% assign start = 1 %} {% for card in page.collection %}
+    <div class="component__subtitle">{{card.title}}</div>
+    <p>{{card.description}}</p>
+    {% include global/accordion.html start=start icon='icon-dot-single'
+    svg-directory=site.data.global.site.directories.svg collection=card.collection
+    expanded=false image=false %} {% assign collection-lenght = card.collection |
+    size %} {% assign start = start | plus : collection-lenght %} {% endfor %}
 </div>
-

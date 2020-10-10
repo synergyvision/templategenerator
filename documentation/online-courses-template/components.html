@@ -1,102 +1,397 @@
 ---
-layout: index/default
+layout: index/components
 title: Online courses template | Components
-collection: 
-    - title: Cards
-      description: 
-      collection:
-        - title: Blog-card.html
-          texts:
-            - title: A blog card that displays the main information of the blog. 
-            - title: Parameters
-            - text: 'url: The path to redirect'
-            - text: 'image-directory: The image source directory'
-            - text: 'image: Object wich include: name, the name of tha image. alt: Alternative text to image'
-            - text: 'title: The title of the blog post'
-            - text: 'description: Breve descriptionof the blog post'
-        - title: buy-card.html
-          texts: 
-            - title: This card includes the payment information, including prices, discount prices, coupons etc.
-            - title: 'Parameters:'
-            - text: 'pay-info: Object wich includes: text, the title of the card, currency, the current currency, percentage-off-text, wich displays an "off", coupon-input wich include the parameters of an input, and a btn, wich includes the parameter of a button component'
-            - text: 'price: the current toal price '
-            - text: 'old-price: the total price without discount'
-            - text: 'svg-directory: source of the svg icon'
-        - title: category-card.html
-          texts:
-            - title: This component shows a rounded button
-            - title: 'Parameters:'
-            - text: 'name: Displays the title of the button'
-            - text: 'href: path to redirect'
-        - title: community-card.html
-          texts:
-            - title: This component displays an element with a drop shape, and an image inside
-            - title: 'Parameters:'
-            - text: 'member: Object that includes a name,  a text (short text), and an image, wich includes a name (name of the image), and an alt (alternative to the image)'
-            - text: 'image-directory: The image directory '
-        - title: course-card.html
-          texts:
-            - title:' This component displays the cover page of a course. Including relevant information about it, depending on the parameters passed'
-            - title: 'Parameters:'
-            - text: 'card: Object wich includes a name, owner, image (wich includes a name, and an alt), score (number between 0 and 5), discount (can be true or false), currency, discount-price (if discount equal to true), and an url to redirect'
-            - text: 'bought-info: Displays the progress of the course. Optional. Object wich includes completed (the percentage of completion), rating ( number between 0 and 5)'
-            - text: 'added: Set to true if you want to display the added buttons'
-        - title: course-feature-card.html
-          texts: 
-            - title: This component displays a card with listed texts
-            - title: 'Parameters:'
-            - text: 'title: Displays the name of the card'
-            - text: 'section: Array that includes, an icon, and a text'
-            - text: 'svg-directory: The path of the svg icons'
-        - title: course-membered-questions.html
-          texts: 
-            - title: 'This components displays a card a question card, including the person image, the question and the description.'
-            - title: 'Parameters:'
-            - text: 'question: Object that includes a question (the question by it self), an answer, and a person with an image, wich includes a name and an alt (alternative text to image)'
-        - title: credit-card-edit.html
-          texts:
-                - title: 'This component display a card with the credit card information.'
-                - title:  'Parameters:'
-                - text: 'This component has no parameters, so the information is taken from the data directory'
-        - title: instructor-card.html
-          texts:
-                - title: This component displays a breve profile of an instructor.
-                - title: 'Parameters:'
-                - text: 'title: displays the title of the card'
-                - text: 'person: Object that includes a name, and image (wich includes a name, and an alt), a short-description of the instructor, features (an array wich includes an icon and a text), and a href wich redirect to a page'
-                - text: 'image-directory: directory of the instructor image'
-                - text: 'btn-more: Object that includes the button component parameters'
-        - title: price-card.html
-          texts:
-                - title: 'This component displays a buy card for a course, showing the prices and a list of buttons.'
-                - title: 'Parameters:'
-                - text: 'price: The price of the course'
-                - text: 'discount-price: The price after the discount'
-                - text: 'buttons: An array wich includes an href, and an icon'
-                - text: 'svg-directory: the directory of the svg icons'
-        - title: students-review-card.html  
-          texts:
-                - title: This component displays a card wich shows a person review of a course
-                - title: 'Parameters:'
-                - text: 'student-review: Object that includes a name, a text, an image wich includes a name, and an alt (alternative to the image), an score (a number between  and 5), a date, '
-                - text: 'image-directory: the directory of the image'
-        - title: switch.html
-          texts:
-                - title: This component shows a simple wich displays a text in the left side.
-                - title: 'Parameters:'
-                - text: 'text: Text to display' 
+collection:
+  - title: global
+    description: " Este directorio contiene componentes que se utilizan repetidamente a lo largo de la plantilla, y pueden ser reutilizados para su modificación "
+    collection:
+      - title: 'header.html'
+        texts:
+          - title: 'Este componente incluye todo lo referente al encabezado del sitio.'
+          - title: 'Todos los datos mostrados son extraídos del directorio "_data", archivo "header.yml"'
+      - title: 'header-links.html'
+        texts:
+          - title: 'Este componente muestra un link, y despliega un menu al hacer "hover" sobre ese, si y solo si contiene una lista que desplegar'
+          - title: 'Parámetros:'
+          - text: 'svg-directory: Directorio donde se encuentran los íconos utilizados'
+          - text: 'link: Objeto que contiene "icon", ícono opcional que se encuentra lateral al nombre; y "name", nombre del ícono' 
+          - text: 'sections: Arreglo que contiene un "url" de redirección, y un "title" título del link'
+          - text: 'position: "left" si el menú desplegable debe mostrarse hacia la izquierda del link, "right" si a la derecha.'
+      - title: 'footer.html'
+        texts:
+          - title: 'Este componente incluye todo el pie de página del sitio.'
+          - title: 'Todos los datos mostrados son extraídos del directorio "_data", archivo "footer.yml"'
+      - title: title.html
+        texts:
+          - title: 'Este componente renderiza el título principal de la platilla, separando el título y subtítulo por una línea.'
+          - title: 'Parámetros:'
+          - text: 'title: título a mostrar'
+          - text: 'subtitle: subtítulo a mostrar. Opcional'
+          - text: 'size: "medium", si desea disminuir el tamaño del título.'
+      - title: 'search-input.html'
+        texts:
+          - title: 'Este componente muestra un buscador customizado'
+          - title: 'Parámetros:'
+          - text: 'placeholder: texto por defecto en el buscador'
+      - title: 'login-input.html'
+        texts: 
+          - title: 'Este componente muestra un input customizado, con un borde inferior del color primario del sitio'
+          - title: 'Parámetros:'
+          - text: 'label: nombre del input.'
+          - text: 'input-type: Si desea un campo para una descripcion seleccione "textarea", si desea un campo ligero indique el tipo del campo, como "number", "text", etc'
+          - text: 'input-name: Texto que desea mostrar por defecto en el campo'
+          - text: 'id: identificador del campo'
+          - text: 'input-icon: id del ícono svg'
+          - text: 'atts: texto con todos los atributos extra que desea añadir al input. Opcional'
+          - text: 'svg-directory: directorio donde se encuentran los íconos svg'
+      - title: "button.html"
+        texts:
+          - title: "Este componente renderiza el botón pricipal de la plantilla, que se reutiliza a lo largo de esta."
+          - title: "Parámetros:"
+          - text: 'btn: Objeto que incluye : "href", nombre que indica la redirección, "type", indica si es "primary" el cual pinta el botón del color primario, o "secondary" en el cual se invierten los colores y "text", incluye el texto del botón.'
+          - text: "icon: nombre del ícono svg. Opcional. Renderiza un ícono a la derecha del texto"
+          - text: "onclick: nombre de la función a la que desea llamar de ser requerido. Opcional."
+      - title: "button-secondary.html"
+        texts:
+          - title: "Este componente renderiza un boton, con bordes redondeados y del color primario del sitio, con un ícono svg en el centro. NO incluye texto"
+          - title: "Parámetros:"
+          - text: "href: redirección del botón/ acción."
+          - text: "directory: directorio donde se aloja el ícono svg."
+          - text: "icon: id del ícono svg."
+      - title: "checkbox.html"
+        texts:
+          - title: "Este componente renderiza un checkbox customizado."
+          - title: "Parámetros:"
+          - text: "value: valor del input. Opcional"
+          - text: "nombre del input. Opcional"
+          - text: "id: identificador del input"
+          - text: "click: nombre de la funcion que se debe ejecutar al hacer el check. Opcional"
+          - text: "checked: Ponga en true si desea que checkear el input por defecto, false si no"
+          - text: "text: Texto incluido en el lado derecho del check. Opcional"
+      - title: "banner-secondary.html"
+        texts:
+          - title: "Este componente renderiza un banner con una imagen de fondo y un titulo alineado a la derecha."
+          - title: "Parámetros:"
+          - text: "title: texto que se muestra en la exquina derecha del banner."
+          - title: "background: nombre de la image de fondo"
+      - title: conversation.html
+        texts:
+          - title: "Este componente renderiza un chat, que incluye un header con la persona que se conversa y su información, el contenido del chat, y un input para escribir."
+          - title: "Parámetros:"
+          - text: 'size: tamaño del chat. "small", si desea un chat pequeño. Por defecto el chat es de tamaño grande.'
+          - text: 'chat: Objeto que incluye la información dinámica del chat. Incluye "image", objeto que tiene un "name" nombre de la imagen y un "alt", texto alternativo a la imagen; "name", nombre de la persona con la que se conversa; "status": status de la persona y "chat", arreglo que contiene la conversación en sí. El arreglo "chat" incluye el atributo "received" si el mensaje es recibido o "sent" si el mensaje fue enviado, y "time" que indica la fecha de envío del mensaje'
+          - text: 'chat-data: Objeto que incluye la información estática del chat. Incluye un "header" que contiene "title", puede ser el prefijo del titulo de la conversa; "message-bottom" que contiene un "title" siendo este el título de la hora del mensaje enviado; "text-area" que contiene los parámetros del componente "login-input" ; y "btn-send" que incluye los parámetros utilizados en el componente "button".'
+      - title: "chat.html"
+        texts:
+          - title: "Este componente renderiza un chat, lo que incluye un buscador con lista de usuarios y una conversación en la ezquina derecha (componente conversation.html)."
+          - title: 'Los datos utilizados en est componentes estan inluidos en el directorio "_data", archivo "conversations"'
+          - title: "Parámetros:"
+          - text: 'type: Lista de usuarios en una conversación. Colección que incluye "image" conteniendo "name", el nombre de la imagen, y "alt" texto alternativo a la imagen; y "name" nombre de la persona.'
+          - text: "image-directory: dirección en la que se encuentran las imagenes utulizadas"
+      - title: "empty-message.html"
+        texts:
+          - title: "Este componente es utilizado para los mensajes de vacío, contiene un texto y un ícono, y si se desea un botón de redirección."
+          - title: "Parámetros:"
+          - text: "message: Mensaje que se desea mostrar"
+          - text: "icon: id del ícono svg que se desea mostrar"
+          - text: 'btn: Objeto que incluye los parámetros del componente "button"'
+          - text: "svg-directory: dirección donde se encuentra alojado el ícono svg."
+      - title: 'message.html'
+        texts: 
+          - title: 'Este componente muestra un mensaje informativo, con un ícono de alerta'
+          - title: 'Parámetros:'
+          - text: 'info: texto de información a mostrar'
+      - title: horizontal-menu.html
+        texts:
+          - title: 'Este componente consiste de un menú horizontal, que permite cambiar el contenido inferior'
+          - title: 'Parámetros:'
+          - text: 'menu: Arreglo que contiene un "link", o nombre de la sección, y un "component" que especifica la dirección donde se encuentra el componente (contenido a mostrar).'
+          - title: '🚨 Los componentes listados NO pueden tener parámetros'
+      - title: fields.html
+        texts:
+          - title: "Este componente nos permite incluir la cantidad de inputs, checkbox, mensaje de información o componente que se desee a un formulario, especificando su tipo"
+          - title: "Parámetros:"
+          - text: 'inputs: Arreglo que contiene : 1. "title", muestra un titulo centrado y es opcional, 2. "type", que puede ser "input", "checkbox", "info" o "component" .'
+          - title: 'Si el "type" es igual a "input" es necesario el atributo "label" que muestra el nombre del input, un objeto "input" que contiene los parámetros del componente "login-input" y el parámetro "data". Este parámetro "data" incluye un arreglo que debe contener el atributo "name", de manera que el name de los campos coincidan con el name del "input" para poder mostrar cada dato en el input correspondiente.'
+          - title: 'Si el "type es igual a "checkbox" , es necesario el atributo "checked" y "text" ( parametros del componente "checkbox")'
+          - title: 'Si el "type" es igual a "info", es necesario el atributo "text-info"  (llamado "info" en el componente message.html), y el atributo "type".'
+          - title: 'Si el "type" es igual a "component", es necesario un atributo name, que hace referencia al lugar donde se aloja este componente. 🚨 Es importante saber que el componente aquí pasado NO puede tener parámetros.'
+      - title: image-title.html
+        texts:
+          - title: 'Este componente muestra un título alargado, con una imagen en el extremo izquierdo'
+          - title: 'Parámetros:'
+          - text: 'info: Objeto que incluye: "image", que contiene un "name" o nombre de la imagen, y un "alt" o texto alternativo a la imagen; "title" o título a mostrar; y "subtitle" o subtitulo a mostrar, alternativo.'
+      - title: "message-fixed.html"
+        texts:
+          - title: 'Componente que incluye un widget fijato en la ezquina inferior derecha, accionando al ser clickeado el componente coversation'
+      - title: 'numbers-stripe.html'
+        texts: 
+          - title: 'Componente que consiste en una franja, con cantidades'
+          - title: 'Parámetros:'
+          - text: 'numbers: Colección que contiene "number" o cantidad a mostrar, y "text" o texto a mostrar'
+      - title: selector.html
+        texts: 
+          - title: 'Este componente se comporta como un selector, incluyendo dentro de si las diferentes opciones a seleccionar. Ejemplo de esto, el selector de idiomas en el pie de página de la plantilla.'
+          - title: 'Parámetros:'
+          - text: 'options: Colección que incluye "name" siendo el nombre de la opción, y "default", que debe ser "true" si desea mostrar dicha opción por defecto.'
+      - title: 'story-stripe.html'
+        texts:
+          - title: 'Este componente muestra una sección básica, mostrando a un lado una imagen, y de otro un texto incluyento título.'
+          - title: 'Parámetros:'
+          - text: 'image-directory: directorio donde se alojan las imagenes mostradas'
+          - text: 'item: Objeto que incluye 1. "image", que contiene "name" o nombre de la imagen, y "alt" o texto alternativo a imagen; 2. "inverted", que se debe igualar a "true" si desea que el invertir los lados de la sección, 3. "title", que muestra el título de la sección, y 4. "text", que muestrael texto respectivo.'
+      - title: "add-to-list.html"
+        texts:
+          - title: 'Este componente permite añadir un elemento a la lista, a través de un "input" y in boton de agregar.'
+          - title: "Parámetros:"
+          - text: "title: título de la lista"
+          - text: 'input: Objeto que contiene los parámetros del componente "login-input", además de un "btn", que contiene los parámetros del componente "button"'
+          - text: 'field-btns: Colección que incluye "name". Estos botones planos son mostrados en la fila de cada elemento añadido a la lista'
+      - title: add-to-list-group.html
+        texts:
+          - title: "Este componente permite añadir secciones y modulos respectivamante a un acordión"
+          - title: "Parámetros:"
+          - text: 'input: Objeto que contiene los parámetros del componente "login-input"'
+          - text: 'btn: Colección que incluye los parámetros del componente "button"'
+          - text: 'field-btns: Colección que incluye "name". Estos botones planos son mostrados en la fila de cada elemento añadido a la lista'
+      - title: accordion.html
+        texts:
+          - title: " Este acordión es utilizado para modificar las secciones y módulos de un curso. "
+          - title: "Parámetros"
+          - text: 'edit-info: incluye un "input", objeto que contiene los parámetros del componente "login-input"; y "btn", objeto que contiene los parámetros necesarios en el componente "button"'
+          - text: 'sections: Colección que contiene un "title", título mostrado en el encabezado del acordión, y otra colección llamada "modules" que representa los elementos de una sección.'
+          - title: 'Cada arreglo "modules", contiene un "title", título del módulo, y de quererse un "icon", donde se especifica el "href", que hace referencia al id del modal que desea abrir; y un "icon", que especifica el nombre del ícono svg'
+      - title: video-text-stripe.html
+        texts:
+          - title: 'Este componente muestra una franja horizontal con un video o imagen que cubre la mitad (izquierda o derecha) de la franja, y un texto en el lado contrario. El fondo es degradado con los colores primarios del sitio.'
+          - title: 'Parámetros:'
+          - text:  'inverted: Si desea que el video/imagen se encuentren del lado derecho, ponga en "true"'
+          - text: 'video: Incluya si desea añadir un video. Objeto que incluye "source" para referir al nombre del video; y "external" que debe poner en true si el video viene de una fuente externa como Youtube'
+          - text: 'source-video: Si desea añadir un video, indique aquí el directorio donde se aloja (de ser un video local).'
+          - text: 'image: Incluya si desea añadir una imagen. Objeto que incluye "name" que hace referencia al nombre de la imagen, y "alt" o texto alternativo a la imagen'
+          - text: 'title: título de la sección, que utiliza el componente title.html'
+          - text: 'subtitle: subtítulo de la sección'
+      - title: vertical-card-menu.html
+        texts:
+          - title: 'Este componente consiste en un box , que contiene un selector en el extremo izquierdo, que nos permite cambiar el contenido de este box.'
+          - title: 'Parámetros:'
+          - text: 'data: arreglo que contendrá los datos que deberán ser mostrados en los campos respectivos, por lo que deberá tener un atributo "name" que haga referencia al nombre o "name" del "login-input"'
+          - text: 'sections: Arreglo que contiene: 1. "title", título de la sección, 2. atributo que puede ser "one-side" si desea el contenido en todo el ancho del componente, "left-fields" si lo desea del lado izquiero del componente, "right-fields" si los desea del lado derecho del componente, "left-fields-big" si los desea del lado izquierdo y ocupando 3/4 del ancho, "left-fields-small" si lo desea del lado izquierdo y 1/4 del ancho, "right-fields-big" si lo desea del lado derecho y 3/4 del ancho del componente, y "right-fields-small" si lo desea del lado derecho del componente ocupando 1/4 del ancho del mismo; y 3. "btn" que posee un arreglo con los parámetros del componente "button"'
+          - title: '🚨 Cada objeto de (2.) es un arreglo. Cada posición de este arreglo debe cumplir con los atributos especificados en el componente fields.html dependiendo de lo que se desee (información, checkbox, input o componente). Se recomienda ver el componente field.html'
+  - title: 'home-sections'
+    description: 'Este directorio contiene los componentes que contienen aquellas secciones utilizadas en el "home" o inicio de la plantilla'
+    collection:
+      - title: banner.html
+        texts:
+          - title: 'Este componente contiene el banner principal, que incluye un box sobrepuesto en este, el cual incluye texto y botones'
+          - title: 'Toda la información del componente es extraida del directorio "_data", en el archivo "header.yml", objeto "banner"'
+      - title: section-features.html
+        texts: 
+          - title: 'Este componente hace referencia a una sección, donde se muestran dos imagenes (una sobrepuesta sobre otra), y en el lateral derecho una liata de caracteristicas del sitio. Esta sección hace uso del título primario.'
+          - title: 'Toda la información mostrada en esta sección es extraida del directorio "_data", en el archivo "home.yml", objeto "features"'
+      - title: feature-stripe.html
+        texts:
+          - title: 'Este componente consiste en una franja degradada con los colores primarios, incluyendo íconos y textos a lo largo de esta.'
+          - title: 'Toda la información mostrada en esta sección es extraida del directorio "_data", en el archivo "home.yml", objeto "features"'
+      - title: section-courses.html
+        texts:
+          - title: 'Este componente consiste en una sección que incluye título, y un carousel con cartas de presentación de los cursos, contenidos en un carousel'
+          - title: 'Parámetros:'
+          - text: 'collection: Incluye una colección con los id de aquellos cursos que se desean incluir en el carousel. 🚨 Se comparan estos id con los identificadores de cada curso contenido en la colección, y de esta manera se extrae la información completa del curso.'
+          - text: 'title: Nombre que se le desea dar a la sección'
+          - text: 'id: Si desea añadir más secciones para mostrar diferentes grupos de cursos, es importante variar dicho id para cada sección. Hace referencia al id del carousel.'
+      - title: section-contact.html
+        texts:
+          - title: 'Este componente incluye un formulario de contacto y un título y subtítulo en el extremo izquierdo'
+          - title: 'Toda la información mostrada en esta sección es extraida del directorio "_data", en el archivo "home.yml", objeto "contact"'
+      - title: section-community.html
+        texts:
+          - title: 'Esta sección, muestra un título (componente title.html)), y en la parte inferior tantos "community-card" como lo indique la colección'    
+          - title: 'Toda la información mostrada en esta sección es extraida del directorio "_data", en el archivo "home.yml", objeto "team"'     
+  - title: Cards
+    description: 'Este directorio contiene diferentes "Cards" utilizados a lo largo de la plantilla, y pueden ser reutilizados y modificados posteriormente.'
+    collection:
+      - title: Blog-card.html
+        texts:
+          - title: A blog card that displays the main information of the blog.
+          - title: Parameters
+          - text: "url: The path to redirect"
+          - text: "image-directory: The image source directory"
+          - text: "image: Object wich include: name, the name of tha image. alt: Alternative text to image"
+          - text: "title: The title of the blog post"
+          - text: "description: Breve descriptionof the blog post"
+      - title: buy-card.html
+        texts:
+          - title: This card includes the payment information, including prices, discount prices, coupons etc.
+          - title: "Parameters:"
+          - text: 'pay-info: Object wich includes: text, the title of the card, currency, the current currency, percentage-off-text, wich displays an "off", coupon-input wich include the parameters of an input, and a btn, wich includes the parameter of a button component'
+          - text: "price: the current toal price "
+          - text: "old-price: the total price without discount"
+          - text: "svg-directory: source of the svg icon"
+      - title: category-card.html
+        texts:
+          - title: This component shows a rounded button
+          - title: "Parameters:"
+          - text: "name: Displays the title of the button"
+          - text: "href: path to redirect"
+      - title: community-card.html
+        texts:
+          - title: This component displays an element with a drop shape, and an image inside
+          - title: "Parameters:"
+          - text: "member: Object that includes a name,  a text (short text), and an image, wich includes a name (name of the image), and an alt (alternative to the image)"
+          - text: "image-directory: The image directory "
+      - title: course-card.html
+        texts:
+          - title:' This component displays the cover page of a course. Including relevant information about it, depending on the parameters passed'
+          - title: "Parameters:"
+          - text: "card: Object wich includes a name, owner, image (wich includes a name, and an alt), score (number between 0 and 5), discount (can be true or false), currency, discount-price (if discount equal to true), and an url to redirect"
+          - text: "bought-info: Displays the progress of the course. Optional. Object wich includes completed (the percentage of completion), rating ( number between 0 and 5)"
+          - text: "added: Set to true if you want to display the added buttons"
+      - title: course-feature-card.html
+        texts:
+          - title: This component displays a card with listed texts
+          - title: "Parameters:"
+          - text: "title: Displays the name of the card"
+          - text: "section: Array that includes, an icon, and a text"
+          - text: "svg-directory: The path of the svg icons"
+      - title: course-membered-questions.html
+        texts:
+          - title: "This components displays a card a question card, including the person image, the question and the description."
+          - title: "Parameters:"
+          - text: "question: Object that includes a question (the question by it self), an answer, and a person with an image, wich includes a name and an alt (alternative text to image)"
+      - title: credit-card-edit.html
+        texts:
+          - title: "This component display a card with the credit card information."
+          - title: "Parameters:"
+          - text: "This component has no parameters, so the information is taken from the data directory"
+      - title: instructor-card.html
+        texts:
+          - title: This component displays a breve profile of an instructor.
+          - title: "Parameters:"
+          - text: "title: displays the title of the card"
+          - text: "person: Object that includes a name, and image (wich includes a name, and an alt), a short-description of the instructor, features (an array wich includes an icon and a text), and a href wich redirect to a page"
+          - text: "image-directory: directory of the instructor image"
+          - text: "btn-more: Object that includes the button component parameters"
+      - title: price-card.html
+        texts:
+          - title: "This component displays a buy card for a course, showing the prices and a list of buttons."
+          - title: "Parameters:"
+          - text: "price: The price of the course"
+          - text: "discount-price: The price after the discount"
+          - text: "buttons: An array wich includes an href, and an icon"
+          - text: "svg-directory: the directory of the svg icons"
+      - title: students-review-card.html
+        texts:
+          - title: This component displays a card wich shows a person review of a course
+          - title: "Parameters:"
+          - text: "student-review: Object that includes a name, a text, an image wich includes a name, and an alt (alternative to the image), an score (a number between  and 5), a date, "
+          - text: "image-directory: the directory of the image"
+      - title: switch.html
+        texts:
+          - title: This component shows a simple wich displays a text in the left side.
+          - title: "Parameters:"
+          - text: "text: Text to display"
+  - title: course-detail-pages
+    description: Este directorio contiene cada una de las vistas del detalle de un curso.
+    collection:
+      - title: course-detail-instructor.html
+        texts:
+          - title: "Este componente muestra la vista de un curso, desde la perspectiva del instructor, permitiendo la modificación del mismo. Incluye lista de estudiante, secciones, información básica, etc."
+          - title: "Parámetros:"
+          - text: "Este componente no posee parámetros pues utiliza la información del curso (página actual)"
+      - title: course-detail-subscribed.html
+        texts:
+          - title: "Este componente muestra el detalle de un curso, cuando el usuario ya se encuentra suscrito en el mismo, mostrando cada una de las secciones que contiene el curso, la descripción, preguntas, campo para realizar una nueva pregunta, y conversación con el instructor."
+          - title: "Parámetros:"
+          - text: 'Cada una de estas secciones pertenece a un componente particular, por lo que se utiliza el parámetro "page", que hace referencia a la página actual, es decir, la información del curso (almacenada en los archivos ".md" del directorio "_online-courses-courses") , y esta a su vez es pasada a los demás componentes segun sea necesario.'
+      - title: course-detail.html
+        texts:
+          - title: 'Este componente muestra el detalle de un curso al que el usuario no se ha inscrito. Mostrando información relevante del curso como precio, descuento, video introductorio, qué incluye el curso , cuáles son las aptitudes que desarrollarán los estudiantes, "feedback" de los estudiantes, descripción escrita, e información básica del instructor que la dicta.'
+          - title: "Parámetros:"
+          - text: 'Cada una de estas secciones pertenece a un componente particular, por lo que se utiliza el parámetro "page", que hace referencia a la página actual, es decir, la información del curso (almacenada en los archivos ".md" del directorio "_online-courses-courses") , y esta a su vez es pasada a los demás componentes segun sea necesario.'
+  - title: course-sections
+    description: "Este directorio contiene varios de los componentes utilizados en el detalle de un curso, tanto en la vista de estudiantes inscritos, como en la de no inscritos."
+    collection:
+      - title: my-courses.html
+        texts:
+          - title: 'Este componente itera sobre la coleccion de cursos situada en "_data/user", donde se especifican los id de los cursos en los que está inscrito el usuario, y los compara con la colección de cursos, para renderizar aquellos que se encuentren en la lista'
+          - title: 'Incluye paginado, de ser la cantidad de cursos mayores a 9.'
+          - title: 'Muestra un mensaje de vacío (componente empty-message.html), de no haber cursos en la colección'
+          - text: '🚨 Si desea añadir algun curso al usuario, añada al arreglo de courses en "user.yml" el id del curso que desee'
+      - title: course-questions.html
+        texts:
+          - title: 'Este componente se ha utilizado en la plantilla para mostrar la sección de preguntas/respuestas en el detalle del curso, cuando se encuentra isncrito a éste. Consta de una sección de "Cards" paginados, de preguntas y respuestas, mostrando el total de preguntas realizadas, y un botón, que al ser seleccionado muestra un formulario para hacer una nueva pregunta.'
+          - title: "Parámetros:"
+          - text: 'Este componente utiliza igualmente la informacion particular de un curso, nombrada "page", y la información estática del archivo "courses.yml"'
+          - text: 'Este componente utiliza clases de "css" para distribuir los diferentes componentes que tiene dentro de sí.'
+      - title: students-review.html
+        texts:
+          - title: 'Este componente se ha utilizado en la plantilla, especificamente en el detalle de un curso, cuando el usuario no se ha inscrito en el curso, para mostrar la sección de "feedbacks" de los estudiantes'
+          - title: "Parámetros:"
+          - text: "title: muestra el titulo de la sección"
+          - text: 'students-reviews: recibe una colección con la información que necesita el card "students-review-card.html" , mencionado en los componentes anteriores'
+          - title: 'Este componente incluye tambien un paginado , encerrando cada uno de los "cards" con la clase "card-cont"'
+      - title: course-modules-dropdown.html
+        texts:
+          - title: 'Este componente consiste en un menu fijado en la ezquina derecha, conteniendo secciones desplegables con módulos dentro de estos, que pueden ser marcados con un "check"'
+          - title: "Parámetros:"
+          - text: 'page: Incluye la información almacenada en la metadata del curso (archivo ".md" incluído en el directorio _online-courses-template), utilizando el "course-content" que ahí se encuentra, siendo este una colección que incluye: "title", título de la sección, y "modules", un arreglo que contiene "title", título del módulo.'
+      - title: course-description.html
+        texts:
+          - title: "Este componente muesta en texto plano una descripción"
+          - title: "Parámetros"
+          - text: "title: Incluye el titulo a mostrar en la descripción"
+          - text: 'description: colección que incluye un "title", subtitulo del parrafo si se desea, y un "paragraph", texto del párrafo.'
+      - title: ask-question.html
+        texts:
+          - title: 'Este componente muestra los "inputs", para realizar una nueva pregunta. Este componente se incluye en "course-questions.html"'
+          - text: 'Este componente utiliza la información alojada en el directorio "_data", archivo "courses", en la sección de detalle de curso'
+  - title: instructor
+    description: En este directorio se encuentran algunos de los componentes utilizados en el dashboard del instructor.
+    collection:
+      - title: side-nav.html
+        texts:
+          - title: 'Este componente consiste en un menú lateral, mostrado en el dashboard del instructor en la pantilla'
+          - title: 'Este componente utiliza la información alojada en el directorio "_data", archivo "instructor", en el objeto "side-nav"'
+          - title: 'Consiste en un arreglo que contiene texto e íconos y una imagen de perfíl.'
+      - title: create-course-stepper.html
+        texts:
+          - title: 'Este componente consiste en un paso a paso, que indica el paso en el que se encuentra.'
+          - title: 'Incluye un encabezado, donde se marcan dichos pasos, un contenido, y un "footer"'
+          - text: 'Este componente utiliza la información alojada en el directorio "_data", archivo "instructor", en el objeto "dashboard-create-course"'
+          - title: '🚧 Si desea añadir los pasos para la creación de un curso, agrege un nuevo "tab" al contenido. Si desea modificar alguno de los pasos, modifique o suplante el componente en el "tab" correspondiente'
+      - title: create-basic-info.html
+        texts:
+          - title: 'Este componente consiste en un formulario básico con información definida. Incluye dos campos a la izquierda de este, y uno a la derecha.'
+          - title: 'Parámetros:'
+          - text: 'info: Objeto que incluye "name", "description", y "price", cada uno de estos con los parámetros utilizaados por el componente "login-input"'
+      - title: edit-module.html
+        texts:
+          - title: 'Este componente se utilizó y fue pasado por parámetro al modal de edición del módulo de un curso'
+          - title: '🚧 Si desea editar este modal, cambie este componente!'
+          - text: 'Este componente utiliza la información alojada en el directorio "_data", archivo "instructor", en el objeto "sections / popup-edit"'
+      - title: includes-course-table.html
+        texts:
+          - title: 'Este componente es pasado a uno de las secciones de "vertical-card-menu.html". Revise la documentación del componente'
+          - title: 'Es utilizado en la plantilla para mostrar la tabla de todo aquello que incluye el curso'
+          - text: 'Este componente utiliza la información alojada en el directorio "_data", archivo "instructor", en el objeto "includes-table"'
+      - title: to-learn-course-table.html
+        texts:
+            - title: 'Al igual que el componente anterior, éste es pasado a uno de las secciones de "vertical-card-menu.html". Revise la documentación del componente'
+            - title: 'Es utilizado en la plantilla para mostrar la tabla de todo aquello que se aprenderá durante el curso'
+            - text: 'Este componente utiliza la información alojada en el directorio "_data", archivo "instructor", en el objeto "to-learn-table"'
 
+     
 ---
 
-<div class="component__title">
-    Components
+<div class="component">
+  <div class="component__title">Components</div>
+  <div class="component__subtitle"></div>
+  {% assign start = 1 %} {% for card in page.collection %}
+  <div class="component__subtitle">{{card.title}}</div>
+  <p>{{card.description}}</p>
+  {% include global/accordion.html start=start icon='icon-dot-single'
+  svg-directory=site.data.global.site.directories.svg collection=card.collection
+  expanded=false image=false %} {% assign collection-lenght = card.collection |
+  size %} {% assign start = start | plus : collection-lenght %} {% endfor %}
 </div>
-{% assign start = 1 %}
-{% for card in page.collection %}
-    <div class="component__subtitle">
-        {{card.title}}
-    </div>
-    {% include global/accordion.html start=start icon='icon-dot-single' svg-directory=site.data.global.site.directories.svg collection=card.collection  expanded=false image=false %}
-      {% assign collection-lenght = card.collection | size %}
-      {% assign start = start | plus : collection-lenght %}
-{% endfor %}

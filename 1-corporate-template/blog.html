@@ -6,7 +6,7 @@ page-image: blog-bg.png
 ---
 
 <!--Banner-->
-{% include corporate-template/sections-banner.html
+{% include corporate-template/global/sections-banner.html
 background=site.data.corporate-template.blog.banner.background
 title=site.data.corporate-template.blog.banner.title
 subtitle=site.data.corporate-template.blog.banner.subtitle
@@ -24,7 +24,7 @@ id=site.data.corporate-template.blog.banner.image.id
 <div class="blog mb-big">
     <div class="blog__content">
         <!--Title-->
-        {% include corporate-template/title.html title=site.data.corporate-template.blog.posts.title %}
+        {% include corporate-template/global/title.html title=site.data.corporate-template.blog.posts.title %}
         {% assign sorted-blogs= site.corporate-blogs | sort: "date"  %}
         <div class="mt-bigger">
             {% for post in sorted-blogs %} 

@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="/templategenerator/3-culinary-blog-template/assets/images/logo.png">
 	<link rel="stylesheet" href="/templategenerator/css/main.css">
 	<link rel="stylesheet" href="/templategenerator/3-culinary-blog-template/css/main.css">
-	<link rel="canonical" href="templategenerator/3-culinary-blog-template/courses/pan-de-leche/step-1.html">
+	<link rel="canonical" href="http://localhost:4000templategenerator/3-culinary-blog-template/courses/pan-de-leche/step-1.html">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
 
 <!-- Schema.org markup for Google+ -->
@@ -381,34 +381,6 @@ max-height: 800px;">
         
     </div>
 </div>
-
-<script>
-(function(){
-	let accordionItems = document.querySelectorAll('.accordionTrigger');
-
- changeItem = function(e) {
-        e.preventDefault();
-        var itemHeader = e.target;
-        var itemContent = e.target.parentNode.nextElementSibling;
-        if(itemContent.classList.contains('is-collapsed')) {
-           itemHeader.setAttribute('aria-expanded', 'true');
-           itemContent.setAttribute('aria-hidden', 'false');
-        } else {
-            itemHeader.setAttribute('aria-expanded', 'false');
-            itemContent.setAttribute('aria-hidden','true');
-        }
-        itemHeader.classList.toggle('is-collapsed');
-        itemHeader.classList.toggle('is-expanded');
-            itemContent.classList.toggle('is-collapsed');
-            itemContent.classList.toggle('is-expanded');
-        
-        itemContent.classList.toggle('animateIn');
- };
-	for (var i=0,len=accordionItems.length; i<len; i++) {
-        accordionItems[i].addEventListener('click', changeItem, false);
-    }
-})();
-</script>
         
             <div class="quantity-box">
     <div class="quantity-box__increase">
@@ -1142,6 +1114,7 @@ function incrementDecreaseValue(operation, value)
 <script src="/templategenerator/javascript/table.js"></script>
 <script src="/templategenerator/javascript/pagination.js"></script>
 <script src="/templategenerator/javascript/charts.js"></script>
+<script src="/templategenerator/javascript/accordion.js"></script>
 
         
             <script src="/templategenerator/3-culinary-blog-template/assets/js/animations.js"></script>
