@@ -14,21 +14,21 @@ base-url=site.data.online-courses-template.global.site.base-url %}
       />
     </a>
   </div>
-  {% include online-courses-template/header-links.html
+  {% include online-courses-template/global/header-links.html
   base-url=base-url
   link=site.data.online-courses-template.header.categories
   sections=site.online-courses-categories position='left'
   svg-directory=svg-directory %} 
   <div class="header__search">
     {% include
-      online-courses-template/search-input.html
+      online-courses-template/global/search-input.html
       placeholder=site.data.online-courses-template.header.search-input.placeholder
       %}
   </div>
   
   <div class="header__info">
     {% for links in site.data.online-courses-template.header.header-buttons %}
-    {% include online-courses-template/header-links.html base-url=base-url link=links
+    {% include online-courses-template/global/header-links.html base-url=base-url link=links
     position='right' svg-directory=svg-directory sections=links.sections %} {%
     endfor %}
     <div class="header__profile">

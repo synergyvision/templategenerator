@@ -9,7 +9,9 @@
     flex-wrap: nowrap;
     padding: 0 2rem;
     z-index: 5;
-
+    @include respond(phone){
+        padding: 0 1rem;
+    }
     &__search{
         width: 330px;
 

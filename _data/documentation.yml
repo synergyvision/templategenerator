@@ -49,6 +49,8 @@ links:
         href: /1-corporate-template/
       - name: How to use
         href: documentation/corporate-template/how-to-use.html
+      - name: Components
+        href: documentation/corporate-template/components.html
   - name: Bakery blog
     type: link
     fa-icon: fa-bread-slice

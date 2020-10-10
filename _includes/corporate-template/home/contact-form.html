@@ -2,7 +2,7 @@
 <div class="book__form" >
         <form class="form" action="https://formspree.io/{{site.data.corporate-template.home.sections.form.your-email}}" method="POST">
             <div class="form__text-side">
-                    {% include corporate-template/title.html title=site.data.corporate-template.home.sections.form.title %}
+                    {% include corporate-template/global/title.html title=site.data.corporate-template.home.sections.form.title %}
                     {% if site.data.corporate-template.home.sections.form.image.type == 'svg' %}
                         {% capture svg-directory %}{{site.data.corporate-template.global.assets.svg-directory  | relative_url  | append: site.data.corporate-template.home.sections.form.image.name }}{% endcapture %}
                         {% include global/svg.html directory=svg-directory image=site.data.corporate-template.home.sections.form.image.id class='form__svg'  %}
@@ -31,7 +31,7 @@
                     <label for="{{site.data.corporate-template.home.sections.form.inputs[2].id}}" class="form__label">{{site.data.corporate-template.home.sections.form.inputs[2].message}}</label>
                 </div>
                 <div class="form__button">
-                    {% include corporate-template/button-primary.html type=1 title=site.data.corporate-template.home.sections.form.button %}  
+                    {% include corporate-template/global/button-primary.html type=1 title=site.data.corporate-template.home.sections.form.button %}  
                     <input type="submit" class="form__button__input">
                 </div>
             </div>

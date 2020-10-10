@@ -6,7 +6,7 @@ page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reic
 
 <!--Banner-->
 
-{% include corporate-template/sections-banner.html
+{% include corporate-template/global/sections-banner.html
 title=site.data.corporate-template.us.banner.title
 background=site.data.corporate-template.us.banner.background
 subtitle=site.data.corporate-template.us.banner.subtitle
@@ -27,13 +27,13 @@ color=site.data.corporate-template.colors.color-primary-light %}
 
 
 <!--'Our' section--> 
-  {% include corporate-template/title.html title=site.data.corporate-template.us.our.title %}
+  {% include corporate-template/global/title.html title=site.data.corporate-template.us.our.title %}
 
   {% include
   corporate-template/cards/our-card.html collection=site.data.corporate-template.us.our.collection %}
 
 <!--Quote carousel-->
-{% include corporate-template/title.html title='What our team have to say' %}
+{% include corporate-template/global/title.html title='What our team have to say' %}
 
 <div class="us-quote row">
   <div class="us-quote__card ">
