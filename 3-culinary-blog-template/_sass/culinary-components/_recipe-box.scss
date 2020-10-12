@@ -1,5 +1,5 @@
 .recipe-box{
-    width: 60%;
+    width: 90%;
     box-shadow: $shadow-dark;
     height: max-content;
     margin: 5rem auto;
@@ -9,7 +9,7 @@
     background-color: #fff;
     border-radius: 10px;
     @include respond(tab-land){
-        width: 70%;
+       // width: 70%;
         margin: 0 auto;
         margin-top: -5%;
         margin-bottom: 5%;
@@ -60,6 +60,12 @@
         @include respond(tab-port){
             flex-direction: column;
         }
+        .table-responsive{
+            width: 70%;
+            @include respond(tab-port){
+                width: 100%;
+            }
+        }
         .rounded-image-container{
             width: 150px;
             height: 150px;
@@ -90,8 +96,8 @@
                 width: 90%;
             }
             .image-container{
-                max-height: 300px;
-                max-width: 300px;
+                max-height: 400px;
+                max-width: 400px;
                 margin: 0 auto;
                 background-color: var(--color-secondary);
                 border: 7px solid var(--color-secondary);
@@ -100,6 +106,22 @@
                     width: 100%;
                     height: auto;
                     object-fit: contain;
+                }
+            }
+            .social-media{
+                @include abscenter;
+                width: 100%;
+                margin-top: 15px;
+                &__title{
+                    font-size: 1.6rem;
+                    color: var(--color-secondary);
+                    font-weight: 500;
+                }
+                &__icons{
+                    .icon{
+                        margin: 0 5px;
+                        fill: var(--color-secondary);
+                    }
                 }
             }
             .features{

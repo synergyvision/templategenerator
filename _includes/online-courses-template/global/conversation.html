@@ -1,5 +1,5 @@
-<div class="chat" {% if include.size == 'small' %} style="max-height: 400px;
-max-width: 90vw; width: 300px; border-radius: 5px;" {% endif %}>
+<div class="chat" {% if include.size == 'small' %} style="max-height: 70vh;
+ width: 300px; max-width: 80vw; border-radius: 5px;" {% endif %}>
     <div class="chat__header">
         <div class="img-container">
             <img src="{{image-directory | append: include.chat.image.name | relative_url}}" alt="{{include.chat.image.alt}}" />

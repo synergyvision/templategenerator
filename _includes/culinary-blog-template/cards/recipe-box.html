@@ -10,6 +10,15 @@
                     <div class="image-container">
                         <img src="{{image-directory | append: include.page.basic-info.primary-image.name | relative_url }}" alt="{{include.page.basic-info.primary-image.alt}}">
                     </div>
+                    <div class="social-media">
+                        <p class="social-media__title">{{site.data.culinary-blog-template.recipes-and-courses.recipes.share.title}}</p>
+                        <div class="social-media__icons">
+                            {% for sm in site.data.culinary-blog-template.recipes-and-courses.recipes.share.social-medias %}
+                                {% assign social-media = include.page.social-media | where: "name", sm.name | first %}
+                                <a href="{{social-media.href}}" target="_blank">{% include global/svg.html directory=include.svg-directory image=sm.icon class='icon'  %}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             {% endif %}
             <div class="recipe-box__content__side">

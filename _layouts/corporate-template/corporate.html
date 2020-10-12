@@ -2,9 +2,9 @@
 <html>
 {% include global/head.html site=site.data.corporate-template.global.site %}
 <body>	
-	{% include corporate-template/header.html url=site.data.corporate-template.global.corporate-base-url %}
+	{% include corporate-template/global/header.html url=site.data.corporate-template.global.corporate-base-url %}
 	   {{ content }} 	
-	{% include corporate-template/footer.html %}
+	{% include corporate-template/global/footer.html %}
 	{% include global/scripts.html %}
 	{% for js in site.data.corporate-template.global.site.directories.js.collection %}
 		<script src="{{ site.data.corporate-template.global.site.directories.js.name | append: js.name | relative_url }}"></script>

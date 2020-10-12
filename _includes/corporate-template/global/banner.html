@@ -17,7 +17,7 @@
           <div class="btn-cont mt-medium">
             {% for button in site.data.corporate-template.home.sections.banner.buttons %}
             <div class="mt-medium">
-              {% include corporate-template/button-primary.html title=button.title
+              {% include corporate-template/global/button-primary.html title=button.title
               type=button.type id=button.go-to to=button.to %}
             </div>
             {% endfor %}
@@ -44,7 +44,7 @@
   </div>
 </div>
 
-{% include corporate-template/border.html %}
+{% include corporate-template/global/border.html %}
 
 
 <script> 

@@ -13,14 +13,22 @@
                     <img src="{{include.image-directory  | append: image | relative_url }}" alt="" {% if include.image == false %} style="display: none;" {% endif %}>
                 {% endif %}
                 <dl {% if include.image == false %} style="width:90%;" {% endif %}>
-                    <dt>
-                        <a href="#accordion{{start}}" aria-expanded="false" aria-controls="accordion{{start}}" class="accordion-title accordionTitle accordionTrigger {% if include.expanded == false %}  {% else %}  is-collapsed is-expanded {% endif %} ">{{item.title}}</a>
+                    <dt >
+                        <a href="#accordion{{start}}" aria-expanded="false" aria-controls="accordion{{start}}" class="accordion-title accordionTitle accordionTrigger {% if include.expanded == false %}  {% else %}  is-collapsed is-expanded {% endif %} ">
+                            <p>{{item.title}}</p>
+                            {% include global/svg.html directory=include.svg-directory image='icon-arrow-down' class='icon-arrow'  %}
+                        </a>                   
                     </dt>
                     <dd class="accordion-content accordionItem {% if include.expanded == true %}is-expanded{% else %} is-collapsed {% endif %}" id="accordion{{start}}" aria-hidden="true">
                         {% for text in item.texts %}
                             <div class="item">
                                 {% if text.text %}
-                                    {% include global/svg.html directory=include.svg-directory image=include.icon class='item-icon'  %}
+                                    {% if include.icon %}
+                                        {% include global/svg.html directory=include.svg-directory image=include.icon class='item-icon'  %}
+                                    {% endif %}
+                                    {% if include.checkbox %}
+                                        <input type="checkbox">
+                                    {% endif %}
                                     <p>{{text.text}}</p>
                                 {% endif %}
                                 {% if text.title %}
@@ -35,31 +43,3 @@
         {% endfor %}
     </div>
 </div>
-
-<script>
-(function(){
-	let accordionItems = document.querySelectorAll('.accordionTrigger');
-
- changeItem = function(e) {
-        e.preventDefault();
-        var itemHeader = e.target;
-        var itemContent = e.target.parentNode.nextElementSibling;
-        if(itemContent.classList.contains('is-collapsed')) {
-           itemHeader.setAttribute('aria-expanded', 'true');
-           itemContent.setAttribute('aria-hidden', 'false');
-        } else {
-            itemHeader.setAttribute('aria-expanded', 'false');
-            itemContent.setAttribute('aria-hidden','true');
-        }
-        itemHeader.classList.toggle('is-collapsed');
-        itemHeader.classList.toggle('is-expanded');
-            itemContent.classList.toggle('is-collapsed');
-            itemContent.classList.toggle('is-expanded');
-        
-        itemContent.classList.toggle('animateIn');
- };
-	for (var i=0,len=accordionItems.length; i<len; i++) {
-        accordionItems[i].addEventListener('click', changeItem, false);
-    }
-})();
-</script>

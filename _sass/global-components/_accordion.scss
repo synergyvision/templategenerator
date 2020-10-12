@@ -5,7 +5,7 @@
      line-height:1.5em; 
   }
   .accordion p {
-    margin-left: 10px;
+    
     width:80%;
     font-size: 1.6rem;
   }
@@ -28,11 +28,14 @@
               width: 100%;
             }
             dt{
+            
             .accordionTitle{
               background-color: var(--color-secondary);
               font-weight: 400;
-              padding: 10px;
-              display: block;
+              padding: 10px 0px;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
               text-decoration: none;
               color: #fff;
               font-size: 1.6rem;
@@ -41,17 +44,37 @@
               border-radius: 5px;
               margin: 10px 0;
               box-shadow: $shadow-light;
+              p{
+                padding: 0;
+                margin: 0;
+                color: #fff !important;
+              }
+              .icon-arrow{
+                width: 22px;
+                height: 22px;
+                fill: #fff;
+                transform: rotate(180deg);
+                transition: all .2s;
+              }
               &.is-expanded {
                 background-color: var(--color-secondary);
                 color: #fff;
+                .icon-arrow{
+                  transform: rotate(0deg);
+                }
                  &:before {
-                  
                    transform:rotate(-225deg);
                  }
              }
               &:hover {
                 background-color: #fff;
                 color: var(--color-secondary);
+                p{
+                  color: var(--color-secondary) !important;
+                }
+                .icon-arrow{
+                  fill: var(--color-secondary);
+                }
               }
             }
           }
@@ -59,6 +82,7 @@
             background-color:#eee;
             font-size:1.4rem;
             line-height:1.5em; 
+
             &.accordionItem {
                 max-height:max-content;
                 overflow:hidden; 
@@ -66,7 +90,11 @@
                   .item{
                       display: flex;
                       align-items: center;
-                      padding: 10px;
+                      padding: 10px !important;
+                      p{
+                        margin: 0 !important;
+                        margin-left: 10px !important;
+                      }
                   }
                   &.is-collapsed {
                     max-height:0;

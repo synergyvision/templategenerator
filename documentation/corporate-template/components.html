@@ -1,0 +1,156 @@
+---
+layout: index/components
+title: Corporate template | Components
+collection:
+  - title: global
+    description: "Este directorio contiene componentes que se utilizan repetidamente a lo largo de la plantilla, y pueden ser reutilizados para su modificación "
+    collection:
+      - title: 'header.html'
+        texts:
+          - title: 'Este componente incluye todo lo referente al encabezado del sitio.'
+          - title: 'Toda la información que ahí se encuentra, esta alojada en el directorio "_data/header"'
+      - title: 'banner.html'
+        texts:
+          - title: 'Este banner que se encuentra en la página de incio de la plantilla, posee una sección de información del lado izquierdo, y diferentes iconos svg o imagenes del lado contrario'
+          - title: 'Toda la información que ahi se muestra, como título, subtítulo , botones , imagenes o íconos svg, se encuentra en el directorio "_data/home/sections/banner"'
+          - title: '🚨 Puede indicar en el tipo de imagen, si se desea una imagen (image) o un svg. De cualquier manera el atributo "name" representará el nombre de la imagen o el svg. Si añade un svg, idenfique el "id" del ícono'
+      - title: 'footer.html'
+        texts:
+            - title: 'Este componente incluye todo lo referente al pie de página del sitio.'
+            - title: 'Toda la información que ahí se encuentra, esta alojada en el directorio "_data/footer"'
+      - title: 'title.html'
+        texts:
+            - title: 'Este componente consiste en un titulo centrado que es utilizado a lo largo de la plantilla'
+            - title: 'Recibe como parámetro "title", siendo el texto a mostrar'
+      - title: 'button-primary.html'
+        texts:
+            - title: 'Este comopente consiste en un botón con animación svg al rededor'
+            - title: 'Parámetros:'
+            - text: 'type: "1" si desea que el boton tenga de fondo el color primario, y como detalles el blanco; "2" si lo desea contrario a esto.'
+            - text: 'to: si es igualado a "section" , el botón hara scroll hacia la sección especificada. Si no desea que esto suceda, no pase dicho parámetro.'
+            - text: 'id: identificador de la sección a la cual desea hacer scroll, si ha utilizado el atributo "to", de lo contrario esta será el nombre del link de redirección'
+            - text: 'title: nombre que desea mostrar en el botón'
+      - title: 'border.html'
+        texts: 
+           - title: 'Este componente muestra una sección en forma de "V" con dos franjas, una gruesa, y otra mas delgada'
+           - title: '🚨 Si desea utilizar únicamente la franja delgada, utilice la clase de css "border-secondary"'
+      - title: 'sections-banner.html'
+        texts: 
+            - title: 'Este componente es utilizado en cada página de la plantilla como banner'
+            - title: 'Parámetros:'
+            - text: 'title: título del banner'
+            - text: 'subtitle: subtitulo del banner'
+            - text: 'type: (svg o image)'
+            - text: 'id: si añade un ícono svg indique su id'
+            - text: 'img: si añade una imagen añada su nombre aquí'
+      - title: 'animated-circles.html'
+        texts:
+            - title: 'Este componente muestra círculos concentricos abstractos animados. Puede observarlos en la página "us"'
+    
+  - title: cards
+    description: Este directorio contiene mucho de los "cards" utilizados a lo largo de la plantilla 
+    collection:
+      - title: blog-card.html
+        texts:
+          - title: 'Este componente muestra la carta de presentación de un post, mostrando su información básica'
+          - title: 'Parámetros:'
+          - text: 'button: texto que debe aparecer en el botón del post'
+          - text: 'post: contiene toda la información del blog. Objeto que incluye: 1. "image" o nombre de la imagen, 2. "alt" o texto alternativo a la imagen, 3. "title" o título del post, 4. "by" o autor del post,5.  "description" o descripción breve del post, 6. "created" o texto referente a la creación del blog, 7. "date" o fecha de creación del post, 8. y "url" para redireccionar al post en sí'
+          - text: 'img: id del ícono svg para mostrar calendario del post'
+      - title: blog-small-card.html
+        texts:
+          - title: 'Este componente muestra la carta de presentación en versión mas pequeña de un post, mostrando su información básica'
+          - title: 'Parámetros:'
+          - text: 'button: texto que debe aparecer en el botón del post'
+          - text: 'post: contiene toda la información del blog. Objeto que incluye: 1. "image" o nombre de la imagen, 2. "alt" o texto alternativo a la imagen, 3. "title" o título del post, 4. "by" o autor del post, 5.  "created" o texto referente a la creación del blog, 6. "date" o fecha de creación del post, 8. y "url" para redireccionar al post en sí'
+          - text: 'img: id del ícono svg para mostrar calendario del post'
+      - title: client-quote-card.html
+        texts:
+          - title: ' Este componente muestra el card del "feedback" de los clientes, mostrando un score, y su apreciación escrita'
+          - title: 'Parámetros:'
+          - text: 'person: Objeto que incluye 1. "image" o imagen de la persona, 2. "alt" o texto alternativo a la image, 3. "name" o nombre de la persona, 4. "text" o  escrito de la persona, y 5. "score" o valoración del 1 al 5 .'
+      - title: 'logo-card.html'
+        texts:
+          - title: 'Este componente muestra un card plano, con una imagen en el centro, y una pequeña animación en el borde inferior al hacer "hover"'
+          - title: 'Parámetros:'
+          - text: 'card: Objeto que incluye "image" o imagen a mostrar, "alt" o texto alternativo a image, y "href" o url a redireccionar al hacer click'
+      - title: 'our-card.html'
+        texts:
+          - title: 'Sección que incluye en sí una colección de cards, con el componente "animated-circles" en la ezquina superior del card. Posee un título, y conjunto a la carta un texto.'
+          - title: 'Dado a que se debe a una colección, se mostraran invertidos las posiciones de los cards'
+          - title: 'Parámetros:'
+          - text: 'collection: Arreglo que contiene "title", siendo el título del card, y "text" siendo el texto que se muestra a un lado de este'
+      - title: 'questions-card.html'
+        texts:
+          - title: 'Sección que contiene en sí una cantidad de preguntas frecuentes'
+          - title: 'Parámetros:'
+          - text: 'collection: Arreglo que contiene en si "question" con el texto de la pregunta, y "answer" con la respuesta'
+      - title: 'quote-card.html'
+        texts: 
+          - title: 'Card que contiene una frase o texto descrito por una persona, resaltando la imagen de esta, su nombre y su cargo'
+          - title: 'Parámetros:'
+          - text: 'card: Objeto que posee un 1. "text" o frase de la persona, 2. "member" a su vez un objeto que contiene "image" siendo la imagen del miembro y "alt" el texto alternativo a la imagen, "name" el nombre del miembro y "position", el cargo de la persona.'
+      - title: 'service-card.html'
+        texts:
+          - title: 'Card que contiene la inforación de presentación de un servicio'
+          - title: 'Parámetros:'
+          - text: 'card: Objeto que contiene  1. "img" o imagen del servicio, 2. "title" o nombre del servicio, 3. "subtitle", pequeño subtitulo de dicho servicio, 4. "description" o descripción del servicio, "url" para redireccionar al servicio, y button, para nombrar al botón del card.'
+      - title: 'us-feature-card.html'
+        texts:
+          - title: 'Card que contiene un ícono inscrito en una circunsferencia, y dentro, un texto explicativo. Al hacer hover se muestra una animación en el borde inferior.'
+          - title: 'Parámetros:'
+          - text: 'collection: Arreglo que contiene 1. "icon" o nombre del ícono svg , y 2. "text" o texto a mostrar en el centro del card'
+  - title: home
+    description: En este dirctorio se listan algunos de los componentes utilizados en esta sección
+    collection:
+      - title: contact-form.html
+        texts:
+          - title: Este componente consta de un formulario de contacto 
+          - title: 'Este formulario utiliza "formspree" para el envío de notificaciones por correo. Si desea añadir su correo electrónico, dirijase al directorio "_data/home/sections/form", donde se encuentran además todos los datos utilizados en la sección'
+      - title: features.html
+        texts:
+          - title: Este componente consta de una sección que contiene diferentes cards con íconos y contadores animados
+          - title: 'Este formulario, utiliza los datos almacenados en  el directorio "_data/home/sections/features/feature"'
+          - title: 'Este arreglo, contiene un "number" o número que se incrementará, un atributo "plus" si desea mostrar un plus junto al número, y un "text" o breve texto'
+      - title: services.html
+        texts:
+          - title: Sección que muestra el título primario y un carousel con la colección de servicios
+      - title: social-card.html
+        texts:
+          - title: Card que muestra un link a una determinada red social, y el ícono de la misma en la esquina superior derecha.
+          - title: 'Parámetros:'
+          - text: 'social, objeto que contiene "link" de redirección, y "account" o nombre de la cuenta'
+          - text: 'svg: id del ícono svg de la red social'
+      - title: social-media.html
+        texts:
+          - title: 'Sección que muestra un título y lista los componentes "social-card.html", ubicados en el directorio "_data/home/account-section/accounts"'
+      - title: us.html
+        texts:
+          - title: 'Sección que muestra el título primario y su contenido. El contenido consta de dos lados, el lado izquierdo que contiene una composición de dos imagenes animadas, y el lado derecho un titulo y sus respectivos párrafos'
+          - title: 'La información de esta seccion se encuentra ubicada en el directorio "_data/home/sections/why-us"'
+  - title: services
+    description: En este directorio se encuentra ubicado el detalle de un servicio
+    collection:
+      - title: service-description.html
+        texts:
+          - title:  Este componente posee toda la información detallada de un servicio en particular.
+          - title: 'Parámetros:'
+          - text: 'service: Objeto que contiene 1. "title", título del servicio, 2. "href" o link de redirección, 3. "by" o autor de la descripción del servicio, 4. "decription", colección que contiene "paragraph" siendo los parrafos listados, 5. "quote", cita relevante del servicio, 6. "share", objeto que incluye "title" texto que incite a compartit, y "icons" arreglo de íconos svg con el atributo "name", siendo este el id del ícono, 7. "side" que contiene "tags/items" consistiendo esta de "titles" o títulos de los tags; "categories/tags", arreglo que posee un "title" o título y un "percentage" o porcentage de pertenencia al servicio; y un "participants" que posee un "title" o título de la sección, y "list" , una lista que contiene "img" nombre de la image, "name" nombre del participante, y "text" o texto inferior'
+  - title: team
+    description: En este directorio se encuentran ubicados la mayoria de los componentes utilizados en la sección "equipo"
+    collection:
+      - title: card.html
+        texts:
+          - title: Este componente consiste en una carta de presentación del miembro del equipo
+          - title: 'Parámetros:'
+          - text: 'member: Objeto que incluye 1. "image" o imagen del miembro, 2. "name" o nombre del participante, 3. "position" o cargo del participante, 4. "social-media" , arreglo que contiene "account" o sitio de redirección y "svg-icon" o id del ícono svg'
+      - title: feature-box.html 
+        texts: 
+          - title: 'Caja que lista diferentes características, mostrando un ícono de representación'
+          - title: 'Parámetros:'
+          - text: 'features: Arreglo que contiene "icon" o id del ícono a mostrar, y "title" o título a mostrar debajo del ícono mencionado.'
+      - title: qualities-box.html
+        texts:
+          - title: Sección que contiene un título primario, y dos partes. El lado izquierdo contiene una ola animada del color primario, con una imagen sobrepuesta y rotada. Del lado derecho, se tiene una caja que contienen barras de progreso (componente progress-bar).
+          - title: 'Toda la información mostrada en esta sección se encuentra ubicada en el directorio "_data/team/section-quality"'
+---

@@ -1,7 +1,7 @@
 <div class="stepper">
     <div class="stepper-header">
             <div class="steps">
-                    {% for i in (1..5) %}
+                    {% for i in (1..site.data.online-courses-template.instructor.dashboard-create-course.steps) %}
                     <div class="step {% if forloop.index == 1 %} active {% endif %}">
                         <span>
                             {{forloop.index}}
@@ -13,7 +13,7 @@
     <div id="cardBody" class="stepper-body">
         <div class="tabs">
                 <div id="1" class="tab">
-                    {% include online-courses-template/instructor/create-course-sections/basic-info.html info=site.data.online-courses-template.instructor.dashboard-create-course.basic-info %}
+                    {% include online-courses-template/instructor/create-basic-info.html info=site.data.online-courses-template.instructor.dashboard-create-course.basic-info %}
                 </div>
                 <div id="2" class="tab">
                     {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.includes %}
@@ -24,8 +24,8 @@
                     {% include online-courses-template/global/add-to-list.html title=info.title input=info.input  field-btns=info.field-btns %}
                 </div>
                 <div id="4" class="tab">
-                    <div class="title">Add a section, and modules to load your videos and resources</div>
-                    {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.sections %}
+                    <div class="title">{{site.data.online-courses-template.instructor.dashboard-create-course.sections.title}}</div>
+                    {% assign info = site.data.online-courses-template.instructor.dashboard-create-course.sections.content %}
                     {% include online-courses-template/global/add-to-list-group.html title=info.title input=info.input  field-btns=info.field-btns %}
                 </div>
                 <div id="5" class="tab">

@@ -1,8 +1,8 @@
 <div class="row">
-    {% include corporate-template/title.html title=site.data.corporate-template.home.account-section.title %}
+    {% include corporate-template/global/title.html title=site.data.corporate-template.home.account-section.title %}
     <div class="social-box">
         {% for social in site.data.corporate-template.home.account-section.accounts %}
-            {% include corporate-template/home/social-card.html social=social svg=social.svg class-svg='social-box__svg' %}
+            {% include corporate-template/home/social-card.html social=social svg=social.svg  %}
         {% endfor %}
     </div>   
 </div>

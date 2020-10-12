@@ -1,0 +1,16 @@
+.techniques{
+    display: flex;
+    @include respond(tab-port){
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-side{
+        @include respond(tab-port){
+            width: 90%;
+        }
+
+    }
+    .right-side{
+        margin-top: 15px;
+    }
+}

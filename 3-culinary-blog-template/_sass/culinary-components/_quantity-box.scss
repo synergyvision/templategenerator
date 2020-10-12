@@ -10,7 +10,7 @@
         box-shadow: $shadow-light;
         h2{
             align-self: flex-start;
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin: 10px 0 !important;
             font-weight: 300;
         }
@@ -24,7 +24,7 @@
     height: 50px;
     @include abscenter;
     flex-wrap: nowrap;
-    font-size: 3rem;
+    
     a{
         height: 100%;
         width: 50px;
@@ -32,6 +32,7 @@
         background-color: var(--color-secondary);
         color: #fff;
         cursor: pointer;
+        font-size: 2.5rem;
         transition: all .2s;
         &:hover{
             background-color: var(--color-secondary-dark);
@@ -51,6 +52,7 @@
         border: 2px solid var(--color-secondary);
         padding-left: 10px;
         color: $gray;
+        font-size: 2rem;
         &:focus{
             outline: none;
         }

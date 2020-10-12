@@ -2,7 +2,7 @@
 layout: culinary-blog-template/culinary-blog-techniques
 identifier: techn1
 page-image: technique-2.png #Imagen para redes sociales
-title: El amasado | Tecnicas
+title: El amasado | Técnicas
 subtitle: Lorem ipsum dolor sit amen
 video: 
     source: https://www.youtube.com/embed/Zog-mn9yF0w?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
@@ -13,6 +13,7 @@ basic-info:
     name: technique-2.png
     alt: Amasado
   url: 'techniques/amasado.html'
+  btn: Ver técnica
 information:
   - name: 'El amasado tiene dos finalidades:'
     type: paragraph

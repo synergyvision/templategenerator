@@ -6,7 +6,7 @@ page-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reic
 
 <!--Banner-->
 
-{% include corporate-template/sections-banner.html
+{% include corporate-template/global/sections-banner.html
 title=site.data.corporate-template.team.banner.title
 background=site.data.corporate-template.team.banner.background
 subtitle=site.data.corporate-template.team.banner.subtitle
@@ -24,7 +24,7 @@ features=site.data.corporate-template.team.features %}
 </div>
 
 <!--Members-->
-  {% include corporate-template/title.html
+  {% include corporate-template/global/title.html
   title=site.data.corporate-template.team.team-section.title %}
   <div class="abscenter mtb-big">
     {% for member in site.data.corporate-template.team.team-section.members %}

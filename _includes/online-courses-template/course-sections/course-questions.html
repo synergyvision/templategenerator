@@ -32,11 +32,9 @@
         </div>
       {% endfor %}
     </div>
- 
     <div class="abscenter mtb-big">
         {% assign max-per-page=2.0 %}
         {% assign number-of-pages = page.questions | size | divided_by: max-per-page | ceil  %}
         {% include global/pagination.html number-of-pages=number-of-pages max-per-page=max-per-page scroll=false %}
-    </div>
-    
+    </div>    
 </div>

@@ -4,12 +4,12 @@ icon-section: wheat
 
 cards:
   icon: wheat
-  btn: Leer más
+  btn: Ver receta
 
 filter:
   - name: Enriquecidos
     value: enriquecido
-  - name: Rusticos
+  - name: Rústicos
     value: rustico
   - name: Todos
     value: all 
@@ -27,6 +27,17 @@ recipes:
   step-by-step:
     title: Paso a paso panadero
     subtitle: Lorem ipsum sit amen fet sit germal
+  share:
+    title: Share
+    social-medias:
+        - name: twitter
+          icon: icon-twitter
+        - name: facebook
+          icon: icon-facebook-square
+        - name: pinterest
+          icon: icon-pinterest
+        - name: instagram
+          icon: icon-instagram
 courses:
   title: Cursos
   empty-message:
@@ -37,12 +48,7 @@ courses:
     subtitle: panadero
 techniques:
   title: Técnicas
-  quote:
-    person:
-      image: chef.png
-      alt: chef edoardo
-      name: Chef Edoardo
-    message: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quo saepe voluptatum aperiam rerum ipsam odit voluptates sed, consequatur non officia laudantium pariatur asperiores quibusdam, necessitatibus porro nam libero voluptatem.
+  message: Te ofrecemos las mejores técnicas de panaderia, lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quo saepe voluptatum aperiam rerum ipsam odit voluptates sed.
   top:
     title: Top tecnicas
     subtitle: lorem ipsum dolor
@@ -50,6 +56,9 @@ techniques:
       - id: techn1
       - id: techn2
       - id: techn3
+      - id: techn4
+      - id: techn5
+      - id: techn6
 
 steps-prefix: 'prep-step-'
 steps:

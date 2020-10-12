@@ -8,6 +8,7 @@ basic-info:
         name: course-2.jpg
         alt: Course 2
     url: courses/pan-de-leche/step-1.html
+    btn: Ver curso
 quantity: 6
 ingredients:
   - collection:

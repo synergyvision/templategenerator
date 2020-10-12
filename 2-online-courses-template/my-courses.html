@@ -3,10 +3,12 @@ layout: online-courses-template/online-courses-header
 title: Coursing | My courses
 
 ---
-
+{% assign
+    svg-directory=site.data.online-courses-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
 <div class="title-stripe__text">
     {{site.data.online-courses-template.profile.my-courses.title}}
 </div>
 <div class="mt-big">
-    {% include online-courses-template/profile/my-courses.html %}
+    {% include online-courses-template/course-sections/my-courses.html %}
 </div>
