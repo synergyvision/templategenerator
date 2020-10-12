@@ -47,7 +47,7 @@ links:
     items:
       - name: Demo en vivo
         href: /1-corporate-template/
-      - name:  ¿ Cómo usar ?
+      - name:   Cómo usar 
         href: documentation/corporate-template/how-to-use.html
       - name: Componentes
         href: documentation/corporate-template/components.html
@@ -57,7 +57,7 @@ links:
     items:
       - name: Demo en vivo
         href: /3-culinary-blog-template/
-      - name: ¿ Cómo usar ?
+      - name:  Cómo usar 
         href: documentation/culinary-blog-template/how-to-use.html
       - name: Componentes
         href: documentation/culinary-blog-template/components.html
@@ -69,5 +69,5 @@ links:
         href: /2-online-courses-template/
       - name: Componentes
         href: documentation/online-courses-template/components.html
-      - name: ¿ Cómo usar ?
+      - name:  Cómo usar 
         href: documentation/online-courses-template/how-to-use.html
