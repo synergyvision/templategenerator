@@ -3,12 +3,12 @@ color-secondary: '#6697E8'
 color-secondary-light: '#e1f5ff'
 
 links:
-  - name: Home
+  - name: Inicio
     type: link
     href: index.html
     fa-icon: fa-border-all
     active: true
-  - name: Components
+  - name: Componentes
     type: link
     fa-icon: fa-layer-group
     items:
@@ -38,36 +38,36 @@ links:
         href: documentation/global-components/wave.html
       - name: Accordion
         href: documentation/global-components/accordion.html
-  - name: Templates
+  - name: Plantillas
     type: title
     fa-icon:
-  - name: Corporate
+  - name: Corporativa
     type: link
     fa-icon: fa-laptop-code
     items:
-      - name: Live demo
+      - name: Demo en vivo
         href: /1-corporate-template/
-      - name: How to use
+      - name:  ¿ Cómo usar ?
         href: documentation/corporate-template/how-to-use.html
-      - name: Components
+      - name: Componentes
         href: documentation/corporate-template/components.html
-  - name: Bakery blog
+  - name: Blog panadero
     type: link
     fa-icon: fa-bread-slice
     items:
-      - name: Live demo
+      - name: Demo en vivo
         href: /3-culinary-blog-template/
-      - name: How to use
+      - name: ¿ Cómo usar ?
         href: documentation/culinary-blog-template/how-to-use.html
-      - name: Components
+      - name: Componentes
         href: documentation/culinary-blog-template/components.html
-  - name: Online courses
+  - name: Cursos en línea
     type: link
     fa-icon: fa-graduation-cap
     items:
-      - name: Live demo
+      - name: Demo en vivo
         href: /2-online-courses-template/
-      - name: Components
+      - name: Componentes
         href: documentation/online-courses-template/components.html
-      - name: How to use
+      - name: ¿ Cómo usar ?
         href: documentation/online-courses-template/how-to-use.html
