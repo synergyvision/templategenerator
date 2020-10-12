@@ -2,8 +2,15 @@
 	let accordionItems = document.querySelectorAll('.accordionTrigger');
  changeItem = function(e) {
         e.preventDefault();
-        var itemHeader = e.target;
-        var itemContent = e.target.parentNode.nextElementSibling;
+        if (e.target.classList.contains("accordionTrigger")){
+            var itemHeader = e.target;
+            var itemContent = e.target.parentNode.nextElementSibling;
+        }
+        else{
+            var itemHeader = e.target.parentNode;
+            var itemContent = e.target.parentNode.parentNode.nextElementSibling;
+        } 
+        
         if(itemContent.classList.contains('is-collapsed')) {
            itemHeader.setAttribute('aria-expanded', 'true');
            itemContent.setAttribute('aria-hidden', 'false');

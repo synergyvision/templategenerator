@@ -5,6 +5,6 @@
     <div class="presentation-card__info">
         <h2 class="name">{% if include.large == true %} {{include.card.name | truncate: 60 }} {% else %} {{include.card.name | truncate: 40 }} {% endif %}</h2>
         {% include global/svg.html directory=svg-directory image=site.data.culinary-blog-template.recipes-and-courses.cards.icon class='svg-primary svg-primary--small'  %}
-        <a href="{{base-url | append: include.card.url | relative_url}}" class="button">{{site.data.culinary-blog-template.recipes-and-courses.cards.btn}}</a>
+        <a href="{{base-url | append: include.card.url | relative_url}}" class="button">{{include.card.btn}}</a>
     </div>
 </div>

@@ -3,7 +3,9 @@
         var searchVal = $(this).val();
         var filterItems = $('[data-filter-item]');   
         if ( searchVal != '' ) {
-            document.querySelector('input[name="bread-type"][value="all"]').checked=true;
+            if (document.querySelector('input[name="bread-type"][value="all"]')){
+                document.querySelector('input[name="bread-type"][value="all"]').checked=true;
+            }
             filterItems.addClass('hidden');
             $('[data-filter-item][data-filter-name*="' + searchVal.toLowerCase() + '"]').removeClass('hidden');
             var lenght = $('[data-filter-item][data-filter-name*="' + searchVal.toLowerCase() + '"]').length;

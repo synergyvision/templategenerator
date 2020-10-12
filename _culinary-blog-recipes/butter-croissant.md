@@ -12,15 +12,25 @@ basic-info:
     name: bread-5.jpg
     alt: Butter croissant
   url: 'recipes/butter-croissant.html'
+  btn: Ver receta
 sections:
   - name: 'Tiempo de preparación: 2 horas'
   - name: 'Tiempo de cocción: 1 hora'
-  - name: 'Clasificación: Rustico'
+  - name: 'Clasificación: Enriquecido'
 breve-text:
   title: 'Resultado esperado:'
   text: 'Este pan tiene una miga suave y esponjosa debido a la combinación de leche, huevo y mantequilla y tiene un sabor ligeramente dulce. La corteza es crocante por el azúcar. ​Este pan es la compañía perfecta para un vaso de leche, para los más pequeños, o con un café como más te guste.'
 score: 4.5
 quantity: 6 
+social-media:
+  - name: twitter
+    href: https://www.twitter.com
+  - name: facebook
+    href: https://www.facebook.com
+  - name: pinterest
+    href: https://www.pinterest.com
+  - name: instagram
+    href: https://www.instagram.com
 ingredients:
   - collection:
       - text: Harina panadera
@@ -123,19 +133,24 @@ recipe:
 gallery:
   - image:
       name: croissant-step-1.jpg
-      alt: Step 1    
+      alt: Step 1   
+    text: Lorem ipsum dolor sit 
   - image:
       name: croissant-step-2.jpg
       alt: Step 2  
+    text: Lorem ipsum dolor
   - image:
       name: croissant-step-3.jpg
-      alt: Step 3  
+      alt: Step 3 
+    text: Lorem ipsum dolor sit  
   - image:
       name: croissant-step-4.jpg
       alt: Step 4  
+    text: Lorem ipsum dolor sit ammen 
   - image:
       name: croissant-step-5.jpg
       alt: Step 5  
+    text: Lorem ipsum dolor sit 
 ---
 
 

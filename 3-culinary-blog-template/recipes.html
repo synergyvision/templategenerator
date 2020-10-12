@@ -13,7 +13,7 @@ layout: culinary-blog-template/culinary-blog-sticky-header
 
 <!--CONTENT-->
 {% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner title=bread-info-section.recipes.title  %}
-{% include culinary-blog-template/cards/filter-box.html svg-directory=svg-directory info=bread-info-section %}
+{% include culinary-blog-template/cards/filter-box.html svg-directory=svg-directory checks=bread-info-section.filter search=bread-info-section.search %}
 <div class="abscenter ptb-big">
     {% for recipe in site.culinary-blog-recipes %}
         <div class="card-cont" data-filter-item data-filter-name="{{recipe.title | downcase }}" data-filter-type="{{recipe.type | downcase}}">

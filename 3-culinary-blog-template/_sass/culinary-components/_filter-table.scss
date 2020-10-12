@@ -1,6 +1,6 @@
 .filter-box{
     background-color: var(--color-secondary);
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 0px;
     margin-top: -5%;
@@ -58,35 +58,18 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        max-width: 400px;
         .input-container{
             @include abscenter;
             color: #fff;
             font-weight: 400;
         }
-        
-          .option-input {
-            appearance: none;
-            -webkit-appeareance:none;
-            height: 20px;
-            width: 20px;
-            
-            -webkit-transition: all 0.15s ease-out 0s;
-            -moz-transition: all 0.15s ease-out 0s;
-            transition: all 0.15s ease-out 0s;
-            background: #cbd1d8; 
-            cursor: pointer;
-            &:hover {
-                background: #9faab7;
-            }
-            &:checked {
-                background: var(--color-primary);
-            }
-            &.radio {
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-              
+        p{
+            color: #fff;
+            font-size: 1.6rem;
+            text-align: center;
         }
+          
     }
 }
 

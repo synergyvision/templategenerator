@@ -12,7 +12,7 @@ layout: culinary-blog-template/culinary-blog-sticky-header
 
 <!--CONTENT-->
 {% include culinary-blog-template/global/banner-secondary.html image-directory=image-directory image=bread-info-section.banner title=bread-info-section.courses.title  %}
-{% include culinary-blog-template/cards/filter-box.html svg-directory=svg-directory info=bread-info-section %}
+{% include culinary-blog-template/cards/filter-box.html svg-directory=svg-directory checks=bread-info-section.filter search=bread-info-section.search %}
 <div class="abscenter ptb-big">
     {% for recipe in site.culinary-blog-courses %}
         {% if recipe.url contains 'info.html' %}

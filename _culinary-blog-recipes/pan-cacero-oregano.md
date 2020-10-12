@@ -1,25 +1,36 @@
 ---
 layout: culinary-blog-template/culinary-blog-recipe
 title: Pan cacero de orégano
+identifier: bread4
 description: # Descripcion para redes sociales.
 page-image: bread-4.jpg #Imagen para redes sociales
 subtitle: Dicta mollitia odit quae maiores ducimus!
-type: Rustico
+type: Rústico
 basic-info:
   name: Pan cacero de orégano
   primary-image:
     name: bread-4.jpg
     alt: Pan cacero Oregano
   url: 'recipes/pan-cacero-oregano.html'
+  btn: Ver receta
 sections:
   - name: 'Tiempo de preparación: 2 horas'
   - name: 'Tiempo de cocción: 1 hora'
-  - name: 'Clasificación: Rustico'
+  - name: 'Clasificación: Rústico'
 breve-text:
   title: 'Resultado esperado:'
   text: 'Este pan tiene una miga suave y esponjosa debido a la combinación de leche, huevo y mantequilla y tiene un sabor ligeramente dulce. La corteza es crocante por el azúcar. ​Este pan es la compañía perfecta para un vaso de leche, para los más pequeños, o con un café como más te guste.'
 score: 4.5
 quantity: 6 
+social-media:
+  - name: twitter
+    href: https://www.twitter.com
+  - name: facebook
+    href: https://www.facebook.com
+  - name: pinterest
+    href: https://www.pinterest.com
+  - name: instagram
+    href: https://www.instagram.com
 ingredients:
   - collection:
       - text: Harina panadera
@@ -124,18 +135,23 @@ gallery:
   - image:
       name: croissant-step-1.jpg
       alt: Step 1    
+    text: Lorem ipsum dolor sit 
   - image:
       name: croissant-step-2.jpg
       alt: Step 2  
+    text: Lorem ipsum dolor sit 
   - image:
       name: croissant-step-3.jpg
       alt: Step 3  
+    text: Lorem ipsum dolor sit 
   - image:
       name: croissant-step-4.jpg
       alt: Step 4  
+    text: Lorem ipsum dolor sit 
   - image:
       name: croissant-step-5.jpg
-      alt: Step 5  
+      alt: Step 5 
+    text: Lorem ipsum dolor sit  
 ---
 
 

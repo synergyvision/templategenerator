@@ -33,34 +33,42 @@ gallery:
   - image:
       name: home-gallery-1.jpeg
       alt: Home gallery 1
+    text: Lorem ipsum dolor
   - image:
       name: home-gallery-2.jpg
       alt: Home gallery 2
+    text: Simply dummy text of the printing
   - image:
       name: home-gallery-3.jpg
       alt: Home gallery 3
+    text: Where can I get some?
   - image:
       name: home-gallery-4.jpg
       alt: Home gallery 4
+    text: Where does it come from?
   - image:
       name: home-gallery-5.jpg
       alt: Home gallery 5
+    text: The standard chunk of Lorem
   - image:
       name: home-gallery-6.jpg
       alt: Home gallery 6
+    text: There are many variations
   - image:
       name: home-gallery-7.jpg
       alt: Home gallery 7
+    text: The bread name
   - image:
       name: home-gallery-8.jpg
       alt: Home gallery 8
+    text: Type the bread name
 
 newsletter:
   background: #newsletter-section-bg.png
   form:
     background: 'form-background.png'
     title: Suscríbete
-    subtitle: ¿TE GUSTAN LOS ARTÍCULOS DEL BLOG?
+    subtitle: ¿TE GUSTAN NUESTRAS RECETAS?
     your-email: scruz.17@est.ucab.edu.ve
     inputs:
       - name: email
@@ -78,7 +86,7 @@ top-recipes:
       - id: bread1
       - id: bread2
       - id: bread3
-
+      - id: bread4
 
 quote-section:
   background: quote-bg.jpg

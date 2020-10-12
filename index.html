@@ -5,54 +5,55 @@ title: Template generador
 {% assign image-directory= site.data.global.site.directories.images  
     %}
 
-<div class="welcome-container">
+<div class="welcome-container" style="background-image: url('../../images/index-background.png');">
     <div class="title-container">
-        <h1>Welcome to my template generator</h1>
+        <h1>Bienvenido a mi generador de plantillas</h1>
         <div class="line"></div>
     </div>
     <img src="{{image-directory | append: 'welcome-image.png' | relative_url }}" alt="">
 </div>
 <div class="index-section">
-    <div class="title">What is Jekyll ?</div>
+    <div class="title">¿ Qué es Jekyll ?</div>
     <p>
-        Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more.
+        Jekyll es un generador de sitios estáticos. Toma texto escrito en su lenguaje de marcado favorito y usa diseños para crear un sitio web estático. Puede modificar la apariencia del sitio, las URL, los datos que se muestran en la página y más.
     </p>
     <div class="subtitle">
-       🚨 Prerequisites
+       🚨 Prerequisitos
     </div>
-    <p>
-        Ruby version 2.5.0 or higher, including all development headers (check your Ruby version using ruby -v)
-RubyGems (check your Gems version using gem -v)
-GCC and Make (check versions using gcc -v,g++ -v, and make -v)
+    <p> 
+        Versión de Ruby  2.5.0 o superior, incluidos todos los encabezados de desarrollo (verifique su versión de Ruby usando ruby ​​-v)
+        RubyGems (verifique su versión de Gems usando gem -v)
+        GCC y Make (verifique las versiones usando gcc -v, g ++ -v y make -v)
     </p>
     <div class="subtitle">
-      🧮 Instructions
+      🧮 Instrucciones
     </div>
-    <p>1. Install the jekyll and bundler gems.        
+    <p>1. 
+        Instala las gemas de jekyll y bundler.       
     </p>
     <div class="instruction">gem install jekyll bundler</div>
-    <p>2. Build the site and make it available on a local server
+    <p>2. Cree el sitio y hágalo disponible en un servidor local
     </p>
+    <p> * Nota 🚧: Antes de generar el sitio, diríjase al archivo "_config.yml" y cambie el atributo "baseurl". </p>
+    <p>- Si desea correr el proyecto localmente, iguale a ""</p>
+    <p>- Si desea correr el proyecto remotamente, iguale a "templategenerator"</p>
     <div class="instruction">bundle exec jekyll serve</div>
     <p>3. Browse to http://localhost:4000</p>
-    <div class="subtitle">
-      👷🏻‍♀️ Generación del directorio "docs"
-    </div>
+    <div class="subtitle">👷🏻‍♀️ Generación del directorio "docs"</div>
     <div class="instruction">`jekyll build` or `bundle exec jekyll build`</div>
 </div>
 <div class="index-section">
-    <div class="title">100% customizable</div>
-    <p>
-        This documentation was created to help you get the most out of these templates.
-The templates include many pages, features and components, You can then learn to use each of the generated components, modify them and even add them at your convenience. . The structure of the code is modular, so it will be very easy to adapt it to your needs
-    </p>
-    
+    <div class="title">100% personalizable</div>
+    <p>       
+Esta documentación se creó para ayudarlo a aprovechar al máximo estas plantillas.
+Las plantillas incluyen muchas páginas, características y componentes. Luego, puede aprender a usar cada uno de los componentes generados, modificarlos e incluso agregarlos a su conveniencia. . La estructura del código es modular, por lo que será muy fácil adaptarlo a tus necesidades
+    </p> 
 </div>
 <div class="index-section">
-    <div class="title">Main Features and Pages
+    <div class="title">Componentes y páginas principales
     </div>
     <p>
-        Go to the template page to see the main Features and Pages of this amazings jekyll templates.
+        Diríjase a la página de la plantilla para ver las principales características, componentes y páginas que te ofrecemos.
     </p>
 </div>
 

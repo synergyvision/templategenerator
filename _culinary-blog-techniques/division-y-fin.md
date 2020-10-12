@@ -2,7 +2,7 @@
 layout: culinary-blog-template/culinary-blog-techniques
 identifier: techn2
 page-image: technique-3.png #Imagen para redes sociales
-title: Division, boleado,reposo y formado | Tecnicas
+title: Division, boleado,reposo y formado | Técnicas
 video: 
     source: https://www.youtube.com/embed/X2vt9GgiPLM?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
     external: true
@@ -13,6 +13,7 @@ basic-info:
     name: technique-3.png
     alt: Image
   url: 'techniques/division-y-fin.html'
+  btn: Ver técnica
 information:
   - name: 'What is Lorem Ipsum?'
     type: title

@@ -1,0 +1,187 @@
+---
+layout: index/components
+title: Bakery blog template | Components
+collection:
+  - title: 'global'
+    description: 'Contiene todos aquellos componentes utilizados a lo largo de la plantilla'
+    collection:
+      - title: 'header.html'
+        texts:
+          - title: 'Este componente incluye todo lo referente al encabezado del sitio.'
+          - title: 'Toda la información que ahí se encuentra, esta alojada en el directorio "_data/header"'
+          - title: 'Parámetros:'
+          - text: 'sticky: Incluir si desea que el encabezado contenga un fondo y una profundidad. Opcional'
+          - text:  'logo: Objeto que incluye:, 1. "name": nombre de imagen del logo, 2. "alt", Texto alternativo a imagen'
+          - text: 'nav-links: Objeto que incluye 1. "href": nombre de la página a redirigir, 2. "text": Texto del link'
+          - text: 'base-url: Añada si el sitio a redirijir no es un sitio externo. Especifique la dirección base.'
+          - text: 'icons: Objeto que incluye: 1. "icon-close": Nombre de ícono para cerrar menú en dispositivos pequeños; 2. "icon-open": Nombre de ícono para abrir menú en dispositivos pequeños.'
+          - text: 'svg-directory: Directorio base de los íconos.'
+          - text: 'image-directory: Directorio base de las imágenes'
+      - title: 'footer.html'
+        texts: 
+            - title: 'Este componente incluye todo lo referente al encabezado del sitio.'
+            - title: 'Parámetros:'
+            - title: '1. footer: Objeto que incluye: '
+            - text: 'logo: Objeto que incluye: "image": nombre de la imagen; "alt": Texto alternativo de no mostrarse la imagen'
+            - text: 'social-media: Collección que incluye, "icon": nombre del ícono a mostrar, y "href": enlace de dirección a red social.'
+            - text: 'quote: Mensaje. Objeto que incluye: 1. "icon": nombre de ícono de comillas, 2.  "text": cita de una persona., y 3. "member-image": Objeto que incluye: "name": nombre de imagen de una persona y "alt": Texto alternativo a imagen'
+            - text: 'instagram-section: Imágenes de cuenta instagram. Objeto que incluye: 1. "title": titulo de la sección, 2. "href": Redirección a cuenta de instagram  y 3. "pictures": Collección que incluye: "name": nombre de imagen y "alt": Texto alternativo a imagen'
+            - text: 'contacts: Objeto que incluye: 1. "title": titulo de la sección, 2. "sections": Colección que incluye: "icon": icono de contacto. Ej: Ícono de teléfono, y "text": texto de contacto. Ej: teléfono'
+            - text: 'copyright: Texto de derechos de autor.'
+            - title: '2. svg-directory: Directorio base de los íconos.'
+            - title: '3. image-directory: Directorio base de las imágenes'
+      - title: 'title-primary.html'
+        texts: 
+            - title: 'Este componente muestra el título primario del sitio'
+            - title: 'Parámetros:'
+            - text: 'small: Igualar a "true" si se desea una versión más pequeña. "false" por defecto. Opcional.'
+            - text: 'title: Título a mostrar.'
+            - text: 'subtitle: Subtítulo a mostrar.'
+      - title: banner-secondary.html
+        texts:
+            - title: Componente que incluye un banner angosto, renderizando un título en la ezquina izquierda
+            - title: 'Parámetros:'
+            - text: 'image-directory: Directorio base de la imágen.'
+            - text: 'image: Nombre de la imagen de fondo.'
+            - text: 'title: Titulo del banner.'
+      - title: button-primary.html
+        texts:
+            - title: 'Botón primario que se utiliza a lo largo de la plantilla con un fondo animado que se alarga del inicio al final del mismo'
+            - title: 'Parámetros:'
+            - text: 'title: Nombre del botón.'
+            - text: 'href: Añada este parámetro si desea que el botón redirija a una página, indicando el nombre de dicha página.'
+            - text: 'inverted: Añada este parámetro si desea invertir los colores del botón.'
+            - text: 'base-url: Añada si el sitio a redirijir no es un sitio externo.'
+            - text: 'onclick: Añada si desea realizar una acción con el botón, especificando el nombre de la función.'
+      - title: button-scroll.html
+        texts:
+            - title: 'Botón fijado en la ezquina inferior derecha, que redirige al tope de la ventana.'
+            - title: 'Parámetros:'
+            - text: 'icon: id del icono (svg) a utilizar.'
+            - text: 'svg-directory: Directorio base del ícono.'
+      - title: empty-message.html
+        texts:
+            - title: 'Mensaje de vacío. Se puede utilizar cuando no se encuentran resultados de algún tipo.'
+            - title: 'Parámetros:'
+            - text: ' info: Objeto que contiene: 1. "icon": nombre del icono a utilizar. Opcional; y 2. "message": Mensaje a mostrar.'
+            - text:  'svg-directory: Directorio base del icono.'
+      - title: increase-value.html
+        texts: 
+            - title: 'Caja con botones de aumentar y disminuir cantidad.'
+            - title: 'Parámetros:'
+            - text: 'value: Valor por defecto del input.'
+      - title: information.html
+        texts:
+            - title: 'texto plano. Incluye titulos, subtitulos, y check'
+            - title: 'Parámetros:'
+            - title: '1.information: Collección que incluye'
+            - text: '1.1 name: texto a ser mostrado'
+            - text: '1.2 type: puede ser: 1. "paragraph": Se mostrará un párrafo plano, 2. "title" : Se mostrará un titulo con un ícono en la parte inferior, 3."subtitle" : Se mostrará un subtitulo con un ícono en la parte inferior, 4. "check" : Se mostrará un marcador del lado izquierdo del texto.'
+            - title: '2. svg-directory: Directorio base del icono.'
+      - title: stripe.html
+        texts: 
+            - title: 'Banda degradada de color secundario, con iconos espaciados.'
+            - title: 'Parámetros:'
+            - text: 'icons: Collección que incluye: "icon": nombre de ícono' 
+            - text: 'svg-directory: Directorio base del icono.'
+  - title: home
+    description: Contiene en sí varios de los componentes utilizados en el inicio de página de la plantilla
+    collection:
+        - title: banner.html
+          texts:
+            - title: Banner de página de inicio.
+            - title: 'Parámetros:'
+            - text: 'background: Nombre de la imágen de fondo.'
+            - text: 'title: Objeto que incluye: "first-line", texto de primera línea, y "second-line": texto de segunda línea'
+            - text: 'image-directory: Directorio base de la imagen.'
+        - title: features-section.html
+          texts:
+            - title: 'Sección que muestra imagenes  con texto inferior.'
+            - title: 'Parámetros:'
+            - title: '1. features: Objeto que incluye:'
+            - text: 'background: nombre de imagen de fondo. Opcional'
+            - text: 'collection: Colección que incluye: "image": a su vez, objeto que incluye, "name": Nombre de imagen y "alt":  Texto alternativo a imagen'
+            - text: 'name: texto inferior a imagen'
+            - title: '2. image-directory: Directorio base de la imagen.'
+        - title: gallery-section.html
+          texts: 
+            - title: 'Seccion que incluye imagenes unidas, cubriendo todo el espacio.' 
+            - title: 'Nota 🚨 : Para una mejor visualización añadir cantidad de imágenes multiplos de 4.'
+            - title: 'Parámetros:'
+            - text: 'collection: Collección que incluye:'
+            - text: 'image: Objeto que incluye: "name": nombre de la imagen, "alt": texto alternativo a imagen'
+            - text: 'image-directory: Directorio base de imágenes.'
+        - title: nesletter-section.html
+          texts:
+            - text: 'Parámetros:'
+            - title: '1. background: imágen de fondo de la sección. Opcional.'
+            - title: '2. form: Objeto que incluye:'
+            - text: 'your-email: Correo al que llegarán cada una de las suscripciones.'
+            - text:  'title: título del formulario'
+            - text:  'subtitle: subtítulo del formulario'
+            - text: 'inputs: Collección que incluye: 1. "type": tipo del campo, 2. "name": nombre que define el identificador del campo, 3. "placeholder": texto del placeholder del campo'
+            - text: 'btn: Objeto que incluye "text": texto del botón del formulario'
+            - title: '3. image-directory: Directorio base de imágenes.'
+        - title: quote-section.html
+          texts:
+            - title: 'Sección que incluye cita de alguna persona.'
+            - title: 'Parámetros:'
+            - title: '1. background: imágen de fondo de la sección. Opcional.'
+            - title: '2.section: Objeto que incluye :'
+            - text: 'quote: que a su vez incluye 1. "icon": nombre de ícono de comillas,2. "text": texto de la cita, 3. "person": Objeto que incluye: image: (name: nombre de imágen de persona que cita y alt: Texto alternativo a imágen.), y "name": nombre de la persona que cita el texto'
+            - title: '3. image-directory: Directorio base de imágenes.'
+        - title: top-section.html
+          texts:
+            - title: 'Sección que muestra componente "title-primary", y un carousel con los componentes "presentation-card", descrito a continuación.'
+            - title: 'Parámetros:'
+            - text: '1. section: Objeto que incluye: "title": título de la sección, "subtitle": subtítulo de la sección'
+            - text: '2. collection: Collección que incluye los parámetros solicitados en "presentation-card"'
+        - title: 'presentation-card.html'
+          texts: 
+            - title: 'Carta de presentación de recetas, cursos, tecnicas, etc.'
+            - title: 'Parámetros:'
+            - text: '1. large: Añada e iguale a "true" si desea una versión horizontal y agrandada del card. Opcional'
+            - text: '2. small: Añada e iguale a "true" si desea una versión horizontal y más pequeña del card. Opcional'
+            - text: '3. card: Objeto que incluye: "primary-image": Objeto que incluye: (name: nombre de imagen , alt:  texto alternativo de la imagen), "name": texto a incluir en el card, "url": nombre del archivo a redirigir'
+        - title: recipe-box.html
+          texts:
+            - title: 'Card que incluye un header, y la ficha técnica de un pan o para una cita.'
+            - title: 'Parámetros:'
+            - title: '(1) Ficha técnica:'
+            - title:  '1.1 page: Página de receta. Objeto que incluye:'
+            - text: 'title: título del encabezado'
+            - text: 'subtitle: subtítulo del encabezado'
+            - text: 'basic-info: Objeto que incluye "primary-image" (name: nombre de la imagen a mostrar y alt: texto alternativo a la imagen), "sections": (name: nombre de la sección a mostrar), "breve-text" (title: titulo del texto breve, text: texto breve) y "score": valor que muestra el "rating" del producto.'
+            - text: 'icon: ícono que se utiliza para marcar las secciones'
+            - title: '(2) Cita:'
+            - title: 'quote: Objeto que incluye: "person": ("image": nombre de la imagen de la persona, "alt": texto alternativo a la imágen y "name": nombre de la persona que cita) y "message": Cita de la persona.'
+            - title: 'svg-directory = directorio base de los íconos.'
+        - title: filter-box.html
+          texts:
+            - title: 'Caja de filtrado de "cards", contiene checks, y barra de búsqueda.'
+            - title: 'Parámetros:'
+            - title: '1. info: Objeto que incluye:'
+            - text: '1.1 filter: Colección que incluye: "checked": Setear en "true" si desea que se encuentre checkeado por defecto. Opcional; "value": valor por el cual se filtrarán los "cards"; y "name": texto lateral del check'
+            - text: '1.2 search: Objeto que incluye: "placeholder": texto que mostrará el campo / buscador; e "icon": ícono del buscador'
+            - title: '2. svg-directory: Directorio base del icono.'
+        - title: gallery-card.html
+          texts: 
+            - title: 'Carta que muestra imagen circular, con ícono inferior. Posee un background del color secundario.'
+            - title: 'Parámetros:'
+            - title: 'card: Objeto que incluye:'
+            - text: 'image: ("name": nombre de la imágen; y "alt": texto alternativo a imagen'
+        - title: 'ingredients-box.html'
+          texts:
+              - title: 'Parámetros:'
+              - title: '1. info: Objeto que incluye: "title": título de la sección y "subtitle": subtítulo de la sección'
+              - title: '2. column: Añada e iguale a "true" si desea formar una columna. Opcional'
+              - title: '3. background: Imágen de fondo. Opcional'
+              - title: '4. quantity-box: Parámetros para componente "quantity-box": "title", titulo de la caja , "btn": Nombre del botón de cantidad y "quantity", Cantidad por defecto, que mostrará el campo'
+              - title: '5. table: Parámetros para componente "table": header, footer, content'
+        - title: 'steps-box.html'
+          texts:
+            - title: 'Menú que muestra los pasos de una receta'
+            - title: 'Parámetros:'
+            - text: 'steps: Objeto que incluye: "id": identificador del paso y "name": nombre del paso'
+            - text: 'page: Página de receta. Incluye identificador de la receta.'
+--- 

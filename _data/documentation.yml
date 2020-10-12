@@ -59,6 +59,8 @@ links:
         href: /3-culinary-blog-template/
       - name: How to use
         href: documentation/culinary-blog-template/how-to-use.html
+      - name: Components
+        href: documentation/culinary-blog-template/components.html
   - name: Online courses
     type: link
     fa-icon: fa-graduation-cap

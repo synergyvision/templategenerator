@@ -3,4 +3,5 @@
         <img src="{{image-directory | append: include.card.image.name | relative_url}}" alt="{{include.card.image.alt}}">
     </div>
     {% include global/svg.html directory=svg-directory image='wheat' class='svg-primary' %}
+    <div class="title">{{include.card.text}}</div>
 </div> 

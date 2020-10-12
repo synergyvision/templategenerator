@@ -2,7 +2,7 @@
 layout: culinary-blog-template/culinary-blog-techniques
 identifier: techn3
 page-image: technique-1.png #Imagen para redes sociales
-title: LA MASA MADRE | Tecnicas
+title: LA MASA MADRE | Técnicas
 video:
     source: https://www.youtube.com/embed/nPpMEZBRElI?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com
     external: true
@@ -13,6 +13,7 @@ basic-info:
     name: technique-1.jpg
     alt: Masa madre
   url: 'techniques/masa-madre.html'
+  btn: Ver técnica
 information:
   - name: 'What is Lorem Ipsum?'
     type: title
