@@ -5,7 +5,7 @@ identifier: bread4
 description: # Descripcion para redes sociales.
 page-image: bread-4.jpg #Imagen para redes sociales
 subtitle: Dicta mollitia odit quae maiores ducimus!
-type: Rústico
+type: rustico
 basic-info:
   name: Pan cacero de orégano
   primary-image:

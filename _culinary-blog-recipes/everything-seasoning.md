@@ -5,7 +5,7 @@ title: Everything seasoning
 page-image: bread-2.jpg #Imagen para redes sociales
 description: # Descripcion para redes sociales.
 subtitle: Dicta mollitia odit quae maiores ducimus!
-type: Rústico
+type: rustico
 basic-info:
   name: Everything seasoning
   primary-image:
