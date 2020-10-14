@@ -1,7 +1,9 @@
 ---
 layout: index/default
 ---
-
+{% assign
+    svg-directory=site.data.global.site.directories.svg
+    | relative_url | append: "#" %}
 <div class="component">
     <div class="component__title">Components</div>
     <div class="component__subtitle"></div>
@@ -9,7 +11,7 @@ layout: index/default
     <div class="component__subtitle">{{card.title}}</div>
     <p>{{card.description}}</p>
     {% include global/accordion.html start=start icon='icon-dot-single'
-    svg-directory=site.data.global.site.directories.svg collection=card.collection
+    svg-directory=svg-directory collection=card.collection
     expanded=false image=false %} {% assign collection-lenght = card.collection |
     size %} {% assign start = start | plus : collection-lenght %} {% endfor %}
 </div>

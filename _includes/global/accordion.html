@@ -12,7 +12,7 @@
                 {% if include.icons-prefix %}
                     <img src="{{include.image-directory  | append: image | relative_url }}" alt="" {% if include.image == false %} style="display: none;" {% endif %}>
                 {% endif %}
-                <dl {% if include.image == false %} style="width:90%;" {% endif %}>
+                <dl {% if include.image == false %} style="width:100%;" {% endif %}>
                     <dt >
                         <a href="#accordion{{start}}" aria-expanded="false" aria-controls="accordion{{start}}" class="accordion-title accordionTitle accordionTrigger {% if include.expanded == false %}  {% else %}  is-collapsed is-expanded {% endif %} ">
                             <p>{{item.title}}</p>

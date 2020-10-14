@@ -1,13 +1,20 @@
+{% assign
+    svg-directory=site.data.culinary-blog-template.global.site.directories.svg-icon-directory
+    | relative_url | append: "#" %}
 <div class="increase-box">
-    <a onclick="incrementDecreaseValue('decrease',{{include.value}})" class="left">-</a>
-        <input class="increase-box__input" type="number" min="1"  value="{{include.value}}" initialValue="{{include.value}}" readonly>
-    <a onclick="incrementDecreaseValue('increment',{{include.value}})" class="right">+</a>
+    <a onclick="incrementDecreaseValue('decrease',{{include.value}})" class="left">
+        {% include global/svg.html directory=svg-directory image='icon-minus' class="icon" %}
+    </a>
+    <div class="increase-box__input"   initialValue="{{include.value}}" >{{include.value}}</div>
+    <a onclick="incrementDecreaseValue('increment',{{include.value}})" class="right">
+        {% include global/svg.html directory=svg-directory image='icon-plus' class="icon" %}
+    </a>
 </div>
 
 <script>
 function incrementDecreaseValue(operation, value)
 {
-    var value = parseInt(document.getElementsByClassName('increase-box__input')[0].value, 10);
+    var value = parseInt(document.getElementsByClassName('increase-box__input')[0].textContent, 10);
     value = isNaN(value) ? 0 : value;
     if (operation == 'increment') value++;
     else {
@@ -15,7 +22,7 @@ function incrementDecreaseValue(operation, value)
             value--;
         }
     };
-    document.getElementsByClassName('increase-box__input')[0].value = value;
+    document.getElementsByClassName('increase-box__input')[0].innerHTML = value;
     changeTableValues(value);
 }
 </script>

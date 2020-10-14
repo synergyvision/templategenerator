@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 100%;
     max-width: 800px;
+    text-align: justify;
     @include respond(phone){
         padding: 20px 0;
     }

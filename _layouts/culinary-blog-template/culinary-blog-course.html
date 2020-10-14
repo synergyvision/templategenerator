@@ -39,7 +39,7 @@ layout: culinary-blog-template/culinary-blog-sticky-header
         {% include global/accordion.html icon=bread-info-section.icon-section image-directory=image-directory collection=page.recipe svg-directory=svg-directory image=false expanded=true %}
         {% if page.url contains 'step-1.html' %}
             {% include culinary-blog-template/cards/quantity-box.html title=bread-info-section.ingredients.quantity-box.title btn=bread-info-section.ingredients.quantity-box.btn value=current-course.quantity %}
-            {% include global/table.html header=bread-info-section.ingredients.ingredients-table.header content=current-course.ingredients header-bg-color='var(--color-secondary)' header-color='#fff' footer=bread-info-section.ingredients.ingredients-table.footer %}
+            {% include global/table.html header=bread-info-section.ingredients.ingredients-table.header content=current-course.ingredients header-bg-color='white' header-color='#333' footer=bread-info-section.ingredients.ingredients-table.footer %}
         {% endif %}
     </div>
 </div>

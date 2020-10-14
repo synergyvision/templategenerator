@@ -1,4 +1,6 @@
-{% assign svg-directory = site.data.global.site.directories.svg %}
+{% assign
+    svg-directory=site.data.global.site.directories.svg
+    | relative_url | append: "#" %}
 {% if include.number-of-pages > 1 %}
     <div class="pagination1">
         <a id="prev">
