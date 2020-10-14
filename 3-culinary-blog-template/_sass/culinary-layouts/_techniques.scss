@@ -5,6 +5,7 @@
         align-items: center;
     }
     .left-side{
+        width: 100%;
         @include respond(tab-port){
             width: 90%;
         }

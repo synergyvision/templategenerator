@@ -57,11 +57,16 @@
         padding: 20px;
         position: relative;
         min-height: 150px;
-        @include respond(tab-port){
-            flex-direction: column;
-        }
-        .table-responsive{
+        
+        &__container{
             width: 70%;
+            margin: 0 auto;
+            @include abscenter;
+            flex-direction: column;
+            .table-responsive{
+                width: 100%;        
+             }
+            
             @include respond(tab-port){
                 width: 100%;
             }

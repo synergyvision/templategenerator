@@ -64,7 +64,7 @@ courses:
   - id: course3
     completed: 44%
     rating: 1.5
-cart-courses: # eliminar cursos y observar cómo se muestra la vista en pantalla
+cart-courses: 
   - id: course3
   - id: course5
 wishlist-courses:
