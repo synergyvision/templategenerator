@@ -88,7 +88,7 @@ defaults:
 # to override the default setting.
 
 exclude:
-  - propuesta
+  - informes
 #   - Gemfile.lock
 #   - node_modules
 #   - vendor/bundle/
